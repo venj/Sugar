@@ -7,12 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251F5F2E1BF452EA009FC984 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */; };
+		251F5F2F1BF452EA009FC984 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F281BF452EA009FC984 /* Info.plist */; };
+		251F5F381BF4530C009FC984 /* CommonCrypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 251F5F371BF4530C009FC984 /* CommonCrypto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		251F5F3D1BF45344009FC984 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F5F351BF4530C009FC984 /* CommonCrypto.framework */; };
 		25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F141BF30EF100CCCE54 /* AppDelegate.swift */; };
 		25883F171BF30EF100CCCE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F161BF30EF100CCCE54 /* ViewController.swift */; };
 		25883F1A1BF30EF100CCCE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25883F181BF30EF100CCCE54 /* Main.storyboard */; };
 		25883F1C1BF30EF100CCCE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25883F1B1BF30EF100CCCE54 /* Assets.xcassets */; };
 		25883F1F1BF30EF100CCCE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25883F1D1BF30EF100CCCE54 /* LaunchScreen.storyboard */; };
 		25883F2A1BF30EF100CCCE54 /* Sugar_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F291BF30EF100CCCE54 /* Sugar_ExampleTests.swift */; };
+		25883F3C1BF30F2000CCCE54 /* Sugar.h in Headers */ = {isa = PBXBuildFile; fileRef = 25883F3B1BF30F2000CCCE54 /* Sugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25883F431BF30F2000CCCE54 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; };
+		25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F491BF30F2000CCCE54 /* SugarTests.swift */; };
+		25883F4E1BF30F2000CCCE54 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; };
+		25883F4F1BF30F2000CCCE54 /* Sugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		25883F631BF30F4700CCCE54 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
+		25883F641BF30F4700CCCE54 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
+		25883F651BF30F4700CCCE54 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
+		25883F661BF30F4700CCCE54 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
+		25883F671BF30F4700CCCE54 /* NSString+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* NSString+Regex.swift */; };
+		25883F681BF30F4700CCCE54 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
+		25883F691BF30F4700CCCE54 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
+		25883F6A1BF30F4700CCCE54 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
+		25883F6B1BF30F4700CCCE54 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
+		25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
+		25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
+		25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,9 +44,54 @@
 			remoteGlobalIDString = 25883F101BF30EF100CCCE54;
 			remoteInfo = "Sugar Example";
 		};
+		25883F441BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25883F381BF30F2000CCCE54;
+			remoteInfo = Sugar;
+		};
+		25883F461BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25883F101BF30EF100CCCE54;
+			remoteInfo = "Sugar Example";
+		};
+		25883F4C1BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25883F381BF30F2000CCCE54;
+			remoteInfo = Sugar;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		25883F531BF30F2000CCCE54 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				25883F4F1BF30F2000CCCE54 /* Sugar.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		251F5F281BF452EA009FC984 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		251F5F291BF452EA009FC984 /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
+		251F5F2A1BF452EA009FC984 /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
+		251F5F2B1BF452EA009FC984 /* macosx.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = macosx.modulemap; sourceTree = "<group>"; };
+		251F5F2C1BF452EA009FC984 /* watchos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchos.modulemap; sourceTree = "<group>"; };
+		251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
+		251F5F351BF4530C009FC984 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		251F5F371BF4530C009FC984 /* CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonCrypto.h; sourceTree = "<group>"; };
+		251F5F391BF4530C009FC984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25883F111BF30EF100CCCE54 /* Sugar Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sugar Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F141BF30EF100CCCE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25883F161BF30EF100CCCE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,13 +102,39 @@
 		25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sugar ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F291BF30EF100CCCE54 /* Sugar_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sugar_ExampleTests.swift; sourceTree = "<group>"; };
 		25883F2B1BF30EF100CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25883F391BF30F2000CCCE54 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25883F3B1BF30F2000CCCE54 /* Sugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar.h; sourceTree = "<group>"; };
+		25883F3D1BF30F2000CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25883F421BF30F2000CCCE54 /* SugarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25883F491BF30F2000CCCE54 /* SugarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTests.swift; sourceTree = "<group>"; };
+		25883F4B1BF30F2000CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25883F571BF30F4700CCCE54 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
+		25883F581BF30F4700CCCE54 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
+		25883F591BF30F4700CCCE54 /* String+URLEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncode.swift"; sourceTree = "<group>"; };
+		25883F5A1BF30F4700CCCE54 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
+		25883F5B1BF30F4700CCCE54 /* NSString+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Regex.swift"; sourceTree = "<group>"; };
+		25883F5C1BF30F4700CCCE54 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
+		25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Base64.swift"; sourceTree = "<group>"; };
+		25883F5E1BF30F4700CCCE54 /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
+		25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
+		25883F601BF30F4700CCCE54 /* Int+FileSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+FileSize.swift"; sourceTree = "<group>"; };
+		25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+StatusBarStyle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		251F5F311BF4530C009FC984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25883F0E1BF30EF100CCCE54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25883F4E1BF30F2000CCCE54 /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,14 +145,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25883F351BF30F2000CCCE54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251F5F3D1BF45344009FC984 /* CommonCrypto.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25883F3F1BF30F2000CCCE54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25883F431BF30F2000CCCE54 /* Sugar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251F5F261BF452EA009FC984 /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */,
+				251F5F281BF452EA009FC984 /* Info.plist */,
+				251F5F291BF452EA009FC984 /* iphoneos.modulemap */,
+				251F5F2A1BF452EA009FC984 /* iphonesimulator.modulemap */,
+				251F5F2B1BF452EA009FC984 /* macosx.modulemap */,
+				251F5F2C1BF452EA009FC984 /* watchos.modulemap */,
+				251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		251F5F361BF4530C009FC984 /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				251F5F371BF4530C009FC984 /* CommonCrypto.h */,
+				251F5F391BF4530C009FC984 /* Info.plist */,
+			);
+			path = CommonCrypto;
+			sourceTree = "<group>";
+		};
+		251F5F3E1BF456AA009FC984 /* UIKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */,
+				25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */,
+			);
+			name = "UIKit Extension";
+			sourceTree = "<group>";
+		};
+		251F5F3F1BF456CC009FC984 /* Standard Library and Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				25883F571BF30F4700CCCE54 /* String+Range.swift */,
+				25883F581BF30F4700CCCE54 /* String+MD5.swift */,
+				25883F591BF30F4700CCCE54 /* String+URLEncode.swift */,
+				25883F5A1BF30F4700CCCE54 /* String+Path.swift */,
+				25883F5E1BF30F4700CCCE54 /* String+JSON.swift */,
+				25883F5C1BF30F4700CCCE54 /* String+Base64.swift */,
+				25883F601BF30F4700CCCE54 /* Int+FileSize.swift */,
+				25883F5B1BF30F4700CCCE54 /* NSString+Regex.swift */,
+				25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */,
+				25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */,
+			);
+			name = "Standard Library and Foundation";
+			sourceTree = "<group>";
+		};
 		25883F081BF30EF100CCCE54 = {
 			isa = PBXGroup;
 			children = (
+				251F5F261BF452EA009FC984 /* CommonCrypto */,
 				25883F131BF30EF100CCCE54 /* Sugar Example */,
 				25883F281BF30EF100CCCE54 /* Sugar ExampleTests */,
+				25883F3A1BF30F2000CCCE54 /* Sugar */,
+				25883F481BF30F2000CCCE54 /* SugarTests */,
+				251F5F361BF4530C009FC984 /* CommonCrypto */,
 				25883F121BF30EF100CCCE54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +231,9 @@
 			children = (
 				25883F111BF30EF100CCCE54 /* Sugar Example.app */,
 				25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */,
+				25883F391BF30F2000CCCE54 /* Sugar.framework */,
+				25883F421BF30F2000CCCE54 /* SugarTests.xctest */,
+				251F5F351BF4530C009FC984 /* CommonCrypto.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,9 +260,66 @@
 			path = "Sugar ExampleTests";
 			sourceTree = "<group>";
 		};
+		25883F3A1BF30F2000CCCE54 /* Sugar */ = {
+			isa = PBXGroup;
+			children = (
+				251F5F3F1BF456CC009FC984 /* Standard Library and Foundation */,
+				251F5F3E1BF456AA009FC984 /* UIKit Extension */,
+				25883F3B1BF30F2000CCCE54 /* Sugar.h */,
+				25883F3D1BF30F2000CCCE54 /* Info.plist */,
+			);
+			path = Sugar;
+			sourceTree = "<group>";
+		};
+		25883F481BF30F2000CCCE54 /* SugarTests */ = {
+			isa = PBXGroup;
+			children = (
+				25883F491BF30F2000CCCE54 /* SugarTests.swift */,
+				25883F4B1BF30F2000CCCE54 /* Info.plist */,
+			);
+			path = SugarTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		251F5F321BF4530C009FC984 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251F5F381BF4530C009FC984 /* CommonCrypto.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25883F361BF30F2000CCCE54 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25883F3C1BF30F2000CCCE54 /* Sugar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		251F5F341BF4530C009FC984 /* CommonCrypto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251F5F3A1BF4530C009FC984 /* Build configuration list for PBXNativeTarget "CommonCrypto" */;
+			buildPhases = (
+				251F5F301BF4530C009FC984 /* Sources */,
+				251F5F311BF4530C009FC984 /* Frameworks */,
+				251F5F321BF4530C009FC984 /* Headers */,
+				251F5F331BF4530C009FC984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommonCrypto;
+			productName = CommonCrypto;
+			productReference = 251F5F351BF4530C009FC984 /* CommonCrypto.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		25883F101BF30EF100CCCE54 /* Sugar Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25883F2E1BF30EF100CCCE54 /* Build configuration list for PBXNativeTarget "Sugar Example" */;
@@ -106,10 +327,12 @@
 				25883F0D1BF30EF100CCCE54 /* Sources */,
 				25883F0E1BF30EF100CCCE54 /* Frameworks */,
 				25883F0F1BF30EF100CCCE54 /* Resources */,
+				25883F531BF30F2000CCCE54 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				25883F4D1BF30F2000CCCE54 /* PBXTargetDependency */,
 			);
 			name = "Sugar Example";
 			productName = "Sugar Example";
@@ -134,6 +357,43 @@
 			productReference = 25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		25883F381BF30F2000CCCE54 /* Sugar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25883F501BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "Sugar" */;
+			buildPhases = (
+				25883F341BF30F2000CCCE54 /* Sources */,
+				25883F351BF30F2000CCCE54 /* Frameworks */,
+				25883F361BF30F2000CCCE54 /* Headers */,
+				25883F371BF30F2000CCCE54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sugar;
+			productName = Sugar;
+			productReference = 25883F391BF30F2000CCCE54 /* Sugar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		25883F411BF30F2000CCCE54 /* SugarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25883F541BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "SugarTests" */;
+			buildPhases = (
+				25883F3E1BF30F2000CCCE54 /* Sources */,
+				25883F3F1BF30F2000CCCE54 /* Frameworks */,
+				25883F401BF30F2000CCCE54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25883F451BF30F2000CCCE54 /* PBXTargetDependency */,
+				25883F471BF30F2000CCCE54 /* PBXTargetDependency */,
+			);
+			name = SugarTests;
+			productName = SugarTests;
+			productReference = 25883F421BF30F2000CCCE54 /* SugarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,10 +404,20 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "朱文杰";
 				TargetAttributes = {
+					251F5F341BF4530C009FC984 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					25883F101BF30EF100CCCE54 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 					25883F241BF30EF100CCCE54 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 25883F101BF30EF100CCCE54;
+					};
+					25883F381BF30F2000CCCE54 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					25883F411BF30F2000CCCE54 = {
 						CreatedOnToolsVersion = 7.1.1;
 						TestTargetID = 25883F101BF30EF100CCCE54;
 					};
@@ -168,11 +438,21 @@
 			targets = (
 				25883F101BF30EF100CCCE54 /* Sugar Example */,
 				25883F241BF30EF100CCCE54 /* Sugar ExampleTests */,
+				25883F381BF30F2000CCCE54 /* Sugar */,
+				25883F411BF30F2000CCCE54 /* SugarTests */,
+				251F5F341BF4530C009FC984 /* CommonCrypto */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		251F5F331BF4530C009FC984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25883F0F1BF30EF100CCCE54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,9 +470,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25883F371BF30F2000CCCE54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				251F5F2F1BF452EA009FC984 /* Info.plist in Resources */,
+				251F5F2E1BF452EA009FC984 /* CommonCrypto.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25883F401BF30F2000CCCE54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		251F5F301BF4530C009FC984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25883F0D1BF30EF100CCCE54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -210,6 +513,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25883F341BF30F2000CCCE54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25883F6A1BF30F4700CCCE54 /* String+JSON.swift in Sources */,
+				25883F671BF30F4700CCCE54 /* NSString+Regex.swift in Sources */,
+				25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */,
+				25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */,
+				25883F691BF30F4700CCCE54 /* NSData+Base64.swift in Sources */,
+				25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */,
+				25883F6B1BF30F4700CCCE54 /* NSDictionary+JSON.swift in Sources */,
+				25883F681BF30F4700CCCE54 /* String+Base64.swift in Sources */,
+				25883F631BF30F4700CCCE54 /* String+Range.swift in Sources */,
+				25883F651BF30F4700CCCE54 /* String+URLEncode.swift in Sources */,
+				25883F641BF30F4700CCCE54 /* String+MD5.swift in Sources */,
+				25883F661BF30F4700CCCE54 /* String+Path.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25883F3E1BF30F2000CCCE54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -217,6 +547,21 @@
 			isa = PBXTargetDependency;
 			target = 25883F101BF30EF100CCCE54 /* Sugar Example */;
 			targetProxy = 25883F261BF30EF100CCCE54 /* PBXContainerItemProxy */;
+		};
+		25883F451BF30F2000CCCE54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25883F381BF30F2000CCCE54 /* Sugar */;
+			targetProxy = 25883F441BF30F2000CCCE54 /* PBXContainerItemProxy */;
+		};
+		25883F471BF30F2000CCCE54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25883F101BF30EF100CCCE54 /* Sugar Example */;
+			targetProxy = 25883F461BF30F2000CCCE54 /* PBXContainerItemProxy */;
+		};
+		25883F4D1BF30F2000CCCE54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25883F381BF30F2000CCCE54 /* Sugar */;
+			targetProxy = 25883F4C1BF30F2000CCCE54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -240,6 +585,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		251F5F3B1BF4530C009FC984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
+				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
+				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.CommonCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		251F5F3C1BF4530C009FC984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
+				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
+				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.CommonCrypto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		25883F2C1BF30EF100CCCE54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Sugar Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-Example";
@@ -338,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Sugar Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-Example";
@@ -369,9 +767,80 @@
 			};
 			name = Release;
 		};
+		25883F511BF30F2000CCCE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.Sugar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		25883F521BF30F2000CCCE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.Sugar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		25883F551BF30F2000CCCE54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SugarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.SugarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sugar Example.app/Sugar Example";
+			};
+			name = Debug;
+		};
+		25883F561BF30F2000CCCE54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SugarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.venj.SugarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sugar Example.app/Sugar Example";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		251F5F3A1BF4530C009FC984 /* Build configuration list for PBXNativeTarget "CommonCrypto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				251F5F3B1BF4530C009FC984 /* Debug */,
+				251F5F3C1BF4530C009FC984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -388,6 +857,7 @@
 				25883F301BF30EF100CCCE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25883F311BF30EF100CCCE54 /* Build configuration list for PBXNativeTarget "Sugar ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +866,25 @@
 				25883F331BF30EF100CCCE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25883F501BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "Sugar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25883F511BF30F2000CCCE54 /* Debug */,
+				25883F521BF30F2000CCCE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25883F541BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "SugarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25883F551BF30F2000CCCE54 /* Debug */,
+				25883F561BF30F2000CCCE54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,24 +8,58 @@
 
 import Foundation
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 9.0, OSX 10.11, *)
 public extension String {
-    func vc_stringByAppendingPathComponent(component: String) -> String {
-        return self.vc_stringByAppendingPathComponents([component])
+    // mimic the behavior NSString's method with the same name. Not cross-platform.
+    func stringByAppendingPathComponents(components: [String]) -> String {
+        let componentsCount = components.count
+        var str = self
+        for var i = 0; i < componentsCount - 1; i++ {
+            str = str + "/" + components[i]
+        }
+        return str
     }
 
-    func vc_stringByAppendingPathComponents(components: [String]) -> String {
-        guard var url = NSURL(string: self) else { return self }
+    func stringByAppendingPathComponent(component: String) -> String {
+        return self.stringByAppendingPathComponents([component])
+    }
+
+    // This method returns a str that could create a valid URL
+    func URLStringByAppendingPathComponents(components: [String]) -> String? {
+        guard var url = NSURL(string: self) else { return nil }
         for component in components {
             url = url.URLByAppendingPathComponent(component)
         }
         return url.absoluteString
     }
 
-    func vc_lastPathComponent() -> String {
-        let url = NSURL(fileURLWithPath: self)
-        guard let components = url.pathComponents else { return self }
-        guard components.count > 0 else { return self }
+    func URLStringByAppendingPathComponent(component: String) -> String? {
+        return self.URLStringByAppendingPathComponents([component])
+    }
+
+    var pathComponents: [String]? {
+        guard let url = NSURL(string: self) else { return nil }
+        return url.pathComponents
+    }
+
+    var lastPathComponent: String {
+        guard let url = NSURL(string: self) else { return "" }
+        guard let components = url.pathComponents else { return "" }
         return components.last!
+    }
+}
+
+@available(iOS 7.0, OSX 10.9, *)
+extension String {
+    func strip() -> String {
+        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    }
+
+    func split(separator: String) -> [String] {
+        return self.componentsSeparatedByString(separator)
+    }
+
+    func split(byCharacterSet set: NSCharacterSet) -> [String] {
+        return self.componentsSeparatedByCharactersInSet(set)
     }
 }

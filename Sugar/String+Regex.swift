@@ -1,5 +1,5 @@
 //
-//  NSString+Regex.swift
+//  String+Regex.swift
 //  Video Player
 //
 //  Created by 朱文杰 on 15/11/2.

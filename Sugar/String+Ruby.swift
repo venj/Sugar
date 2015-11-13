@@ -194,5 +194,67 @@ public extension String {
     func endWith(suffix: String) -> Bool {
         return self.hasSuffix(suffix)
     }
-    
+
+    func gsub(pattern:String, replacement:String) -> String? {
+        var result: String? = self
+        result = self.gsub(pattern) { (match) in
+            return ""
+        }
+        return result
+    }
+
+    // Not good... Anyway to get rid of one of the loops?
+    func gsub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
+        var result: String? = self
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
+        let matches = regex.matchesInString(self, options: [], range: NSRange(location:0, length: self.characters.count))
+        var replaces: [(String, String)] = []
+        for match in matches {
+            replaces.append( (self.substringWithRange(self.rangeFromNSRange(match.range)!), invocation(match)) )
+        }
+        for replace in replaces {
+            result = result?.stringByReplacingOccurrencesOfString(replace.0, withString: replace.1)
+        }
+        return result
+    }
+
+    // gsub! not implemented
+    // hash is already implemented by standard library
+    // hex not implemented
+
+    func include(subString: String) -> Bool {
+        return self.containsString(subString)
+    }
+
+    func index(subString: String, isRegex: Bool = false,  offset: Int = 0) -> Int? {
+        let stringLength = self.characters.count
+        let searchOffset = (stringLength + offset) % stringLength
+        let searchRange = Range<Index>(start: startIndex.advancedBy(searchOffset), end: endIndex)
+        let options: NSStringCompareOptions = isRegex ? [.RegularExpressionSearch] : []
+        guard let range = self.rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
+        return startIndex.distanceTo(range.startIndex)
+    }
+
+    mutating func replace(anotherString: String) -> String {
+        self = anotherString
+        return self
+    }
+
+    mutating func insert(index:Int, subString: String) -> String {
+        let offset = index > 0 ? index : self.characters.count + index + 1
+        self.insertContentsOf(subString.characters, at: startIndex.advancedBy(offset))
+        return self
+    }
+
+    // inspect is not implemented
+    // intern is not applicaable
+
+    func length() -> Int {
+        return self.characters.count
+    }
+
+    func lines() -> [String] {
+        return self.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+    }
+
 }

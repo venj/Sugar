@@ -256,5 +256,49 @@ public extension String {
     func lines() -> [String] {
         return self.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
     }
+    
+    func ljust(totalLength:Int, padString: String = " ") -> String {
+        let stringLength = self.characters.count
+        if totalLength <= stringLength {
+            return self
+        }
+        else {
+            var result = self
+            let padSize = padString.characters.count
+            for var i = stringLength, j = 0; i < totalLength; ++i, ++j {
+                if j % padSize == 0 { j = 0 }
+                result += padString[j]
+            }
+            return result
+        }
+    }
+    
+    func lstrip() -> String {
+        var result = self
+        guard let range = self.rangeOfString("^\\s+", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
+        result.replaceRange(range, with: "")
+        return result
+    }
+    
+    mutating func lstripInPlace() {
+        self = self.lstrip()
+    }
+    
+    func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+        let stringLength = self.characters.count
+        let searchOffset = (stringLength + offset) % stringLength
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
+        let matches = regex.matchesInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
+        if matches.count == 0 {
+            return nil
+        }
+        else {
+            let match = matches[0]
+            invocation?(match)
+            return match
+        }
+    }
+        
+    
 
 }

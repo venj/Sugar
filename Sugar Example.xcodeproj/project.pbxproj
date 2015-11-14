@@ -93,6 +93,7 @@
 		251F5F351BF4530C009FC984 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251F5F401BF46A75009FC984 /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swift.swift"; sourceTree = "<group>"; };
 		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
+		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
 		25883F111BF30EF100CCCE54 /* Sugar Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sugar Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F141BF30EF100CCCE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25883F161BF30EF100CCCE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 		25883F081BF30EF100CCCE54 = {
 			isa = PBXGroup;
 			children = (
+				257EA4F41BF6CA4E006E5277 /* Sugar.playground */,
 				251F5F261BF452EA009FC984 /* CommonCrypto */,
 				25883F131BF30EF100CCCE54 /* Sugar Example */,
 				25883F281BF30EF100CCCE54 /* Sugar ExampleTests */,

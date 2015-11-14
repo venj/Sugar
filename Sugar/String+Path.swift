@@ -48,18 +48,3 @@ public extension String {
         return components.last!
     }
 }
-
-@available(iOS 7.0, OSX 10.9, *)
-extension String {
-    func strip() -> String {
-        return self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-    }
-
-    func split(separator: String) -> [String] {
-        return self.componentsSeparatedByString(separator)
-    }
-
-    func split(byCharacterSet set: NSCharacterSet) -> [String] {
-        return self.componentsSeparatedByCharactersInSet(set)
-    }
-}

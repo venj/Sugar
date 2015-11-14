@@ -9,15 +9,17 @@
 import Foundation
 
 //MARK: - String Operators
-infix operator % { associativity left precedence 140 }
+// Because % is a system operator, we use %% instead
+// Not all the functionality of the ruby % operator 
+// are implemented, like dictionary replacement
+infix operator %% { associativity left precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
-func %(lhs: String, rhs: [AnyObject]) {
-    //TODO: Use va_args to implement
-    fatalError("not implemented")
+public func %%(lhs: String, rhs: [CVarArgType]) -> String{
+    return String(format: lhs, arguments: rhs)
 }
 
 @available(iOS 7.0, OSX 10.9, *)
-func *(lhs: String, rhs:Int) -> String {
+public func *(lhs: String, rhs:Int) -> String {
     if rhs < 0 {
         fatalError("String can not multiply by negtive number.")
     }
@@ -34,32 +36,44 @@ func *(lhs: String, rhs:Int) -> String {
 // like ruby did.
 infix operator << { associativity left precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
-func <<<T>(lhs: String, rhs: T) -> String {
+public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(rhs)
 }
 
 infix operator <=> { associativity left precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
-func <=>(lhs: String, rhs: String) -> Int {
+public func <=>(lhs: String, rhs: String) -> Int {
     if lhs > rhs { return 1 }
     else if lhs == rhs { return 0 }
     else { return -1 }
 }
 
-
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
+    // Static function
+    static func UUIDString() -> String {
+        let now = NSDate()
+        let timeStamp = now.timeIntervalSince1970
+        let str = String(timeStamp)
+        let hash = str.md5
+        let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        let dateComponents = calender!.components([.Minute, .Second], fromDate: now)
+        let minute = dateComponents.minute
+        let second = dateComponents.second
+        let selectedIndices = (minute % 32, second % 32)
+        let range = min(selectedIndices.0, selectedIndices.1)...max(selectedIndices.0, selectedIndices.1)
+        return hash[range]
+    }
+
     // Byte related methods are not included currently
     // b(), bytes(), bytesize(), byteslice()
-
-    // Shortcut for capitalizedString property
 
     subscript(index: Int) -> String {
         let startIndex = self.startIndex
         let position = startIndex.advancedBy(index)
         let endIndex = startIndex.advancedBy(index+1)
         let range = Range<Index>(start:position, end:endIndex)
-        return self.substringWithRange(range)
+        return substringWithRange(range)
     }
 
     subscript(intRange: Range<Int>) -> String {
@@ -67,27 +81,31 @@ public extension String {
         let startIndex = stringOrigin.advancedBy(intRange.startIndex)
         let endIndex = startIndex.advancedBy(intRange.endIndex - intRange.startIndex)
         let range = Range<Index>(start:startIndex, end:endIndex)
-        return self.substringWithRange(range)
+        return substringWithRange(range)
     }
     
     subscript(nsRange: NSRange) -> String {
-        let range = self.rangeFromNSRange(nsRange)
+        let range = rangeFromNSRange(nsRange)
         return self[range]
     }
 
+    func asciiOnly() -> Bool {
+        return fastestEncoding == NSASCIIStringEncoding
+    }
+
     func capitalize() -> String {
-        return self.capitalizedString
+        return capitalizedString
     }
 
     func casecomp(rhs:String) -> Int {
-        return self.lowercaseString <=> rhs.lowercaseString
+        return lowercaseString <=> rhs.lowercaseString
     }
 
     func center(size: Int, padString:String = " ") -> String {
         let padSize = padString.characters.count
         if padSize == 0 { fatalError("padString can not be zero length") }
-        let count = self.characters.count
-        if self.characters.count <= size { return self }
+        let count = characters.count
+        if characters.count <= size { return self }
         let leftPadSpace = (size - count) / 2
         let rightPadSpace = leftPadSpace + (size - count) % 2
         if padSize == 1 {
@@ -113,8 +131,8 @@ public extension String {
             return set.characterIsMember(String(char).utf16.first!)
         }
         var result = self
-        let lastCharIndex = self.endIndex.advancedBy(-1)
-        let range = Range<Index>(start:lastCharIndex, end:self.endIndex)
+        let lastCharIndex = endIndex.advancedBy(-1)
+        let range = Range<Index>(start:lastCharIndex, end:endIndex)
         let lastCharString = result.substringWithRange(range)
         if isChar(lastCharString.characters.first!, inSet: NSCharacterSet.newlineCharacterSet()) {
             while (result.hasSuffix(lastCharString)) {
@@ -131,8 +149,8 @@ public extension String {
 
     func chop(inPlace: Bool = false) -> String {
         var result = self
-        let lastCharIndex = self.endIndex.advancedBy(-1)
-        let range = Range<Index>(start:lastCharIndex, end:self.endIndex)
+        let lastCharIndex = endIndex.advancedBy(-1)
+        let range = Range<Index>(start:lastCharIndex, end:endIndex)
         result.removeRange(range)
         return result
     }
@@ -149,24 +167,39 @@ public extension String {
     }
 
     func count() -> Int {
-        return self.characters.count
+        return characters.count
     }
 
     // crypt not implemented
 
-    func delete() -> String {
-        //TODO: Use va_args to implement
-        fatalError("not implemented")
+    func delete(words: [String]) -> String {
+        if words.count == 0 { return self }
+        let charset = NSMutableCharacterSet(charactersInString: words[0])
+        if words.count >= 2 {
+            for var i = 1; i < words.count; ++i {
+                let s = NSCharacterSet(charactersInString: words[i])
+                charset.formIntersectionWithCharacterSet(s)
+            }
+        }
+        let components = componentsSeparatedByCharactersInSet(charset)
+        var result = ""
+        for component in components {
+            result += component
+        }
+        return result
     }
 
-    //TODO: also implement deleteInPlace() here
+    // Not like ruby's delete!, this method does not return.
+    mutating func deleteInPlace(words: [String]) {
+        self = delete(words)
+    }
 
     func downcase() -> String {
-        return self.lowercaseString
+        return lowercaseString
     }
 
     mutating func downcaseInPlace() {
-        self = self.lowercaseString
+        self = lowercaseString
     }
 
     // dump not implemented
@@ -174,37 +207,38 @@ public extension String {
     // each_byte, each_codepoint not implemented
 
     func eachChar( invocation: ((_:Character) -> Void) ) {
-        for char in self.characters {
+        for char in characters {
             invocation(char)
         }
     }
 
     func eachLine( invocation: ((_:String) -> Void) ) {
-        let lines = self.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        let lines = componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         for line in lines {
             invocation(line)
         }
     }
 
     var empty: Bool {
-        return self.isEmpty
+        return isEmpty
     }
 
     func encode(toEncoding: NSStringEncoding, fromEncoding: NSStringEncoding = NSUTF8StringEncoding) -> String? {
-        guard let data = self.dataUsingEncoding(fromEncoding) else { return nil }
+        guard let data = dataUsingEncoding(fromEncoding) else { return nil }
         let result = String(data: data, encoding: toEncoding)
         return result
     }
 
-    // encoding is not applicable; encode!, force_encoding, get_byte not implemented
+    // encoding is not applicable; encode!, get_byte not implemented
+    // force_encoding is not applicable
 
     func endWith(suffix: String) -> Bool {
-        return self.hasSuffix(suffix)
+        return hasSuffix(suffix)
     }
 
     func gsub(pattern:String, replacement:String) -> String? {
         var result: String? = self
-        result = self.gsub(pattern) { (match) in
+        result = gsub(pattern) { (match) in
             return ""
         }
         return result
@@ -214,7 +248,7 @@ public extension String {
     func gsub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
         var result: String? = self
         guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
-        let matches = regex.matchesInString(self, options: [], range: NSRange(location:0, length: self.characters.count))
+        let matches = regex.matchesInString(self, options: [], range: NSRange(location:0, length: characters.count))
         var replaces: [(String, String)] = []
         for match in matches {
             replaces.append( (self[match.range], invocation(match)) )
@@ -230,22 +264,22 @@ public extension String {
     // hex not implemented
 
     func include(subString: String) -> Bool {
-        return self.containsString(subString)
+        return containsString(subString)
     }
 
     func index(subString: String, isRegex: Bool = false, isReverse: Bool = false,  offset: Int = 0) -> Int? {
-        let stringLength = self.characters.count
+        let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
         let searchRange = Range<Index>(start: startIndex.advancedBy(searchOffset), end: endIndex)
         var options: NSStringCompareOptions = isRegex ? [.RegularExpressionSearch] : []
         if isReverse { options.insert(.BackwardsSearch) }
-        guard let range = self.rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
+        guard let range = rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
         return startIndex.distanceTo(range.startIndex)
     }
 
     mutating func insert(index:Int, subString: String) -> String {
-        let offset = index > 0 ? index : self.characters.count + index + 1
-        self.insertContentsOf(subString.characters, at: startIndex.advancedBy(offset))
+        let offset = index > 0 ? index : characters.count + index + 1
+        insertContentsOf(subString.characters, at: startIndex.advancedBy(offset))
         return self
     }
 
@@ -253,15 +287,15 @@ public extension String {
     // intern is not applicaable
 
     func length() -> Int {
-        return self.characters.count
+        return characters.count
     }
 
     func lines() -> [String] {
-        return self.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+        return componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
     }
     
     func ljust(totalLength:Int, padString: String = " ") -> String {
-        let stringLength = self.characters.count
+        let stringLength = characters.count
         if totalLength <= stringLength {
             return self
         }
@@ -278,18 +312,18 @@ public extension String {
     
     func lstrip() -> String {
         var result = self
-        guard let range = self.rangeOfString("^\\s+", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
+        guard let range = rangeOfString("^\\s+", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
         result.replaceRange(range, with: "")
         return result
     }
     
     // Not like ruby, this method will not return
     mutating func lstripInPlace() {
-        self = self.lstrip()
+        self = lstrip()
     }
     
     func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
-        let stringLength = self.characters.count
+        let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
         guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
         return regex.firstMatchInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
@@ -307,28 +341,28 @@ public extension String {
     }
     
     func reverse() -> String {
-        return String(self.characters.reverse())
+        return String(characters.reverse())
     }
     
     mutating func reverseInPlace() -> String {
-        self = self.reverse()
+        self = reverse()
         return self
     }
     
     // The implementation is done in index()
     func rindex(subString: String, isRegex: Bool = false, offset: Int = 0) -> Int? {
-        return self.index(subString, isRegex: isRegex, isReverse:true, offset: offset)
+        return index(subString, isRegex: isRegex, isReverse:true, offset: offset)
     }
     
     func rjust(totalLength: Int, padString: String = " ") -> String {
-        let stringLength = self.characters.count
+        let stringLength = characters.count
         if totalLength <= stringLength {
             return self
         }
         else {
             var result = ""
             let padSize = padString.characters.count
-            let stringLength = self.characters.count
+            let stringLength = characters.count
             for var i = 0, j = 0; i < totalLength - stringLength; ++i, ++j {
                 if j % padSize == 0 { j = 0 }
                 result += padString[j]
@@ -338,7 +372,6 @@ public extension String {
         }
     }
     
-    
     func rpartition(separator: String, isRegex: Bool = false) -> [String]? {
         //TODO: implement later.
         fatalError("not implemented")
@@ -346,19 +379,19 @@ public extension String {
     
     func rstrip() -> String {
         var result = self
-        guard let range = self.rangeOfString("\\s+$", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
+        guard let range = rangeOfString("\\s+$", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
         result.replaceRange(range, with: "")
         return result
     }
     
     // Not like ruby, this method will not return
     mutating func rstripInPlace() {
-        self = self.rstrip()
+        self = rstrip()
     }
     
     //FIXME: ruby can use a block with variable amount of arguments. Maybe we can pass an array of matched strings or range?
     func scan(pattern:String, invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
-        let stringLength = self.characters.count
+        let stringLength = characters.count
         guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
         let matches = regex.matchesInString(self, options: [], range: NSRange(location: 0, length: stringLength))
         if matches.count == 0 {
@@ -372,4 +405,80 @@ public extension String {
         }
     }
 
+    // scrub, scrub!, setByte not implemented
+    func size() -> Int {
+        return characters.count
+    }
+
+    // slice is not implemented, maybe implemented later, part of the functionalities are implemented by subsctipt
+    
+    // the limit argument is not implemented.
+    // now split() and split("") mimic ruby behavior, not componentsSeparatedByString behavior.
+    func split(seperator: String? = nil, isRegex: Bool = false) -> [String] {
+        if seperator == nil { return [self] }
+        if isRegex {
+            let __UUID = String.UUIDString()
+            let tmpString = stringByReplacingOccurrencesOfString(seperator!, withString: __UUID, options: [.RegularExpressionSearch], range: nil)
+            return tmpString.componentsSeparatedByString(__UUID)
+        }
+        else {
+            if seperator == "" {
+                var result: [String] = []
+                for char in self.characters {
+                    result.append(String(char))
+                }
+                return result
+            }
+            else {
+                return componentsSeparatedByString(seperator!)
+            }
+        }
+    }
+
+    func squeeze() -> String {
+        return gsub("\\s+", replacement: " ")!
+    }
+
+    mutating func squeezeInPlace() -> String {
+        self = squeeze()
+        return self
+    }
+
+    func startWith(prefix: String) -> Bool {
+        return hasPrefix(prefix)
+    }
+
+    // white space and new line chars are all stripped
+    // note: lstrip and rstrip are not trim newline chars
+    // this behavior may change later
+    func strip() -> String {
+        return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+    }
+
+    mutating func stripInPlace() -> String {
+        self = strip()
+        return self
+    }
+
+    //TODO: sub() subInPlace()
+
+    // succ, succ!, sum to_xxx unpack upto not implemented
+
+    //TODO: swapcase(), swapcaseInPlace()
+
+    //  tr and tr! not implemented. Maybe add later
+
+    func upcase() -> String {
+        return uppercaseString
+    }
+
+    mutating func upcaseInPlace() {
+        self = uppercaseString
+    }
+
+    // not functions the same as the ruby's valid_encoding?
+    func validEncoding(encoding: NSStringEncoding) -> Bool {
+        guard let _ = dataUsingEncoding(encoding, allowLossyConversion: false) else { return false }
+        return true
+    }
 }

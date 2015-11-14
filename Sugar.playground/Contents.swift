@@ -14,8 +14,7 @@ vbase.lstripInPlace()
 base.match("H", offset: 9)?.range.location
 
 base.match("H") {
-    let capture1 = base.substringWithRange(base.rangeFromNSRange($0.range)!)
-    let capture2 = base[$0.range]
+    let capture = base[$0.range]
 }
 
 base.ljust(20)
@@ -38,4 +37,25 @@ let subRange = Range<String.Index>(start: myString.startIndex, end: endIndex)
 
 let testString = "test"
 let nsrange = NSRange(location:0, length:500)
-testString.rangeFromNSRange(nsrange)
+testString[nsrange]
+
+myString.split("</[^>]+?>", isRegex: true)
+
+myString.squeeze()
+vbase.squeezeInPlace()
+vbase = "H ello   Wor  l d"
+vbase.squeezeInPlace()
+
+vbase.validEncoding(NSUTF8StringEncoding)
+vbase.fastestEncoding
+
+"Size: %d" %% [12]
+
+"good".split("")
+
+let str = "The big brown fox jumps over the lazy dog."
+
+str.delete(["hello", "old"])
+
+
+

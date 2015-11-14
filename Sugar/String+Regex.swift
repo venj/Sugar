@@ -30,7 +30,7 @@ public extension String {
             var subResult: [String] = []
             for var i = 0; i < match.numberOfRanges; ++i {
                 let nsRange = match.rangeAtIndex(i)
-                subResult.append(self.substringWithRange(self.rangeFromNSRange(nsRange)!))
+                subResult.append(self[nsRange])
             }
             if !subResult.isEmpty { result.append(subResult) }
         }

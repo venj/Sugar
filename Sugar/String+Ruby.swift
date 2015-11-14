@@ -13,6 +13,7 @@ infix operator % { associativity left precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
 func %(lhs: String, rhs: [AnyObject]) {
     //TODO: Use va_args to implement
+    fatalError("not implemented")
 }
 
 @available(iOS 7.0, OSX 10.9, *)
@@ -67,6 +68,11 @@ public extension String {
         let endIndex = startIndex.advancedBy(intRange.endIndex - intRange.startIndex)
         let range = Range<Index>(start:startIndex, end:endIndex)
         return self.substringWithRange(range)
+    }
+    
+    subscript(nsRange: NSRange) -> String {
+        let range = self.rangeFromNSRange(nsRange)
+        return self[range]
     }
 
     func capitalize() -> String {
@@ -148,8 +154,9 @@ public extension String {
 
     // crypt not implemented
 
-    func delete() {
+    func delete() -> String {
         //TODO: Use va_args to implement
+        fatalError("not implemented")
     }
 
     //TODO: also implement deleteInPlace() here
@@ -210,7 +217,7 @@ public extension String {
         let matches = regex.matchesInString(self, options: [], range: NSRange(location:0, length: self.characters.count))
         var replaces: [(String, String)] = []
         for match in matches {
-            replaces.append( (self.substringWithRange(self.rangeFromNSRange(match.range)!), invocation(match)) )
+            replaces.append( (self[match.range], invocation(match)) )
         }
         for replace in replaces {
             result = result?.stringByReplacingOccurrencesOfString(replace.0, withString: replace.1)
@@ -226,18 +233,14 @@ public extension String {
         return self.containsString(subString)
     }
 
-    func index(subString: String, isRegex: Bool = false,  offset: Int = 0) -> Int? {
+    func index(subString: String, isRegex: Bool = false, isReverse: Bool = false,  offset: Int = 0) -> Int? {
         let stringLength = self.characters.count
         let searchOffset = (stringLength + offset) % stringLength
         let searchRange = Range<Index>(start: startIndex.advancedBy(searchOffset), end: endIndex)
-        let options: NSStringCompareOptions = isRegex ? [.RegularExpressionSearch] : []
+        var options: NSStringCompareOptions = isRegex ? [.RegularExpressionSearch] : []
+        if isReverse { options.insert(.BackwardsSearch) }
         guard let range = self.rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
         return startIndex.distanceTo(range.startIndex)
-    }
-
-    mutating func replace(anotherString: String) -> String {
-        self = anotherString
-        return self
     }
 
     mutating func insert(index:Int, subString: String) -> String {
@@ -280,6 +283,7 @@ public extension String {
         return result
     }
     
+    // Not like ruby, this method will not return
     mutating func lstripInPlace() {
         self = self.lstrip()
     }
@@ -288,17 +292,84 @@ public extension String {
         let stringLength = self.characters.count
         let searchOffset = (stringLength + offset) % stringLength
         guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
-        let matches = regex.matchesInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
+        return regex.firstMatchInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
+    }
+        
+    // next/succ, oct, ord not implemented
+    
+    func prepend(prefix: String) -> String {
+        return prefix + self
+    }
+    
+    mutating func replace(anotherString: String) -> String {
+        self = anotherString
+        return self
+    }
+    
+    func reverse() -> String {
+        return String(self.characters.reverse())
+    }
+    
+    mutating func reverseInPlace() -> String {
+        self = self.reverse()
+        return self
+    }
+    
+    // The implementation is done in index()
+    func rindex(subString: String, isRegex: Bool = false, offset: Int = 0) -> Int? {
+        return self.index(subString, isRegex: isRegex, isReverse:true, offset: offset)
+    }
+    
+    func rjust(totalLength: Int, padString: String = " ") -> String {
+        let stringLength = self.characters.count
+        if totalLength <= stringLength {
+            return self
+        }
+        else {
+            var result = ""
+            let padSize = padString.characters.count
+            let stringLength = self.characters.count
+            for var i = 0, j = 0; i < totalLength - stringLength; ++i, ++j {
+                if j % padSize == 0 { j = 0 }
+                result += padString[j]
+            }
+            result += self
+            return result
+        }
+    }
+    
+    
+    func rpartition(separator: String, isRegex: Bool = false) -> [String]? {
+        //TODO: implement later.
+        fatalError("not implemented")
+    }
+    
+    func rstrip() -> String {
+        var result = self
+        guard let range = self.rangeOfString("\\s+$", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
+        result.replaceRange(range, with: "")
+        return result
+    }
+    
+    // Not like ruby, this method will not return
+    mutating func rstripInPlace() {
+        self = self.rstrip()
+    }
+    
+    //FIXME: ruby can use a block with variable amount of arguments. Maybe we can pass an array of matched strings or range?
+    func scan(pattern:String, invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
+        let stringLength = self.characters.count
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
+        let matches = regex.matchesInString(self, options: [], range: NSRange(location: 0, length: stringLength))
         if matches.count == 0 {
             return nil
         }
         else {
-            let match = matches[0]
-            invocation?(match)
-            return match
+            for match in matches {
+                invocation?(match)
+            }
+            return matches
         }
     }
-        
-    
 
 }

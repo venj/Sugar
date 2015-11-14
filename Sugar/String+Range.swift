@@ -10,13 +10,17 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
-    func rangeFromNSRange(range : NSRange) -> Range<String.Index>? {
+    func rangeFromNSRange(range : NSRange) -> Range<String.Index> {
         let from16 = utf16.startIndex.advancedBy(range.location, limit: utf16.endIndex)
         let to16 = from16.advancedBy(range.length, limit: utf16.endIndex)
         if let from = String.Index(from16, within: self),
             let to = String.Index(to16, within: self) {
                 return from ..< to
         }
-        return nil
+        fatalError("Range conversion error")
+    }
+    
+    func substringWithNSRange(nsRange: NSRange) -> String {
+        return self.substringWithRange(rangeFromNSRange(nsRange))
     }
 }

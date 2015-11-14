@@ -3,7 +3,7 @@
 import UIKit
 import Sugar
 
-let base = "        Hello"
+let base = "Hello"
 base.ljust(20, padString: "abc")
 
 base.lstrip()
@@ -15,5 +15,27 @@ base.match("H", offset: 9)?.range.location
 
 base.match("H") {
     let capture1 = base.substringWithRange(base.rangeFromNSRange($0.range)!)
-    let capture2 = base[base.rangeFromNSRange($0.range)!]
+    let capture2 = base[$0.range]
 }
+
+base.ljust(20)
+base.ljust(20, padString: "abc")
+base.rjust(20)
+base.rjust(20, padString: "abc")
+
+let myString = "<li><a href=\"https://google.com\">Google</a></li><li><a href=\"https://apple.com\">Apple</a></li>"
+
+var result = ""
+myString.scan("<a href=\"([^\"]+?)\">([^<]+?)</a>") { match in
+    let keyRange = match[1]
+    let valueRange = match[2]
+    result = result + myString[keyRange] + ", "  + myString[valueRange] + "; "
+}
+result
+
+let endIndex = myString.startIndex.advancedBy(2)
+let subRange = Range<String.Index>(start: myString.startIndex, end: endIndex)
+
+let testString = "test"
+let nsrange = NSRange(location:0, length:500)
+testString.rangeFromNSRange(nsrange)

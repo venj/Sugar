@@ -239,7 +239,7 @@ public extension String {
     func gsub(pattern:String, replacement:String) -> String? {
         var result: String? = self
         result = gsub(pattern) { (match) in
-            return ""
+            return replacement
         }
         return result
     }
@@ -460,7 +460,22 @@ public extension String {
         return self
     }
 
-    //TODO: sub() subInPlace()
+    func sub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
+        let result: String
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
+        guard let match = regex.firstMatchInString(self, options: [], range: NSRange(location:0, length: characters.count)) else { return self }
+        result = stringByReplacingOccurrencesOfString(self[match.range], withString: invocation(match))
+        return result
+    }
+
+    func sub(pattern:String, replacement:String) -> String? {
+        var result: String? = self
+        result = sub(pattern) { (match) in
+            return replacement
+        }
+        return result
+    }
+
 
     // succ, succ!, sum to_xxx unpack upto not implemented
 

@@ -50,12 +50,16 @@ vbase.validEncoding(NSUTF8StringEncoding)
 vbase.fastestEncoding
 
 "Size: %d" %% [12]
-
+ 
 "good".split("")
 
-let str = "The big brown fox jumps over the lazy dog."
+let str1 = "The big brown fox jumps over the lazy dog."
 
-str.delete(["hello", "old"])
-
-
+str1.delete(["hello", "old"])
+let str = "Hello, Hello, Hello"
+str.partition("ll")
+str.rpartition("ll")
+str.partition("l+", isRegex: true)
+str.index("l+", isRegex: true)
+str.rindex("ll")
 

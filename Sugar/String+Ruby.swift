@@ -267,12 +267,13 @@ public extension String {
         return containsString(subString)
     }
 
+    // FIXME: Anyway to make regex and reverse search working together?
     func index(subString: String, isRegex: Bool = false, isReverse: Bool = false,  offset: Int = 0) -> Int? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
         let searchRange = Range<Index>(start: startIndex.advancedBy(searchOffset), end: endIndex)
-        var options: NSStringCompareOptions = isRegex ? [.RegularExpressionSearch] : []
-        if isReverse { options.insert(.BackwardsSearch) }
+        var options: NSStringCompareOptions = isReverse ? [.BackwardsSearch] : []
+        if isRegex { options = [.RegularExpressionSearch] }
         guard let range = rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
         return startIndex.distanceTo(range.startIndex)
     }
@@ -325,11 +326,20 @@ public extension String {
     func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return nil }
         return regex.firstMatchInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
     }
         
     // next/succ, oct, ord not implemented
+
+    func partition(pattern: String, isRegex: Bool = false, isReverse: Bool = false) -> [String] {
+        var options: NSStringCompareOptions = isReverse ? [.BackwardsSearch] : []
+        if isRegex { options = [.RegularExpressionSearch] }
+        guard let range = rangeOfString(pattern, options: options, range: nil, locale: nil) else { return ["", self,""] }
+        let rangeBefore = Range<Index>(start:self.startIndex, end:range.startIndex)
+        let rangeAfter = Range<Index>(start:range.endIndex, end:self.endIndex)
+        return [self[rangeBefore], self[range], self[rangeAfter]]
+    }
     
     func prepend(prefix: String) -> String {
         return prefix + self
@@ -350,8 +360,11 @@ public extension String {
     }
     
     // The implementation is done in index()
-    func rindex(subString: String, isRegex: Bool = false, offset: Int = 0) -> Int? {
-        return index(subString, isRegex: isRegex, isReverse:true, offset: offset)
+    // Due we use rangeOfString for implementation, 
+    // currently regex search from backword is not supported
+    // so we disable it, for now.
+    func rindex(subString: String, offset: Int = 0) -> Int? {  //FIXME: isRegex: Bool = false, removed from method signature
+        return index(subString, isRegex: false, isReverse:true, offset: offset)
     }
     
     func rjust(totalLength: Int, padString: String = " ") -> String {
@@ -371,10 +384,10 @@ public extension String {
             return result
         }
     }
-    
-    func rpartition(separator: String, isRegex: Bool = false) -> [String]? {
-        //TODO: implement later.
-        fatalError("not implemented")
+
+    // Same reason as rindex
+    func rpartition(pattern: String) -> [String] {//FIXME: isRegex: Bool = false, removed from method signature
+        return partition(pattern, isRegex: false, isReverse: true)
     }
     
     func rstrip() -> String {

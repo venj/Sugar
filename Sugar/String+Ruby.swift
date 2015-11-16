@@ -39,14 +39,6 @@ public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(rhs)
 }
 
-infix operator <=> { associativity none precedence 130 }
-@available(iOS 7.0, OSX 10.9, *)
-public func <=>(lhs: String, rhs: String) -> Int {
-    if lhs > rhs { return 1 }
-    else if lhs == rhs { return 0 }
-    else { return -1 }
-}
-
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
     // Static function
@@ -165,7 +157,7 @@ public extension String {
         return self << obj
     }
 
-    func count() -> Int {
+    var count: Int {
         return characters.count
     }
 
@@ -246,8 +238,7 @@ public extension String {
     // Not good... Anyway to get rid of one of the loops?
     func gsub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
         var result: String? = self
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
-        let matches = regex.matchesInString(self, options: [], range: NSRange(location:0, length: characters.count))
+        guard let matches = allMatches(pattern)  else { return nil }
         var replaces: [(String, String)] = []
         for match in matches {
             replaces.append( (self[match.range], invocation(match)) )
@@ -321,14 +312,26 @@ public extension String {
     mutating func lstripInPlace() {
         self = lstrip()
     }
-    
-    func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+
+    func lastMatch(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+        let m = self.allMatches(pattern, offset: offset)?.last
+        if m != nil { invocation?(m!) }
+        return m
+    }
+
+    func allMatches(pattern:String, offset: Int = 0) -> [NSTextCheckingResult]? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return nil }
-        return regex.firstMatchInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
+        return regex.matchesInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
     }
-        
+    
+    func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+        let m = self.allMatches(pattern, offset: offset)?.first
+        if m != nil { invocation?(m!) }
+        return m
+    }
+
     // next/succ, oct, ord not implemented
 
     func partition(pattern: String, isRegex: Bool = false, isReverse: Bool = false) -> [String] {
@@ -400,12 +403,9 @@ public extension String {
     mutating func rstripInPlace() {
         self = rstrip()
     }
-    
-    //FIXME: ruby can use a block with variable amount of arguments. Maybe we can pass an array of matched strings or range?
+
     func scan(pattern:String, invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
-        let stringLength = characters.count
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
-        let matches = regex.matchesInString(self, options: [], range: NSRange(location: 0, length: stringLength))
+        guard let matches = allMatches(pattern) else { return nil }
         if matches.count == 0 {
             return nil
         }
@@ -474,8 +474,7 @@ public extension String {
 
     func sub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
         let result: String
-        guard let regex = try? NSRegularExpression(pattern: pattern, options: .CaseInsensitive) else { return nil }
-        guard let match = regex.firstMatchInString(self, options: [], range: NSRange(location:0, length: characters.count)) else { return self }
+        guard let match = match(pattern) else { return self }
         result = stringByReplacingOccurrencesOfString(self[match.range], withString: invocation(match))
         return result
     }

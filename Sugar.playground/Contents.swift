@@ -72,5 +72,7 @@ str.rindex("ll")
 27.lcm(9)
 27.lcm(15)
 
+"abc" <=> "bcd"
+
 
 

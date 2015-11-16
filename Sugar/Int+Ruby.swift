@@ -6,8 +6,6 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
-//import Foundation
-
 infix operator ** { associativity left precedence 160 }
 @available(iOS 7.0, OSX 10.9, *)
 public func **(lhs: Int, rhs: Int) -> Int {

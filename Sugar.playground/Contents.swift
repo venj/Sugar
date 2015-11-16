@@ -63,3 +63,14 @@ str.partition("l+", isRegex: true)
 str.index("l+", isRegex: true)
 str.rindex("ll")
 
+2 * 3
+2 ** 3
+5.upTo(9) { print($0) }
+5.gcd(2)
+27.gcd(9)
+27.gcd(15)
+27.lcm(9)
+27.lcm(15)
+
+
+

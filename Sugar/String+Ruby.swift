@@ -12,7 +12,7 @@ import Foundation
 // Because % is a system operator, we use %% instead
 // Not all the functionality of the ruby % operator 
 // are implemented, like dictionary replacement
-infix operator %% { associativity left precedence 140 }
+infix operator %% { associativity none precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
 public func %%(lhs: String, rhs: [CVarArgType]) -> String{
     return String(format: lhs, arguments: rhs)
@@ -34,13 +34,12 @@ public func *(lhs: String, rhs:Int) -> String {
 // Since manipulate with unicode point is difficult, we
 // are not convert Int to char while using this operator
 // like ruby did.
-infix operator << { associativity left precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
 public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(rhs)
 }
 
-infix operator <=> { associativity left precedence 140 }
+infix operator <=> { associativity none precedence 130 }
 @available(iOS 7.0, OSX 10.9, *)
 public func <=>(lhs: String, rhs: String) -> Int {
     if lhs > rhs { return 1 }

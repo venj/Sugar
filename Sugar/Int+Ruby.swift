@@ -21,7 +21,7 @@ public extension Int {
         return self >= 0 ? self : -self
     }
 
-    func downTo(to: Int, invocation:((index: Int) -> Void)) {
+    func downTo(to: Int, _ invocation:((index: Int) -> Void)) {
         if to >= self {
             invocation(index: self)
         }
@@ -77,7 +77,7 @@ public extension Int {
         }
     }
 
-    func upTo(to: Int, invocation:((index: Int) -> Void)) {
+    func upTo(to: Int, _ invocation:((index: Int) -> Void)) {
         if to <= self {
             invocation(index: self)
         }

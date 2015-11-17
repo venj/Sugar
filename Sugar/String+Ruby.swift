@@ -197,13 +197,13 @@ public extension String {
 
     // each_byte, each_codepoint not implemented
 
-    func eachChar( invocation: ((_:Character) -> Void) ) {
+    func eachChar(invocation: ((_:Character) -> Void)) {
         for char in characters {
             invocation(char)
         }
     }
 
-    func eachLine( invocation: ((_:String) -> Void) ) {
+    func eachLine(invocation: ((_:String) -> Void)) {
         let lines = componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         for line in lines {
             invocation(line)
@@ -236,7 +236,7 @@ public extension String {
     }
 
     // Not good... Anyway to get rid of one of the loops?
-    func gsub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
+    func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
         var result: String? = self
         guard let matches = allMatches(pattern)  else { return nil }
         var replaces: [(String, String)] = []
@@ -313,7 +313,7 @@ public extension String {
         self = lstrip()
     }
 
-    func lastMatch(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+    func lastMatch(pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.last
         if m != nil { invocation?(m!) }
         return m
@@ -326,7 +326,7 @@ public extension String {
         return regex.matchesInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
     }
     
-    func match(pattern:String, offset: Int = 0, invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+    func match(pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.first
         if m != nil { invocation?(m!) }
         return m
@@ -404,7 +404,7 @@ public extension String {
         self = rstrip()
     }
 
-    func scan(pattern:String, invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
+    func scan(pattern:String, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
         guard let matches = allMatches(pattern) else { return nil }
         if matches.count == 0 {
             return nil
@@ -472,7 +472,7 @@ public extension String {
         return self
     }
 
-    func sub(pattern:String, invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
+    func sub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
         let result: String
         guard let match = match(pattern) else { return self }
         result = stringByReplacingOccurrencesOfString(self[match.range], withString: invocation(match))

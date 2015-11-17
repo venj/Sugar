@@ -15,7 +15,7 @@ public extension Dictionary {
 
     // Since Swift is strict-typed language, not like ruby's method with the same name,
     // invocation does not return, but we can still do something with the key while not found
-    mutating func delete(key: Key, invocation:((Key) -> Void)) -> Value? {
+    mutating func delete(key: Key, _ invocation:((Key) -> Void)) -> Value? {
         guard let result = removeValueForKey(key) else { invocation(key); return nil }
         return result
     }
@@ -51,7 +51,7 @@ public extension Dictionary {
         }
     }
 
-    func fetch(key: Key, invocation:((Key) -> Void)) -> Value? {
+    func fetch(key: Key, _ invocation:((Key) -> Void)) -> Value? {
         guard let result = self[key] else { invocation(key); return nil }
         return result
     }
@@ -90,7 +90,7 @@ public extension Dictionary {
         return hasKey(key)
     }
 
-    func merge(dict: [Key: Value], invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+    func merge(dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
         var result: [Key: Value] = self
         var dictGenerator = dict.generate()
         while let (key, newValue) = dictGenerator.next() {
@@ -101,7 +101,7 @@ public extension Dictionary {
         return result
     }
 
-    mutating func mergeInPlace(dict: [Key: Value], invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+    mutating func mergeInPlace(dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
         var dictGenerator = dict.generate()
         while let (key, newValue) = dictGenerator.next() {
             guard let oldValue = self[key] else { self[key] = newValue; continue }
@@ -177,8 +177,8 @@ public extension Dictionary {
     }
 
     // update and mergeInPlace are the same
-    mutating func update(dict: [Key: Value], invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
-        return mergeInPlace(dict, invocation: invocation)
+    mutating func update(dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+        return mergeInPlace(dict, invocation)
     }
 
 }

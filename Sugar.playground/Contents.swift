@@ -95,6 +95,25 @@ dict1.mergeInPlace(dict2) { (key, oldValue, value) -> Int in
 }
 dict1
 
+let arr = [1,2,3,4,5,6,7,8,9]
+arr.at(-1)
+arr.at(-9)
+arr.at(-10)
+arr.at(8)
+arr.at(9)
+
+var a = ["a", "b", "c"]
+
+a.cycle(3) {
+    print($0)
+}
+
+
+let r = a.anyIf("b", ==)
+r
+a.deleteIf { $0 == "b" }
+a
+
 
 
 

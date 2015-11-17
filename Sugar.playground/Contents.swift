@@ -108,6 +108,11 @@ a.cycle(3) {
     print($0)
 }
 
+a.rotate(2)
+a.rotate(-2)
+a
+
+
 
 let r = a.anyIf("b", ==)
 r

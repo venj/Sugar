@@ -22,7 +22,7 @@ func +<Element>(lhs: Array<Element>, rhs: Array<Element>) -> [Element] {
     return result
 }
 
-// Anyway to implement & and - ?
+// Anyway to implement & or - or | ?
 func <<<Element>(lhs:Array<Element>, rhs: Element) -> [Element] {
     var result: [Element] = lhs
     result.append(rhs)
@@ -30,7 +30,6 @@ func <<<Element>(lhs:Array<Element>, rhs: Element) -> [Element] {
 }
 
 public extension Array {
-
     /*
         any is not applicable to generic Array
         You can use the anyIf method to reach the same function:
@@ -95,7 +94,6 @@ public extension Array {
     delete not applicable to generic array use deleteIf, like anyIf:
     
         a.deleteIf { $0 == "b" }
-
     */
 
     mutating func deleteAt(index: Int) -> Element? {
@@ -159,4 +157,106 @@ public extension Array {
         return nil
     }
 
+    func index(invocation:((Element) -> Bool)) -> Int? {
+        return findIndex(invocation)
+    }
+
+    mutating func keepIf(invocation:((Element) -> Bool)) {
+        for var i = 0; i < count; i++ {
+            if !invocation(self[i]) {
+                removeAtIndex(i)
+            }
+        }
+    }
+
+    var length: Int {
+        return count
+    }
+
+    mutating func pop(n: Int) -> [Element] {
+        var result: [Element] = []
+        n.times { _ in
+            if let e = self.popLast() {
+                result.append(e)
+            }
+        }
+        return result
+    }
+
+    mutating func prepend(e: Element) {
+        self.insert(e, atIndex: 0)
+    }
+
+    // push is not applicable to generic Array
+
+    mutating func push(e: Element) {
+        append(e)
+    }
+
+    mutating func replace(arr: [Element]) {
+        self = arr
+    }
+
+    func rIndex(invocation:((Element) -> Bool)) -> Int? {
+        for var i = count - 1; i <= 0; --i {
+            if invocation(self[i]) { return i }
+        }
+        return nil
+    }
+
+    func rotate(n: Int = 1) -> [Element] {
+        var result = self
+        if n >= 0 {
+            n.times { _ in
+                let first = result.removeFirst()
+                result.append(first)
+            }
+        }
+        else {
+            (-n).times { _ in
+                let last = result.removeLast()
+                result.insert(last, atIndex: 0)
+            }
+        }
+        return result
+    }
+
+    //TODO: sample(n) implement later while random number extension done
+    func select(invocation:((Element) -> Bool)) -> [Element] {
+        var result: [Element] = []
+        var generator = self.generate()
+        while let e = generator.next() {
+            if invocation(e) {
+                result.append(e)
+            }
+        }
+        return result
+    }
+
+    mutating func selectInPlace(invocation:((Element) -> Bool)) {
+        keepIf(invocation)
+    }
+
+    mutating func shift(n: Int) -> Element? {
+        return removeFirst()
+    }
+
+    // shuffle, shuffle! implement later
+
+    var size: Int {
+        return count
+    }
+
+    // slice, sort
+
+    // take is same to fetch() and at() not like ruby
+    func take(index: Int) -> Element? {
+        return fetch(index)
+    }
+
+    func takeWhile(invocation:((Element) -> Bool)) -> [Element] {
+        return select(invocation)
+    }
+
+    // transpose, uniq uniq!, unshift, value_at, zip not implemented
 }

@@ -74,5 +74,28 @@ str.rindex("ll")
 
 "abc" <=> "bcd"
 
+let dict = ["name" : "John Doe", "sex" : "Male", "Age": 30, "Nationality": "U.S."]
+dict.each { (key, value) in
+    print("Key: \(key), value: \(value)")
+}
+
+dict.fetch("not exist") {
+    print("\($0) not found")
+}
+
+var dict1 = ["a": 100, "b": 200]
+let dict2 = ["b": 254, "c": 300]
+
+dict1.merge(dict2)
+dict1.merge(dict2) { (key, oldValue, value) -> Int in
+    return value - oldValue
+}
+dict1.mergeInPlace(dict2) { (key, oldValue, value) -> Int in
+    return value - oldValue
+}
+dict1
+
+
+
 
 

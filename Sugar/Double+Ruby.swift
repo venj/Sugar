@@ -7,8 +7,6 @@
 //
 
 @available(iOS 7.0, OSX 10.9, *)
-
-@available(iOS 7.0, OSX 10.9, *)
 public func **(lhs: Double, rhs: Int) -> Double {
     var result = 1.0
     rhs.times { _ in result *= lhs }

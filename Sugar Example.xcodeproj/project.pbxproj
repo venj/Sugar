@@ -16,6 +16,7 @@
 		2547BC0B1BF9B12900665E1C /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
 		2547BC0D1BF9B2DC00665E1C /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
 		2547BC0F1BF9B38C00665E1C /* RegularExpression+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0E1BF9B38C00665E1C /* RegularExpression+Ruby.swift */; };
+		2547BC131BFABAA700665E1C /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
 		256A486D1BF58B4900926D90 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
 		257EA4F61BF73603006E5277 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
 		25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F141BF30EF100CCCE54 /* AppDelegate.swift */; };
@@ -103,6 +104,7 @@
 		2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Ruby.swift"; sourceTree = "<group>"; };
 		2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Ruby.swift"; sourceTree = "<group>"; };
 		2547BC0E1BF9B38C00665E1C /* RegularExpression+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Ruby.swift"; sourceTree = "<group>"; };
+		2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby.swift"; sourceTree = "<group>"; };
 		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
 		257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextCheckingResult+Swift.swift"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */,
 				2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */,
 				2547BC0E1BF9B38C00665E1C /* RegularExpression+Ruby.swift */,
+				2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */,
 			);
 			name = "Ruby Core Style Extension";
 			sourceTree = "<group>";
@@ -545,6 +548,7 @@
 				25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */,
 				25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */,
 				25883F691BF30F4700CCCE54 /* NSData+Base64.swift in Sources */,
+				2547BC131BFABAA700665E1C /* Dictionary+Ruby.swift in Sources */,
 				25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */,
 				2547BC091BF9AFDD00665E1C /* Double+Ruby.swift in Sources */,
 				2547BC0F1BF9B38C00665E1C /* RegularExpression+Ruby.swift in Sources */,

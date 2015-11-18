@@ -62,13 +62,13 @@ public extension Dictionary {
         return self[key] != nil ? true : false
     }
 
-    // hasValue ?
+    // hasValue not applicable to generic dictionary, implemented in `Dictionary where Value: Equatable`
 
     func include(key: Key) -> Bool {
         return hasKey(key)
     }
 
-    // invert is not applicable
+    // invert is not applicable to generic Dictionary, implemented in `Dictionary where Value: Hashable`
 
     mutating func keepIf(invocation:((Key, Value) -> Bool)) {
         var generator = generate()
@@ -79,8 +79,7 @@ public extension Dictionary {
         }
     }
 
-    // key (find key by value) is not applicable to generic dictionary type
-    // since value is not comform to Equatable protocal
+    // key not applicable to generic dictionary, implemented in `Dictionary where Value: Equatable`
 
     var length: Int {
         return count
@@ -183,3 +182,37 @@ public extension Dictionary {
 
 }
 
+@available(iOS 7.0, OSX 10.9, *)
+public extension Dictionary where Value: Equatable {
+    func key(value: Value) -> Key? {
+        var result: Key? = nil
+        keys.forEach {
+            if self[$0] == value {
+                result = $0
+            }
+        }
+        return result
+    }
+
+    func hasValue(value: Value) -> Bool {
+        var result: Bool = false
+        keys.forEach {
+            if self[$0] == value {
+                result = true
+            }
+        }
+        return result
+    }
+}
+
+@available(iOS 7.0, OSX 10.9, *)
+public extension Dictionary where Value: Hashable {
+    // invertInplace is not applicable
+    func invert() -> [Value: Key] {
+        var result: [Value: Key] = [:]
+        each { (key, value) -> Void in
+            result[value] = key
+        }
+        return result
+    }
+}

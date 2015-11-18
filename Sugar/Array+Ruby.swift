@@ -16,23 +16,24 @@ func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
     return result
 }
 
-func +<Element>(lhs: Array<Element>, rhs: Array<Element>) -> [Element] {
+func +<Element>(lhs: [Element], rhs: [Element]) -> [Element] {
     var result: [Element] = lhs
     result.appendContentsOf(rhs)
     return result
 }
 
 // Anyway to implement & or - or | ?
-func <<<Element>(lhs:Array<Element>, rhs: Element) -> [Element] {
+func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
     var result: [Element] = lhs
     result.append(rhs)
     return result
 }
 
+@available(iOS 7.0, OSX 10.9, *)
 public extension Array {
     /*
-        any is not applicable to generic Array
-        You can use the anyIf method to reach the same function:
+        any is not applicable to generic Array, implemeted in `Array where Element: Equatable`
+        You can use the anyIf method if Element does not conform to Comparable:
 
             a.anyIf("b") { $0 == $1 }  // true, suppose: let a = ["a", "b", "c"]
     
@@ -40,10 +41,9 @@ public extension Array {
 
             a.anyIf("b", ==)
     */
-
-    func anyIf(e: Element, _ invocation: ((Element, Element) -> Bool)) -> Bool {
+    func anyIf(element: Element, _ invocation: ((Element, Element) -> Bool)) -> Bool {
         for var i = 0; i < count; ++i {
-            if invocation(e, self[i]) {
+            if invocation(element, self[i]) {
                 return true
             }
         }
@@ -75,7 +75,6 @@ public extension Array {
     // collect!, compact, compact! is not applicable
 
     // combination not implement
-
     func concat(arr: [Element]) -> [Element] {
         return self + arr
     }
@@ -148,8 +147,6 @@ public extension Array {
     }
 
     // fill not implememnted
-
-    // findIndex(Element) is not applicable to generic Array
     func findIndex(invocation:((Element) -> Bool)) -> Int? {
         for var i = 0; i < count; ++i {
             if invocation(self[i]) { return i }
@@ -187,7 +184,7 @@ public extension Array {
         self.insert(e, atIndex: 0)
     }
 
-    // push is not applicable to generic Array
+    // push multiple elements is not applicable to generic Array
 
     mutating func push(e: Element) {
         append(e)
@@ -247,8 +244,6 @@ public extension Array {
         return count
     }
 
-    // slice, sort
-
     // take is same to fetch() and at() not like ruby
     func take(index: Int) -> Element? {
         return fetch(index)
@@ -258,5 +253,62 @@ public extension Array {
         return select(invocation)
     }
 
-    // transpose, uniq uniq!, unshift, value_at, zip not implemented
+    // transpose, value_at, zip not implemented
+
+    // uniq and uniq! are not applicable to generic Array, implemented in `Array where Element: Equatable`
+
+    // unshift multiple values is not implemented
+    mutating func unshift(element: Element) -> [Element] {
+        insert(element, atIndex: 0)
+        return self
+    }
+}
+
+@available(iOS 7.0, OSX 10.9, *)
+public extension Array where Element: Equatable {
+    func any(element: Element) -> Bool {
+        for var i = 0; i < count; ++i {
+            if element == self[i] {
+                return true
+            }
+        }
+        return false
+    }
+
+    mutating func delete(element: Element, _ invocation:((Element) -> Void)) -> Element {
+        var result: [Element] = []
+        var generator = self.generate()
+        var changed = false
+        while let e = generator.next() {
+            if e != element {
+                changed = true
+                result.append(e)
+            }
+        }
+        changed ? self = result : invocation(element)
+        return element
+    }
+
+    func findIndex(element: Element) -> Int? {
+        for var i = 0; i < count; ++i {
+            if self[i] == element {
+                return i
+            }
+        }
+        return nil
+    }
+
+    func uniq() -> [Element] {
+        var result: [Element] = []
+        var generator = self.generate()
+        while let e = generator.next() {
+            if result.contains(e) { continue }
+            result.append(e)
+        }
+        return result
+    }
+
+    mutating func uniqInPlace() {
+        self = uniq()
+    }
 }

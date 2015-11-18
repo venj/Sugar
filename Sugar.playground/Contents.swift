@@ -75,6 +75,7 @@ str.rindex("ll")
 "abc" <=> "bcd"
 
 let dict = ["name" : "John Doe", "sex" : "Male", "Age": 30, "Nationality": "U.S."]
+dict.invert()
 dict.each { (key, value) in
     print("Key: \(key), value: \(value)")
 }
@@ -119,7 +120,11 @@ r
 a.deleteIf { $0 == "b" }
 a
 
+3.isBetween(1, 5)
+3.isBetween(5, 1)
+3.isBetween(3, 3)
 
-
+var z: [Int?] = []
+z = [1,2,3,4,nil,nil]
 
 

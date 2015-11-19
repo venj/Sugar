@@ -67,5 +67,31 @@ public extension NSDate {
         return __components.second
     }
 
+    // very lame implementation to get day of year
+    var yday: Int {
+        var days = (__components.weekOfYear - 1) * 7 + __components.weekday
+        var components = NSDateComponents()
+        components.year = __components.year
+        components.month = 1
+        components.day = 1
+        let date = __calender.dateFromComponents(components)!
+        components = __calender.components([.Weekday], fromDate: date)
+        days = days - components.weekday + 1
+        return days
+    }
 
+    var mweek: Int {
+        return __components.weekOfMonth
+    }
+
+    var yweek: Int {
+        return __components.weekOfYear
+    }
+
+    var mday: Int {
+        return day
+    }
+
+    //TODO: implement strftime()
+    
 }

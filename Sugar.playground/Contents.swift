@@ -127,16 +127,6 @@ a
 var z: [Int?] = []
 z = [1,2,3,4,nil,nil]
 
-var t = Time(year: 2014, month: 11, day: 23, hour: 11, minute: 11, second: 11, calender: nil)
-t?.year
-t?.date
-
-t = Time(year: 2015, month: 11, day: 19, hour: 0, minute: 0, second: 0, calender: nil)
-t?.locale = NSLocale(localeIdentifier: "en_GB")
-t?.isThursday
-t?.mediumString
-t?.locale = NSLocale.currentLocale()
-t?.mediumString
 let date = NSDate()
 date.isIt(.Thursday)
 let date1: NSDate
@@ -146,10 +136,16 @@ date1 = date2
 date1 == date2
 date == date1
 date < date1
+date <=> date1
 
 date.year
 date.month
 date.day
+date.yday
+date.mday
+date.mweek
+date.yweek
+
 
 
 

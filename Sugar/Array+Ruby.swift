@@ -141,6 +141,12 @@ public extension Array {
         }
     }
 
+    func eachWithIndex(invocation:((Int, Element) -> Void)) {
+        for var i = 0; i < count; ++i {
+            invocation(i, self[i])
+        }
+    }
+
     // not like ruby, fetch() is same to at() in here
     func fetch(index: Int) -> Element? {
         return at(index)

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2510B6011BFD863300AED85C /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
+		2510B6031BFDB03800AED85C /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
+		2510B6051BFDB04D00AED85C /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
 		251F5F2E1BF452EA009FC984 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */; };
 		251F5F2F1BF452EA009FC984 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F281BF452EA009FC984 /* Info.plist */; };
 		251F5F3D1BF45344009FC984 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F5F351BF4530C009FC984 /* CommonCrypto.framework */; };
@@ -93,6 +95,8 @@
 
 /* Begin PBXFileReference section */
 		2510B6001BFD863300AED85C /* NSDate+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Ruby.swift"; sourceTree = "<group>"; };
+		2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport.swift"; sourceTree = "<group>"; };
+		2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport.swift"; sourceTree = "<group>"; };
 		251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 		251F5F281BF452EA009FC984 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		251F5F291BF452EA009FC984 /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
@@ -184,6 +188,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2510B6061BFDB05300AED85C /* ActiveSupport Style Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */,
+				2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */,
+			);
+			name = "ActiveSupport Style Extension";
+			sourceTree = "<group>";
+		};
 		251F5F261BF452EA009FC984 /* CommonCrypto */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				2547BC071BF9AEAF00665E1C /* Ruby Core Style Extension */,
+				2510B6061BFDB05300AED85C /* ActiveSupport Style Extension */,
 				257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */,
 				25883F571BF30F4700CCCE54 /* String+Range.swift */,
 				251F5F401BF46A75009FC984 /* NSRange+Swift.swift */,
@@ -546,6 +560,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2510B6031BFDB03800AED85C /* String+ActiveSupport.swift in Sources */,
 				2510B6011BFD863300AED85C /* NSDate+Ruby.swift in Sources */,
 				256A486D1BF58B4900926D90 /* String+Ruby.swift in Sources */,
 				2547BC061BF96B9B00665E1C /* Int+Ruby.swift in Sources */,
@@ -562,6 +577,7 @@
 				257EA4F61BF73603006E5277 /* NSTextCheckingResult+Swift.swift in Sources */,
 				25883F6B1BF30F4700CCCE54 /* NSDictionary+JSON.swift in Sources */,
 				25883F681BF30F4700CCCE54 /* String+Base64.swift in Sources */,
+				2510B6051BFDB04D00AED85C /* Int+ActiveSupport.swift in Sources */,
 				25883F631BF30F4700CCCE54 /* String+Range.swift in Sources */,
 				2547BC0D1BF9B2DC00665E1C /* Comparable+Ruby.swift in Sources */,
 				2547BC151BFAE17800665E1C /* Array+Ruby.swift in Sources */,

@@ -10,17 +10,6 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int {
-    var gb: Int {
-        return self * 1073741824 // 1024 x 1024 x 1024
-    }
-
-    var mb: Int {
-        return self * 1048576 // 1024 x 1024
-    }
-
-    var kb: Int {
-        return self * 1024
-    }
 
     var fileSizeString: String {
         var str = ""

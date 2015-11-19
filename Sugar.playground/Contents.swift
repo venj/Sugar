@@ -63,6 +63,8 @@ str.partition("l+", isRegex: true)
 str.index("l+", isRegex: true)
 str.rindex("ll")
 
+let i = str.startIndex.advancedBy(6)
+
 2 * 3
 2 ** 3
 5.upTo(9) { print($0) }
@@ -146,6 +148,8 @@ date.mday
 date.mweek
 date.yweek
 
+let ab = "hello"
+ab.first(4)
 
 
 

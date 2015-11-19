@@ -74,6 +74,10 @@ public extension String {
         let range = Range<Index>(start:startIndex, end:endIndex)
         return substringWithRange(range)
     }
+
+    subscript(range: Range<Index>) -> String {
+        return substringWithRange(range)
+    }
     
     subscript(nsRange: NSRange) -> String {
         let range = rangeFromNSRange(nsRange)

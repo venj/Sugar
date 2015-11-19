@@ -231,8 +231,8 @@ public extension String {
         return hasSuffix(suffix)
     }
 
-    func gsub(pattern:String, replacement:String) -> String? {
-        var result: String? = self
+    func gsub(pattern:String, replacement:String) -> String {
+        var result = self
         result = gsub(pattern) { (match) in
             return replacement
         }
@@ -240,15 +240,15 @@ public extension String {
     }
 
     // Not good... Anyway to get rid of one of the loops?
-    func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
-        var result: String? = self
-        guard let matches = allMatches(pattern)  else { return nil }
+    func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
+        var result = self
+        guard let matches = allMatches(pattern)  else { return self }
         var replaces: [(String, String)] = []
         for match in matches {
             replaces.append( (self[match.range], invocation(match)) )
         }
         for replace in replaces {
-            result = result?.stringByReplacingOccurrencesOfString(replace.0, withString: replace.1)
+            result = result.stringByReplacingOccurrencesOfString(replace.0, withString: replace.1)
         }
         return result
     }
@@ -452,7 +452,7 @@ public extension String {
     }
 
     func squeeze() -> String {
-        return gsub("\\s+", replacement: " ")!
+        return gsub("\\s+", replacement: " ")
     }
 
     mutating func squeezeInPlace() -> String {

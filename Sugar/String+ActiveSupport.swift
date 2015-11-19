@@ -42,4 +42,15 @@ public extension String {
         else { return self[0..<length] }
     }
 
+    func squish() -> String {
+        var result = self
+        result = result.strip().gsub("[[:space:]]+", replacement: " ")
+        return result
+    }
+
+    mutating func squishInPlace() -> String {
+        self = squish()
+        return self
+    }
+
 }

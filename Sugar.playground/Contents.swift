@@ -151,6 +151,10 @@ date.yweek
 let ab = "hello"
 ab.first(4)
 
+var long_boring_string = "  what    \t  the \n\n hell! "
+long_boring_string.squish()
+long_boring_string.squishInPlace()
+
 
 
 

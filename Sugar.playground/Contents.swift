@@ -168,12 +168,23 @@ let strrr = "Int: %ld Float: %.2f, String: %@" %% [9999, 3.1415926, "hello world
 "abc" <=> "abc"
 "Abc".casecmp("abc")
 
-let original = "abc"
-let center1 = original.center(10)
-let center2 = original.center(10, padString: "-")
-let center3 = original.center(5, padString: "x*x")
-let center4 = original.center(7, padString: "x*x")
+let original1 = "abc"
+let center1 = original1.center(10)
+let center2 = original1.center(10, padString: "-")
+let center3 = original1.center(5, padString: "x*x")
+let center4 = original1.center(7, padString: "x*x")
 
 "llollollollohellollllollollo".chomp("llo")
 
 let result9 = "hello\r\n\r\r\n".chomp("")
+" ".empty
+
+let u16 = "中国".encode(NSUTF16StringEncoding, fromEncoding:NSUTF8StringEncoding)
+u16?.fastestEncoding
+
+"<a href=\"http:www.google.com\">Google</a><br><a href=\"#tag\">Tag</a>".index("<.+>", isRegex: true, offset: 6)
+
+"hello".delete(["her", "lily"])
+
+
+

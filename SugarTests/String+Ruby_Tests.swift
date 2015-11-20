@@ -159,5 +159,126 @@ class StringRubyTests: XCTestCase {
         XCTAssertEqual(str1, target1)
         XCTAssertEqual(str2, target2)
     }
-    
+
+    func testCount() {
+        XCTAssertEqual("Hello".count, 5)
+    }
+
+    func testDelete() {
+        let original = "hello"
+        XCTAssertEqual(original.delete(["her", "rely"]), "hllo")
+    }
+
+    func testDeleteInPlace() {
+        var original = "hello"
+        original.deleteInPlace(["her", "rely"])
+        XCTAssertEqual(original, "hllo")
+    }
+
+    func testDowncase() {
+        let original = "hELlo, WOrlD."
+        let downcased = "hello, world."
+        XCTAssertEqual(original.downcase(), downcased)
+    }
+
+    func testDowncaseInPlace() {
+        var original = "hELlo, WOrlD."
+        original.downcaseInPlace()
+        let downcased = "hello, world."
+        XCTAssertEqual(original, downcased)
+    }
+
+    func testEachChar() {
+        var result = ""
+        "hello".eachChar {
+            result += (String($0) + " ")
+        }
+        XCTAssertEqual(result, "h e l l o ")
+    }
+
+    func testEachLine() {
+        let str = "Line 1\nLine 2\n\nLine 4"
+        var numberOfLines = 0
+        str.eachLine { _ in
+            numberOfLines++
+        }
+        XCTAssertEqual(numberOfLines, 4)
+    }
+
+    func testEmpty() {
+        XCTAssertTrue("".empty)
+        XCTAssertFalse(" ".empty)
+        XCTAssertFalse("Not empty".empty)
+    }
+
+    func testEncode() {
+        let original = "中国"
+        let utf16String = original.encode(NSUTF16StringEncoding)
+        XCTAssertNotNil(utf16String)
+    }
+
+    func testEndWith() {
+        let str = "Hello"
+        XCTAssertTrue(str.endWith("lo"))
+        XCTAssertFalse(str.endWith("lol"))
+    }
+
+    func testGsubNoInvocation() {
+        let original = "hello daaaaaaark world."
+        let replaced = original.gsub("da+rk", replacement: "beautiful")
+        XCTAssertEqual(replaced, "hello beautiful world.")
+    }
+
+    func testGsubWithInvocation() {
+        let original = "plaese, relaese, plaese!"
+        var count = 0
+        let replaced = original.gsub("ae") {
+            count++
+            let fetched = original[$0.range]
+            return fetched.reverse()
+        }
+
+        XCTAssertEqual(count, 3)
+        XCTAssertEqual(replaced, "please, release, please!")
+    }
+
+    func testInclude() {
+        XCTAssertTrue("hello".include("hell"))
+        XCTAssertFalse("hello".include("lol"))
+    }
+
+    func testIndex() {
+        let original1 = "<a href=\"http:www.google.com\">Google</a><br><a href=\"#tag\">Tag</a>"
+        let index1 = original1.index("a")
+        let index2 = original1.index("a", isReverse:true)
+        let index3 = original1.index("<.+>", isRegex: true, offset: 6) // reverse is not applicable
+        XCTAssertEqual(index1, 1)
+        XCTAssertEqual(index2, 64)
+        XCTAssertEqual(index3, 36)
+    }
+
+    func testInsert() {
+        var original = "Hello world"
+        let result = original.insert(6, subString: "coding ")
+        XCTAssertEqual(result, "Hello coding world")
+    }
+
+    func testLength() {
+        XCTAssertEqual("hello".length, 5)
+    }
+
+    func testLines() {
+        let str = "line 1\n\nline 3\nline 4\n\nline 6"
+        let lines = str.lines()
+        let target = ["line 1", "", "line 3", "line 4", "", "line 6"]
+        var result = true
+        for var i = 0; i < lines.count; ++i {
+            result = result && (lines[i] == target[i])
+        }
+        XCTAssertTrue(result)
+    }
+
+
+
+
 }

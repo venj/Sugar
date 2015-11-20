@@ -293,7 +293,7 @@ public extension String {
     // inspect is not implemented
     // intern is not applicaable
 
-    func length() -> Int {
+    var length: Int {
         return characters.count
     }
 
@@ -434,7 +434,7 @@ public extension String {
     }
 
     // scrub, scrub!, setByte not implemented
-    func size() -> Int {
+    var size: Int {
         return characters.count
     }
 

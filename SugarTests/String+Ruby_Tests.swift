@@ -278,6 +278,92 @@ class StringRubyTests: XCTestCase {
         XCTAssertTrue(result)
     }
 
+    func testLjust() {
+        let str = "hello"
+        let result = str.ljust(10)
+        let target = "hello     "
+        XCTAssertEqual(result, target)
+    }
+
+    func testLstrip() {
+        let str = "    Hello   world     "
+        let result = str.lstrip()
+        let target = "Hello   world     "
+        XCTAssertEqual(result, target)
+    }
+
+    func testLstripInPlace() {
+        var str = "    Hello   world     "
+        str.lstripInPlace()
+        let target = "Hello   world     "
+        XCTAssertEqual(str, target)
+    }
+
+    func testLastMatch() {
+        let str = "hello"
+        let match = str.lastMatch("l")
+        let location = match!.range.location
+        XCTAssertEqual(location, 3)
+    }
+
+    func testAllMatches() {
+        let str = "hello"
+        let matches = str.allMatches("l")
+        XCTAssertEqual(matches?.count, 2)
+    }
+
+    func testMatch() {
+        let str = "hello"
+        let match = str.match("l")
+        let location = match!.range.location
+        XCTAssertEqual(location, 2)
+    }
+
+    func testPartition() {
+        let str = "Halloween"
+        let partition = str.partition("ll")
+        let target = ["Ha", "ll", "oween"]
+        var result = true
+        for var i = 0; i < partition.count; ++i {
+            result = result && (partition[i] == target[i])
+        }
+        XCTAssertTrue(result)
+    }
+
+    func testPrepend() {
+        let str = " world"
+        let result = str.prepend("hello")
+        let target = "hello world"
+        XCTAssertEqual(result, target)
+    }
+
+    func testReplace() {
+        var str = "hello"
+        let result = str.replace("bello")
+        XCTAssertEqual(result, "bello")
+    }
+
+    func testReverse() {
+        let str = "lol"
+        XCTAssertEqual(str.reverse(), "lol")
+        let str1 = "pit"
+        XCTAssertEqual(str1.reverse(), "tip")
+    }
+
+    func testReverseInPlace() {
+        var str = "lol"
+        str.reverseInPlace()
+        XCTAssertEqual(str, "lol")
+        var str1 = "pit"
+        str1.reverseInPlace()
+        XCTAssertEqual(str1, "tip")
+    }
+
+    func testRindex() {
+        let str = "hello"
+        let result = str.rindex("l")
+        XCTAssertEqual(result, 3)
+    }
 
 
 

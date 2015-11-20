@@ -36,10 +36,25 @@ public extension String {
         return !include(subString)
     }
 
-    func first(length:Int) -> String {
+    func first(length:Int = 1) -> String {
         if length <= 0 { return "" }
         if length >= count { return self }
         else { return self[0..<length] }
+    }
+
+    func last(length:Int = 1) -> String {
+        if length <= 0 { return "" }
+        if length >= count { return self }
+        else { return self [(count - length)..<count] }
+    }
+
+    func remove(pattern: String) -> String {
+        return gsub(pattern, replacement: "")
+    }
+
+    mutating func removeInPlace(pattern: String) -> String {
+        self = gsub(pattern, replacement: "")
+        return self
     }
 
     func squish() -> String {
@@ -52,5 +67,4 @@ public extension String {
         self = squish()
         return self
     }
-
 }

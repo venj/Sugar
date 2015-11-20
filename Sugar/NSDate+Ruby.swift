@@ -18,12 +18,14 @@ public enum WeekDay: Int {
     case Saturday
 }
 
+@available(iOS 7.0, OSX 10.9, *)
 @warn_unused_result public func <(lhs: NSDate, rhs: NSDate) -> Bool {
     let lhsTimeStamp = lhs.timeIntervalSince1970
     let rhsTimeStamp = rhs.timeIntervalSince1970
     return (rhsTimeStamp - lhsTimeStamp) > 0
 }
 
+@available(iOS 7.0, OSX 10.9, *)
 extension NSDate: Comparable {
 }
 
@@ -39,7 +41,7 @@ public extension NSDate {
         return cal
     }
 
-    private var __components: NSDateComponents {
+    var __components: NSDateComponents {
         return __calender.components([.Year, .Month, .Day, .Hour, .Minute, .Second, .Weekday, .WeekOfYear, .WeekOfMonth], fromDate: self)
     }
 
@@ -94,4 +96,11 @@ public extension NSDate {
 
     //TODO: implement strftime()
     
+    func isToday() -> Bool {
+        let today = __calender.components([.Year, .Month, .Day], fromDate: NSDate())
+        if __components.year == today.year && __components.month == today.month && __components.day == today.day {
+            return true
+        }
+        return false
+    }
 }

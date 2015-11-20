@@ -176,6 +176,10 @@ public extension Array {
         return count
     }
 
+    var many: Bool {
+        return count > 1
+    }
+
     mutating func pop(n: Int) -> [Element] {
         var result: [Element] = []
         n.times { _ in

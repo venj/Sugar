@@ -23,6 +23,7 @@
 		2547BC131BFABAA700665E1C /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
 		2547BC151BFAE17800665E1C /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
 		256A486D1BF58B4900926D90 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */; };
 		257EA4F61BF73603006E5277 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
 		25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F141BF30EF100CCCE54 /* AppDelegate.swift */; };
 		25883F171BF30EF100CCCE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F161BF30EF100CCCE54 /* ViewController.swift */; };
@@ -116,6 +117,7 @@
 		2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby.swift"; sourceTree = "<group>"; };
 		2547BC141BFAE17800665E1C /* Array+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ruby.swift"; sourceTree = "<group>"; };
 		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
+		257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
 		257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextCheckingResult+Swift.swift"; sourceTree = "<group>"; };
 		25883F111BF30EF100CCCE54 /* Sugar Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sugar Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				25883F491BF30F2000CCCE54 /* SugarTests.swift */,
+				257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */,
 				25883F4B1BF30F2000CCCE54 /* Info.plist */,
 			);
 			path = SugarTests;
@@ -596,6 +599,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */,
 				25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

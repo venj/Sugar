@@ -155,9 +155,25 @@ var long_boring_string = "  what    \t  the \n\n hell! "
 long_boring_string.squish()
 long_boring_string.squishInPlace()
 
+ab.last(1)
+ab.last(0)
+ab.last(4)
+ab.last(5)
+ab.last(6)
 
+let strrr = "Int: %ld Float: %.2f, String: %@" %% [9999, 3.1415926, "hello world."]
 
+"abc".fastestEncoding
+"abc" == "abc"
+"abc" <=> "abc"
+"Abc".casecmp("abc")
 
+let original = "abc"
+let center1 = original.center(10)
+let center2 = original.center(10, padString: "-")
+let center3 = original.center(5, padString: "x*x")
+let center4 = original.center(7, padString: "x*x")
 
+"llollollollohellollllollollo".chomp("llo")
 
-
+let result9 = "hello\r\n\r\r\n".chomp("")

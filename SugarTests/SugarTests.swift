@@ -36,20 +36,5 @@ class SugarTests: XCTestCase {
     }
 
     //MARK: - Tests for String+Path.swift
-    func testStringByAddingComponents() {
-        let base = "//Base"
-        let components = ["not:a-valid string for path./", "/git.pdf"]
-        XCTAssertEqual(base.stringByAppendingPathComponents(components), "/Base/not:a-valid string for path./git.pdf")
-        let component = "/git.pdf"
-        XCTAssertEqual(base.stringByAppendingPathComponent(component), "/Base/git.pdf")
-    }
-
-    func testURLStringByAddingComponents() {
-        let validBase = "//Base"
-        let components = ["not:a-valid string for path.//", "/git.pdf"]
-        XCTAssertEqual(validBase.URLStringByAppendingPathComponents(components), "//Base/not:a-valid%20string%20for%20path.///git.pdf")
-        let invalidBase = ""
-        XCTAssertNil(validBase.URLStringByAppendingPathComponents(components))
-    }
     
 }

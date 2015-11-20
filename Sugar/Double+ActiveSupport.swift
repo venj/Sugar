@@ -12,6 +12,10 @@ public extension Double {
         return NSDate(timeIntervalSinceNow: self)
     }
 
+    func ago() -> NSDate {
+        return NSDate(timeIntervalSinceNow: -self)
+    }
+
     var hours: NSTimeInterval {
         return self * 60.minutes
     }

@@ -60,13 +60,16 @@ public extension String {
     // b(), bytes(), bytesize(), byteslice()
 
     subscript(index: Int) -> String {
+        var pos = index
+        if index < 0 && -index <= count { pos = count + index }
         let startIndex = self.startIndex
-        let position = startIndex.advancedBy(index)
-        let endIndex = startIndex.advancedBy(index+1)
+        let position = startIndex.advancedBy(pos)
+        let endIndex = startIndex.advancedBy(pos+1)
         let range = Range<Index>(start:position, end:endIndex)
         return substringWithRange(range)
     }
 
+    // minus int range not implemented
     subscript(intRange: Range<Int>) -> String {
         let stringOrigin = self.startIndex
         let startIndex = stringOrigin.advancedBy(intRange.startIndex)
@@ -75,32 +78,26 @@ public extension String {
         return substringWithRange(range)
     }
 
-    subscript(range: Range<Index>) -> String {
-        return substringWithRange(range)
-    }
-    
     subscript(nsRange: NSRange) -> String {
         let range = rangeFromNSRange(nsRange)
         return self[range]
     }
 
-    func asciiOnly() -> Bool {
-        return fastestEncoding == NSASCIIStringEncoding
-    }
+    // ascii_only? not implemented
 
     func capitalize() -> String {
         return capitalizedString
     }
 
-    func casecomp(rhs:String) -> Int {
+    func casecmp(rhs:String) -> Int {
+        //print("compare: \(lowercaseString) <=> \(rhs.lowercaseString)")
         return lowercaseString <=> rhs.lowercaseString
     }
 
     func center(size: Int, padString:String = " ") -> String {
         let padSize = padString.characters.count
         if padSize == 0 { fatalError("padString can not be zero length") }
-        let count = characters.count
-        if characters.count <= size { return self }
+        if count >= size { return self }
         let leftPadSpace = (size - count) / 2
         let rightPadSpace = leftPadSpace + (size - count) % 2
         if padSize == 1 {
@@ -126,28 +123,43 @@ public extension String {
             return set.characterIsMember(String(char).utf16.first!)
         }
         var result = self
-        let lastCharIndex = endIndex.advancedBy(-1)
-        let range = Range<Index>(start:lastCharIndex, end:endIndex)
-        let lastCharString = result.substringWithRange(range)
-        if isChar(lastCharString.characters.first!, inSet: NSCharacterSet.newlineCharacterSet()) {
-            while (result.hasSuffix(lastCharString)) {
-                guard let range = result.rangeOfString(lastCharString, options: .BackwardsSearch, range: nil, locale: nil) else { return result }
-                result.removeRange(range)
+        if separator == nil || separator == "" {
+            let lastCharIndex = endIndex.advancedBy(-1)
+            let range = Range<Index>(start:lastCharIndex, end:endIndex)
+            let lastCharString = result.substringWithRange(range)
+            if isChar(lastCharString.characters.first!, inSet: NSCharacterSet.newlineCharacterSet()) {
+                while (result.hasSuffix(lastCharString)) {
+                    guard let range = result.rangeOfString(lastCharString, options: .BackwardsSearch, range: nil, locale: nil) else { return result }
+                    result.removeRange(range)
+                }
             }
         }
         else {
-            result.removeRange(range)
+            while(result.hasPrefix(separator!)) {
+                let r = rangeOfString(separator!)
+                result.removeRange(r!)
+            }
+            while (result.hasSuffix(separator!)) {
+                let position = result.rindex(separator!)
+                let index = result.startIndex.advancedBy(position!)
+                result = result.substringToIndex(index)
+            }
         }
 
         return result
     }
 
-    func chop(inPlace: Bool = false) -> String {
+    func chop() -> String {
         var result = self
         let lastCharIndex = endIndex.advancedBy(-1)
         let range = Range<Index>(start:lastCharIndex, end:endIndex)
         result.removeRange(range)
         return result
+    }
+
+    mutating func chopInPlace() -> String {
+        self = chop()
+        return self
     }
 
     mutating func clear() {

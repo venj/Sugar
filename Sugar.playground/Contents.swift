@@ -190,5 +190,8 @@ u16?.fastestEncoding
 "   hello              world        ".gsub("\\s+", replacement: " ")
 "   hello             world          ".squeeze()
 
+var arrv = [1, 3, 5, 7, 9, 11, 13, 15]
+arrv.keepIf() { $0 % 3 == 0 }
+arrv
 
 

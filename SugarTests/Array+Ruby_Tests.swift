@@ -218,4 +218,93 @@ class ArrayRubyTests: XCTestCase {
         XCTAssertEqual(rightRotate, rightTarget)
     }
 
+    func testSelect() {
+        let arr = [1, 3, 5, 7, 9, 11, 13, 15]
+        let selected = arr.select() {
+            $0 % 3 == 0
+        }
+        let target = [3, 9, 15]
+        XCTAssertEqual(selected, target)
+    }
+
+    func testSelectInPlace() {
+        var arr = [1, 3, 5, 7, 9, 11, 13, 15]
+        arr.selectInPlace() {
+            $0 % 3 == 0
+        }
+        let target = [3, 9, 15]
+        XCTAssertEqual(arr, target)
+    }
+
+    func testShift() {
+        var arr = [1, 2, 3, 4]
+        let shifted = arr.shift(2)
+        let target = [3, 4]
+        XCTAssertEqual(shifted, [1, 2])
+        XCTAssertEqual(arr, target)
+    }
+
+    func testSize() {
+        testLength()
+    }
+
+    func testTake() {
+        testFetch()
+    }
+
+    func testTakeWhile() {
+        testSelect()
+    }
+
+    func testUnshift() {
+        var arr = [2, 3]
+        arr.unshift(1)
+        let target = [1, 2, 3]
+        XCTAssertEqual(arr, target)
+    }
+
+    func testAny() {
+        let arr = [1, 2, 3]
+        let result1 = arr.any(1)
+        let result2 = arr.any(10)
+        XCTAssertTrue(result1)
+        XCTAssertFalse(result2)
+    }
+
+    func testDelete() {
+        var arr = [1, 2, 3]
+        var doubled = 0
+        arr.delete(2) {
+            doubled = $0 * 2
+        }
+        XCTAssertEqual(doubled, 0)
+        XCTAssertEqual(arr, [1, 3])
+        arr.delete(10) {
+            doubled = $0 * 2
+        }
+        XCTAssertEqual(doubled, 20)
+        XCTAssertEqual(arr, [1, 3])
+    }
+
+    func testFindIndexWithoutInvocation() {
+        let arr = [1, 2, 3, 3, 2]
+        let result1 = arr.findIndex(3)
+        let result2 = arr.findIndex(4)
+        XCTAssertEqual(result1, 2)
+        XCTAssertNil(result2)
+    }
+
+    func testUniq() {
+        let arr = [1, 2, 1, 3, 4, 2, 3, 5, 3]
+        let result = arr.uniq()
+        let target = [1, 2, 3, 4, 5]
+        XCTAssertEqual(result, target)
+    }
+
+    func testUniqInPlace() {
+        var arr = [1, 2, 1, 3, 4, 2, 3, 5, 3]
+        arr.uniqInPlace()
+        let target = [1, 2, 3, 4, 5]
+        XCTAssertEqual(arr, target)
+    }
 }

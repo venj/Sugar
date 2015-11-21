@@ -169,7 +169,7 @@ public extension Array {
     }
 
     mutating func keepIf(invocation:((Element) -> Bool)) {
-        for var i = 0; i < count; i++ {
+        for var i = count - 1; i >= 0; --i {
             if !invocation(self[i]) {
                 removeAtIndex(i)
             }
@@ -248,8 +248,12 @@ public extension Array {
         keepIf(invocation)
     }
 
-    mutating func shift(n: Int) -> Element? {
-        return removeFirst()
+    mutating func shift(n: Int) -> [Element] {
+        var result = [Element]()
+        n.times() { _ in
+            result.append(self.removeFirst())
+        }
+        return result
     }
 
     // shuffle, shuffle! implement later
@@ -292,14 +296,12 @@ public extension Array where Element: Equatable {
     mutating func delete(element: Element, _ invocation:((Element) -> Void)) -> Element {
         var result: [Element] = []
         var generator = self.generate()
-        var changed = false
         while let e = generator.next() {
             if e != element {
-                changed = true
                 result.append(e)
             }
         }
-        changed ? self = result : invocation(element)
+        result.count < count ? self = result : invocation(element)
         return element
     }
 

@@ -364,7 +364,103 @@ class StringRubyTests: XCTestCase {
         let result = str.rindex("l")
         XCTAssertEqual(result, 3)
     }
+    
+    func testRjust() {
+        let str = "hello"
+        let result1 = str.rjust(10)
+        let result2 = str.rjust(10, padString: "*-")
+        XCTAssertEqual(result1, "     hello")
+        XCTAssertEqual(result2, "*-*-*hello")
+    }
+    
+    func testRstrip() {
+        let str = "  hello    world   "
+        let result = str.rstrip()
+        let target = "  hello    world"
+        XCTAssertEqual(result, target)
+    }
+    
+    func testRstripInPlace() {
+        var str = "  hello    world   "
+        str.rstripInPlace()
+        let target = "  hello    world"
+        XCTAssertEqual(str, target)
+    }
 
+    func testScan() {
+        let str = "h-e-l-l-o w-o-r-l-d"
+        var count = 0
+        str.scan("-") { _ in
+            count++
+        }
+        XCTAssertEqual(count, 8)
+    }
+    
+    func testSize() {
+        let str = "hello"
+        XCTAssertEqual(str.size, 5)
+    }
+    
+    func testSplit() {
+        let str = "hello \t world"
+        let chars = str.split("")
+        let words = str.split("\\s+", isRegex: true)
+        let nochange = str.split()
+        XCTAssertEqual(chars.count, 13)
+        XCTAssertEqual(words.count, 2)
+        XCTAssertEqual(nochange, [str])
+    }
 
-
+    func testSqueeze() {
+        let str = "  hello   world   "
+        let result = str.squeeze()
+        let target = " hello world "
+        XCTAssertEqual(result, target)
+    }
+    
+    func testSqueezeInPlace() {
+        var str = "  hello   world   "
+        str.squeezeInPlace()
+        let target = " hello world "
+        XCTAssertEqual(str, target)
+    }
+    
+    func testSub() {
+        let str = "hello world"
+        let result = str.sub("l", replacement: "1")
+        let target = "he1lo world"
+        XCTAssertEqual(result, target)
+    }
+    
+    func testSubWithRegex() {
+        let str = "<a href=\"http://google.com\">Google</a>"
+        let result = str.sub("<[^>]+?>", replacement: "")
+        let target = "Google</a>"
+        XCTAssertEqual(result, target)
+    }
+    
+    func testUpcase() {
+        let str = "hElLo wOrLd"
+        let result = str.upcase()
+        let target = "HELLO WORLD"
+        XCTAssertEqual(result, target)
+    }
+    
+    func testUpcaseInPlace() {
+        var str = "hElLo wOrLd"
+        str.upcaseInPlace()
+        let target = "HELLO WORLD"
+        XCTAssertEqual(str, target)
+    }
+    
+    func testValidEncoding() {
+        let str1 = "中国"
+        let result1 = str1.validEncoding(NSASCIIStringEncoding)
+        let result2 = str1.validEncoding(NSUTF16StringEncoding)
+        let str2 = "😊"
+        let result3 = str2.validEncoding(NSUTF8StringEncoding)
+        XCTAssertFalse(result1)
+        XCTAssertTrue(result2)
+        XCTAssertTrue(result3)
+    }
 }

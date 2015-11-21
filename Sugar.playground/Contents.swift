@@ -186,5 +186,9 @@ u16?.fastestEncoding
 
 "hello".delete(["her", "lily"])
 
+"  hello   ".rstrip()
+"   hello              world        ".gsub("\\s+", replacement: " ")
+"   hello             world          ".squeeze()
+
 
 

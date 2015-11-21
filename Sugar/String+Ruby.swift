@@ -251,16 +251,13 @@ public extension String {
         return result
     }
 
-    // Not good... Anyway to get rid of one of the loops?
+    // Not good...replace from reverse to avoid range change...
     func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let matches = allMatches(pattern)  else { return self }
-        var replaces: [(String, String)] = []
-        for match in matches {
-            replaces.append( (self[match.range], invocation(match)) )
-        }
-        for replace in replaces {
-            result = result.stringByReplacingOccurrencesOfString(replace.0, withString: replace.1)
+        for var i = matches.count - 1; i >= 0; --i {
+            let match = matches[i]
+            result.replaceRange(result.rangeFromNSRange(match.range), with: invocation(match))
         }
         return result
     }
@@ -410,7 +407,7 @@ public extension String {
     
     func rstrip() -> String {
         var result = self
-        guard let range = rangeOfString("\\s+$", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
+        guard let range = rangeOfString("\\s+$", options: [.RegularExpressionSearch], range: nil) else { return self }
         result.replaceRange(range, with: "")
         return result
     }
@@ -464,7 +461,9 @@ public extension String {
     }
 
     func squeeze() -> String {
-        return gsub("\\s+", replacement: " ")
+        let result = gsub("\\s+", replacement: " ")
+        print(result)
+        return result
     }
 
     mutating func squeezeInPlace() -> String {
@@ -488,15 +487,15 @@ public extension String {
         return self
     }
 
-    func sub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String? {
-        let result: String
+    func sub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
+        var result = self
         guard let match = match(pattern) else { return self }
-        result = stringByReplacingOccurrencesOfString(self[match.range], withString: invocation(match))
+        result.replaceRange(result.rangeFromNSRange(match.range), with: invocation(match))
         return result
     }
 
-    func sub(pattern:String, replacement:String) -> String? {
-        var result: String? = self
+    func sub(pattern:String, replacement:String) -> String {
+        var result = self
         result = sub(pattern) { (match) in
             return replacement
         }

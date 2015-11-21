@@ -121,18 +121,16 @@ public extension Array {
         }
     }
 
-    func drop(n: Int) throws -> [Element] {
+    func drop(n: Int) -> [Element] {
         var result = self
         n.times { _ in result.removeAtIndex(0) }
         return result
     }
 
     func dropWhile(invocation:((Element) -> Bool)) -> [Element] {
-        var result: [Element] = []
-        for var i = 0; i < count; ++i {
-            if !invocation(self[i]) {
-                result.append(self[i])
-            }
+        var result = self
+        while invocation(result[0]) {
+            result.deleteAt(0)
         }
         return result
     }
@@ -190,7 +188,7 @@ public extension Array {
         var result: [Element] = []
         n.times { _ in
             if let e = self.popLast() {
-                result.append(e)
+                result.prepend(e)
             }
         }
         return result
@@ -211,7 +209,7 @@ public extension Array {
     }
 
     func rIndex(invocation:((Element) -> Bool)) -> Int? {
-        for var i = count - 1; i <= 0; --i {
+        for var i = count - 1; i >= 0; --i {
             if invocation(self[i]) { return i }
         }
         return nil

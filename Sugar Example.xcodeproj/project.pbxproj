@@ -15,6 +15,7 @@
 		251F5F2F1BF452EA009FC984 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F281BF452EA009FC984 /* Info.plist */; };
 		251F5F3D1BF45344009FC984 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251F5F351BF4530C009FC984 /* CommonCrypto.framework */; };
 		251F5F411BF46A75009FC984 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
+		25461A5A1C005D79009E5ADE /* Int+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */; };
 		2547BC061BF96B9B00665E1C /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
 		2547BC091BF9AFDD00665E1C /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
 		2547BC0B1BF9B12900665E1C /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
@@ -109,6 +110,7 @@
 		251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
 		251F5F351BF4530C009FC984 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251F5F401BF46A75009FC984 /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swift.swift"; sourceTree = "<group>"; };
+		25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		2547BC051BF96B9B00665E1C /* Int+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ruby.swift"; sourceTree = "<group>"; };
 		2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Ruby.swift"; sourceTree = "<group>"; };
 		2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Ruby.swift"; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				25883F491BF30F2000CCCE54 /* SugarTests.swift */,
 				257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */,
+				25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */,
 				25883F4B1BF30F2000CCCE54 /* Info.plist */,
 			);
 			path = SugarTests;
@@ -600,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */,
+				25461A5A1C005D79009E5ADE /* Int+Ruby_Tests.swift in Sources */,
 				25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

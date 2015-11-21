@@ -8,6 +8,7 @@
 
 infix operator ** { associativity left precedence 160 }
 @available(iOS 7.0, OSX 10.9, *)
+//TODO: minus rhs not implemented
 public func **(lhs: Int, rhs: Int) -> Int {
     var result = 1
     rhs.times { _ in result *= lhs }

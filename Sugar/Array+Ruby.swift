@@ -29,6 +29,12 @@ func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
     return result
 }
 
+func <<<Element>(lhs:[Element], rhs: [Element]) -> [Element] {
+    var result: [Element] = lhs
+    result.appendContentsOf(rhs)
+    return result
+}
+
 @available(iOS 7.0, OSX 10.9, *)
 public extension Array {
     /*

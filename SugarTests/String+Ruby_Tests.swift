@@ -271,10 +271,7 @@ class StringRubyTests: XCTestCase {
         let str = "line 1\n\nline 3\nline 4\n\nline 6"
         let lines = str.lines()
         let target = ["line 1", "", "line 3", "line 4", "", "line 6"]
-        var result = true
-        for var i = 0; i < lines.count; ++i {
-            result = result && (lines[i] == target[i])
-        }
+        let result = lines == target
         XCTAssertTrue(result)
     }
 
@@ -323,10 +320,7 @@ class StringRubyTests: XCTestCase {
         let str = "Halloween"
         let partition = str.partition("ll")
         let target = ["Ha", "ll", "oween"]
-        var result = true
-        for var i = 0; i < partition.count; ++i {
-            result = result && (partition[i] == target[i])
-        }
+        let result = partition == target
         XCTAssertTrue(result)
     }
 

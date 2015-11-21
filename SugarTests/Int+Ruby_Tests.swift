@@ -7,11 +7,10 @@
 //
 
 import XCTest
-import Foundation
 @testable import Sugar
 
 class IntRubyTests: XCTestCase {
-    func testSquareOperator() {
+    func testDoubleStarOperator() {
         let result = 2 ** 3
         let target = 8
         XCTAssertEqual(result, target)

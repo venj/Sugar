@@ -12,12 +12,43 @@ import Foundation
 // Because % is a system operator, we use %% instead
 // Not all the functionality of the ruby % operator 
 // are implemented, like dictionary replacement
+/**
+`%%` is an operator that mimic the behavior of Ruby's `%` operator. `%%` is used
+as a shortcut for `String`'s `format:arguments:` method. Like: 
+
+    "%@ has %ld unread email messages." %% ["Tom", 10]
+
+This will produce string:
+
+    Tom has 10 unread email messages.
+
+Since Swift have very powerful String interpolation ability, this
+method not very useful. Not like Ruby's `%`, named arguments list is not implemented.
+
+- parameter lhs: Left hand side operand is a format string.
+- parameter rhs: Right hand side operand is an array containing `CVarArgType` arguments.
+- returns: The formatted string.
+*/
 infix operator %% { associativity none precedence 140 }
 @available(iOS 7.0, OSX 10.9, *)
 public func %%(lhs: String, rhs: [CVarArgType]) -> String{
     return String(format: lhs, arguments: rhs)
 }
 
+/**
+ `*` will produce a string that repeat the original string for several times.
+
+    "hello" * 3
+
+ This will produce string:
+
+    "hellohellohello"
+
+ - parameter lhs: Left hand side operand is the original string
+ - parameter rhs: Right hand side operand is an `Int` that indicate how many times
+ that should be repeated.
+ - returns: The repeated string.
+ */
 @available(iOS 7.0, OSX 10.9, *)
 public func *(lhs: String, rhs:Int) -> String {
     if rhs < 0 {
@@ -34,6 +65,16 @@ public func *(lhs: String, rhs:Int) -> String {
 // Since manipulate with unicode point is difficult, we
 // are not convert Int to char while using this operator
 // like ruby did.
+/**
+`<<` operator will concat the right hand side operand in to left hand side string. 
+But unlike Ruby, when right hand size operand is `Int`, this will not convert it
+to Unicode charactor, but convert the `Int` to `String` and concat it to the left
+hand size string. 
+
+- parameter lhs: The original string
+- parameter rhs: Any type of object that `String` initializer can handle.
+- returns: A string with left hand side operand and right hand side operand
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(rhs)
@@ -42,6 +83,12 @@ public func <<<T>(lhs: String, rhs: T) -> String {
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
     // Static function
+    /**
+    This method will generate an UUID string. This is not a trivial UUID implementation.
+    But more like a custom baked UUID.
+
+    - returns: A variable length UUID string.
+    */
     static func UUIDString() -> String {
         let now = NSDate()
         let timeStamp = now.timeIntervalSince1970
@@ -59,6 +106,12 @@ public extension String {
     // Byte related methods are not included currently
     // b(), bytes(), bytesize(), byteslice()
 
+    /**
+    Subscript of `String` using `Int` as index. 
+    
+    - parameter index: An `Int` value that indicate the index of a character.
+    - returns: A string contains a character. Not the Swift `Character` object.
+    */
     subscript(index: Int) -> String {
         var pos = index
         if index < 0 && -index <= count { pos = count + index }
@@ -70,6 +123,15 @@ public extension String {
     }
 
     // minus int range not implemented
+    /**
+    Subscript of `String` using `Range<Int>` as range. Note: Range contains minus
+    minus int value is not supported. If you pass in a Range contains minus value,
+    the behavior is unpredictable. 
+    
+    - parameter intRange: A integer range. You can create a Swift native `Int` range
+    by `1...5` or `2..<6` range literials. 
+    - returns: Substring within the range.
+    */
     subscript(intRange: Range<Int>) -> String {
         let stringOrigin = self.startIndex
         let startIndex = stringOrigin.advancedBy(intRange.startIndex)
@@ -78,22 +140,48 @@ public extension String {
         return substringWithRange(range)
     }
 
+    /**
+     Subscript of `String` using `NSRange` as range. Note: Range contains minus
+     minus int value is not supported. If you pass in a invalid range, app will 
+     crash.
+
+     - parameter nsRange: A `NSRange` C-struct.
+     - returns: Substring within the range.
+     */
     subscript(nsRange: NSRange) -> String {
         let range = rangeFromNSRange(nsRange)
         return self[range]
     }
 
     // ascii_only? not implemented
-
+    /**
+     Capitalize a string. This is a shortcut method for `capitalizedString` property.
+    
+     - returns: The capitalized string of the original string.
+    */
     func capitalize() -> String {
         return capitalizedString
     }
 
-    func casecmp(rhs:String) -> Int {
-        //print("compare: \(lowercaseString) <=> \(rhs.lowercaseString)")
-        return lowercaseString <=> rhs.lowercaseString
+    /**
+     Compare string with another string and not consider cases.
+
+     - parameter aString: Any other string.
+     - returns: `1` is returned if string is larger than `aString` according to string encoding
+     `0` is returned if strings are the same (without consider cases).
+     `-1` is returned if string is smaller than `aString`.
+    */
+    func casecmp(aString: String) -> Int {
+        return lowercaseString <=> aString.lowercaseString
     }
 
+    /**
+     Make a long string and center the original string inside the resulting string. The other part are filled with a padding string.
+     
+     - parameter size: The length of the resulting string. 
+     - parameter padString: Padding string that fill the space beside the center string. 
+     - returns: A longer string with original string centered.
+    */
     func center(size: Int, padString:String = " ") -> String {
         let padSize = padString.characters.count
         if padSize == 0 { fatalError("padString can not be zero length") }

@@ -196,3 +196,5 @@ arrv
 
 NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15)
 
+"%@ has %ld unread email messages." %% ["Tom", 10]
+

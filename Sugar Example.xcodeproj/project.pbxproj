@@ -53,6 +53,12 @@
 		25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
 		25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
 		259DF13C1C01918C00A5773A /* Dictionary+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */; };
+		259DF13E1C01ACD500A5773A /* Comparable+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13D1C01ACD500A5773A /* Comparable+Ruby_Tests.swift */; };
+		259DF1401C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13F1C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift */; };
+		259DF1421C01B03E00A5773A /* NSDate+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1411C01B03E00A5773A /* NSDate+Ruby_Tests.swift */; };
+		259DF1441C01B7C400A5773A /* String+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */; };
+		259DF1461C01BB1200A5773A /* Int+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */; };
+		259DF1481C01C39700A5773A /* Double+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +164,12 @@
 		25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby_Tests.swift"; sourceTree = "<group>"; };
+		259DF13D1C01ACD500A5773A /* Comparable+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Ruby_Tests.swift"; sourceTree = "<group>"; };
+		259DF13F1C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Ruby_Tests.swift"; sourceTree = "<group>"; };
+		259DF1411C01B03E00A5773A /* NSDate+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Ruby_Tests.swift"; sourceTree = "<group>"; };
+		259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
+		259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
+		259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +345,16 @@
 		25883F481BF30F2000CCCE54 /* SugarTests */ = {
 			isa = PBXGroup;
 			children = (
+				259DF1491C01C68100A5773A /* Ruby Core Style Extension Tests */,
+				259DF14A1C01C69600A5773A /* ActiveSupport Style Extension Tests */,
+				25883F4B1BF30F2000CCCE54 /* Info.plist */,
+			);
+			path = SugarTests;
+			sourceTree = "<group>";
+		};
+		259DF1491C01C68100A5773A /* Ruby Core Style Extension Tests */ = {
+			isa = PBXGroup;
+			children = (
 				25883F491BF30F2000CCCE54 /* SugarTests.swift */,
 				257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */,
 				25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */,
@@ -340,9 +362,21 @@
 				25461A5D1C006F3B009E5ADE /* Float+Ruby_Tests.swift */,
 				25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */,
 				259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */,
-				25883F4B1BF30F2000CCCE54 /* Info.plist */,
+				259DF13D1C01ACD500A5773A /* Comparable+Ruby_Tests.swift */,
+				259DF13F1C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift */,
+				259DF1411C01B03E00A5773A /* NSDate+Ruby_Tests.swift */,
 			);
-			path = SugarTests;
+			name = "Ruby Core Style Extension Tests";
+			sourceTree = "<group>";
+		};
+		259DF14A1C01C69600A5773A /* ActiveSupport Style Extension Tests */ = {
+			isa = PBXGroup;
+			children = (
+				259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */,
+				259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */,
+				259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */,
+			);
+			name = "ActiveSupport Style Extension Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -614,12 +648,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259DF1441C01B7C400A5773A /* String+ActiveSupport_Tests.swift in Sources */,
+				259DF1461C01BB1200A5773A /* Int+ActiveSupport_Tests.swift in Sources */,
 				25461A5E1C006F3B009E5ADE /* Float+Ruby_Tests.swift in Sources */,
 				25461A5C1C006F2D009E5ADE /* Double+Ruby_Tests.swift in Sources */,
 				257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */,
+				259DF1481C01C39700A5773A /* Double+ActiveSupport_Tests.swift in Sources */,
+				259DF13E1C01ACD500A5773A /* Comparable+Ruby_Tests.swift in Sources */,
 				25461A601C00705D009E5ADE /* Array+Ruby_Tests.swift in Sources */,
 				25461A5A1C005D79009E5ADE /* Int+Ruby_Tests.swift in Sources */,
 				25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */,
+				259DF1401C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift in Sources */,
+				259DF1421C01B03E00A5773A /* NSDate+Ruby_Tests.swift in Sources */,
 				259DF13C1C01918C00A5773A /* Dictionary+Ruby_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

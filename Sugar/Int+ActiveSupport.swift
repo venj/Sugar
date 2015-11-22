@@ -7,6 +7,7 @@
 //
 
 // Notice for 32-bit: Following code may overflow on 32-bit platform
+
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int {
     var kilobytes: Int {

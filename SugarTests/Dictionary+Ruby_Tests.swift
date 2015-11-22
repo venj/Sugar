@@ -6,7 +6,6 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
-import Foundation
 import XCTest
 @testable import Sugar
 

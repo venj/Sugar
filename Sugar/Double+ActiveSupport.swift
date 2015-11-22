@@ -35,5 +35,4 @@ public extension Double {
     var weeks: NSTimeInterval {
         return self * 7.days
     }
-
 }

@@ -194,4 +194,5 @@ var arrv = [1, 3, 5, 7, 9, 11, 13, 15]
 arrv.keepIf() { $0 % 3 == 0 }
 arrv
 
+NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15)
 

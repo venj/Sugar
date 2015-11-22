@@ -293,7 +293,7 @@ public extension Array where Element: Equatable {
         return false
     }
 
-    mutating func delete(element: Element, _ invocation:((Element) -> Void)) -> Element {
+    mutating func delete(element: Element, _ invocation:((Element) -> Void)? = nil) -> Element {
         var result: [Element] = []
         var generator = self.generate()
         while let e = generator.next() {
@@ -301,7 +301,7 @@ public extension Array where Element: Equatable {
                 result.append(e)
             }
         }
-        result.count < count ? self = result : invocation(element)
+        result.count < count ? self = result : invocation?(element)
         return element
     }
 

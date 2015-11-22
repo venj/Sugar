@@ -52,6 +52,7 @@
 		25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
 		25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
 		25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
+		259DF13C1C01918C00A5773A /* Dictionary+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		25883F601BF30F4700CCCE54 /* Int+FileSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+FileSize.swift"; sourceTree = "<group>"; };
 		25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby_Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +339,7 @@
 				25461A5B1C006F2D009E5ADE /* Double+Ruby_Tests.swift */,
 				25461A5D1C006F3B009E5ADE /* Float+Ruby_Tests.swift */,
 				25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */,
+				259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */,
 				25883F4B1BF30F2000CCCE54 /* Info.plist */,
 			);
 			path = SugarTests;
@@ -617,6 +620,7 @@
 				25461A601C00705D009E5ADE /* Array+Ruby_Tests.swift in Sources */,
 				25461A5A1C005D79009E5ADE /* Int+Ruby_Tests.swift in Sources */,
 				25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */,
+				259DF13C1C01918C00A5773A /* Dictionary+Ruby_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

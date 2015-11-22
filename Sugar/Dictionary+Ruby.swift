@@ -15,8 +15,8 @@ public extension Dictionary {
 
     // Since Swift is strict-typed language, not like ruby's method with the same name,
     // invocation does not return, but we can still do something with the key while not found
-    mutating func delete(key: Key, _ invocation:((Key) -> Void)) -> Value? {
-        guard let result = removeValueForKey(key) else { invocation(key); return nil }
+    mutating func delete(key: Key, _ invocation:((Key) -> Void)? = nil) -> Value? {
+        guard let result = removeValueForKey(key) else { invocation?(key); return nil }
         return result
     }
 
@@ -51,8 +51,8 @@ public extension Dictionary {
         }
     }
 
-    func fetch(key: Key, _ invocation:((Key) -> Void)) -> Value? {
-        guard let result = self[key] else { invocation(key); return nil }
+    func fetch(key: Key, _ invocation:((Key) -> Void)? = nil) -> Value? {
+        guard let result = self[key] else { invocation?(key); return nil }
         return result
     }
 

@@ -198,3 +198,9 @@ NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15)
 
 "%@ has %ld unread email messages." %% ["Tom", 10]
 
+"hello\r".chomp() // return: hello
+"hello\r\r".chomp() // return: hello\r
+"hello\r\n\r\n".chomp() // return: hello\r\n
+"hello\r\n\n\r".chomp() // return: hello\r\n\n
+"hello".chomp("llo") // return: he
+

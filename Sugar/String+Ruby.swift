@@ -206,6 +206,20 @@ public extension String {
     }
 
     // May not a good implementation, just mimic ruby's chomp method
+    /**
+    Return a string that all new line characters or any characters that user specified from the end of a string are removed. e.g.:
+    
+        "hello\r".chomp() // return: hello
+        "hello\r\r".chomp() // return: hello
+        "hello\r\n\r\n".chomp() // return: hello
+        "hello\r\n\n\r".chomp() // return: hello\r\n\n
+        "hello".chomp("llo") // return: he
+    
+    Not like Ruby's `chomp`, if seperator is `nil` or `""`, the result are the same. But in Ruby, if `nil` is specified, only the last new line character is removed.
+    
+    - parameter sepatator: User specified characters or nil, which will use the `\r`, `\r\n` or `\n` whoever comes first as the new line character.
+    - returns: Returns a string with last new line character removed.
+    */
     func chomp(separator: String? = nil) -> String {
         func isChar(char: Character, inSet set: NSCharacterSet) -> Bool {
             return set.characterIsMember(String(char).utf16.first!)
@@ -237,6 +251,11 @@ public extension String {
         return result
     }
 
+    /**
+    Chop off the last character from a string and return it. The original string is not changed.
+     
+    - returns: A string with the last character removed.
+    */
     func chop() -> String {
         var result = self
         let lastCharIndex = endIndex.advancedBy(-1)
@@ -245,11 +264,19 @@ public extension String {
         return result
     }
 
+    /**
+     Chop off the last character from the original string and return it. 
+     
+     @returns The string with last character removed.
+    */
     mutating func chopInPlace() -> String {
         self = chop()
         return self
     }
 
+    /**
+     Clear out a string, after clear, the original string become an empty string.
+    */
     mutating func clear() {
         self = ""
     }
@@ -257,16 +284,32 @@ public extension String {
     // chr, chomp!, chop!,  are not implemented
 
     // codepoints not implemented, since String has better solutions
+
+    /**
+    Concat the an object to a string. But unlike Ruby, the object is an `Int`, it will not convert it to Unicode charactor, but convert the `Int` to `String` and concat it to the left hand size string.
+
+    - parameter obj: Any type of object that `String` initializer can handle.
+    - returns: A string with original string and an object contact to it.
+    */
     func concat<T>(obj: T) -> String {
         return self << obj
     }
 
+    /**
+     This is an alias to `String.characters.count`.
+     */
     var count: Int {
         return characters.count
     }
 
     // crypt not implemented
 
+    /**
+    Letters that are shared in a string array are removed from the original string and return. Original string is not changed.
+    
+    - parameter words: A list of strings. 
+    - returns: String with common letters in a string array are removed.
+    */
     func delete(words: [String]) -> String {
         if words.count == 0 { return self }
         let charset = NSMutableCharacterSet(charactersInString: words[0])
@@ -285,14 +328,25 @@ public extension String {
     }
 
     // Not like ruby's delete!, this method does not return.
+    /**
+    Remove letters that are shared in a string array from the original string.
+    
+    - parameter words: A list of strings.
+    */
     mutating func deleteInPlace(words: [String]) {
         self = delete(words)
     }
 
+    /**
+     An alias for `lowercaseString`.
+    */
     func downcase() -> String {
         return lowercaseString
     }
 
+    /**
+     Make the string downcase. Original string is changed.
+    */
     mutating func downcaseInPlace() {
         self = lowercaseString
     }
@@ -300,13 +354,22 @@ public extension String {
     // dump not implemented
 
     // each_byte, each_codepoint not implemented
-
+    /**
+    Enumerate all the characters from a string and execute a closure on the characters.
+    
+    - parameter invocation: A closure that accept a `Character` as argument.
+    */
     func eachChar(invocation: ((_:Character) -> Void)) {
         for char in characters {
             invocation(char)
         }
     }
 
+    /**
+    Emumerate all lines in a string and execute a closure on the lines.
+     
+    - parameter invocation: A closure that accept a line of string as argument.
+    */
     func eachLine(invocation: ((_:String) -> Void)) {
         let lines = componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         for line in lines {
@@ -314,10 +377,20 @@ public extension String {
         }
     }
 
+    /**
+     An alias to `isEmpty` property. Since ? can not be used in the property name, this is basically useless.
+    */
     var empty: Bool {
         return isEmpty
     }
 
+    /**
+     Convert a string from one encoding to another encoding. 
+     
+     - parameter toEncoding: Encoding that the string is converting to.
+     - parameter fromEncodding: Original string's encoding. Default value is `NSUTF8StringEncoding`. 
+     - returns: A string with destination character encoding. Or `nil` if convert failed.
+    */
     func encode(toEncoding: NSStringEncoding, fromEncoding: NSStringEncoding = NSUTF8StringEncoding) -> String? {
         guard let data = dataUsingEncoding(fromEncoding) else { return nil }
         let result = String(data: data, encoding: toEncoding)
@@ -326,11 +399,20 @@ public extension String {
 
     // encoding is not applicable; encode!, get_byte not implemented
     // force_encoding is not applicable
-
+    /**
+    An alias for `hasSuffix`.
+    */
     func endWith(suffix: String) -> Bool {
         return hasSuffix(suffix)
     }
 
+    /**
+     Substitude all occurance of substrings matching regular expression pattern with the replacement string. If regular expression pattern is illegal or no matching found in the string, the original string will be returned. Original string is not changed.
+     
+     - parameter pattern: A regular expression pattern. 
+     - parameter replacement: The replacement string that will be applied. 
+     - returns: A new string with all occurance of patterns replaced.
+    */
     func gsub(pattern:String, replacement:String) -> String {
         var result = self
         result = gsub(pattern) { (match) in
@@ -340,6 +422,13 @@ public extension String {
     }
 
     // Not good...replace from reverse to avoid range change...
+    /**
+    Substitude all occurance of substrings matching regular expression pattern with the string that was returned by the closure. If regular expression pattern is illegal or no matching found in the string, the original string will be returned. Original string is not changed.
+
+    - parameter pattern: A regular expression pattern.
+    - parameter invocation: A closure accecpt an `NSTextCheckingResult` argument and return a string.
+    - returns: A new string with all occurance of patterns replaced.
+    */
     func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let matches = allMatches(pattern)  else { return self }
@@ -354,11 +443,23 @@ public extension String {
     // hash is already implemented by standard library
     // hex not implemented
 
+    /**
+    Alias for method `containsString`.
+    */
     func include(subString: String) -> Bool {
         return containsString(subString)
     }
 
     // FIXME: Anyway to make regex and reverse search working together?
+    /**
+    Get the first index of a substring, or a substring that matches a regular expression pattern.
+    
+    - parameter subString: If `isRegex` is `false`, `subString` is used as-is while searching for sub string. If `isRegex` is `true`, subString is used as regular expression pattern. 
+    - parameter isRegex: Specify use regular expression search or not. 
+    - parameter isReverse: Search from the end of the string. If `isRegex` is true, this argument is always `false`. 
+    - parameter offset: Specify an offset to start search. 
+    - returns: Index of the first occurance of a string or a pattern. If not found, return `nil`.
+    */
     func index(subString: String, isRegex: Bool = false, isReverse: Bool = false,  offset: Int = 0) -> Int? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
@@ -369,6 +470,13 @@ public extension String {
         return startIndex.distanceTo(range.startIndex)
     }
 
+    /**
+     Insert the a string into the original string at specific index. Original string is changed. If the index is out of bound of a string, an exception will occured and will crash your app.
+
+     - parameter index: The index to insert the sub string. Type of index is `Int`. 
+     - parameter subString: The substring to insert. 
+     - returns: Returned the string with sub string inserted.
+    */
     mutating func insert(index:Int, subString: String) -> String {
         let offset = index > 0 ? index : characters.count + index + 1
         insertContentsOf(subString.characters, at: startIndex.advancedBy(offset))
@@ -378,14 +486,29 @@ public extension String {
     // inspect is not implemented
     // intern is not applicaable
 
+    /**
+    An alias for `String.characters.count`.
+    */
     var length: Int {
         return characters.count
     }
 
+    /**
+     Get an array of lines that was contained in the original string. 
+     
+     - returns: String array contains all lines in a string.
+    */
     func lines() -> [String] {
         return componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
     }
-    
+
+    /**
+     Put a string at left most of a longer string and pad the other spaces with padding string. 
+     
+     - parameter totalLength: The total length of the target string. 
+     - parameter padString: The padding string to fill the target string.
+     - returns: Returns a new string with the original string at left and other spaces filled with padding string.
+    */
     func ljust(totalLength:Int, padString: String = " ") -> String {
         let stringLength = characters.count
         if totalLength <= stringLength {
@@ -401,7 +524,12 @@ public extension String {
             return result
         }
     }
-    
+
+    /**
+     Remove all the white space characters at the left end of the string.
+     
+     - returns: A new string with white spaces at the left end removed.
+    */
     func lstrip() -> String {
         var result = self
         guard let range = rangeOfString("^\\s+", options: [.RegularExpressionSearch, .AnchoredSearch], range: nil) else { return self }
@@ -410,10 +538,13 @@ public extension String {
     }
     
     // Not like ruby, this method will not return
+    /**
+    Remove all the white space characters at the left end of the original string. Original string is changed.
+    */
     mutating func lstripInPlace() {
         self = lstrip()
     }
-
+    
     func lastMatch(pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.last
         if m != nil { invocation?(m!) }

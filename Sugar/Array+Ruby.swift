@@ -8,6 +8,13 @@
 
 @available(iOS 7.0, OSX 10.9, *)
 
+/**
+Array multiply an integer.
+
+- parameter lhs: An array.
+- parameter rhs: An integer.
+- returns: A new array with all `lhs` elements repeated for `rhs` number of times.
+*/
 func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
     var result: [Element] = []
     rhs.times { (index) -> Void in
@@ -16,6 +23,13 @@ func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
     return result
 }
 
+/**
+ Sum of two arrays.
+
+ - parameter lhs: An array.
+ - parameter rhs: Another array.
+ - returns: A new array with `lhs` array and `rhs` array concatenated together.
+ */
 func +<Element>(lhs: [Element], rhs: [Element]) -> [Element] {
     var result: [Element] = lhs
     result.appendContentsOf(rhs)
@@ -23,12 +37,26 @@ func +<Element>(lhs: [Element], rhs: [Element]) -> [Element] {
 }
 
 // Anyway to implement & or - or | ?
+/**
+Concat an element into an existing array.
+
+- parameter lhs: An array of elements. 
+- parameter rhs: An element. 
+- returns: A new array with all the elements from the original array and another element.
+*/
 func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
     var result: [Element] = lhs
     result.append(rhs)
     return result
 }
 
+/**
+ Concat an array into an existing array.
+ 
+ - parameter lhs: An array of elements.
+ - parameter rhs: Another array.
+ - returns: A new array with all the elements from the original array and another array.
+*/
 func <<<Element>(lhs:[Element], rhs: [Element]) -> [Element] {
     var result: [Element] = lhs
     result.appendContentsOf(rhs)
@@ -47,6 +75,13 @@ public extension Array {
 
             a.anyIf("b", ==)
     */
+    /**
+    Examine whether an array contains an element or not by an invocation thet returns a boolean value. 
+    
+    - parameter element: The element need to be find. 
+    - parameter invocation: A closure that accept current element and the target element and return a boolean value. 
+    - returns: Return `true` if the element is found.
+    */
     func anyIf(element: Element, _ invocation: ((Element, Element) -> Bool)) -> Bool {
         for var i = 0; i < count; ++i {
             if invocation(element, self[i]) {
@@ -56,12 +91,18 @@ public extension Array {
         return false
     }
 
-    func at(index: Int) -> Element? {
-        if index >= 0 && index < count {
-            return self[index]
+    /**
+     Get the element at the specified position. 
+     
+     - parameter position: The position in the array. The position can be minus. If minus, the position is count from the end of the array.
+     - returns: An element at the specified position. If the position is out of bound, `nil` will be returned. 
+    */
+    func at(position: Int) -> Element? {
+        if position >= 0 && position < count {
+            return self[position]
         }
-        else if index < 0 && count+index >= 0 {
-            return self[count+index]
+        else if position < 0 && count+position >= 0 {
+            return self[count+position]
         }
         else {
             return nil

@@ -544,20 +544,43 @@ public extension String {
     mutating func lstripInPlace() {
         self = lstrip()
     }
-    
+
+    /**
+     Found the last match of a pattern from a specified offset.
+     
+     - parameter pattern: A regular expression pattern. 
+     - parameter offset: Search offset.
+     - parameter invocation: Execute a closure if the pattern is found.
+     - returns: Last found pattern's `NSTextCheckingResult`, or `nil` if nothing found.
+    */
     func lastMatch(pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.last
         if m != nil { invocation?(m!) }
         return m
     }
 
+    /**
+     Found all matches of a pattern from a specified offset. 
+     
+     - parameter pattern: A regular expression pattern. 
+     - parameter offset: Search offset.
+     - returns: An array of found result in the form of `NSTextCheckingResult`, or `nil` if nothing found.
+    */
     func allMatches(pattern:String, offset: Int = 0) -> [NSTextCheckingResult]? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
         guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return nil }
         return regex.matchesInString(self, options: [], range: NSRange(location: searchOffset, length: stringLength - searchOffset))
     }
-    
+
+    /**
+     Found the first match of a pattern from a specified offset.
+
+     - parameter pattern: A regular expression pattern.
+     - parameter offset: Search offset.
+     - parameter invocation: Execute a closure if the pattern is found.
+     - returns: First found pattern's `NSTextCheckingResult`, or `nil` if nothing found.
+     */
     func match(pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.first
         if m != nil { invocation?(m!) }
@@ -565,29 +588,60 @@ public extension String {
     }
 
     // next/succ, oct, ord not implemented
-
+    /**
+    Partition a string with the first occurance of a sub string or matches a regular expression.
+    
+    - parameter pattern: A regular expression pattern or a sub string.
+    - parameter isRegex: If regular expression is specified, `isReverse` has no effect.
+    - parameter isReverse: Search from the end of a string.
+    - returns: An array contains first part of a string, substring that matches a pattern, and the remain part of the string. If nothing found, an array contains the original string and two empty string is returned.
+    */
     func partition(pattern: String, isRegex: Bool = false, isReverse: Bool = false) -> [String] {
         var options: NSStringCompareOptions = isReverse ? [.BackwardsSearch] : []
         if isRegex { options = [.RegularExpressionSearch] }
-        guard let range = rangeOfString(pattern, options: options, range: nil, locale: nil) else { return ["", self,""] }
+        guard let range = rangeOfString(pattern, options: options, range: nil, locale: nil) else { return [self, "", ""] }
         let rangeBefore = Range<Index>(start:self.startIndex, end:range.startIndex)
         let rangeAfter = Range<Index>(start:range.endIndex, end:self.endIndex)
         return [self[rangeBefore], self[range], self[rangeAfter]]
     }
-    
+
+    /**
+     Add a prefix to a string. Original string is not changed.
+     
+     - parameter prefix: String prefix. 
+     - returns: String with a prefix and the original string.
+    */
     func prepend(prefix: String) -> String {
         return prefix + self
     }
-    
+
+    /**
+     Replace the current string with another string.
+     
+     - parameter anotherString: A string. 
+     - returns: The value of `anotherString` argument.
+    */
     mutating func replace(anotherString: String) -> String {
         self = anotherString
         return self
     }
-    
+
+
+    /**
+     Reverse all the characters in a string.
+     
+     - returns: The reversed string.
+    */
     func reverse() -> String {
         return String(characters.reverse())
     }
-    
+
+
+    /**
+     Change the original string to a string of all the characters reversed.
+     
+     - returns: The reversed string.
+    */
     mutating func reverseInPlace() -> String {
         self = reverse()
         return self
@@ -597,10 +651,24 @@ public extension String {
     // Due we use rangeOfString for implementation, 
     // currently regex search from backword is not supported
     // so we disable it, for now.
+    /**
+    Return the last index of a substring. Currently regular expression search is not supported. 
+    
+    - parameter subString: The sub string to found. 
+    - parameter offset: Search offset. 
+    - returns: Return the index of the target sub string. If not found, returns `nil`.
+    */
     func rindex(subString: String, offset: Int = 0) -> Int? {  //FIXME: isRegex: Bool = false, removed from method signature
         return index(subString, isRegex: false, isReverse:true, offset: offset)
     }
-    
+
+    /**
+     Put a string at right most of a longer string and pad the other spaces with padding string.
+
+     - parameter totalLength: The total length of the target string.
+     - parameter padString: The padding string to fill the target string.
+     - returns: Returns a new string with the original string at right and other spaces filled with padding string.
+     */
     func rjust(totalLength: Int, padString: String = " ") -> String {
         let stringLength = characters.count
         if totalLength <= stringLength {
@@ -620,22 +688,43 @@ public extension String {
     }
 
     // Same reason as rindex
+    /**
+    Partition a string with the last occurance of a sub string or matches a regular expression. Currently regular expression search is not supported.
+
+    - parameter pattern: A regular expression pattern or a sub string.
+    - returns: An array contains first part of a string, last substring that matches a pattern, and the remain part of the string. If nothing found, an array contains the original string and two empty string is returned.
+    */
     func rpartition(pattern: String) -> [String] {//FIXME: isRegex: Bool = false, removed from method signature
         return partition(pattern, isRegex: false, isReverse: true)
     }
-    
+
+    /**
+     Remove all the white space characters at the right end of the string.
+
+     - returns: A new string with white spaces at the right end removed.
+     */
     func rstrip() -> String {
         var result = self
         guard let range = rangeOfString("\\s+$", options: [.RegularExpressionSearch], range: nil) else { return self }
         result.replaceRange(range, with: "")
         return result
     }
-    
+
     // Not like ruby, this method will not return
+    /**
+    Remove all the white space characters at the right end of the original string. Original string is changed.
+    */
     mutating func rstripInPlace() {
         self = rstrip()
     }
 
+    /**
+     Scan for a regular expression pattern and execute a closure with the founc result as the argument.
+     
+     - parameter pattern: A regular expression pattern. 
+     - parameter invocation: A closure that accept the scan result as argument. 
+     - returns: Returns a search result array, or `nil` if pattern not found.
+    */
     func scan(pattern:String, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
         guard let matches = allMatches(pattern) else { return nil }
         if matches.count == 0 {
@@ -650,6 +739,9 @@ public extension String {
     }
 
     // scrub, scrub!, setByte not implemented
+    /**
+    Alias for `String.characters.count`.
+    */
     var size: Int {
         return characters.count
     }
@@ -658,6 +750,17 @@ public extension String {
     
     // the limit argument is not implemented.
     // now split() and split("") mimic ruby behavior, not componentsSeparatedByString behavior.
+    /**
+    Split a string by a sub string or regular expression. If the sub string to split a string is `nil`, returns an array contains the original string; If the sub string is an empty string `""`, an array contains every single character as a string is returned. For example:
+    
+        "hello".split() // returns: ["hello"]
+        "hello".split("") // returns: ["h", "e", "l", "l", "o"]
+        "hello".split("l+", isRegex: true) // returns: ["he", "o"]
+    
+    - parameter seperator: The sub string to seperate a longer string. If `isRegex` is `true`, `seperator` is used as a regular expression pattern. 
+    - parameter isRegex: Use regular expression search or not. 
+    - returns: An array contains every single character as a string is returned.
+    */
     func split(seperator: String? = nil, isRegex: Bool = false) -> [String] {
         if seperator == nil { return [self] }
         if isRegex {
@@ -679,17 +782,32 @@ public extension String {
         }
     }
 
+    /**
+     Squeeze all the continous white spaces into one space. Original string is not changed. e.g.
+     
+        "   Hello   world!   ".squeeze() // returns: " Hello world! "
+     
+     - returns: A new string with all continous white spaces condenced into one.
+    */
     func squeeze() -> String {
         let result = gsub("\\s+", replacement: " ")
         print(result)
         return result
     }
 
+    /**
+     Squeeze all the continous white spaces into one space from the original string.
+
+     - returns: A new string with all continous white spaces condenced into one.
+     */
     mutating func squeezeInPlace() -> String {
         self = squeeze()
         return self
     }
 
+    /**
+     Alias to `hasPrefix` method.
+    */
     func startWith(prefix: String) -> Bool {
         return hasPrefix(prefix)
     }
@@ -697,15 +815,31 @@ public extension String {
     // white space and new line chars are all stripped
     // note: lstrip and rstrip are not trim newline chars
     // this behavior may change later
+    /**
+    Delete white space and new line characters from both end of a string. Original string is not changed.
+    
+    - returns: A new string with white space and new line characters remove from both end of the original string.
+    */
     func strip() -> String {
         return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
+    /**
+     Delete white space and new line characters from both end of the original string.
 
+     - returns: The string with white space and new line characters remove from both end of the original string.
+     */
     mutating func stripInPlace() -> String {
         self = strip()
         return self
     }
 
+    /**
+     Replace first match of a regular expression pattern with the result of execusion of a closure.
+     
+     - parameter pattern: A regular expression pattern.
+     - parameter invocation: A parameter process the found result and return a string to replace. 
+     - return: A string with the first matched pattern replaced.
+    */
     func sub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let match = match(pattern) else { return self }
@@ -713,6 +847,13 @@ public extension String {
         return result
     }
 
+    /**
+     Replace the first match of a regular expression pattern with the target replacement string.
+
+     - parameter pattern: A regular expression.
+     - parameter replacement: The replacement string.
+     - return: A string with the first matched pattern replaced.
+    */
     func sub(pattern:String, replacement:String) -> String {
         var result = self
         result = sub(pattern) { (match) in
@@ -721,22 +862,30 @@ public extension String {
         return result
     }
 
-
     // succ, succ!, sum to_xxx unpack upto not implemented
-
     //TODO: swapcase(), swapcaseInPlace()
-
     //  tr and tr! not implemented. Maybe add later
 
+    /**
+    Alias for `uppercaseString` property.
+    */
     func upcase() -> String {
         return uppercaseString
     }
 
+    /**
+     Make the original string an upper cased string.
+    */
     mutating func upcaseInPlace() {
         self = uppercaseString
     }
 
     // not functions the same as the ruby's valid_encoding?
+    /**
+    Evaluate a string whether it can be converted to a specified string encoding.
+    
+    - returns: If convertable returns `true`, else returns `false`.
+    */
     func validEncoding(encoding: NSStringEncoding) -> Bool {
         guard let _ = dataUsingEncoding(encoding, allowLossyConversion: false) else { return false }
         return true

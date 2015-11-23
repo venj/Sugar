@@ -203,4 +203,6 @@ NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15)
 "hello\r\n\r\n".chomp() // return: hello\r\n
 "hello\r\n\n\r".chomp() // return: hello\r\n\n
 "hello".chomp("llo") // return: he
+"hello".partition("z")
+"hello".split("l+", isRegex: true) // returns: ["he", "o"]
 

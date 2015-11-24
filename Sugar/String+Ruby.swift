@@ -22,8 +22,7 @@ This will produce string:
 
     Tom has 10 unread email messages.
 
-Since Swift have very powerful String interpolation ability, this
-method not very useful. Not like Ruby's `%`, named arguments list is not implemented.
+Since Swift have very powerful String interpolation ability, this method not very useful. Not like Ruby's `%`, named arguments list is not implemented.
 
 - parameter lhs: Left hand side operand is a format string.
 - parameter rhs: Right hand side operand is an array containing `CVarArgType` arguments.
@@ -42,11 +41,10 @@ public func %%(lhs: String, rhs: [CVarArgType]) -> String{
 
  This will produce string:
 
-    "hellohellohello"
+     "hellohellohello"
 
  - parameter lhs: Left hand side operand is the original string
- - parameter rhs: Right hand side operand is an `Int` that indicate how many times
- that should be repeated.
+ - parameter rhs: Right hand side operand is an `Int` that indicate how many times that should be repeated.
  - returns: The repeated string.
  */
 @available(iOS 7.0, OSX 10.9, *)
@@ -80,6 +78,10 @@ public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(rhs)
 }
 
+
+/**
+ Ruby Core flavored string extension. 
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
     // Static function

@@ -9,6 +9,9 @@
 import Foundation
 
 //TODO: Regex options are not applicable here, add later
+/**
+Determine whether a string matches a regular expression pattern.
+*/
 infix operator =~ { associativity none precedence 130 }
 @available(iOS 7.0, OSX 10.9, *)
 public func =~(lhs: String, rhs: String) -> Int? {
@@ -17,6 +20,9 @@ public func =~(lhs: String, rhs: String) -> Int? {
     return match.range.location
 }
 
+/**
+Determine whether a string does not matches a regular expression pattern.
+*/
 infix operator !~ { associativity none precedence 130 }
 @available(iOS 7.0, OSX 10.9, *)
 // since swift does not have literal for regex, so not like ruby,

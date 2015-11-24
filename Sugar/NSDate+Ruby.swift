@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ All seven week days.
+*/
 public enum WeekDay: Int {
     case Sunday = 1
     case Monday
@@ -18,6 +21,9 @@ public enum WeekDay: Int {
     case Saturday
 }
 
+/**
+Compare two `NSDate`. Earlier date is smaller.
+*/
 @available(iOS 7.0, OSX 10.9, *)
 @warn_unused_result public func <(lhs: NSDate, rhs: NSDate) -> Bool {
     let lhsTimeStamp = lhs.timeIntervalSince1970
@@ -25,6 +31,9 @@ public enum WeekDay: Int {
     return (rhsTimeStamp - lhsTimeStamp) > 0
 }
 
+/**
+ Make `NSDate` comform to `Comparable` protocal. 
+*/
 @available(iOS 7.0, OSX 10.9, *)
 extension NSDate: Comparable {
 }

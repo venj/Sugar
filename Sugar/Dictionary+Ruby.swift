@@ -8,7 +8,9 @@
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension Dictionary {
-
+    /**
+     Remove all the keys and values of the dict. 
+    */
     mutating func clear() {
         removeAll()
     }

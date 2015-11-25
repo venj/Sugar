@@ -10,6 +10,9 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
+    /**
+     Determine whether a string matches regular expression.
+    */
     func matches(pattern: String, regularExpressionOptions:NSRegularExpressionOptions = [.CaseInsensitive], matchingOptions:NSMatchingOptions = []) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: regularExpressionOptions) else { return false }
         let nsRange = NSRange(location: 0, length: self.characters.count)
@@ -21,6 +24,9 @@ public extension String {
         }
     }
 
+    /**
+     Array of regular expression captures.
+    */
     func arrayOfCaptureComponentsMatchedByRegex(pattern: String) -> [[String]] {
         var result: [[String]] = [[]]
         guard let regex = try? NSRegularExpression(pattern: pattern, options:[.CaseInsensitive]) else { return result }
@@ -36,7 +42,10 @@ public extension String {
         }
         return result
     }
-    
+
+    /**
+     Matched sub strings captured by a regular expression.
+    */
     func captureComponentsMatchedByRegex(pattern: String, capture captureIndex: Int = 1) -> [String] {
         let matches = self.arrayOfCaptureComponentsMatchedByRegex(pattern)
         var result: [String] = []
@@ -47,6 +56,9 @@ public extension String {
         return result
     }
 
+    /**
+     The exact matched sub string captured by a regular expression.
+     */
     func stringByMatching(pattern: String, capture captureIndex: Int = 1) -> String? {
         let matches = self.arrayOfCaptureComponentsMatchedByRegex(pattern)
         var result: String? = nil

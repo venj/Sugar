@@ -6,63 +6,9 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
-@available(iOS 7.0, OSX 10.9, *)
-
 /**
-Array multiply an integer.
-
-- parameter lhs: An array.
-- parameter rhs: An integer.
-- returns: A new array with all `lhs` elements repeated for `rhs` number of times.
+Ruby core flavored extension for Generic `Array`.
 */
-func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
-    var result: [Element] = []
-    rhs.times { (index) -> Void in
-        result.appendContentsOf(lhs)
-    }
-    return result
-}
-
-/**
- Sum of two arrays.
-
- - parameter lhs: An array.
- - parameter rhs: Another array.
- - returns: A new array with `lhs` array and `rhs` array concatenated together.
- */
-func +<Element>(lhs: [Element], rhs: [Element]) -> [Element] {
-    var result: [Element] = lhs
-    result.appendContentsOf(rhs)
-    return result
-}
-
-// Anyway to implement & or - or | ?
-/**
-Concat an element into an existing array.
-
-- parameter lhs: An array of elements. 
-- parameter rhs: An element. 
-- returns: A new array with all the elements from the original array and another element.
-*/
-func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
-    var result: [Element] = lhs
-    result.append(rhs)
-    return result
-}
-
-/**
- Concat an array into an existing array.
- 
- - parameter lhs: An array of elements.
- - parameter rhs: Another array.
- - returns: A new array with all the elements from the original array and another array.
-*/
-func <<<Element>(lhs:[Element], rhs: [Element]) -> [Element] {
-    var result: [Element] = lhs
-    result.appendContentsOf(rhs)
-    return result
-}
-
 @available(iOS 7.0, OSX 10.9, *)
 public extension Array {
     /*

@@ -13,6 +13,7 @@ import CommonCrypto
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
+    /// String's MD5 checksum. 
     var md5: String {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))

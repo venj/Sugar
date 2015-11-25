@@ -9,6 +9,11 @@
 import Foundation
 
 public extension NSRange {
+    /**
+     Create a `Range<Index>` object from `NSRange` value.
+     
+     - returns: A `Range<Index>` object. 
+    */
     func range() -> Range<Int> {
         let startIndex = location
         let endIndex = startIndex.advancedBy(length)

@@ -6,25 +6,10 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
-infix operator ** { associativity left precedence 160 }
-@available(iOS 7.0, OSX 10.9, *)
-//TODO: minus rhs not implemented
-/**
-Calculate power of two integers.
-
-- parameter lhs: Can be a minus number. 
-- parameter rhs: Can not be minus for now.
-- returns: Power of two numbers.
-*/
-public func **(lhs: Int, rhs: Int) -> Int {
-    var result = 1
-    rhs.times { _ in result *= lhs }
-    return result
-}
 /**
 Integer extensions that mimic Ruby core's Integer and Numeric classes.
  
-** This extension may have serious overflow issue while used on 32-bit platform. **
+**This extension may have serious overflow issue while used on 32-bit platform.**
  
 32-bit compatibility issue will be fixed in future extension for `Int64` and will be resolved here too. 
 

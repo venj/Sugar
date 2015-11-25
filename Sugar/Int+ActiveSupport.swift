@@ -7,7 +7,9 @@
 //
 
 // Notice for 32-bit: Following code may overflow on 32-bit platform
-
+/**
+Active Support flavored extension for Int.
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int {
     /// Kilobytes in int.

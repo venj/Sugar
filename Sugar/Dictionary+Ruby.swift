@@ -6,6 +6,9 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
+/**
+Ruby core flavored extension for Generic `Dictionary`.
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public extension Dictionary {
     /**

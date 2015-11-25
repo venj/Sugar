@@ -10,7 +10,7 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int {
-
+    /// Convert size number into human readable size string. Largest size unit is `GB`.
     var fileSizeString: String {
         var str = ""
         if self > 1.gb {
@@ -30,18 +30,22 @@ public extension Int {
 }
 
 public extension CLongLong {
+    /// GB in Int64.
     var gb: CLongLong {
         return self * 1073741824 // 1024 x 1024 x 1024
     }
 
+    /// MB in Int64.
     var mb: CLongLong {
         return self * 1048576 // 1024 x 1024
     }
 
+    /// KB in Int64.
     var kb: CLongLong {
         return self * 1024
     }
 
+    /// Convert size number into human readable size string. Largest size unit is `GB`.
     var fileSizeString: String {
         var str = ""
         if self > CLongLong(1.gb) {

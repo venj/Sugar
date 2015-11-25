@@ -12,18 +12,20 @@ import Foundation
  All seven week days.
 */
 public enum WeekDay: Int {
+    /// Sunday. Day of week is 1.
     case Sunday = 1
-    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday
-}
-
-/**
-Compare two `NSDate`. Earlier date is smaller.
-*/
-@available(iOS 7.0, OSX 10.9, *)
-@warn_unused_result public func <(lhs: NSDate, rhs: NSDate) -> Bool {
-    let lhsTimeStamp = lhs.timeIntervalSince1970
-    let rhsTimeStamp = rhs.timeIntervalSince1970
-    return (rhsTimeStamp - lhsTimeStamp) > 0
+    /// Monday. Day of week is 2.
+    case Monday
+    /// Tuesday. Day of week is 3.
+    case Tuesday
+    /// Wednesday. Day of week is 4.
+    case Wednesday
+    /// Thursday. Day of week is 5.
+    case Thursday
+    /// Friday. Day of week is 6.
+    case Friday
+    /// Saturday. Day of week is 7.
+    case Saturday
 }
 
 /**
@@ -33,6 +35,9 @@ Compare two `NSDate`. Earlier date is smaller.
 extension NSDate: Comparable {
 }
 
+/**
+Some sugar for `NDDate`.  
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public extension NSDate {
     /**

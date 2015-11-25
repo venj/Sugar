@@ -5,7 +5,9 @@
 //  Created by 朱文杰 on 15/11/19.
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
-
+/**
+Active Support flavored extension for Double.
+*/
 @available(iOS 7.0, OSX 10.9, *)
 public extension Double {
     /**

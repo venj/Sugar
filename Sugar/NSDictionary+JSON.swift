@@ -10,6 +10,7 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension NSDictionary {
+    /// Convert a dictionary to JSON string.
     var JSONString: String? {
         get {
             guard let data = self.JSONData else { return nil }
@@ -17,6 +18,7 @@ public extension NSDictionary {
         }
     }
 
+    /// Convert a dictionary to JSON data.
     var JSONData: NSData? {
         guard let data = try? NSJSONSerialization.dataWithJSONObject(self, options: []) else { return nil }
         return data

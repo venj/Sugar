@@ -10,6 +10,12 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
+    /**
+     Convert a JSON string to a JSONObject.
+     
+     - parameter encoding: String encoding for the JSON string. 
+     - returns: JSON object (typically a dictionary or an array) or `nil` if conversion failed.
+    */
     func JSONObject(encoding: NSStringEncoding = NSUTF8StringEncoding) -> AnyObject? {
         guard let data = self.dataUsingEncoding(encoding) else { return nil }
         guard let JSON = try? NSJSONSerialization.JSONObjectWithData(data, options:[]) else { return nil }

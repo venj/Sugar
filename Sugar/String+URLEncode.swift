@@ -10,6 +10,7 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
+    /// Encode all the characters that are not rfc3986 reserved. Not very useful. Considering a more effective way.
     var percentEncodedString: String {
         get {
             let rfc3986ReservedCharacterSet = NSCharacterSet(charactersInString: " !*'();:@&=+$,/?%#[]") // Space char is included
@@ -18,6 +19,7 @@ public extension String {
         }
     }
 
+    /// Decode percent encoded string. 
     var decodedPercentEncodingString: String {
         get {
             let str = self.stringByReplacingOccurrencesOfString("+", withString: " ")

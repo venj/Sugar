@@ -23,6 +23,7 @@ class NSDateRubyTests: XCTestCase {
 
     func testCompareOperator() {
         let date1 = NSDate()
+        usleep(1000)
         let date2 = NSDate()
         let result = (date1 < date2)
         XCTAssertTrue(result)

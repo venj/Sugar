@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CommonCrypto
+import CommonCrypto_iOS
 
 // via https://github.com/mnbayan/StringHash
 

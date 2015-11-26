@@ -133,6 +133,8 @@
 		2547BC141BFAE17800665E1C /* Array+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ruby.swift"; sourceTree = "<group>"; };
 		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
 		25501F171C059839001CB1FE /* Operators+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Ruby.swift"; sourceTree = "<group>"; };
+		25612D2E1C06B4D000EE3668 /* tvos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = tvos.modulemap; sourceTree = "<group>"; };
+		25612D2F1C06B4EA00EE3668 /* tvossimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = tvossimulator.modulemap; sourceTree = "<group>"; };
 		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
 		257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
@@ -235,6 +237,8 @@
 				251F5F2A1BF452EA009FC984 /* iphonesimulator.modulemap */,
 				251F5F2B1BF452EA009FC984 /* macosx.modulemap */,
 				251F5F2C1BF452EA009FC984 /* watchos.modulemap */,
+				25612D2E1C06B4D000EE3668 /* tvos.modulemap */,
+				25612D2F1C06B4EA00EE3668 /* tvossimulator.modulemap */,
 				251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */,
 			);
 			path = CommonCrypto;
@@ -734,6 +738,8 @@
 				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/tvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/tvossimulator.modulemap";
 				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
 				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
 				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
@@ -759,6 +765,8 @@
 				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/tvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/tvossimulator.modulemap";
 				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
 				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
 				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";

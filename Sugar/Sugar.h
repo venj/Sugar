@@ -6,7 +6,13 @@
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
 
+#if TARGET_OS_IPHONE || TARGET_OS_TV
+#import <UIKit/UIKit.h>
+#elif TARGET_OS_WATCH
+#import <WatchKit/WatchKit.h>
+#else
 #import <Cocoa/Cocoa.h>
+#endif
 
 //! Project version number for Sugar_OSX.
 FOUNDATION_EXPORT double Sugar_OSXVersionNumber;

@@ -11,120 +11,42 @@
 		25461A5C1C006F2D009E5ADE /* Double+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5B1C006F2D009E5ADE /* Double+Ruby_Tests.swift */; };
 		25461A5E1C006F3B009E5ADE /* Float+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5D1C006F3B009E5ADE /* Float+Ruby_Tests.swift */; };
 		25461A601C00705D009E5ADE /* Array+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */; };
-		25612D3F1C06B79700EE3668 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 25612D3D1C06B79700EE3668 /* CommonCrypto.xcconfig */; };
-		25612D541C06B86500EE3668 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 25612D511C06B86500EE3668 /* CommonCrypto.xcconfig */; };
-		257859451C080EB7001E8C51 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */; };
-		257859561C080F09001E8C51 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 257859531C080F09001E8C51 /* CommonCrypto.xcconfig */; };
-		2578595F1C0810E1001E8C51 /* Sugar_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2578595E1C0810E1001E8C51 /* Sugar_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		25461A631C086A3F009E5ADE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25461A611C086A3E009E5ADE /* Info.plist */; };
+		25461A6E1C086DC5009E5ADE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25461A681C086DC5009E5ADE /* Info.plist */; };
+		25461A901C08729D009E5ADE /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A881C08729D009E5ADE /* Array+Ruby.swift */; };
+		25461A911C08729D009E5ADE /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A891C08729D009E5ADE /* Dictionary+Ruby.swift */; };
+		25461A921C08729D009E5ADE /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8A1C08729D009E5ADE /* Double+Ruby.swift */; };
+		25461A931C08729D009E5ADE /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8B1C08729D009E5ADE /* Float+Ruby.swift */; };
+		25461A941C08729D009E5ADE /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8C1C08729D009E5ADE /* Int+Ruby.swift */; };
+		25461A951C08729D009E5ADE /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8D1C08729D009E5ADE /* NSDate+Ruby.swift */; };
+		25461A961C08729D009E5ADE /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8E1C08729D009E5ADE /* Operators+Ruby.swift */; };
+		25461A971C08729D009E5ADE /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A8F1C08729D009E5ADE /* String+Ruby.swift */; };
+		25461A9B1C0872B3009E5ADE /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A981C0872B3009E5ADE /* Double+ActiveSupport.swift */; };
+		25461A9C1C0872B3009E5ADE /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A991C0872B3009E5ADE /* Int+ActiveSupport.swift */; };
+		25461A9D1C0872B3009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
+		25461AC51C087327009E5ADE /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB81C087327009E5ADE /* Comparable+Ruby.swift */; };
+		25461AC61C087327009E5ADE /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB91C087327009E5ADE /* Int+FileSize.swift */; };
+		25461AC71C087327009E5ADE /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABA1C087327009E5ADE /* NSData+Base64.swift */; };
+		25461AC81C087327009E5ADE /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */; };
+		25461AC91C087327009E5ADE /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABC1C087327009E5ADE /* NSRange+Swift.swift */; };
+		25461ACA1C087327009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
+		25461ACB1C087327009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
+		25461ACC1C087327009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
+		25461ACD1C087327009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461ACE1C087327009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
+		25461ACF1C087327009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
+		25461AD01C087327009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
+		25461AD11C087327009E5ADE /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC41C087327009E5ADE /* String+URLEncode.swift */; };
+		25461AD41C0874E9009E5ADE /* Sugar_watchOS.modulemap in Resources */ = {isa = PBXBuildFile; fileRef = 25461AD31C0874E9009E5ADE /* Sugar_watchOS.modulemap */; };
 		257859631C0810E1001E8C51 /* Sugar_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; };
 		257859641C0810E1001E8C51 /* Sugar_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		257859681C08111B001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
-		257859691C08111B001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
-		2578596A1C08111B001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
-		2578596B1C08111B001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
-		2578596C1C08111C001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
-		2578596D1C08111C001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
-		2578596E1C08111C001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
-		2578596F1C08111C001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
-		257859701C08111C001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
-		257859711C08111C001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
-		257859721C08111C001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
-		257859731C08111C001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
-		257859741C08111C001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
-		257859751C08111C001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
-		257859761C08111C001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
-		257859771C08111C001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
-		257859781C08111C001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
-		257859791C08111C001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
-		2578597A1C08111C001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
-		2578597B1C08111C001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
-		2578597C1C08111C001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
-		2578597D1C08111C001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
-		2578597E1C08111C001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
-		2578597F1C08111C001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
 		257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
 		257859811C08111C001E8C51 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
 		257859821C08111C001E8C51 /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
 		257859831C081144001E8C51 /* CommonCrypto_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */; };
-		2578598C1C0811FD001E8C51 /* Sugar_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		257859911C081214001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
-		257859921C081214001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
-		257859931C081214001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
-		257859941C081214001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
-		257859951C081214001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
-		257859961C081214001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
-		257859971C081214001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
-		257859981C081214001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
-		257859991C081214001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
-		2578599A1C081214001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
-		2578599B1C081214001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
-		2578599C1C081214001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
-		2578599D1C081214001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
-		2578599E1C081214001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
-		2578599F1C081214001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
-		257859A01C081214001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
-		257859A11C081214001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
-		257859A21C081214001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
-		257859A31C081214001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
-		257859A41C081214001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
-		257859A51C081214001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
-		257859A61C081214001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
-		257859A71C081214001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
-		257859A81C081214001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
-		257859B11C08122E001E8C51 /* Sugar_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859B01C08122E001E8C51 /* Sugar_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		257859B61C081244001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
-		257859B71C081244001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
-		257859B81C081244001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
-		257859B91C081244001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
-		257859BA1C081244001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
-		257859BB1C081244001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
-		257859BC1C081244001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
-		257859BD1C081244001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
-		257859BE1C081244001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
-		257859BF1C081244001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
-		257859C01C081244001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
-		257859C11C081244001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
-		257859C21C081244001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
-		257859C31C081244001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
-		257859C41C081244001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
-		257859C51C081244001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
-		257859C61C081244001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
-		257859C71C081244001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
-		257859C81C081244001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
-		257859C91C081244001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
-		257859CA1C081244001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
-		257859CB1C081244001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
-		257859CC1C081244001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
-		257859CD1C081244001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
 		257859CE1C081254001E8C51 /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
-		257859D71C081272001E8C51 /* Sugar_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859D61C081272001E8C51 /* Sugar_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		257859DC1C081289001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
-		257859DD1C081289001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
-		257859DE1C081289001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
-		257859DF1C081289001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
-		257859E01C081289001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
-		257859E11C081289001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
-		257859E21C081289001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
-		257859E31C081289001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
-		257859E41C081289001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
-		257859E51C081289001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
-		257859E61C081289001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
-		257859E71C081289001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
-		257859E81C081289001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
-		257859E91C081289001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
-		257859EA1C081289001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
-		257859EB1C081289001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
-		257859EC1C081289001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
-		257859ED1C081289001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
-		257859EE1C081289001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
-		257859EF1C081289001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
-		257859F01C081289001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
-		257859F11C081289001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
-		257859F21C081289001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
-		257859F31C081289001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
 		257859F41C081406001E8C51 /* CommonCrypto_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25612D351C06B68000EE3668 /* CommonCrypto_OSX.framework */; };
 		257859F51C081410001E8C51 /* CommonCrypto_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */; };
-		25785A001C08157D001E8C51 /* Sugar_watch.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859FF1C08157D001E8C51 /* Sugar_watch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */; };
 		25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F141BF30EF100CCCE54 /* AppDelegate.swift */; };
 		25883F171BF30EF100CCCE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F161BF30EF100CCCE54 /* ViewController.swift */; };
@@ -188,60 +110,57 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2510B6001BFD863300AED85C /* NSDate+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Ruby.swift"; sourceTree = "<group>"; };
-		2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport.swift"; sourceTree = "<group>"; };
-		2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport.swift"; sourceTree = "<group>"; };
-		2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ActiveSupport.swift"; sourceTree = "<group>"; };
-		251F5F401BF46A75009FC984 /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swift.swift"; sourceTree = "<group>"; };
 		25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		25461A5B1C006F2D009E5ADE /* Double+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		25461A5D1C006F3B009E5ADE /* Float+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ruby_Tests.swift"; sourceTree = "<group>"; };
-		2547BC051BF96B9B00665E1C /* Int+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ruby.swift"; sourceTree = "<group>"; };
-		2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Ruby.swift"; sourceTree = "<group>"; };
-		2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Float+Ruby.swift"; sourceTree = "<group>"; };
-		2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Ruby.swift"; sourceTree = "<group>"; };
-		2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby.swift"; sourceTree = "<group>"; };
-		2547BC141BFAE17800665E1C /* Array+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ruby.swift"; sourceTree = "<group>"; };
-		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
-		25501F171C059839001CB1FE /* Operators+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Ruby.swift"; sourceTree = "<group>"; };
+		25461A611C086A3E009E5ADE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Sugar/Info.plist; sourceTree = "<group>"; };
+		25461A621C086A3E009E5ADE /* Sugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sugar.h; path = Sugar/Sugar.h; sourceTree = "<group>"; };
+		25461A661C086DC5009E5ADE /* appletvos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = appletvos.modulemap; path = CommonCrypto/appletvos.modulemap; sourceTree = "<group>"; };
+		25461A671C086DC5009E5ADE /* appletvsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = appletvsimulator.modulemap; path = CommonCrypto/appletvsimulator.modulemap; sourceTree = "<group>"; };
+		25461A681C086DC5009E5ADE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CommonCrypto/Info.plist; sourceTree = "<group>"; };
+		25461A691C086DC5009E5ADE /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = iphoneos.modulemap; path = CommonCrypto/iphoneos.modulemap; sourceTree = "<group>"; };
+		25461A6A1C086DC5009E5ADE /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = iphonesimulator.modulemap; path = CommonCrypto/iphonesimulator.modulemap; sourceTree = "<group>"; };
+		25461A6B1C086DC5009E5ADE /* macosx.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = macosx.modulemap; path = CommonCrypto/macosx.modulemap; sourceTree = "<group>"; };
+		25461A6C1C086DC5009E5ADE /* watchos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = watchos.modulemap; path = CommonCrypto/watchos.modulemap; sourceTree = "<group>"; };
+		25461A6D1C086DC5009E5ADE /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = watchsimulator.modulemap; path = CommonCrypto/watchsimulator.modulemap; sourceTree = "<group>"; };
+		25461A881C08729D009E5ADE /* Array+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+Ruby.swift"; path = "Sources/Common/Array+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A891C08729D009E5ADE /* Dictionary+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+Ruby.swift"; path = "Sources/Common/Dictionary+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8A1C08729D009E5ADE /* Double+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+Ruby.swift"; path = "Sources/Common/Double+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8B1C08729D009E5ADE /* Float+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Float+Ruby.swift"; path = "Sources/Common/Float+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8C1C08729D009E5ADE /* Int+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int+Ruby.swift"; path = "Sources/Common/Int+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8D1C08729D009E5ADE /* NSDate+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+Ruby.swift"; path = "Sources/Common/NSDate+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8E1C08729D009E5ADE /* Operators+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Operators+Ruby.swift"; path = "Sources/Common/Operators+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A8F1C08729D009E5ADE /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Ruby.swift"; path = "Sources/Common/String+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461A981C0872B3009E5ADE /* Double+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+ActiveSupport.swift"; path = "Sources/Common/Double+ActiveSupport.swift"; sourceTree = SOURCE_ROOT; };
+		25461A991C0872B3009E5ADE /* Int+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int+ActiveSupport.swift"; path = "Sources/Common/Int+ActiveSupport.swift"; sourceTree = SOURCE_ROOT; };
+		25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+ActiveSupport.swift"; path = "Sources/Common/String+ActiveSupport.swift"; sourceTree = SOURCE_ROOT; };
+		25461AB81C087327009E5ADE /* Comparable+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Comparable+Ruby.swift"; path = "Sources/Common/Comparable+Ruby.swift"; sourceTree = SOURCE_ROOT; };
+		25461AB91C087327009E5ADE /* Int+FileSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int+FileSize.swift"; path = "Sources/Common/Int+FileSize.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABA1C087327009E5ADE /* NSData+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSData+Base64.swift"; path = "Sources/Common/NSData+Base64.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDictionary+JSON.swift"; path = "Sources/Common/NSDictionary+JSON.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABC1C087327009E5ADE /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSRange+Swift.swift"; path = "Sources/Common/NSRange+Swift.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextCheckingResult+Swift.swift"; path = "Sources/Common/NSTextCheckingResult+Swift.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABE1C087327009E5ADE /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Base64.swift"; path = "Sources/Common/String+Base64.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABF1C087327009E5ADE /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JSON.swift"; path = "Sources/Common/String+JSON.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC01C087327009E5ADE /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/Common/String+MD5.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC11C087327009E5ADE /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Path.swift"; path = "Sources/Common/String+Path.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC21C087327009E5ADE /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Sources/Common/String+Range.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC31C087327009E5ADE /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Sources/Common/String+Regex.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC41C087327009E5ADE /* String+URLEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+URLEncode.swift"; path = "Sources/Common/String+URLEncode.swift"; sourceTree = SOURCE_ROOT; };
+		25461AD21C087444009E5ADE /* Sugar_OSX.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = Sugar_OSX.modulemap; path = Sugar/Sugar_OSX.modulemap; sourceTree = "<group>"; };
+		25461AD31C0874E9009E5ADE /* Sugar_watchOS.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; name = Sugar_watchOS.modulemap; path = Sugar/Sugar_watchOS.modulemap; sourceTree = "<group>"; };
+		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Sugar.swift"; path = "../Sources/UIKit/UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
 		25612D351C06B68000EE3668 /* CommonCrypto_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25612D391C06B68000EE3668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25612D3D1C06B79700EE3668 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		25612D3E1C06B79700EE3668 /* macosx.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = macosx.modulemap; sourceTree = "<group>"; };
 		25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25612D491C06B7D200EE3668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25612D511C06B86500EE3668 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		25612D521C06B86500EE3668 /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
-		25612D531C06B86500EE3668 /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
-		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
 		2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2578593E1C080E21001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		257859421C080EB7001E8C51 /* appletvos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvos.modulemap; sourceTree = "<group>"; };
-		257859431C080EB7001E8C51 /* appletvsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvsimulator.modulemap; sourceTree = "<group>"; };
-		257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
 		2578594B1C080ED4001E8C51 /* CommonCrypto_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2578594F1C080ED4001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		257859531C080F09001E8C51 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		257859541C080F09001E8C51 /* watchos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchos.modulemap; sourceTree = "<group>"; };
-		257859551C080F09001E8C51 /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
 		2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2578595E1C0810E1001E8C51 /* Sugar_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_iOS.h; sourceTree = "<group>"; };
-		257859601C0810E1001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257859891C0811FC001E8C51 /* Sugar_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_tvOS.h; sourceTree = "<group>"; };
-		2578598D1C0811FD001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257859AE1C08122E001E8C51 /* Sugar_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257859B01C08122E001E8C51 /* Sugar_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_OSX.h; sourceTree = "<group>"; };
-		257859B21C08122E001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257859D41C081272001E8C51 /* Sugar_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257859D61C081272001E8C51 /* Sugar_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_watchOS.h; sourceTree = "<group>"; };
-		257859D81C081272001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		257859FF1C08157D001E8C51 /* Sugar_watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_watch.h; sourceTree = "<group>"; };
-		25785A011C08157D001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
-		257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextCheckingResult+Swift.swift"; sourceTree = "<group>"; };
 		25883F111BF30EF100CCCE54 /* Sugar Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sugar Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F141BF30EF100CCCE54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25883F161BF30EF100CCCE54 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -255,18 +174,8 @@
 		25883F421BF30F2000CCCE54 /* SugarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F491BF30F2000CCCE54 /* SugarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTests.swift; sourceTree = "<group>"; };
 		25883F4B1BF30F2000CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25883F571BF30F4700CCCE54 /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Range.swift"; sourceTree = "<group>"; };
-		25883F581BF30F4700CCCE54 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
-		25883F591BF30F4700CCCE54 /* String+URLEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+URLEncode.swift"; sourceTree = "<group>"; };
-		25883F5A1BF30F4700CCCE54 /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
-		25883F5B1BF30F4700CCCE54 /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
-		25883F5C1BF30F4700CCCE54 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
-		25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Base64.swift"; sourceTree = "<group>"; };
-		25883F5E1BF30F4700CCCE54 /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+JSON.swift"; sourceTree = "<group>"; };
-		25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+JSON.swift"; sourceTree = "<group>"; };
-		25883F601BF30F4700CCCE54 /* Int+FileSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+FileSize.swift"; sourceTree = "<group>"; };
-		25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
-		25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBarController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UINavigationController+StatusBarStyle.swift"; path = "../Sources/UIKit/UINavigationController+StatusBarStyle.swift"; sourceTree = "<group>"; };
+		25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITabBarController+StatusBarStyle.swift"; path = "../Sources/UIKit/UITabBarController+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		259DF13D1C01ACD500A5773A /* Comparable+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		259DF13F1C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegularExpression+Ruby_Tests.swift"; sourceTree = "<group>"; };
@@ -364,11 +273,12 @@
 		2510B6061BFDB05300AED85C /* ActiveSupport Style Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */,
-				2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */,
-				2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */,
+				25461A981C0872B3009E5ADE /* Double+ActiveSupport.swift */,
+				25461A991C0872B3009E5ADE /* Int+ActiveSupport.swift */,
+				25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */,
 			);
 			name = "ActiveSupport Style Extension";
+			path = "../Sources/Common/ActiveSupport Style Extension";
 			sourceTree = "<group>";
 		};
 		251F5F3E1BF456AA009FC984 /* UIKit Extension */ = {
@@ -391,146 +301,78 @@
 			name = "Standard Library and Foundation";
 			sourceTree = "<group>";
 		};
+		25461A641C086A43009E5ADE /* Sugar */ = {
+			isa = PBXGroup;
+			children = (
+				25461A611C086A3E009E5ADE /* Info.plist */,
+				25461AD21C087444009E5ADE /* Sugar_OSX.modulemap */,
+				25461AD31C0874E9009E5ADE /* Sugar_watchOS.modulemap */,
+				25461A621C086A3E009E5ADE /* Sugar.h */,
+			);
+			name = Sugar;
+			sourceTree = "<group>";
+		};
+		25461A6F1C086DCB009E5ADE /* CommonCrypto */ = {
+			isa = PBXGroup;
+			children = (
+				25461A661C086DC5009E5ADE /* appletvos.modulemap */,
+				25461A671C086DC5009E5ADE /* appletvsimulator.modulemap */,
+				25461A681C086DC5009E5ADE /* Info.plist */,
+				25461A691C086DC5009E5ADE /* iphoneos.modulemap */,
+				25461A6A1C086DC5009E5ADE /* iphonesimulator.modulemap */,
+				25461A6B1C086DC5009E5ADE /* macosx.modulemap */,
+				25461A6C1C086DC5009E5ADE /* watchos.modulemap */,
+				25461A6D1C086DC5009E5ADE /* watchsimulator.modulemap */,
+			);
+			name = CommonCrypto;
+			sourceTree = "<group>";
+		};
 		2547BC071BF9AEAF00665E1C /* Ruby Core Style Extension */ = {
 			isa = PBXGroup;
 			children = (
-				25501F171C059839001CB1FE /* Operators+Ruby.swift */,
-				256A486C1BF58B4900926D90 /* String+Ruby.swift */,
-				2547BC051BF96B9B00665E1C /* Int+Ruby.swift */,
-				2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */,
-				2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */,
-				2547BC141BFAE17800665E1C /* Array+Ruby.swift */,
-				2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */,
-				2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */,
-				2510B6001BFD863300AED85C /* NSDate+Ruby.swift */,
+				25461A881C08729D009E5ADE /* Array+Ruby.swift */,
+				25461AB81C087327009E5ADE /* Comparable+Ruby.swift */,
+				25461A891C08729D009E5ADE /* Dictionary+Ruby.swift */,
+				25461A8A1C08729D009E5ADE /* Double+Ruby.swift */,
+				25461A8B1C08729D009E5ADE /* Float+Ruby.swift */,
+				25461A8C1C08729D009E5ADE /* Int+Ruby.swift */,
+				25461A8D1C08729D009E5ADE /* NSDate+Ruby.swift */,
+				25461A8E1C08729D009E5ADE /* Operators+Ruby.swift */,
+				25461A8F1C08729D009E5ADE /* String+Ruby.swift */,
 			);
 			name = "Ruby Core Style Extension";
+			path = "../Sources/Common/Ruby Core Style Extension";
 			sourceTree = "<group>";
 		};
 		25501F141C048E65001CB1FE /* General Extension */ = {
 			isa = PBXGroup;
 			children = (
-				257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */,
-				25883F571BF30F4700CCCE54 /* String+Range.swift */,
-				251F5F401BF46A75009FC984 /* NSRange+Swift.swift */,
-				25883F581BF30F4700CCCE54 /* String+MD5.swift */,
-				25883F591BF30F4700CCCE54 /* String+URLEncode.swift */,
-				25883F5A1BF30F4700CCCE54 /* String+Path.swift */,
-				25883F5E1BF30F4700CCCE54 /* String+JSON.swift */,
-				25883F5C1BF30F4700CCCE54 /* String+Base64.swift */,
-				25883F601BF30F4700CCCE54 /* Int+FileSize.swift */,
-				25883F5B1BF30F4700CCCE54 /* String+Regex.swift */,
-				25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */,
-				25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */,
+				25461AB91C087327009E5ADE /* Int+FileSize.swift */,
+				25461ABA1C087327009E5ADE /* NSData+Base64.swift */,
+				25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */,
+				25461ABC1C087327009E5ADE /* NSRange+Swift.swift */,
+				25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */,
+				25461ABE1C087327009E5ADE /* String+Base64.swift */,
+				25461ABF1C087327009E5ADE /* String+JSON.swift */,
+				25461AC01C087327009E5ADE /* String+MD5.swift */,
+				25461AC11C087327009E5ADE /* String+Path.swift */,
+				25461AC21C087327009E5ADE /* String+Range.swift */,
+				25461AC31C087327009E5ADE /* String+Regex.swift */,
+				25461AC41C087327009E5ADE /* String+URLEncode.swift */,
 			);
 			name = "General Extension";
-			sourceTree = "<group>";
-		};
-		25612D361C06B68000EE3668 /* CommonCrypto_OSX */ = {
-			isa = PBXGroup;
-			children = (
-				25612D391C06B68000EE3668 /* Info.plist */,
-				25612D3D1C06B79700EE3668 /* CommonCrypto.xcconfig */,
-				25612D3E1C06B79700EE3668 /* macosx.modulemap */,
-			);
-			path = CommonCrypto_OSX;
-			sourceTree = "<group>";
-		};
-		25612D461C06B7D200EE3668 /* CommonCrypto_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				25612D491C06B7D200EE3668 /* Info.plist */,
-				25612D511C06B86500EE3668 /* CommonCrypto.xcconfig */,
-				25612D521C06B86500EE3668 /* iphoneos.modulemap */,
-				25612D531C06B86500EE3668 /* iphonesimulator.modulemap */,
-			);
-			path = CommonCrypto_iOS;
-			sourceTree = "<group>";
-		};
-		2578593B1C080E21001E8C51 /* CommonCrypto_tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				2578593E1C080E21001E8C51 /* Info.plist */,
-				257859421C080EB7001E8C51 /* appletvos.modulemap */,
-				257859431C080EB7001E8C51 /* appletvsimulator.modulemap */,
-				257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */,
-			);
-			path = CommonCrypto_tvOS;
-			sourceTree = "<group>";
-		};
-		2578594C1C080ED4001E8C51 /* CommonCrypto_watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				2578594F1C080ED4001E8C51 /* Info.plist */,
-				257859531C080F09001E8C51 /* CommonCrypto.xcconfig */,
-				257859541C080F09001E8C51 /* watchos.modulemap */,
-				257859551C080F09001E8C51 /* watchsimulator.modulemap */,
-			);
-			path = CommonCrypto_watchOS;
-			sourceTree = "<group>";
-		};
-		2578595D1C0810E1001E8C51 /* Sugar_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				2578595E1C0810E1001E8C51 /* Sugar_iOS.h */,
-				257859601C0810E1001E8C51 /* Info.plist */,
-			);
-			path = Sugar_iOS;
-			sourceTree = "<group>";
-		};
-		2578598A1C0811FC001E8C51 /* Sugar_tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */,
-				2578598D1C0811FD001E8C51 /* Info.plist */,
-			);
-			path = Sugar_tvOS;
-			sourceTree = "<group>";
-		};
-		257859AF1C08122E001E8C51 /* Sugar_OSX */ = {
-			isa = PBXGroup;
-			children = (
-				257859B01C08122E001E8C51 /* Sugar_OSX.h */,
-				257859B21C08122E001E8C51 /* Info.plist */,
-			);
-			path = Sugar_OSX;
-			sourceTree = "<group>";
-		};
-		257859D51C081272001E8C51 /* Sugar_watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				257859D61C081272001E8C51 /* Sugar_watchOS.h */,
-				257859D81C081272001E8C51 /* Info.plist */,
-			);
-			path = Sugar_watchOS;
-			sourceTree = "<group>";
-		};
-		257859FE1C08157D001E8C51 /* Sugar_watch */ = {
-			isa = PBXGroup;
-			children = (
-				257859FF1C08157D001E8C51 /* Sugar_watch.h */,
-				25785A011C08157D001E8C51 /* Info.plist */,
-			);
-			path = Sugar_watch;
 			sourceTree = "<group>";
 		};
 		25883F081BF30EF100CCCE54 = {
 			isa = PBXGroup;
 			children = (
 				257EA4F41BF6CA4E006E5277 /* Sugar.playground */,
+				25883F3A1BF30F2000CCCE54 /* Sources */,
+				25461A641C086A43009E5ADE /* Sugar */,
+				25461A6F1C086DCB009E5ADE /* CommonCrypto */,
 				25883F131BF30EF100CCCE54 /* Sugar Example */,
 				25883F281BF30EF100CCCE54 /* Sugar ExampleTests */,
-				25883F3A1BF30F2000CCCE54 /* Sources */,
-				257859AF1C08122E001E8C51 /* Sugar_OSX */,
-				2578595D1C0810E1001E8C51 /* Sugar_iOS */,
-				2578598A1C0811FC001E8C51 /* Sugar_tvOS */,
-				257859D51C081272001E8C51 /* Sugar_watchOS */,
 				25883F481BF30F2000CCCE54 /* SugarTests */,
-				25612D361C06B68000EE3668 /* CommonCrypto_OSX */,
-				25612D461C06B7D200EE3668 /* CommonCrypto_iOS */,
-				2578593B1C080E21001E8C51 /* CommonCrypto_tvOS */,
-				2578594C1C080ED4001E8C51 /* CommonCrypto_watchOS */,
-				257859FE1C08157D001E8C51 /* Sugar_watch */,
 				25883F121BF30EF100CCCE54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -643,7 +485,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2578598C1C0811FD001E8C51 /* Sugar_tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,7 +492,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859D71C081272001E8C51 /* Sugar_watchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +499,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2578595F1C0810E1001E8C51 /* Sugar_iOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,7 +513,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859B11C08122E001E8C51 /* Sugar_OSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,7 +520,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25785A001C08157D001E8C51 /* Sugar_watch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +806,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25612D3F1C06B79700EE3668 /* CommonCrypto.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,7 +813,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25612D541C06B86500EE3668 /* CommonCrypto.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,7 +820,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859451C080EB7001E8C51 /* CommonCrypto.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -993,7 +827,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859561C080F09001E8C51 /* CommonCrypto.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +855,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25461AD41C0874E9009E5ADE /* Sugar_watchOS.modulemap in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,8 +863,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25461A631C086A3F009E5ADE /* Info.plist in Resources */,
 				25883F1F1BF30EF100CCCE54 /* LaunchScreen.storyboard in Resources */,
 				25883F1C1BF30EF100CCCE54 /* Assets.xcassets in Resources */,
+				25461A6E1C086DC5009E5ADE /* Info.plist in Resources */,
 				25883F1A1BF30EF100CCCE54 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1084,30 +920,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859681C08111B001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
-				257859691C08111B001E8C51 /* String+Range.swift in Sources */,
-				2578596A1C08111B001E8C51 /* NSRange+Swift.swift in Sources */,
-				2578596B1C08111B001E8C51 /* String+MD5.swift in Sources */,
-				2578596C1C08111C001E8C51 /* String+URLEncode.swift in Sources */,
-				2578596D1C08111C001E8C51 /* String+Path.swift in Sources */,
-				2578596E1C08111C001E8C51 /* String+JSON.swift in Sources */,
-				2578596F1C08111C001E8C51 /* String+Base64.swift in Sources */,
-				257859701C08111C001E8C51 /* Int+FileSize.swift in Sources */,
-				257859711C08111C001E8C51 /* String+Regex.swift in Sources */,
-				257859721C08111C001E8C51 /* NSData+Base64.swift in Sources */,
-				257859731C08111C001E8C51 /* NSDictionary+JSON.swift in Sources */,
-				257859741C08111C001E8C51 /* Operators+Ruby.swift in Sources */,
-				257859751C08111C001E8C51 /* String+Ruby.swift in Sources */,
-				257859761C08111C001E8C51 /* Int+Ruby.swift in Sources */,
-				257859771C08111C001E8C51 /* Double+Ruby.swift in Sources */,
-				257859781C08111C001E8C51 /* Float+Ruby.swift in Sources */,
-				257859791C08111C001E8C51 /* Array+Ruby.swift in Sources */,
-				2578597A1C08111C001E8C51 /* Dictionary+Ruby.swift in Sources */,
-				2578597B1C08111C001E8C51 /* Comparable+Ruby.swift in Sources */,
-				2578597C1C08111C001E8C51 /* NSDate+Ruby.swift in Sources */,
-				2578597D1C08111C001E8C51 /* String+ActiveSupport.swift in Sources */,
-				2578597E1C08111C001E8C51 /* Int+ActiveSupport.swift in Sources */,
-				2578597F1C08111C001E8C51 /* Double+ActiveSupport.swift in Sources */,
 				257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */,
 				257859811C08111C001E8C51 /* UITabBarController+StatusBarStyle.swift in Sources */,
 				257859821C08111C001E8C51 /* UIAlertController+Sugar.swift in Sources */,
@@ -1119,30 +931,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				257859CE1C081254001E8C51 /* UIAlertController+Sugar.swift in Sources */,
-				257859911C081214001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
-				257859921C081214001E8C51 /* String+Range.swift in Sources */,
-				257859931C081214001E8C51 /* NSRange+Swift.swift in Sources */,
-				257859941C081214001E8C51 /* String+MD5.swift in Sources */,
-				257859951C081214001E8C51 /* String+URLEncode.swift in Sources */,
-				257859961C081214001E8C51 /* String+Path.swift in Sources */,
-				257859971C081214001E8C51 /* String+JSON.swift in Sources */,
-				257859981C081214001E8C51 /* String+Base64.swift in Sources */,
-				257859991C081214001E8C51 /* Int+FileSize.swift in Sources */,
-				2578599A1C081214001E8C51 /* String+Regex.swift in Sources */,
-				2578599B1C081214001E8C51 /* NSData+Base64.swift in Sources */,
-				2578599C1C081214001E8C51 /* NSDictionary+JSON.swift in Sources */,
-				2578599D1C081214001E8C51 /* Operators+Ruby.swift in Sources */,
-				2578599E1C081214001E8C51 /* String+Ruby.swift in Sources */,
-				2578599F1C081214001E8C51 /* Int+Ruby.swift in Sources */,
-				257859A01C081214001E8C51 /* Double+Ruby.swift in Sources */,
-				257859A11C081214001E8C51 /* Float+Ruby.swift in Sources */,
-				257859A21C081214001E8C51 /* Array+Ruby.swift in Sources */,
-				257859A31C081214001E8C51 /* Dictionary+Ruby.swift in Sources */,
-				257859A41C081214001E8C51 /* Comparable+Ruby.swift in Sources */,
-				257859A51C081214001E8C51 /* NSDate+Ruby.swift in Sources */,
-				257859A61C081214001E8C51 /* String+ActiveSupport.swift in Sources */,
-				257859A71C081214001E8C51 /* Int+ActiveSupport.swift in Sources */,
-				257859A81C081214001E8C51 /* Double+ActiveSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1150,30 +938,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859B61C081244001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
-				257859B71C081244001E8C51 /* String+Range.swift in Sources */,
-				257859B81C081244001E8C51 /* NSRange+Swift.swift in Sources */,
-				257859B91C081244001E8C51 /* String+MD5.swift in Sources */,
-				257859BA1C081244001E8C51 /* String+URLEncode.swift in Sources */,
-				257859BB1C081244001E8C51 /* String+Path.swift in Sources */,
-				257859BC1C081244001E8C51 /* String+JSON.swift in Sources */,
-				257859BD1C081244001E8C51 /* String+Base64.swift in Sources */,
-				257859BE1C081244001E8C51 /* Int+FileSize.swift in Sources */,
-				257859BF1C081244001E8C51 /* String+Regex.swift in Sources */,
-				257859C01C081244001E8C51 /* NSData+Base64.swift in Sources */,
-				257859C11C081244001E8C51 /* NSDictionary+JSON.swift in Sources */,
-				257859C21C081244001E8C51 /* Operators+Ruby.swift in Sources */,
-				257859C31C081244001E8C51 /* String+Ruby.swift in Sources */,
-				257859C41C081244001E8C51 /* Int+Ruby.swift in Sources */,
-				257859C51C081244001E8C51 /* Double+Ruby.swift in Sources */,
-				257859C61C081244001E8C51 /* Float+Ruby.swift in Sources */,
-				257859C71C081244001E8C51 /* Array+Ruby.swift in Sources */,
-				257859C81C081244001E8C51 /* Dictionary+Ruby.swift in Sources */,
-				257859C91C081244001E8C51 /* Comparable+Ruby.swift in Sources */,
-				257859CA1C081244001E8C51 /* NSDate+Ruby.swift in Sources */,
-				257859CB1C081244001E8C51 /* String+ActiveSupport.swift in Sources */,
-				257859CC1C081244001E8C51 /* Int+ActiveSupport.swift in Sources */,
-				257859CD1C081244001E8C51 /* Double+ActiveSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1181,30 +945,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859DC1C081289001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
-				257859DD1C081289001E8C51 /* String+Range.swift in Sources */,
-				257859DE1C081289001E8C51 /* NSRange+Swift.swift in Sources */,
-				257859DF1C081289001E8C51 /* String+MD5.swift in Sources */,
-				257859E01C081289001E8C51 /* String+URLEncode.swift in Sources */,
-				257859E11C081289001E8C51 /* String+Path.swift in Sources */,
-				257859E21C081289001E8C51 /* String+JSON.swift in Sources */,
-				257859E31C081289001E8C51 /* String+Base64.swift in Sources */,
-				257859E41C081289001E8C51 /* Int+FileSize.swift in Sources */,
-				257859E51C081289001E8C51 /* String+Regex.swift in Sources */,
-				257859E61C081289001E8C51 /* NSData+Base64.swift in Sources */,
-				257859E71C081289001E8C51 /* NSDictionary+JSON.swift in Sources */,
-				257859E81C081289001E8C51 /* Operators+Ruby.swift in Sources */,
-				257859E91C081289001E8C51 /* String+Ruby.swift in Sources */,
-				257859EA1C081289001E8C51 /* Int+Ruby.swift in Sources */,
-				257859EB1C081289001E8C51 /* Double+Ruby.swift in Sources */,
-				257859EC1C081289001E8C51 /* Float+Ruby.swift in Sources */,
-				257859ED1C081289001E8C51 /* Array+Ruby.swift in Sources */,
-				257859EE1C081289001E8C51 /* Dictionary+Ruby.swift in Sources */,
-				257859EF1C081289001E8C51 /* Comparable+Ruby.swift in Sources */,
-				257859F01C081289001E8C51 /* NSDate+Ruby.swift in Sources */,
-				257859F11C081289001E8C51 /* String+ActiveSupport.swift in Sources */,
-				257859F21C081289001E8C51 /* Int+ActiveSupport.swift in Sources */,
-				257859F31C081289001E8C51 /* Double+ActiveSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,7 +953,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				25883F171BF30EF100CCCE54 /* ViewController.swift in Sources */,
+				25461A911C08729D009E5ADE /* Dictionary+Ruby.swift in Sources */,
+				25461A9B1C0872B3009E5ADE /* Double+ActiveSupport.swift in Sources */,
+				25461AC51C087327009E5ADE /* Comparable+Ruby.swift in Sources */,
+				25461AD11C087327009E5ADE /* String+URLEncode.swift in Sources */,
+				25461ACF1C087327009E5ADE /* String+Range.swift in Sources */,
+				25461A901C08729D009E5ADE /* Array+Ruby.swift in Sources */,
+				25461ACC1C087327009E5ADE /* String+JSON.swift in Sources */,
+				25461A961C08729D009E5ADE /* Operators+Ruby.swift in Sources */,
+				25461A951C08729D009E5ADE /* NSDate+Ruby.swift in Sources */,
+				25461AC61C087327009E5ADE /* Int+FileSize.swift in Sources */,
+				25461AC91C087327009E5ADE /* NSRange+Swift.swift in Sources */,
+				25461AD01C087327009E5ADE /* String+Regex.swift in Sources */,
+				25461A921C08729D009E5ADE /* Double+Ruby.swift in Sources */,
+				25461AC71C087327009E5ADE /* NSData+Base64.swift in Sources */,
+				25461A9C1C0872B3009E5ADE /* Int+ActiveSupport.swift in Sources */,
+				25461ACD1C087327009E5ADE /* String+MD5.swift in Sources */,
+				25461A9D1C0872B3009E5ADE /* String+ActiveSupport.swift in Sources */,
+				25461A941C08729D009E5ADE /* Int+Ruby.swift in Sources */,
 				25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */,
+				25461ACE1C087327009E5ADE /* String+Path.swift in Sources */,
+				25461A931C08729D009E5ADE /* Float+Ruby.swift in Sources */,
+				25461ACA1C087327009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
+				25461ACB1C087327009E5ADE /* String+Base64.swift in Sources */,
+				25461AC81C087327009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25461A971C08729D009E5ADE /* String+Ruby.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,11 +1065,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CommonCrypto_OSX/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto_OSX/macosx.modulemap";
+				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1326,7 +1090,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = CommonCrypto_OSX/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -1347,11 +1111,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_iOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto_iOS/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto_iOS/iphonesimulator.modulemap";
+				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
+				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1368,11 +1132,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_iOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto_iOS/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto_iOS/iphonesimulator.modulemap";
+				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
+				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1389,11 +1153,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_tvOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvsimulator.modulemap";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/appletvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/appletvsimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1413,11 +1177,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_tvOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvsimulator.modulemap";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/appletvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/appletvsimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1438,11 +1202,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_watchOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchsimulator.modulemap";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1463,11 +1227,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto_watchOS/Info.plist;
+				INFOPLIST_FILE = CommonCrypto/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchsimulator.modulemap";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1487,7 +1251,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_iOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
@@ -1506,7 +1270,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_iOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
@@ -1525,7 +1289,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_tvOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
@@ -1547,7 +1311,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_tvOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
@@ -1572,10 +1336,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sugar_OSX/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "$(SRCROOT)/Sugar/Sugar_OSX.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1596,10 +1361,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sugar_OSX/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "$(SRCROOT)/Sugar/Sugar_OSX.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1618,9 +1384,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_watchOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/Sugar/Sugar_OSX.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1641,9 +1408,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar_watchOS/Info.plist;
+				INFOPLIST_FILE = Sugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "$(SRCROOT)/Sugar/Sugar_OSX.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1836,6 +1604,7 @@
 				257859401C080E21001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257859501C080ED4001E8C51 /* Build configuration list for PBXNativeTarget "CommonCrypto_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1844,6 +1613,7 @@
 				257859521C080ED4001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257859651C0810E1001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_iOS" */ = {
 			isa = XCConfigurationList;
@@ -1852,6 +1622,7 @@
 				257859671C0810E1001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2578598E1C0811FD001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_tvOS" */ = {
 			isa = XCConfigurationList;
@@ -1860,6 +1631,7 @@
 				257859901C0811FD001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257859B31C08122E001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_OSX" */ = {
 			isa = XCConfigurationList;
@@ -1868,6 +1640,7 @@
 				257859B51C08122E001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		257859D91C081272001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1876,6 +1649,7 @@
 				257859DB1C081272001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar Example" */ = {
 			isa = XCConfigurationList;

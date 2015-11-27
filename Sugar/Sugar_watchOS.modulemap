@@ -1,5 +1,0 @@
-framework module Sugar_watchOS {
-    umbrella header "$(SRCROOT)/Sugar/Sugar.h"
-    export *
-    module * { export * }
-}

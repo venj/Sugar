@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-@testable import Sugar
+@testable import Sugar_iOS
 
 class IntActiveSupportTests: XCTestCase {
     func testKilobytes() {

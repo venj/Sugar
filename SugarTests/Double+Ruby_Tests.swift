@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Sugar
+@testable import Sugar_iOS
 
 class DoubleRubyTests: XCTestCase {
     func testDoubleStarOperator() {

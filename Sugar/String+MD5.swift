@@ -7,7 +7,15 @@
 //
 
 import Foundation
+#if os(iOS)
 import CommonCrypto_iOS
+#elseif os(OSX)
+import CommonCrypto_OSX
+#elseif os(tvOS)
+import CommonCrypto_tvOS
+#elseif os(watchOS)
+import CommonCrypto_watchOS
+#endif
 
 // via https://github.com/mnbayan/StringHash
 

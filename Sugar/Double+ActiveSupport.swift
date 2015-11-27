@@ -8,6 +8,8 @@
 /**
 Active Support flavored extension for Double.
 */
+import Foundation
+
 @available(iOS 7.0, OSX 10.9, *)
 public extension Double {
     /**

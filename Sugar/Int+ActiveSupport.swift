@@ -10,6 +10,8 @@
 /**
 Active Support flavored extension for Int.
 */
+import Foundation
+
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int {
     /// Kilobytes in int.

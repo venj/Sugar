@@ -7,54 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2510B6011BFD863300AED85C /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
-		2510B6031BFDB03800AED85C /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
-		2510B6051BFDB04D00AED85C /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
-		2510B6081BFDF60900AED85C /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
-		251F5F2E1BF452EA009FC984 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */; };
-		251F5F2F1BF452EA009FC984 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 251F5F281BF452EA009FC984 /* Info.plist */; };
-		251F5F411BF46A75009FC984 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
 		25461A5A1C005D79009E5ADE /* Int+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */; };
 		25461A5C1C006F2D009E5ADE /* Double+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5B1C006F2D009E5ADE /* Double+Ruby_Tests.swift */; };
 		25461A5E1C006F3B009E5ADE /* Float+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5D1C006F3B009E5ADE /* Float+Ruby_Tests.swift */; };
 		25461A601C00705D009E5ADE /* Array+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */; };
-		2547BC061BF96B9B00665E1C /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
-		2547BC091BF9AFDD00665E1C /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
-		2547BC0B1BF9B12900665E1C /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
-		2547BC0D1BF9B2DC00665E1C /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
-		2547BC131BFABAA700665E1C /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
-		2547BC151BFAE17800665E1C /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
-		25501F161C048E7C001CB1FE /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
-		25501F181C059839001CB1FE /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
 		25612D3F1C06B79700EE3668 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 25612D3D1C06B79700EE3668 /* CommonCrypto.xcconfig */; };
 		25612D541C06B86500EE3668 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 25612D511C06B86500EE3668 /* CommonCrypto.xcconfig */; };
-		25612D551C06B8C600EE3668 /* CommonCrypto_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */; };
-		256A486D1BF58B4900926D90 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		257859451C080EB7001E8C51 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */; };
+		257859561C080F09001E8C51 /* CommonCrypto.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 257859531C080F09001E8C51 /* CommonCrypto.xcconfig */; };
+		2578595F1C0810E1001E8C51 /* Sugar_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2578595E1C0810E1001E8C51 /* Sugar_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257859631C0810E1001E8C51 /* Sugar_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; };
+		257859641C0810E1001E8C51 /* Sugar_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		257859681C08111B001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
+		257859691C08111B001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
+		2578596A1C08111B001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
+		2578596B1C08111B001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
+		2578596C1C08111C001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
+		2578596D1C08111C001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
+		2578596E1C08111C001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
+		2578596F1C08111C001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
+		257859701C08111C001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
+		257859711C08111C001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
+		257859721C08111C001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
+		257859731C08111C001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
+		257859741C08111C001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
+		257859751C08111C001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		257859761C08111C001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
+		257859771C08111C001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
+		257859781C08111C001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
+		257859791C08111C001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
+		2578597A1C08111C001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
+		2578597B1C08111C001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
+		2578597C1C08111C001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
+		2578597D1C08111C001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
+		2578597E1C08111C001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
+		2578597F1C08111C001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
+		257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
+		257859811C08111C001E8C51 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
+		257859821C08111C001E8C51 /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
+		257859831C081144001E8C51 /* CommonCrypto_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */; };
+		2578598C1C0811FD001E8C51 /* Sugar_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257859911C081214001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
+		257859921C081214001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
+		257859931C081214001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
+		257859941C081214001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
+		257859951C081214001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
+		257859961C081214001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
+		257859971C081214001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
+		257859981C081214001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
+		257859991C081214001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
+		2578599A1C081214001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
+		2578599B1C081214001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
+		2578599C1C081214001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
+		2578599D1C081214001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
+		2578599E1C081214001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		2578599F1C081214001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
+		257859A01C081214001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
+		257859A11C081214001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
+		257859A21C081214001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
+		257859A31C081214001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
+		257859A41C081214001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
+		257859A51C081214001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
+		257859A61C081214001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
+		257859A71C081214001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
+		257859A81C081214001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
+		257859B11C08122E001E8C51 /* Sugar_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859B01C08122E001E8C51 /* Sugar_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257859B61C081244001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
+		257859B71C081244001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
+		257859B81C081244001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
+		257859B91C081244001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
+		257859BA1C081244001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
+		257859BB1C081244001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
+		257859BC1C081244001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
+		257859BD1C081244001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
+		257859BE1C081244001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
+		257859BF1C081244001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
+		257859C01C081244001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
+		257859C11C081244001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
+		257859C21C081244001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
+		257859C31C081244001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		257859C41C081244001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
+		257859C51C081244001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
+		257859C61C081244001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
+		257859C71C081244001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
+		257859C81C081244001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
+		257859C91C081244001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
+		257859CA1C081244001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
+		257859CB1C081244001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
+		257859CC1C081244001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
+		257859CD1C081244001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
+		257859CE1C081254001E8C51 /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
+		257859D71C081272001E8C51 /* Sugar_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859D61C081272001E8C51 /* Sugar_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		257859DC1C081289001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
+		257859DD1C081289001E8C51 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
+		257859DE1C081289001E8C51 /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251F5F401BF46A75009FC984 /* NSRange+Swift.swift */; };
+		257859DF1C081289001E8C51 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
+		257859E01C081289001E8C51 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
+		257859E11C081289001E8C51 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
+		257859E21C081289001E8C51 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
+		257859E31C081289001E8C51 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
+		257859E41C081289001E8C51 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
+		257859E51C081289001E8C51 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
+		257859E61C081289001E8C51 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
+		257859E71C081289001E8C51 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
+		257859E81C081289001E8C51 /* Operators+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F171C059839001CB1FE /* Operators+Ruby.swift */; };
+		257859E91C081289001E8C51 /* String+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256A486C1BF58B4900926D90 /* String+Ruby.swift */; };
+		257859EA1C081289001E8C51 /* Int+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC051BF96B9B00665E1C /* Int+Ruby.swift */; };
+		257859EB1C081289001E8C51 /* Double+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC081BF9AFDD00665E1C /* Double+Ruby.swift */; };
+		257859EC1C081289001E8C51 /* Float+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0A1BF9B12900665E1C /* Float+Ruby.swift */; };
+		257859ED1C081289001E8C51 /* Array+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC141BFAE17800665E1C /* Array+Ruby.swift */; };
+		257859EE1C081289001E8C51 /* Dictionary+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC121BFABAA700665E1C /* Dictionary+Ruby.swift */; };
+		257859EF1C081289001E8C51 /* Comparable+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2547BC0C1BF9B2DC00665E1C /* Comparable+Ruby.swift */; };
+		257859F01C081289001E8C51 /* NSDate+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6001BFD863300AED85C /* NSDate+Ruby.swift */; };
+		257859F11C081289001E8C51 /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */; };
+		257859F21C081289001E8C51 /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */; };
+		257859F31C081289001E8C51 /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */; };
+		257859F41C081406001E8C51 /* CommonCrypto_OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25612D351C06B68000EE3668 /* CommonCrypto_OSX.framework */; };
+		257859F51C081410001E8C51 /* CommonCrypto_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */; };
+		25785A001C08157D001E8C51 /* Sugar_watch.h in Headers */ = {isa = PBXBuildFile; fileRef = 257859FF1C08157D001E8C51 /* Sugar_watch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		257C8BBA1BFEE1C800DDD037 /* String+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */; };
-		257EA4F61BF73603006E5277 /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */; };
 		25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F141BF30EF100CCCE54 /* AppDelegate.swift */; };
 		25883F171BF30EF100CCCE54 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F161BF30EF100CCCE54 /* ViewController.swift */; };
 		25883F1A1BF30EF100CCCE54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25883F181BF30EF100CCCE54 /* Main.storyboard */; };
 		25883F1C1BF30EF100CCCE54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25883F1B1BF30EF100CCCE54 /* Assets.xcassets */; };
 		25883F1F1BF30EF100CCCE54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25883F1D1BF30EF100CCCE54 /* LaunchScreen.storyboard */; };
 		25883F2A1BF30EF100CCCE54 /* Sugar_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F291BF30EF100CCCE54 /* Sugar_ExampleTests.swift */; };
-		25883F3C1BF30F2000CCCE54 /* Sugar.h in Headers */ = {isa = PBXBuildFile; fileRef = 25883F3B1BF30F2000CCCE54 /* Sugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		25883F431BF30F2000CCCE54 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; };
 		25883F4A1BF30F2000CCCE54 /* SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F491BF30F2000CCCE54 /* SugarTests.swift */; };
-		25883F4E1BF30F2000CCCE54 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; };
-		25883F4F1BF30F2000CCCE54 /* Sugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25883F391BF30F2000CCCE54 /* Sugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		25883F631BF30F4700CCCE54 /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F571BF30F4700CCCE54 /* String+Range.swift */; };
-		25883F641BF30F4700CCCE54 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F581BF30F4700CCCE54 /* String+MD5.swift */; };
-		25883F651BF30F4700CCCE54 /* String+URLEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F591BF30F4700CCCE54 /* String+URLEncode.swift */; };
-		25883F661BF30F4700CCCE54 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5A1BF30F4700CCCE54 /* String+Path.swift */; };
-		25883F671BF30F4700CCCE54 /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5B1BF30F4700CCCE54 /* String+Regex.swift */; };
-		25883F681BF30F4700CCCE54 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5C1BF30F4700CCCE54 /* String+Base64.swift */; };
-		25883F691BF30F4700CCCE54 /* NSData+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5D1BF30F4700CCCE54 /* NSData+Base64.swift */; };
-		25883F6A1BF30F4700CCCE54 /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5E1BF30F4700CCCE54 /* String+JSON.swift */; };
-		25883F6B1BF30F4700CCCE54 /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F5F1BF30F4700CCCE54 /* NSDictionary+JSON.swift */; };
-		25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F601BF30F4700CCCE54 /* Int+FileSize.swift */; };
-		25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
-		25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
 		259DF13C1C01918C00A5773A /* Dictionary+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13B1C01918C00A5773A /* Dictionary+Ruby_Tests.swift */; };
 		259DF13E1C01ACD500A5773A /* Comparable+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13D1C01ACD500A5773A /* Comparable+Ruby_Tests.swift */; };
 		259DF1401C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF13F1C01ADA800A5773A /* RegularExpression+Ruby_Tests.swift */; };
@@ -65,6 +143,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		257859611C0810E1001E8C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2578595B1C0810E1001E8C51;
+			remoteInfo = Sugar_iOS;
+		};
+		257859F61C081445001E8C51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2578594A1C080ED4001E8C51;
+			remoteInfo = CommonCrypto_watchOS;
+		};
 		25883F261BF30EF100CCCE54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
@@ -72,26 +164,12 @@
 			remoteGlobalIDString = 25883F101BF30EF100CCCE54;
 			remoteInfo = "Sugar Example";
 		};
-		25883F441BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25883F381BF30F2000CCCE54;
-			remoteInfo = Sugar;
-		};
 		25883F461BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 25883F101BF30EF100CCCE54;
 			remoteInfo = "Sugar Example";
-		};
-		25883F4C1BF30F2000CCCE54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 25883F091BF30EF100CCCE54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 25883F381BF30F2000CCCE54;
-			remoteInfo = Sugar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -102,7 +180,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				25883F4F1BF30F2000CCCE54 /* Sugar.framework in Embed Frameworks */,
+				257859641C0810E1001E8C51 /* Sugar_iOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,14 +192,6 @@
 		2510B6021BFDB03800AED85C /* String+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport.swift"; sourceTree = "<group>"; };
 		2510B6041BFDB04D00AED85C /* Int+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport.swift"; sourceTree = "<group>"; };
 		2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ActiveSupport.swift"; sourceTree = "<group>"; };
-		251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
-		251F5F281BF452EA009FC984 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		251F5F291BF452EA009FC984 /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
-		251F5F2A1BF452EA009FC984 /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
-		251F5F2B1BF452EA009FC984 /* macosx.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = macosx.modulemap; sourceTree = "<group>"; };
-		251F5F2C1BF452EA009FC984 /* watchos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchos.modulemap; sourceTree = "<group>"; };
-		251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
-		251F5F351BF4530C009FC984 /* CommonCrypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		251F5F401BF46A75009FC984 /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRange+Swift.swift"; sourceTree = "<group>"; };
 		25461A591C005D79009E5ADE /* Int+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		25461A5B1C006F2D009E5ADE /* Double+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Ruby_Tests.swift"; sourceTree = "<group>"; };
@@ -135,8 +205,6 @@
 		2547BC141BFAE17800665E1C /* Array+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Ruby.swift"; sourceTree = "<group>"; };
 		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
 		25501F171C059839001CB1FE /* Operators+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operators+Ruby.swift"; sourceTree = "<group>"; };
-		25612D2E1C06B4D000EE3668 /* appletvos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvos.modulemap; sourceTree = "<group>"; };
-		25612D2F1C06B4EA00EE3668 /* appletvsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvsimulator.modulemap; sourceTree = "<group>"; };
 		25612D351C06B68000EE3668 /* CommonCrypto_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25612D391C06B68000EE3668 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25612D3D1C06B79700EE3668 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
@@ -147,6 +215,30 @@
 		25612D521C06B86500EE3668 /* iphoneos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphoneos.modulemap; sourceTree = "<group>"; };
 		25612D531C06B86500EE3668 /* iphonesimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = iphonesimulator.modulemap; sourceTree = "<group>"; };
 		256A486C1BF58B4900926D90 /* String+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby.swift"; sourceTree = "<group>"; };
+		2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2578593E1C080E21001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859421C080EB7001E8C51 /* appletvos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvos.modulemap; sourceTree = "<group>"; };
+		257859431C080EB7001E8C51 /* appletvsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = appletvsimulator.modulemap; sourceTree = "<group>"; };
+		257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		2578594B1C080ED4001E8C51 /* CommonCrypto_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CommonCrypto_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2578594F1C080ED4001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859531C080F09001E8C51 /* CommonCrypto.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = CommonCrypto.xcconfig; sourceTree = "<group>"; };
+		257859541C080F09001E8C51 /* watchos.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchos.modulemap; sourceTree = "<group>"; };
+		257859551C080F09001E8C51 /* watchsimulator.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = watchsimulator.modulemap; sourceTree = "<group>"; };
+		2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2578595E1C0810E1001E8C51 /* Sugar_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_iOS.h; sourceTree = "<group>"; };
+		257859601C0810E1001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859891C0811FC001E8C51 /* Sugar_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_tvOS.h; sourceTree = "<group>"; };
+		2578598D1C0811FD001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859AE1C08122E001E8C51 /* Sugar_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257859B01C08122E001E8C51 /* Sugar_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_OSX.h; sourceTree = "<group>"; };
+		257859B21C08122E001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859D41C081272001E8C51 /* Sugar_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257859D61C081272001E8C51 /* Sugar_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_watchOS.h; sourceTree = "<group>"; };
+		257859D81C081272001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		257859FF1C08157D001E8C51 /* Sugar_watch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar_watch.h; sourceTree = "<group>"; };
+		25785A011C08157D001E8C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
 		257EA4F51BF73603006E5277 /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextCheckingResult+Swift.swift"; sourceTree = "<group>"; };
@@ -160,9 +252,6 @@
 		25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sugar ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F291BF30EF100CCCE54 /* Sugar_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sugar_ExampleTests.swift; sourceTree = "<group>"; };
 		25883F2B1BF30EF100CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25883F391BF30F2000CCCE54 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25883F3B1BF30F2000CCCE54 /* Sugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sugar.h; sourceTree = "<group>"; };
-		25883F3D1BF30F2000CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25883F421BF30F2000CCCE54 /* SugarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SugarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25883F491BF30F2000CCCE54 /* SugarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugarTests.swift; sourceTree = "<group>"; };
 		25883F4B1BF30F2000CCCE54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,13 +277,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		251F5F311BF4530C009FC984 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25612D311C06B68000EE3668 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,11 +291,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		257859361C080E21001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859471C080ED4001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859581C0810E1001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859831C081144001E8C51 /* CommonCrypto_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859851C0811FC001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859F51C081410001E8C51 /* CommonCrypto_tvOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859AA1C08122E001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859F41C081406001E8C51 /* CommonCrypto_OSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859D01C081272001E8C51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		25883F0E1BF30EF100CCCE54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25883F4E1BF30F2000CCCE54 /* Sugar.framework in Frameworks */,
+				257859631C0810E1001E8C51 /* Sugar_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,19 +351,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25883F351BF30F2000CCCE54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				25612D551C06B8C600EE3668 /* CommonCrypto_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25883F3F1BF30F2000CCCE54 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25883F431BF30F2000CCCE54 /* Sugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,22 +369,6 @@
 				2510B6071BFDF60900AED85C /* Double+ActiveSupport.swift */,
 			);
 			name = "ActiveSupport Style Extension";
-			sourceTree = "<group>";
-		};
-		251F5F261BF452EA009FC984 /* CommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				251F5F271BF452EA009FC984 /* CommonCrypto.xcconfig */,
-				251F5F2B1BF452EA009FC984 /* macosx.modulemap */,
-				251F5F281BF452EA009FC984 /* Info.plist */,
-				251F5F291BF452EA009FC984 /* iphoneos.modulemap */,
-				251F5F2A1BF452EA009FC984 /* iphonesimulator.modulemap */,
-				251F5F2C1BF452EA009FC984 /* watchos.modulemap */,
-				25612D2E1C06B4D000EE3668 /* appletvos.modulemap */,
-				25612D2F1C06B4EA00EE3668 /* appletvsimulator.modulemap */,
-				251F5F2D1BF452EA009FC984 /* watchsimulator.modulemap */,
-			);
-			path = CommonCrypto;
 			sourceTree = "<group>";
 		};
 		251F5F3E1BF456AA009FC984 /* UIKit Extension */ = {
@@ -345,17 +447,90 @@
 			path = CommonCrypto_iOS;
 			sourceTree = "<group>";
 		};
+		2578593B1C080E21001E8C51 /* CommonCrypto_tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				2578593E1C080E21001E8C51 /* Info.plist */,
+				257859421C080EB7001E8C51 /* appletvos.modulemap */,
+				257859431C080EB7001E8C51 /* appletvsimulator.modulemap */,
+				257859441C080EB7001E8C51 /* CommonCrypto.xcconfig */,
+			);
+			path = CommonCrypto_tvOS;
+			sourceTree = "<group>";
+		};
+		2578594C1C080ED4001E8C51 /* CommonCrypto_watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				2578594F1C080ED4001E8C51 /* Info.plist */,
+				257859531C080F09001E8C51 /* CommonCrypto.xcconfig */,
+				257859541C080F09001E8C51 /* watchos.modulemap */,
+				257859551C080F09001E8C51 /* watchsimulator.modulemap */,
+			);
+			path = CommonCrypto_watchOS;
+			sourceTree = "<group>";
+		};
+		2578595D1C0810E1001E8C51 /* Sugar_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2578595E1C0810E1001E8C51 /* Sugar_iOS.h */,
+				257859601C0810E1001E8C51 /* Info.plist */,
+			);
+			path = Sugar_iOS;
+			sourceTree = "<group>";
+		};
+		2578598A1C0811FC001E8C51 /* Sugar_tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				2578598B1C0811FD001E8C51 /* Sugar_tvOS.h */,
+				2578598D1C0811FD001E8C51 /* Info.plist */,
+			);
+			path = Sugar_tvOS;
+			sourceTree = "<group>";
+		};
+		257859AF1C08122E001E8C51 /* Sugar_OSX */ = {
+			isa = PBXGroup;
+			children = (
+				257859B01C08122E001E8C51 /* Sugar_OSX.h */,
+				257859B21C08122E001E8C51 /* Info.plist */,
+			);
+			path = Sugar_OSX;
+			sourceTree = "<group>";
+		};
+		257859D51C081272001E8C51 /* Sugar_watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				257859D61C081272001E8C51 /* Sugar_watchOS.h */,
+				257859D81C081272001E8C51 /* Info.plist */,
+			);
+			path = Sugar_watchOS;
+			sourceTree = "<group>";
+		};
+		257859FE1C08157D001E8C51 /* Sugar_watch */ = {
+			isa = PBXGroup;
+			children = (
+				257859FF1C08157D001E8C51 /* Sugar_watch.h */,
+				25785A011C08157D001E8C51 /* Info.plist */,
+			);
+			path = Sugar_watch;
+			sourceTree = "<group>";
+		};
 		25883F081BF30EF100CCCE54 = {
 			isa = PBXGroup;
 			children = (
 				257EA4F41BF6CA4E006E5277 /* Sugar.playground */,
-				251F5F261BF452EA009FC984 /* CommonCrypto */,
 				25883F131BF30EF100CCCE54 /* Sugar Example */,
 				25883F281BF30EF100CCCE54 /* Sugar ExampleTests */,
-				25883F3A1BF30F2000CCCE54 /* Sugar */,
+				25883F3A1BF30F2000CCCE54 /* Sources */,
+				257859AF1C08122E001E8C51 /* Sugar_OSX */,
+				2578595D1C0810E1001E8C51 /* Sugar_iOS */,
+				2578598A1C0811FC001E8C51 /* Sugar_tvOS */,
+				257859D51C081272001E8C51 /* Sugar_watchOS */,
 				25883F481BF30F2000CCCE54 /* SugarTests */,
 				25612D361C06B68000EE3668 /* CommonCrypto_OSX */,
 				25612D461C06B7D200EE3668 /* CommonCrypto_iOS */,
+				2578593B1C080E21001E8C51 /* CommonCrypto_tvOS */,
+				2578594C1C080ED4001E8C51 /* CommonCrypto_watchOS */,
+				257859FE1C08157D001E8C51 /* Sugar_watch */,
 				25883F121BF30EF100CCCE54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -365,11 +540,15 @@
 			children = (
 				25883F111BF30EF100CCCE54 /* Sugar Example.app */,
 				25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */,
-				25883F391BF30F2000CCCE54 /* Sugar.framework */,
 				25883F421BF30F2000CCCE54 /* SugarTests.xctest */,
-				251F5F351BF4530C009FC984 /* CommonCrypto.framework */,
 				25612D351C06B68000EE3668 /* CommonCrypto_OSX.framework */,
 				25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */,
+				2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */,
+				2578594B1C080ED4001E8C51 /* CommonCrypto_watchOS.framework */,
+				2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */,
+				257859891C0811FC001E8C51 /* Sugar_tvOS.framework */,
+				257859AE1C08122E001E8C51 /* Sugar_OSX.framework */,
+				257859D41C081272001E8C51 /* Sugar_watchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -396,14 +575,13 @@
 			path = "Sugar ExampleTests";
 			sourceTree = "<group>";
 		};
-		25883F3A1BF30F2000CCCE54 /* Sugar */ = {
+		25883F3A1BF30F2000CCCE54 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				251F5F3F1BF456CC009FC984 /* Standard Library and Foundation */,
 				251F5F3E1BF456AA009FC984 /* UIKit Extension */,
-				25883F3B1BF30F2000CCCE54 /* Sugar.h */,
-				25883F3D1BF30F2000CCCE54 /* Info.plist */,
 			);
+			name = Sources;
 			path = Sugar;
 			sourceTree = "<group>";
 		};
@@ -447,13 +625,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		251F5F321BF4530C009FC984 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25612D321C06B68000EE3668 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,35 +639,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25883F361BF30F2000CCCE54 /* Headers */ = {
+		257859371C080E21001E8C51 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25883F3C1BF30F2000CCCE54 /* Sugar.h in Headers */,
+				2578598C1C0811FD001E8C51 /* Sugar_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859481C080ED4001E8C51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859D71C081272001E8C51 /* Sugar_watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859591C0810E1001E8C51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2578595F1C0810E1001E8C51 /* Sugar_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859861C0811FC001E8C51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859AB1C08122E001E8C51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859B11C08122E001E8C51 /* Sugar_OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859D11C081272001E8C51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25785A001C08157D001E8C51 /* Sugar_watch.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		251F5F341BF4530C009FC984 /* CommonCrypto */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 251F5F3A1BF4530C009FC984 /* Build configuration list for PBXNativeTarget "CommonCrypto" */;
-			buildPhases = (
-				251F5F301BF4530C009FC984 /* Sources */,
-				251F5F311BF4530C009FC984 /* Frameworks */,
-				251F5F321BF4530C009FC984 /* Headers */,
-				251F5F331BF4530C009FC984 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = CommonCrypto;
-			productName = CommonCrypto;
-			productReference = 251F5F351BF4530C009FC984 /* CommonCrypto.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		25612D341C06B68000EE3668 /* CommonCrypto_OSX */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25612D3A1C06B68000EE3668 /* Build configuration list for PBXNativeTarget "CommonCrypto_OSX" */;
@@ -533,6 +725,115 @@
 			productReference = 25612D451C06B7D200EE3668 /* CommonCrypto_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		257859391C080E21001E8C51 /* CommonCrypto_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257859411C080E21001E8C51 /* Build configuration list for PBXNativeTarget "CommonCrypto_tvOS" */;
+			buildPhases = (
+				257859351C080E21001E8C51 /* Sources */,
+				257859361C080E21001E8C51 /* Frameworks */,
+				257859371C080E21001E8C51 /* Headers */,
+				257859381C080E21001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommonCrypto_tvOS;
+			productName = CommonCrypto_tvOS;
+			productReference = 2578593A1C080E21001E8C51 /* CommonCrypto_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2578594A1C080ED4001E8C51 /* CommonCrypto_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257859501C080ED4001E8C51 /* Build configuration list for PBXNativeTarget "CommonCrypto_watchOS" */;
+			buildPhases = (
+				257859461C080ED4001E8C51 /* Sources */,
+				257859471C080ED4001E8C51 /* Frameworks */,
+				257859481C080ED4001E8C51 /* Headers */,
+				257859491C080ED4001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CommonCrypto_watchOS;
+			productName = CommonCrypto_watchOS;
+			productReference = 2578594B1C080ED4001E8C51 /* CommonCrypto_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2578595B1C0810E1001E8C51 /* Sugar_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257859651C0810E1001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_iOS" */;
+			buildPhases = (
+				257859571C0810E1001E8C51 /* Sources */,
+				257859581C0810E1001E8C51 /* Frameworks */,
+				257859591C0810E1001E8C51 /* Headers */,
+				2578595A1C0810E1001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sugar_iOS;
+			productName = Sugar_iOS;
+			productReference = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		257859881C0811FC001E8C51 /* Sugar_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2578598E1C0811FD001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_tvOS" */;
+			buildPhases = (
+				257859841C0811FC001E8C51 /* Sources */,
+				257859851C0811FC001E8C51 /* Frameworks */,
+				257859861C0811FC001E8C51 /* Headers */,
+				257859871C0811FC001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sugar_tvOS;
+			productName = Sugar_tvOS;
+			productReference = 257859891C0811FC001E8C51 /* Sugar_tvOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		257859AD1C08122E001E8C51 /* Sugar_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257859B31C08122E001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_OSX" */;
+			buildPhases = (
+				257859A91C08122E001E8C51 /* Sources */,
+				257859AA1C08122E001E8C51 /* Frameworks */,
+				257859AB1C08122E001E8C51 /* Headers */,
+				257859AC1C08122E001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sugar_OSX;
+			productName = Sugar_OSX;
+			productReference = 257859AE1C08122E001E8C51 /* Sugar_OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		257859D31C081272001E8C51 /* Sugar_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 257859D91C081272001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_watchOS" */;
+			buildPhases = (
+				257859CF1C081272001E8C51 /* Sources */,
+				257859D01C081272001E8C51 /* Frameworks */,
+				257859D11C081272001E8C51 /* Headers */,
+				257859D21C081272001E8C51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				257859F71C081445001E8C51 /* PBXTargetDependency */,
+			);
+			name = Sugar_watchOS;
+			productName = Sugar_watchOS;
+			productReference = 257859D41C081272001E8C51 /* Sugar_watchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		25883F101BF30EF100CCCE54 /* Sugar Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25883F2E1BF30EF100CCCE54 /* Build configuration list for PBXNativeTarget "Sugar Example" */;
@@ -545,7 +846,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				25883F4D1BF30F2000CCCE54 /* PBXTargetDependency */,
+				257859621C0810E1001E8C51 /* PBXTargetDependency */,
 			);
 			name = "Sugar Example";
 			productName = "Sugar Example";
@@ -570,24 +871,6 @@
 			productReference = 25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		25883F381BF30F2000CCCE54 /* Sugar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 25883F501BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "Sugar" */;
-			buildPhases = (
-				25883F341BF30F2000CCCE54 /* Sources */,
-				25883F351BF30F2000CCCE54 /* Frameworks */,
-				25883F361BF30F2000CCCE54 /* Headers */,
-				25883F371BF30F2000CCCE54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Sugar;
-			productName = Sugar;
-			productReference = 25883F391BF30F2000CCCE54 /* Sugar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		25883F411BF30F2000CCCE54 /* SugarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25883F541BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "SugarTests" */;
@@ -599,7 +882,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				25883F451BF30F2000CCCE54 /* PBXTargetDependency */,
 				25883F471BF30F2000CCCE54 /* PBXTargetDependency */,
 			);
 			name = SugarTests;
@@ -617,13 +899,28 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "朱文杰";
 				TargetAttributes = {
-					251F5F341BF4530C009FC984 = {
-						CreatedOnToolsVersion = 7.1.1;
-					};
 					25612D341C06B68000EE3668 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 					25612D441C06B7D200EE3668 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					257859391C080E21001E8C51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2578594A1C080ED4001E8C51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2578595B1C0810E1001E8C51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					257859881C0811FC001E8C51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					257859AD1C08122E001E8C51 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					257859D31C081272001E8C51 = {
 						CreatedOnToolsVersion = 7.1.1;
 					};
 					25883F101BF30EF100CCCE54 = {
@@ -632,9 +929,6 @@
 					25883F241BF30EF100CCCE54 = {
 						CreatedOnToolsVersion = 7.1.1;
 						TestTargetID = 25883F101BF30EF100CCCE54;
-					};
-					25883F381BF30F2000CCCE54 = {
-						CreatedOnToolsVersion = 7.1.1;
 					};
 					25883F411BF30F2000CCCE54 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -657,23 +951,20 @@
 			targets = (
 				25883F101BF30EF100CCCE54 /* Sugar Example */,
 				25883F241BF30EF100CCCE54 /* Sugar ExampleTests */,
-				25883F381BF30F2000CCCE54 /* Sugar */,
+				257859AD1C08122E001E8C51 /* Sugar_OSX */,
+				2578595B1C0810E1001E8C51 /* Sugar_iOS */,
+				257859881C0811FC001E8C51 /* Sugar_tvOS */,
+				257859D31C081272001E8C51 /* Sugar_watchOS */,
 				25883F411BF30F2000CCCE54 /* SugarTests */,
-				251F5F341BF4530C009FC984 /* CommonCrypto */,
 				25612D341C06B68000EE3668 /* CommonCrypto_OSX */,
 				25612D441C06B7D200EE3668 /* CommonCrypto_iOS */,
+				257859391C080E21001E8C51 /* CommonCrypto_tvOS */,
+				2578594A1C080ED4001E8C51 /* CommonCrypto_watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		251F5F331BF4530C009FC984 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25612D331C06B68000EE3668 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -687,6 +978,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				25612D541C06B86500EE3668 /* CommonCrypto.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859381C080E21001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859451C080EB7001E8C51 /* CommonCrypto.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859491C080ED4001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859561C080F09001E8C51 /* CommonCrypto.xcconfig in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2578595A1C0810E1001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859871C0811FC001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859AC1C08122E001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859D21C081272001E8C51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,15 +1042,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25883F371BF30F2000CCCE54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				251F5F2F1BF452EA009FC984 /* Info.plist in Resources */,
-				251F5F2E1BF452EA009FC984 /* CommonCrypto.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25883F401BF30F2000CCCE54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -726,13 +1052,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		251F5F301BF4530C009FC984 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25612D301C06B68000EE3668 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -744,6 +1063,148 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859351C080E21001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859461C080ED4001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859571C0810E1001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859681C08111B001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
+				257859691C08111B001E8C51 /* String+Range.swift in Sources */,
+				2578596A1C08111B001E8C51 /* NSRange+Swift.swift in Sources */,
+				2578596B1C08111B001E8C51 /* String+MD5.swift in Sources */,
+				2578596C1C08111C001E8C51 /* String+URLEncode.swift in Sources */,
+				2578596D1C08111C001E8C51 /* String+Path.swift in Sources */,
+				2578596E1C08111C001E8C51 /* String+JSON.swift in Sources */,
+				2578596F1C08111C001E8C51 /* String+Base64.swift in Sources */,
+				257859701C08111C001E8C51 /* Int+FileSize.swift in Sources */,
+				257859711C08111C001E8C51 /* String+Regex.swift in Sources */,
+				257859721C08111C001E8C51 /* NSData+Base64.swift in Sources */,
+				257859731C08111C001E8C51 /* NSDictionary+JSON.swift in Sources */,
+				257859741C08111C001E8C51 /* Operators+Ruby.swift in Sources */,
+				257859751C08111C001E8C51 /* String+Ruby.swift in Sources */,
+				257859761C08111C001E8C51 /* Int+Ruby.swift in Sources */,
+				257859771C08111C001E8C51 /* Double+Ruby.swift in Sources */,
+				257859781C08111C001E8C51 /* Float+Ruby.swift in Sources */,
+				257859791C08111C001E8C51 /* Array+Ruby.swift in Sources */,
+				2578597A1C08111C001E8C51 /* Dictionary+Ruby.swift in Sources */,
+				2578597B1C08111C001E8C51 /* Comparable+Ruby.swift in Sources */,
+				2578597C1C08111C001E8C51 /* NSDate+Ruby.swift in Sources */,
+				2578597D1C08111C001E8C51 /* String+ActiveSupport.swift in Sources */,
+				2578597E1C08111C001E8C51 /* Int+ActiveSupport.swift in Sources */,
+				2578597F1C08111C001E8C51 /* Double+ActiveSupport.swift in Sources */,
+				257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */,
+				257859811C08111C001E8C51 /* UITabBarController+StatusBarStyle.swift in Sources */,
+				257859821C08111C001E8C51 /* UIAlertController+Sugar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859841C0811FC001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859CE1C081254001E8C51 /* UIAlertController+Sugar.swift in Sources */,
+				257859911C081214001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
+				257859921C081214001E8C51 /* String+Range.swift in Sources */,
+				257859931C081214001E8C51 /* NSRange+Swift.swift in Sources */,
+				257859941C081214001E8C51 /* String+MD5.swift in Sources */,
+				257859951C081214001E8C51 /* String+URLEncode.swift in Sources */,
+				257859961C081214001E8C51 /* String+Path.swift in Sources */,
+				257859971C081214001E8C51 /* String+JSON.swift in Sources */,
+				257859981C081214001E8C51 /* String+Base64.swift in Sources */,
+				257859991C081214001E8C51 /* Int+FileSize.swift in Sources */,
+				2578599A1C081214001E8C51 /* String+Regex.swift in Sources */,
+				2578599B1C081214001E8C51 /* NSData+Base64.swift in Sources */,
+				2578599C1C081214001E8C51 /* NSDictionary+JSON.swift in Sources */,
+				2578599D1C081214001E8C51 /* Operators+Ruby.swift in Sources */,
+				2578599E1C081214001E8C51 /* String+Ruby.swift in Sources */,
+				2578599F1C081214001E8C51 /* Int+Ruby.swift in Sources */,
+				257859A01C081214001E8C51 /* Double+Ruby.swift in Sources */,
+				257859A11C081214001E8C51 /* Float+Ruby.swift in Sources */,
+				257859A21C081214001E8C51 /* Array+Ruby.swift in Sources */,
+				257859A31C081214001E8C51 /* Dictionary+Ruby.swift in Sources */,
+				257859A41C081214001E8C51 /* Comparable+Ruby.swift in Sources */,
+				257859A51C081214001E8C51 /* NSDate+Ruby.swift in Sources */,
+				257859A61C081214001E8C51 /* String+ActiveSupport.swift in Sources */,
+				257859A71C081214001E8C51 /* Int+ActiveSupport.swift in Sources */,
+				257859A81C081214001E8C51 /* Double+ActiveSupport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859A91C08122E001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859B61C081244001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
+				257859B71C081244001E8C51 /* String+Range.swift in Sources */,
+				257859B81C081244001E8C51 /* NSRange+Swift.swift in Sources */,
+				257859B91C081244001E8C51 /* String+MD5.swift in Sources */,
+				257859BA1C081244001E8C51 /* String+URLEncode.swift in Sources */,
+				257859BB1C081244001E8C51 /* String+Path.swift in Sources */,
+				257859BC1C081244001E8C51 /* String+JSON.swift in Sources */,
+				257859BD1C081244001E8C51 /* String+Base64.swift in Sources */,
+				257859BE1C081244001E8C51 /* Int+FileSize.swift in Sources */,
+				257859BF1C081244001E8C51 /* String+Regex.swift in Sources */,
+				257859C01C081244001E8C51 /* NSData+Base64.swift in Sources */,
+				257859C11C081244001E8C51 /* NSDictionary+JSON.swift in Sources */,
+				257859C21C081244001E8C51 /* Operators+Ruby.swift in Sources */,
+				257859C31C081244001E8C51 /* String+Ruby.swift in Sources */,
+				257859C41C081244001E8C51 /* Int+Ruby.swift in Sources */,
+				257859C51C081244001E8C51 /* Double+Ruby.swift in Sources */,
+				257859C61C081244001E8C51 /* Float+Ruby.swift in Sources */,
+				257859C71C081244001E8C51 /* Array+Ruby.swift in Sources */,
+				257859C81C081244001E8C51 /* Dictionary+Ruby.swift in Sources */,
+				257859C91C081244001E8C51 /* Comparable+Ruby.swift in Sources */,
+				257859CA1C081244001E8C51 /* NSDate+Ruby.swift in Sources */,
+				257859CB1C081244001E8C51 /* String+ActiveSupport.swift in Sources */,
+				257859CC1C081244001E8C51 /* Int+ActiveSupport.swift in Sources */,
+				257859CD1C081244001E8C51 /* Double+ActiveSupport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		257859CF1C081272001E8C51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				257859DC1C081289001E8C51 /* NSTextCheckingResult+Swift.swift in Sources */,
+				257859DD1C081289001E8C51 /* String+Range.swift in Sources */,
+				257859DE1C081289001E8C51 /* NSRange+Swift.swift in Sources */,
+				257859DF1C081289001E8C51 /* String+MD5.swift in Sources */,
+				257859E01C081289001E8C51 /* String+URLEncode.swift in Sources */,
+				257859E11C081289001E8C51 /* String+Path.swift in Sources */,
+				257859E21C081289001E8C51 /* String+JSON.swift in Sources */,
+				257859E31C081289001E8C51 /* String+Base64.swift in Sources */,
+				257859E41C081289001E8C51 /* Int+FileSize.swift in Sources */,
+				257859E51C081289001E8C51 /* String+Regex.swift in Sources */,
+				257859E61C081289001E8C51 /* NSData+Base64.swift in Sources */,
+				257859E71C081289001E8C51 /* NSDictionary+JSON.swift in Sources */,
+				257859E81C081289001E8C51 /* Operators+Ruby.swift in Sources */,
+				257859E91C081289001E8C51 /* String+Ruby.swift in Sources */,
+				257859EA1C081289001E8C51 /* Int+Ruby.swift in Sources */,
+				257859EB1C081289001E8C51 /* Double+Ruby.swift in Sources */,
+				257859EC1C081289001E8C51 /* Float+Ruby.swift in Sources */,
+				257859ED1C081289001E8C51 /* Array+Ruby.swift in Sources */,
+				257859EE1C081289001E8C51 /* Dictionary+Ruby.swift in Sources */,
+				257859EF1C081289001E8C51 /* Comparable+Ruby.swift in Sources */,
+				257859F01C081289001E8C51 /* NSDate+Ruby.swift in Sources */,
+				257859F11C081289001E8C51 /* String+ActiveSupport.swift in Sources */,
+				257859F21C081289001E8C51 /* Int+ActiveSupport.swift in Sources */,
+				257859F31C081289001E8C51 /* Double+ActiveSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,40 +1222,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				25883F2A1BF30EF100CCCE54 /* Sugar_ExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		25883F341BF30F2000CCCE54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2510B6031BFDB03800AED85C /* String+ActiveSupport.swift in Sources */,
-				2510B6011BFD863300AED85C /* NSDate+Ruby.swift in Sources */,
-				256A486D1BF58B4900926D90 /* String+Ruby.swift in Sources */,
-				2547BC061BF96B9B00665E1C /* Int+Ruby.swift in Sources */,
-				25883F6A1BF30F4700CCCE54 /* String+JSON.swift in Sources */,
-				251F5F411BF46A75009FC984 /* NSRange+Swift.swift in Sources */,
-				25883F671BF30F4700CCCE54 /* String+Regex.swift in Sources */,
-				25883F6C1BF30F4700CCCE54 /* Int+FileSize.swift in Sources */,
-				25883F6D1BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift in Sources */,
-				25883F691BF30F4700CCCE54 /* NSData+Base64.swift in Sources */,
-				2547BC131BFABAA700665E1C /* Dictionary+Ruby.swift in Sources */,
-				25883F6E1BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift in Sources */,
-				2547BC091BF9AFDD00665E1C /* Double+Ruby.swift in Sources */,
-				25501F161C048E7C001CB1FE /* UIAlertController+Sugar.swift in Sources */,
-				257EA4F61BF73603006E5277 /* NSTextCheckingResult+Swift.swift in Sources */,
-				25883F6B1BF30F4700CCCE54 /* NSDictionary+JSON.swift in Sources */,
-				25883F681BF30F4700CCCE54 /* String+Base64.swift in Sources */,
-				2510B6051BFDB04D00AED85C /* Int+ActiveSupport.swift in Sources */,
-				25883F631BF30F4700CCCE54 /* String+Range.swift in Sources */,
-				2547BC0D1BF9B2DC00665E1C /* Comparable+Ruby.swift in Sources */,
-				2510B6081BFDF60900AED85C /* Double+ActiveSupport.swift in Sources */,
-				2547BC151BFAE17800665E1C /* Array+Ruby.swift in Sources */,
-				25883F651BF30F4700CCCE54 /* String+URLEncode.swift in Sources */,
-				25883F641BF30F4700CCCE54 /* String+MD5.swift in Sources */,
-				2547BC0B1BF9B12900665E1C /* Float+Ruby.swift in Sources */,
-				25883F661BF30F4700CCCE54 /* String+Path.swift in Sources */,
-				25501F181C059839001CB1FE /* Operators+Ruby.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,25 +1248,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		257859621C0810E1001E8C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2578595B1C0810E1001E8C51 /* Sugar_iOS */;
+			targetProxy = 257859611C0810E1001E8C51 /* PBXContainerItemProxy */;
+		};
+		257859F71C081445001E8C51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2578594A1C080ED4001E8C51 /* CommonCrypto_watchOS */;
+			targetProxy = 257859F61C081445001E8C51 /* PBXContainerItemProxy */;
+		};
 		25883F271BF30EF100CCCE54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 25883F101BF30EF100CCCE54 /* Sugar Example */;
 			targetProxy = 25883F261BF30EF100CCCE54 /* PBXContainerItemProxy */;
 		};
-		25883F451BF30F2000CCCE54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25883F381BF30F2000CCCE54 /* Sugar */;
-			targetProxy = 25883F441BF30F2000CCCE54 /* PBXContainerItemProxy */;
-		};
 		25883F471BF30F2000CCCE54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 25883F101BF30EF100CCCE54 /* Sugar Example */;
 			targetProxy = 25883F461BF30F2000CCCE54 /* PBXContainerItemProxy */;
-		};
-		25883F4D1BF30F2000CCCE54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 25883F381BF30F2000CCCE54 /* Sugar */;
-			targetProxy = 25883F4C1BF30F2000CCCE54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -863,61 +1290,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		251F5F3B1BF4530C009FC984 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/appletvsimulator.modulemap";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
-				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = me.venj.CommonCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		251F5F3C1BF4530C009FC984 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = CommonCrypto/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto/appletvos.modulemap";
-				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto/appletvsimulator.modulemap";
-				"MODULEMAP_FILE[sdk=iphoneos*]" = "$(SRCROOT)/CommonCrypto/iphoneos.modulemap";
-				"MODULEMAP_FILE[sdk=iphonesimulator*]" = "$(SRCROOT)/CommonCrypto/iphonesimulator.modulemap";
-				"MODULEMAP_FILE[sdk=macosx*]" = "$(SRCROOT)/CommonCrypto/macosx.modulemap";
-				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto/watchos.modulemap";
-				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto/watchsimulator.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = me.venj.CommonCrypto;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		25612D3B1C06B68000EE3668 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1006,6 +1378,280 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2578593F1C080E21001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		257859401C080E21001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=appletvos*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvos.modulemap";
+				"MODULEMAP_FILE[sdk=appletvsimulator*]" = "$(SRCROOT)/CommonCrypto_tvOS/appletvsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257859511C080ED4001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		257859521C080ED4001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CommonCrypto_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				"MODULEMAP_FILE[sdk=watchos*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchos.modulemap";
+				"MODULEMAP_FILE[sdk=watchsimulator*]" = "$(SRCROOT)/CommonCrypto_watchOS/watchsimulator.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.CommonCrypto-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		257859661C0810E1001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		257859671C0810E1001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_iOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2578598F1C0811FD001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		257859901C0811FD001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_tvOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257859B41C08122E001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sugar_OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		257859B51C08122E001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = Sugar_OSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		257859DA1C081272001E8C51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		257859DB1C081272001E8C51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sugar_watchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -1140,47 +1786,6 @@
 			};
 			name = Release;
 		};
-		25883F511BF30F2000CCCE54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.venj.Sugar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		25883F521BF30F2000CCCE54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sugar/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.venj.Sugar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		25883F551BF30F2000CCCE54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1206,15 +1811,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		251F5F3A1BF4530C009FC984 /* Build configuration list for PBXNativeTarget "CommonCrypto" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				251F5F3B1BF4530C009FC984 /* Debug */,
-				251F5F3C1BF4530C009FC984 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		25612D3A1C06B68000EE3668 /* Build configuration list for PBXNativeTarget "CommonCrypto_OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1222,12 +1818,62 @@
 				25612D3C1C06B68000EE3668 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25612D4E1C06B7D200EE3668 /* Build configuration list for PBXNativeTarget "CommonCrypto_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25612D4F1C06B7D200EE3668 /* Debug */,
 				25612D501C06B7D200EE3668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		257859411C080E21001E8C51 /* Build configuration list for PBXNativeTarget "CommonCrypto_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2578593F1C080E21001E8C51 /* Debug */,
+				257859401C080E21001E8C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		257859501C080ED4001E8C51 /* Build configuration list for PBXNativeTarget "CommonCrypto_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257859511C080ED4001E8C51 /* Debug */,
+				257859521C080ED4001E8C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		257859651C0810E1001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257859661C0810E1001E8C51 /* Debug */,
+				257859671C0810E1001E8C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2578598E1C0811FD001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2578598F1C0811FD001E8C51 /* Debug */,
+				257859901C0811FD001E8C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		257859B31C08122E001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257859B41C08122E001E8C51 /* Debug */,
+				257859B51C08122E001E8C51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		257859D91C081272001E8C51 /* Build configuration list for PBXNativeTarget "Sugar_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				257859DA1C081272001E8C51 /* Debug */,
+				257859DB1C081272001E8C51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
@@ -1254,15 +1900,6 @@
 			buildConfigurations = (
 				25883F321BF30EF100CCCE54 /* Debug */,
 				25883F331BF30EF100CCCE54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		25883F501BF30F2000CCCE54 /* Build configuration list for PBXNativeTarget "Sugar" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				25883F511BF30F2000CCCE54 /* Debug */,
-				25883F521BF30F2000CCCE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

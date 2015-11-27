@@ -1,0 +1,10 @@
+//
+//  CommonCrypto.xcconfig
+//  Crypto
+//
+//  Created by Sam Soffes on 4/21/15.
+//  Copyright (c) 2015 Sam Soffes. All rights reserved.
+//
+
+MODULEMAP_FILE[sdk=appletvos*] = $(SRCROOT)/CommonCrypto_tvOS/appletvos.modulemap
+MODULEMAP_FILE[sdk=appletvsimulator*] = $(SRCROOT)/CommonCrypto_tvOS/appletvsimulator.modulemap

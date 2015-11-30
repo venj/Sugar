@@ -12,11 +12,12 @@ import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
 public extension Double {
+
     /**
      Calculate a date with a time interval from now.
-     
+
      - returns: A future date.
-    */
+     */
     func fromNow() -> NSDate {
         return NSDate(timeIntervalSinceNow: self)
     }

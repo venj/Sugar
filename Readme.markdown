@@ -33,3 +33,27 @@ Documentation
 
 3. Read documentation in `docs` directory.
 
+Linux Support
+-------------
+
+Part of the code is now Linux compatiable. Linux support will evolve as Swift evolves.
+
+
+Usage for Linux
+---------------
+
+Add dependency code in your Package.swift:
+
+```
+dependencies: [
+    .Package(url: "https://github.com/venj/Sugar.git", versions: Version(0,0,1) ..< Version(1,0,0)),
+]
+```
+
+Now, in your code:
+
+```
+import Sugar
+```
+
+See [main.swift](https://github.com/venj/SugarTest/blob/master/Sources/main.swift) for an example.

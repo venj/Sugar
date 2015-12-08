@@ -8,6 +8,7 @@
 
 import Foundation
 
+#if !os(Linux)
 //MARK: - String Operators
 /**
 `%%` is an operator that mimic the behavior of Ruby's `%` operator. `%%` is used
@@ -30,6 +31,8 @@ infix operator %% { associativity none precedence 140 }
 public func %%(lhs: String, rhs: [CVarArgType]) -> String{
     return String(format: lhs, arguments: rhs)
 }
+
+#endif
 
 /**
  `*` will produce a string that repeat the original string for several times.

@@ -6,6 +6,8 @@
 //  Copyright © 2015年 Home. All rights reserved.
 //
 
+#if !os(Linux)
+
 import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
@@ -26,3 +28,5 @@ public extension NSData {
         return self.base64EncodedStringWithOptions([])
     }
 }
+
+#endif

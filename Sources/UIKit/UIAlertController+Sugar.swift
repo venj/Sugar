@@ -5,7 +5,7 @@
 //  Created by 朱文杰 on 15/11/24.
 //  Copyright © 2015年 朱文杰. All rights reserved.
 //
-
+#if !os(Linux)
 import UIKit
 
 public extension UIAlertController {
@@ -18,3 +18,4 @@ public extension UIAlertController {
         actions.forEach(addAction)
     }
 }
+#endif

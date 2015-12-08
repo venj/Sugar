@@ -52,6 +52,8 @@ public extension String {
         return self[range]
     }
 
+    #if !os(Linux)
+
     /**
      Find the first substring matching a specified regular expression pattern.
 
@@ -72,6 +74,8 @@ public extension String {
     func exclude(subString: String) -> Bool {
         return !include(subString)
     }
+    
+    #endif
 
     /**
      Get the first several characters of the string. 
@@ -97,6 +101,7 @@ public extension String {
         else { return self [(count - length)..<count] }
     }
 
+    #if !os(Linux)
     /**
      Remove all occurances of sub string matches a regular expression pattern.
 
@@ -138,4 +143,6 @@ public extension String {
         self = squish()
         return self
     }
+
+    #endif
 }

@@ -1,10 +1,12 @@
 //
 //  NSString+URLEncode.swift
-//  Video Player
+//  Sugar
 //
 //  Created by 朱文杰 on 15/11/2.
 //  Copyright © 2015年 Home. All rights reserved.
 //
+
+#if !os(Linux)
 
 import Foundation
 
@@ -28,3 +30,5 @@ public extension String {
         }
     }
 }
+
+#endif

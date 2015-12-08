@@ -45,11 +45,11 @@ public extension String {
      - returns: A valid url string contains specified path components or `nil`.
     */
     func URLStringByAppendingPathComponents(components: [String]) -> String? {
-        guard var url = NSURL(string: self) else { return nil }
+        var url = NSURL(string: self)
         for component in components {
-            url = url.URLByAppendingPathComponent(component)
+            url = url?.URLByAppendingPathComponent(component)
         }
-        return url.absoluteString
+        return url?.absoluteString
     }
 
     /**

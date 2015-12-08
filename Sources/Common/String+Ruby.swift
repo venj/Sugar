@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+#if os(Linux)
+import NSLinux
+#endif
 /**
  Ruby Core flavored string extension. 
 */
@@ -24,14 +26,24 @@ public extension String {
         let now = NSDate()
         let timeStamp = now.timeIntervalSince1970
         let str = String(timeStamp)
+        #if os(Linux)
+        //FIXME: Not good implementation for Linux
+        return str
+        #else
         let hash = str.md5
         let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let dateComponents = calender!.components([.Minute, .Second], fromDate: now)
+        #if os(Linux)
+        let minute = dateComponents!.minute
+        let second = dateComponents!.second
+        #else
         let minute = dateComponents.minute
         let second = dateComponents.second
+        #endif
         let selectedIndices = (minute % 32, second % 32)
         let range = min(selectedIndices.0, selectedIndices.1)...max(selectedIndices.0, selectedIndices.1)
         return hash[range]
+        #endif
     }
 
     // Byte related methods are not included currently
@@ -136,6 +148,7 @@ public extension String {
         }
     }
 
+    #if !os(Linux)
     // May not a good implementation, just mimic ruby's chomp method
     /**
     Return a string that all new line characters or any characters that user specified from the end of a string are removed. e.g.:
@@ -181,6 +194,8 @@ public extension String {
 
         return result
     }
+
+    #endif
 
     /**
     Chop off the last character from a string and return it. The original string is not changed.
@@ -234,7 +249,7 @@ public extension String {
     }
 
     // crypt not implemented
-
+    #if !os(Linux)
     /**
     Letters that are shared in a string array are removed from the original string and return. Original string is not changed.
     
@@ -257,7 +272,6 @@ public extension String {
         }
         return result
     }
-
     // Not like ruby's delete!, this method does not return.
     /**
     Remove letters that are shared in a string array from the original string.
@@ -267,6 +281,8 @@ public extension String {
     mutating func deleteInPlace(words: [String]) {
         self = delete(words)
     }
+
+    #endif
 
     /**
      An alias for `lowercaseString`.
@@ -296,6 +312,7 @@ public extension String {
         }
     }
 
+    #if !os(Linux)
     /**
     Emumerate all lines in a string and execute a closure on the lines.
      
@@ -307,6 +324,7 @@ public extension String {
             invocation(line)
         }
     }
+    #endif
 
     /**
      An alias to `isEmpty` property. Since ? can not be used in the property name, this is basically useless.
@@ -315,6 +333,7 @@ public extension String {
         return isEmpty
     }
 
+    #if !os(Linux)
     /**
      Convert a string from one encoding to another encoding. 
      
@@ -328,13 +347,20 @@ public extension String {
         return result
     }
 
+    #endif
+
     // encoding is not applicable; encode!, get_byte not implemented
     // force_encoding is not applicable
     /**
     An alias for `hasSuffix`.
     */
     func endWith(suffix: String) -> Bool {
+        #if os(Linux)
+        //FIXME: This is a really heavy implementation 
+        return self.characters.reverse().startsWith(suffix.characters.reverse())
+        #else
         return hasSuffix(suffix)
+        #endif
     }
 
     /**
@@ -344,6 +370,7 @@ public extension String {
      - parameter replacement: The replacement string that will be applied. 
      - returns: A new string with all occurance of patterns replaced.
     */
+    #if !os(Linux)
     func gsub(pattern:String, replacement:String) -> String {
         var result = self
         result = gsub(pattern) { (match) in
@@ -351,7 +378,7 @@ public extension String {
         }
         return result
     }
-
+    #endif
     // Not good...replace from reverse to avoid range change...
     /**
     Substitude all occurance of substrings matching regular expression pattern with the string that was returned by the closure. If regular expression pattern is illegal or no matching found in the string, the original string will be returned. Original string is not changed.
@@ -360,6 +387,7 @@ public extension String {
     - parameter invocation: A closure accecpt an `NSTextCheckingResult` argument and return a string.
     - returns: A new string with all occurance of patterns replaced.
     */
+    #if !os(Linux)
     func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let matches = allMatches(pattern)  else { return self }
@@ -369,7 +397,8 @@ public extension String {
         }
         return result
     }
-
+    
+    
     // gsub! not implemented
     // hash is already implemented by standard library
     // hex not implemented
@@ -401,6 +430,8 @@ public extension String {
         return startIndex.distanceTo(range.startIndex)
     }
 
+    #endif
+
     /**
      Insert the a string into the original string at specific index. Original string is changed. If the index is out of bound of a string, an exception will occured and will crash your app.
 
@@ -424,6 +455,7 @@ public extension String {
         return characters.count
     }
 
+    #if !os(Linux)
     /**
      Get an array of lines that was contained in the original string. 
      
@@ -433,6 +465,7 @@ public extension String {
         return componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
     }
 
+    #endif
     /**
      Put a string at left most of a longer string and pad the other spaces with padding string. 
      
@@ -456,6 +489,7 @@ public extension String {
         }
     }
 
+    #if !os(Linux)
     /**
      Remove all the white space characters at the left end of the string.
      
@@ -535,7 +569,7 @@ public extension String {
         let rangeAfter = Range<Index>(start:range.endIndex, end:self.endIndex)
         return [self[rangeBefore], self[range], self[rangeAfter]]
     }
-
+    #endif
     /**
      Add a prefix to a string. Original string is not changed.
      
@@ -578,6 +612,7 @@ public extension String {
         return self
     }
     
+    #if !os(Linux)
     // The implementation is done in index()
     // Due we use rangeOfString for implementation, 
     // currently regex search from backword is not supported
@@ -592,7 +627,7 @@ public extension String {
     func rindex(subString: String, offset: Int = 0) -> Int? {  //FIXME: isRegex: Bool = false, removed from method signature
         return index(subString, isRegex: false, isReverse:true, offset: offset)
     }
-
+    #endif
     /**
      Put a string at right most of a longer string and pad the other spaces with padding string.
 
@@ -618,6 +653,7 @@ public extension String {
         }
     }
 
+    #if !os(Linux)
     // Same reason as rindex
     /**
     Partition a string with the last occurance of a sub string or matches a regular expression. Currently regular expression search is not supported.
@@ -668,6 +704,8 @@ public extension String {
             return matches
         }
     }
+    
+    #endif
 
     // scrub, scrub!, setByte not implemented
     /**
@@ -677,6 +715,7 @@ public extension String {
         return characters.count
     }
 
+    #if !os(Linux)
     // slice is not implemented, maybe implemented later, part of the functionalities are implemented by subsctipt
     
     // the limit argument is not implemented.
@@ -736,11 +775,17 @@ public extension String {
         return self
     }
 
+    #endif
+
     /**
      Alias to `hasPrefix` method.
     */
     func startWith(prefix: String) -> Bool {
+        #if os(Linux)
+        return self.characters.startsWith(prefix.characters)
+        #else
         return hasPrefix(prefix)
+        #endif
     }
 
     // white space and new line chars are all stripped
@@ -764,6 +809,7 @@ public extension String {
         return self
     }
 
+    #if !os(Linux)
     /**
      Replace first match of a regular expression pattern with the result of execusion of a closure.
      
@@ -778,6 +824,9 @@ public extension String {
         return result
     }
 
+    #endif
+
+    #if !os(Linux)
     /**
      Replace the first match of a regular expression pattern with the target replacement string.
 
@@ -792,6 +841,8 @@ public extension String {
         }
         return result
     }
+    
+    #endif
 
     // succ, succ!, sum to_xxx unpack upto not implemented
     //TODO: swapcase(), swapcaseInPlace()
@@ -811,6 +862,7 @@ public extension String {
         self = uppercaseString
     }
 
+    #if !os(Linux)
     // not functions the same as the ruby's valid_encoding?
     /**
     Evaluate a string whether it can be converted to a specified string encoding.
@@ -821,4 +873,5 @@ public extension String {
         guard let _ = dataUsingEncoding(encoding, allowLossyConversion: false) else { return false }
         return true
     }
+    #endif
 }

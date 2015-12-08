@@ -6,6 +6,8 @@
 //  Copyright © 2015年 Home. All rights reserved.
 //
 
+#if !os(Linux)
+
 import Foundation
 
 @available(iOS 7.0, OSX 10.9, *)
@@ -30,3 +32,5 @@ public extension String {
         return String(data: data, encoding: NSUTF8StringEncoding)
     }
 }
+
+#endif

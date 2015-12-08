@@ -5,7 +5,7 @@
 //  Created by 朱文杰 on 15/11/10.
 //  Copyright © 2015年 Home. All rights reserved.
 //
-
+#if !os(Linux)
 import UIKit
 
 @available(iOS 7.0, *)
@@ -20,3 +20,4 @@ public extension UITabBarController {
         return selectedViewController!.preferredStatusBarStyle()
     }
 }
+#endif

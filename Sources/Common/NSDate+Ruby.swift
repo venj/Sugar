@@ -56,7 +56,12 @@ public extension NSDate {
 
     /// Private property that parse a date into date components.
     private var __components: NSDateComponents {
-        return __calender.components([.Year, .Month, .Day, .Hour, .Minute, .Second, .Weekday, .WeekOfYear, .WeekOfMonth], fromDate: self)
+        let comps = __calender.components([.Year, .Month, .Day, .Hour, .Minute, .Second, .Weekday, .WeekOfYear, .WeekOfMonth], fromDate: self)
+        #if os(Linux)
+        return comps!
+        #else
+        return comps
+        #endif
     }
 
     /// Year of the date object.
@@ -93,12 +98,20 @@ public extension NSDate {
     /// Day number in the year.
     var yday: Int {
         var days = (__components.weekOfYear - 1) * 7 + __components.weekday
+        #if os(Linux)
+        var components = NSDateComponents(coder:NSCoder())!
+        #else
         var components = NSDateComponents()
+        #endif
         components.year = __components.year
         components.month = 1
         components.day = 1
         let date = __calender.dateFromComponents(components)!
+        #if os(Linux)
+        components = __calender.components([.Weekday], fromDate: date)!
+        #else
         components = __calender.components([.Weekday], fromDate: date)
+        #endif
         days = days - components.weekday + 1
         return days
     }
@@ -125,7 +138,11 @@ public extension NSDate {
     - returns: A boolean indicate whether it is today. 
     */
     func isToday() -> Bool {
+        #if os(Linux)
+        let today = __calender.components([.Year, .Month, .Day], fromDate: NSDate())!
+        #else
         let today = __calender.components([.Year, .Month, .Day], fromDate: NSDate())
+        #endif
         if __components.year == today.year && __components.month == today.month && __components.day == today.day {
             return true
         }

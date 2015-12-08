@@ -38,13 +38,12 @@ Linux Support
 
 Part of the code is now Linux compatiable. Linux support will evolve as Swift evolves.
 
-
 Usage for Linux
 ---------------
 
 Add dependency code in your Package.swift:
 
-```
+```swift
 dependencies: [
     .Package(url: "https://github.com/venj/Sugar.git", versions: Version(0,0,1) ..< Version(1,0,0)),
 ]
@@ -52,7 +51,7 @@ dependencies: [
 
 Now, in your code:
 
-```
+```swift
 import Sugar
 ```
 

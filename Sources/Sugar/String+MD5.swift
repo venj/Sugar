@@ -17,7 +17,6 @@ import CommonCrypto_tvOS
 import CommonCrypto_watchOS
 #elseif os(Linux)
 import COpenSSL
-import Glibc
 #endif
 
 // via https://github.com/mnbayan/StringHash
@@ -32,7 +31,7 @@ public extension String {
         let digestLength = Int(CC_MD5_DIGEST_LENGTH)
         #endif
         var result: [UInt8] = [UInt8(0)] * digestLength
-        let length = strlen(self)
+        let length = self.utf8.count
         #if os(Linux)
         MD5(self, Int(length), &result)
         #else

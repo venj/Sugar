@@ -19,8 +19,6 @@ import CommonCrypto_watchOS
 import COpenSSL
 #endif
 
-// via https://github.com/mnbayan/StringHash
-
 @available(iOS 7.0, OSX 10.9, *)
 public extension String {
     /// String's MD5 checksum. 
@@ -37,9 +35,14 @@ public extension String {
         #else
         CC_MD5(self, UInt32(length), &result)
         #endif
-        let hash = result.map {
-            String($0, radix: 16, uppercase: true)
+        let value = result.map {
+            #if os(Linux)
+            let s = String($0, radix: 16, uppercase: true)
+            return s.characters.count == 1 ? "0"+s : s
+            #else
+            return String(format: "%02X", arguments: [$0])
+            #endif
         }.reduce("", combine: +)
-        return hash
+        return value
     }
 }

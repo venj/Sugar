@@ -25,7 +25,7 @@ class SugarTests: XCTestCase {
     //MARK: - Tests for String+MD5.swift
     func testStringMD5() {
         let str = "Hello world."
-        XCTAssertEqual(str.md5, "764569e58f53ea8b6404f6fa7fc0247f")
+        XCTAssertEqual(str.md5.downcase(), "764569e58f53ea8b6404f6fa7fc0247f")
     }
 
     //MARK: - Tests for String+URLEncode.swift

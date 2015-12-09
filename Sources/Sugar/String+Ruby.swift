@@ -140,8 +140,7 @@ public extension String {
         }
     }
 
-    #if !os(Linux)
-    // May not a good implementation, just mimic ruby's chomp method
+    // Copied from Swift Package Manager source code with a little modification.
     /**
     Return a string that all new line characters or any characters that user specified from the end of a string are removed. e.g.:
     
@@ -151,43 +150,33 @@ public extension String {
         "hello\r\n\n\r".chomp() // return: hello\r\n\n
         "hello".chomp("llo") // return: he
     
-    Not like Ruby's `chomp`, if seperator is `nil` or `""`, the result are the same. But in Ruby, if `nil` is specified, only the last new line character is removed.
+    Not like Ruby's `chomp`, this method will remove **ALL** the occurance of `separator`. If `""`(empty string) is specified as separator, then nothing will do.
     
     - parameter sepatator: User specified characters or nil, which will use the `\r`, `\r\n` or `\n` whoever comes first as the new line character.
     - returns: Returns a string with last new line character removed.
     */
-    func chomp(separator: String? = nil) -> String {
-        func isChar(char: Character, inSet set: NSCharacterSet) -> Bool {
-            return set.characterIsMember(String(char).utf16.first!)
-        }
-        var result = self
-        if separator == nil || separator == "" {
-            let lastCharIndex = endIndex.advancedBy(-1)
-            let range = Range<Index>(start:lastCharIndex, end:endIndex)
-            let lastCharString = result.substringWithRange(range)
-            if isChar(lastCharString.characters.first!, inSet: NSCharacterSet.newlineCharacterSet()) {
-                while (result.hasSuffix(lastCharString)) {
-                    guard let range = result.rangeOfString(lastCharString, options: .BackwardsSearch, range: nil, locale: nil) else { return result }
-                    result.removeRange(range)
-                }
+    public func chomp(separator: String? = nil) -> String {
+        var separator = separator
+        func scrub(separator: String) -> String {
+            var E = endIndex
+            while self[startIndex..<E].hasSuffix(separator) && E > startIndex {
+                E = E.advancedBy(-separator.characters.count)
             }
-        }
-        else {
-            while(result.hasPrefix(separator!)) {
-                let r = rangeOfString(separator!)
-                result.removeRange(r!)
-            }
-            while (result.hasSuffix(separator!)) {
-                let position = result.rindex(separator!)
-                let index = result.startIndex.advancedBy(position!)
-                result = result.substringToIndex(index)
-            }
+            return self[startIndex..<E]
         }
 
-        return result
+        if let separator = separator {
+            return scrub(separator)
+        } else if hasSuffix("\r\n") {
+            return scrub("\r\n")
+        } else if hasSuffix("\n") {
+            return scrub("\n")
+        } else if hasSuffix("\r") {
+            return scrub("\r")
+        } else {
+            return self
+        }
     }
-
-    #endif
 
     /**
     Chop off the last character from a string and return it. The original string is not changed.
@@ -347,12 +336,7 @@ public extension String {
     An alias for `hasSuffix`.
     */
     func endWith(suffix: String) -> Bool {
-        #if os(Linux)
-        //FIXME: This is a really heavy implementation 
-        return self.characters.reverse().startsWith(suffix.characters.reverse())
-        #else
         return hasSuffix(suffix)
-        #endif
     }
 
     /**
@@ -389,8 +373,39 @@ public extension String {
         }
         return result
     }
-    
-    
+    #endif
+
+    #if os(Linux)
+    // hasPrefix and hasSuffix are copied from Swift Package Manager.
+    public func hasPrefix(str: String) -> Bool {
+        if utf8.count < str.utf8.count {
+            return false
+        }
+        for i in 0..<str.utf8.count {
+            if utf8[utf8.startIndex.advancedBy(i)] != str.utf8[str.utf8.startIndex.advancedBy(i)] {
+                return false
+            }
+        }
+        return true
+    }
+
+    public func hasSuffix(str: String) -> Bool {
+        let count = utf8.count
+        let strCount = str.utf8.count
+        if count < strCount {
+            return false
+        }
+        for i in 0..<str.utf8.count {
+            if utf8[utf8.startIndex.advancedBy(count-i-1)] != str.utf8[str.utf8.startIndex.advancedBy(strCount-i-1)] {
+                return false
+            }
+        }
+        return true
+    }
+
+    #endif
+
+    #if !os(Linux)
     // gsub! not implemented
     // hash is already implemented by standard library
     // hex not implemented
@@ -771,6 +786,8 @@ public extension String {
 
     /**
      Alias to `hasPrefix` method.
+     
+     On Linux platform this is not. Since standard library does not implement `hasPrefix` yet. I copied `hasPrefix` implementation code from Swift Package Manager, but I think this `startWith` implementation is better than `hasPrefix`.
     */
     func startWith(prefix: String) -> Bool {
         #if os(Linux)

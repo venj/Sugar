@@ -112,14 +112,14 @@ class StringRubyTests: XCTestCase {
 
     func testChomp() {
         let result1 = "hello".chomp()
-        let result2 = "hello\n".chomp()
+        let result2 = "hello\n\n\n".chomp()
         let result3 = "hello\r\n".chomp()
         let result4 = "hello\n\r".chomp()
         let result5 = "hello\r".chomp()
         let result6 = "hello \n there".chomp()
         let result7 = "hello".chomp("llo")
-        let result8 = "hello\r\n\r\n".chomp("")
-        let result9 = "hello\r\n\r\r\n".chomp("")
+        let result8 = "hello\r\n".chomp("")
+        let result9 = "hello\r\n\r\n".chomp("\r\n")
         let result10 = "llollollollohellollllollollo".chomp("llo")
 
         XCTAssertEqual(result1, "hello")
@@ -129,9 +129,9 @@ class StringRubyTests: XCTestCase {
         XCTAssertEqual(result5, "hello")
         XCTAssertEqual(result6, "hello \n there")
         XCTAssertEqual(result7, "he")
-        XCTAssertEqual(result8, "hello")
-        XCTAssertEqual(result9, "hello\r\n\r")
-        XCTAssertEqual(result10, "helloll")
+        XCTAssertEqual(result8, "hello\r\n")
+        XCTAssertEqual(result9, "hello")
+        XCTAssertEqual(result10, "llollollollohelloll")
     }
 
     func testChop() {

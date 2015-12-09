@@ -29,7 +29,7 @@ public extension String {
         #if os(Linux)
         let digestLength = Int(MD5_DIGEST_LENGTH)
         #else
-        let digestLength = CC_MD5_DIGEST_LENGTH
+        let digestLength = Int(CC_MD5_DIGEST_LENGTH)
         #endif
         var result: [UInt8] = [UInt8(0)] * digestLength
         let length = strlen(self)

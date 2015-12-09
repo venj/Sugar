@@ -5,3 +5,5 @@ import Sugar_OSX
 
 var str = "Hello, playground"
 str[2...10]
+
+str.md5

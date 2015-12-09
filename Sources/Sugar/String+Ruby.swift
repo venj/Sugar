@@ -25,18 +25,17 @@ public extension String {
         let timeStamp = now.timeIntervalSince1970
         let str = String(timeStamp)
         let hash = str.md5
+        #if os(Linux)
+        return hash[0..<12]
+        #else
         let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
         let dateComponents = calender!.components([.Minute, .Second], fromDate: now)
-        #if os(Linux)
-        let minute = dateComponents!.minute
-        let second = dateComponents!.second
-        #else
         let minute = dateComponents.minute
         let second = dateComponents.second
-        #endif
         let selectedIndices = (minute % 32, second % 32)
         let range = min(selectedIndices.0, selectedIndices.1)...max(selectedIndices.0, selectedIndices.1)
         return hash[range]
+        #endif
     }
 
     // Byte related methods are not included currently

@@ -7,9 +7,7 @@
 //
 
 import Foundation
-#if os(Linux)
-import NSLinux
-#endif
+
 /**
  Ruby Core flavored string extension. 
 */
@@ -783,6 +781,7 @@ public extension String {
         #endif
     }
 
+    #if !os(Linux)
     // white space and new line chars are all stripped
     // note: lstrip and rstrip are not trim newline chars
     // this behavior may change later
@@ -794,6 +793,7 @@ public extension String {
     func strip() -> String {
         return stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
     }
+
     /**
      Delete white space and new line characters from both end of the original string.
 
@@ -804,7 +804,6 @@ public extension String {
         return self
     }
 
-    #if !os(Linux)
     /**
      Replace first match of a regular expression pattern with the result of execusion of a closure.
      

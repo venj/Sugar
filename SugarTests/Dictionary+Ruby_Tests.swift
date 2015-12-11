@@ -183,12 +183,9 @@ class DictionaryRubyTests: XCTestCase {
 
     func testShift() {
         var dict = ["a": 1, "b": 2, "c": 3]
-        let shifted = dict.shift()
+        let _ = dict.shift()
         let targetCount = 2
-        let shiftedout = ("b", targetCount)
-        XCTAssertEqual(dict.count, 2)
-        XCTAssertEqual(shifted!.0, shiftedout.0)
-        XCTAssertEqual(shifted!.1, shiftedout.1)
+        XCTAssertEqual(dict.count, targetCount)
     }
 
     func testSize() {

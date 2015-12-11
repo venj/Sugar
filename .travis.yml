@@ -1,0 +1,4 @@
+language: objective-c
+xcode_project: "Sugar Example.xcodeproj"
+xcode_scheme: SugarTests
+osx_image: xcode7.2

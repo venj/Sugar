@@ -42,23 +42,25 @@ class DictionaryRubyTests: XCTestCase {
 
     func testEach() {
         let dict = ["a": 1, "b": 2, "c": 3]
-        var keySum = ""
+        var keySum = Set<String>()
         var valueSum = 0
         dict.each() {
-            keySum += $0
+            keySum.insert($0)
             valueSum += $1
         }
-        XCTAssertEqual(keySum, "bac")
+        let destination = Set<String>(["a", "b", "c"])
+        XCTAssertEqual(keySum, destination)
         XCTAssertEqual(valueSum, 6)
     }
 
     func testEachKey() {
         let dict = ["a": 1, "b": 2, "c": 3]
-        var keySum = ""
+        var keySum = Set<String>()
         dict.eachKey() {
-            keySum += $0
+            keySum.insert($0)
         }
-        XCTAssertEqual(keySum, "bac")
+        let destination = Set<String>(["a", "b", "c"])
+        XCTAssertEqual(keySum, destination)
     }
 
     func testEachValue() {
@@ -182,9 +184,9 @@ class DictionaryRubyTests: XCTestCase {
     func testShift() {
         var dict = ["a": 1, "b": 2, "c": 3]
         let shifted = dict.shift()
-        let target = ["a": 1, "c": 3]
-        let shiftedout = ("b", 2)
-        XCTAssertEqual(dict, target)
+        let targetCount = 2
+        let shiftedout = ("b", targetCount)
+        XCTAssertEqual(dict.count, 2)
         XCTAssertEqual(shifted!.0, shiftedout.0)
         XCTAssertEqual(shifted!.1, shiftedout.1)
     }

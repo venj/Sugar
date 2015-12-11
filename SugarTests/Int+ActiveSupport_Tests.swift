@@ -29,6 +29,7 @@ class IntActiveSupportTests: XCTestCase {
         XCTAssertEqual(result, target)
     }
 
+    #if ( arch(x86_64) || arch(arm64) )
     func testTeraBytes() {
         let result = 1.terabytes
         let target = 1024 ** 4
@@ -46,6 +47,7 @@ class IntActiveSupportTests: XCTestCase {
         let target = 1024 ** 6
         XCTAssertEqual(result, target)
     }
+    #endif
 
     func testKb() {
         testKilobytes()
@@ -59,6 +61,7 @@ class IntActiveSupportTests: XCTestCase {
         testGigabytes()
     }
 
+    #if ( arch(x86_64) || arch(arm64) )
     func testTb() {
         testTeraBytes()
     }
@@ -70,6 +73,7 @@ class IntActiveSupportTests: XCTestCase {
     func testEb() {
         testExabytes()
     }
+    #endif
 
     func testHours() {
         let result = 1.hours

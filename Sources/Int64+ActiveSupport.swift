@@ -1,4 +1,12 @@
 //
+//  Int64+ActiveSupport.swift
+//  Sugar Example
+//
+//  Created by 朱文杰 on 15/12/11.
+//  Copyright © 2015年 朱文杰. All rights reserved.
+//
+
+//
 //  Int+ActiveSupport.swift
 //  Sugar Example
 //
@@ -12,8 +20,9 @@ Active Support flavored extension for Int.
 */
 import Foundation
 
+#if !( arch(x86_64) || arch(arm64) )
 @available(iOS 7.0, OSX 10.9, *)
-public extension Int {
+public extension Int64 {
     /// Kilobytes in int.
     var kilobytes: Int {
         return 1024
@@ -29,7 +38,6 @@ public extension Int {
         return 1024 * megabytes
     }
 
-    #if arch(x86_64) || arch(arm64)
     /// Terabytes in int.
     var terabytes: Int {
         return 1024 * gigabytes
@@ -59,12 +67,12 @@ public extension Int {
     var tb: Int {
         return terabytes
     }
-    #endif
-    
+
     /// Shortcut for gigabytes
     var gb: Int {
         return gigabytes
     }
+    
     /// Shortcut for megabytes
     var mb: Int {
         return megabytes
@@ -102,3 +110,4 @@ public extension Int {
 
     //TODO: months and years are a little tricky to implement, so do it later
 }
+#endif

@@ -14,7 +14,7 @@ class NSDateRubyTests: XCTestCase {
     var date: NSDate!
     override func setUp() {
         super.setUp()
-        date = NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15) // 2015-1-1 22:10:15
+        date = NSDate(timeIntervalSince1970: 365.25 * 45 * 24 * 3600 + 8 * 3600 + 10 * 60 + 15) // 2015-1-1 14:10:15 UTC
     }
 
     override func tearDown() {
@@ -47,7 +47,7 @@ class NSDateRubyTests: XCTestCase {
     }
 
     func testHour() {
-        XCTAssertEqual(date.hour, 22)
+        XCTAssertEqual(date.hour, 14)
     }
 
     func testMinute() {

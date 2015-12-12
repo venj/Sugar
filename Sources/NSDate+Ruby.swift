@@ -50,7 +50,8 @@ public extension NSDate {
     /// Private property that return a calender object.
     private var __calender: NSCalendar {
         let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        cal.locale = NSLocale.currentLocale()
+        cal.timeZone = NSTimeZone(forSecondsFromGMT: 0)
+        //cal.locale = NSLocale.currentLocale()
         return cal
     }
 

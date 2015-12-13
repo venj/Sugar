@@ -13,13 +13,13 @@ public extension Int {
     /// Convert size number into human readable size string. Largest size unit is `GB`.
     var fileSizeString: String {
         var str = ""
-        if self > 1.gb {
+        if Int64(self) > 1.gb {
             str = String(format: "%.1f GB", arguments: [Double(self) / Double(1.gb)])
         }
-        else if self > 1.mb {
+        else if Int64(self) > 1.mb {
             str = String(format: "%.1f MB", arguments: [Double(self) / Double(1.mb)])
         }
-        else if self > 1.kb {
+        else if Int64(self) > 1.kb {
             str = String(format: "%.1f KB", arguments: [Double(self) / Double(1.kb)])
         }
         else {
@@ -29,17 +29,17 @@ public extension Int {
     }
 }
 
-public extension CLongLong {
+public extension Int64 {
     /// Convert size number into human readable size string. Largest size unit is `GB`.
     var fileSizeString: String {
         var str = ""
-        if self > CLongLong(1.gb) {
+        if self > Int64(1.gb) {
             str = String(format: "%.1f GB", arguments: [Double(self) / Double(1.gb)])
         }
-        else if self > CLongLong(1.mb) {
+        else if self > Int64(1.mb) {
             str = String(format: "%.1f MB", arguments: [Double(self) / Double(1.mb)])
         }
-        else if self > CLongLong(1.kb) {
+        else if self > Int64(1.kb) {
             str = String(format: "%.1f KB", arguments: [Double(self) / Double(1.kb)])
         }
         else {

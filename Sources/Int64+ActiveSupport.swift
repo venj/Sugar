@@ -20,66 +20,67 @@ Active Support flavored extension for Int.
 */
 import Foundation
 
+// Only needed on 32-bit platform, because on 64-bit platform, Int and Int64 are the same.
 #if !( arch(x86_64) || arch(arm64) )
 @available(iOS 7.0, OSX 10.9, *)
 public extension Int64 {
     /// Kilobytes in int.
-    var kilobytes: Int {
-        return 1024
+    var kilobytes: Int64 {
+        return Int64(1024)
     }
 
     /// Megabytes in int.
-    var megabytes: Int {
-        return 1024 * kilobytes
+    var megabytes: Int64 {
+        return Int64(1024) * kilobytes
     }
 
     /// Gigabytes in int.
-    var gigabytes: Int {
-        return 1024 * megabytes
+    var gigabytes: Int64 {
+        return Int64(1024) * megabytes
     }
 
     /// Terabytes in int.
-    var terabytes: Int {
-        return 1024 * gigabytes
+    var terabytes: Int64 {
+        return Int64(1024) * gigabytes
     }
 
     /// Petabytes in int.
-    var petabytes: Int {
-        return 1024 * terabytes
+    var petabytes: Int64 {
+        return Int64(1024) * terabytes
     }
 
     /// Exabytes in int.
-    var exabytes: Int {
-        return 1024 * petabytes
+    var exabytes: Int64 {
+        return Int64(1024) * petabytes
     }
 
     /// Shortcut for exabytes
-    var eb: Int {
+    var eb: Int64 {
         return exabytes
     }
 
     /// Shortcut for petabytes
-    var pb: Int {
+    var pb: Int64 {
         return petabytes
     }
 
     /// Shortcut for terabytes
-    var tb: Int {
+    var tb: Int64 {
         return terabytes
     }
 
     /// Shortcut for gigabytes
-    var gb: Int {
+    var gb: Int64 {
         return gigabytes
     }
     
     /// Shortcut for megabytes
-    var mb: Int {
+    var mb: Int64 {
         return megabytes
     }
 
     /// Shortcut for kilobytes
-    var kb: Int {
+    var kb: Int64 {
         return kilobytes
     }
 

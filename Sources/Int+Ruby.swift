@@ -128,7 +128,7 @@ public extension Int {
      - parameter invocation: A closure accept current index as argument.
     */
     func times(invocation: ((index: Int) -> Void)) {
-        for var i = 0; i < self; ++i {
+        for i in 0..<self {
             invocation(index: i)
         }
     }

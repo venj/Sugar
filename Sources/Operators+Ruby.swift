@@ -96,6 +96,19 @@ public func **(lhs: Int, rhs: Int) -> Int {
 }
 
 /**
+ Calculate power of two 64-bit integers.
+
+ - parameter lhs: Can be a minus number.
+ - parameter rhs: Can not be minus for now.
+ - returns: Power of two numbers.
+ */
+public func **(lhs: Int64, rhs: Int64) -> Int64 {
+    var result = Int64(1)
+    rhs.times { _ in result *= lhs }
+    return result
+}
+
+/**
  Calculate power of a double value.
 
  - parameter lhs: Can be a minus number.

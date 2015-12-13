@@ -13,41 +13,39 @@ import Foundation
 class IntActiveSupportTests: XCTestCase {
     func testKilobytes() {
         let result = 1.kilobytes
-        let target = 1024
+        let target = Int64(1024)
         XCTAssertEqual(result, target)
     }
 
     func testMegaBytes() {
         let result = 1.megabytes
-        let target = 1024 * 1024
+        let target = Int64(1024 * 1024)
         XCTAssertEqual(result, target)
     }
 
     func testGigabytes() {
         let result = 1.gigabytes
-        let target = 1024 ** 3
+        let target = Int64(1024) ** 3
         XCTAssertEqual(result, target)
     }
 
-    #if ( arch(x86_64) || arch(arm64) )
     func testTeraBytes() {
         let result = 1.terabytes
-        let target = 1024 ** 4
+        let target = Int64(1024) ** 4
         XCTAssertEqual(result, target)
     }
 
     func testPetaBytes() {
         let result = 1.petabytes
-        let target = 1024 ** 5
+        let target = Int64(1024) ** 5
         XCTAssertEqual(result, target)
     }
 
     func testExabytes() {
         let result = 1.exabytes
-        let target = 1024 ** 6
+        let target = Int64(1024) ** 6
         XCTAssertEqual(result, target)
     }
-    #endif
 
     func testKb() {
         testKilobytes()

@@ -161,6 +161,11 @@
 		259DF1441C01B7C400A5773A /* String+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */; };
 		259DF1461C01BB1200A5773A /* Int+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */; };
 		259DF1481C01C39700A5773A /* Double+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */; };
+		25D4EBFF1C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
+		25D4EC001C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
+		25D4EC011C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
+		25D4EC021C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
+		25D4EC031C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,6 +287,7 @@
 		259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
 		259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
 		259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
+		25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int64+Ruby.swift"; path = "Sources/Int64+Ruby.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +440,7 @@
 				25461A8A1C08729D009E5ADE /* Double+Ruby.swift */,
 				25461A8B1C08729D009E5ADE /* Float+Ruby.swift */,
 				25461A8C1C08729D009E5ADE /* Int+Ruby.swift */,
+				25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */,
 				25461A8D1C08729D009E5ADE /* NSDate+Ruby.swift */,
 				25461A8E1C08729D009E5ADE /* Operators+Ruby.swift */,
 				25461A8F1C08729D009E5ADE /* String+Ruby.swift */,
@@ -1030,6 +1037,7 @@
 				25461B111C0876B7009E5ADE /* String+Range.swift in Sources */,
 				25461B121C0876B7009E5ADE /* String+Regex.swift in Sources */,
 				25461B131C0876B7009E5ADE /* String+URLEncode.swift in Sources */,
+				25D4EC011C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461B141C0876B7009E5ADE /* Array+Ruby.swift in Sources */,
 				25461B151C0876B7009E5ADE /* Comparable+Ruby.swift in Sources */,
 				25461B161C0876B7009E5ADE /* Dictionary+Ruby.swift in Sources */,
@@ -1064,6 +1072,7 @@
 				25461AF71C0876A9009E5ADE /* String+Range.swift in Sources */,
 				25461AF81C0876A9009E5ADE /* String+Regex.swift in Sources */,
 				25461AF91C0876A9009E5ADE /* String+URLEncode.swift in Sources */,
+				25D4EC021C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461AFA1C0876A9009E5ADE /* Array+Ruby.swift in Sources */,
 				25461AFB1C0876A9009E5ADE /* Comparable+Ruby.swift in Sources */,
 				25461AFC1C0876A9009E5ADE /* Dictionary+Ruby.swift in Sources */,
@@ -1086,6 +1095,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25461B201C0876C0009E5ADE /* Int+FileSize.swift in Sources */,
+				25D4EC001C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461B211C0876C0009E5ADE /* NSData+Base64.swift in Sources */,
 				25461B221C0876C0009E5ADE /* NSDictionary+JSON.swift in Sources */,
 				25461B231C0876C0009E5ADE /* NSRange+Swift.swift in Sources */,
@@ -1118,6 +1128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25461AD61C08769F009E5ADE /* Int+FileSize.swift in Sources */,
+				25D4EC031C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461AD71C08769F009E5ADE /* NSData+Base64.swift in Sources */,
 				25461AD81C08769F009E5ADE /* NSDictionary+JSON.swift in Sources */,
 				25461AD91C08769F009E5ADE /* NSRange+Swift.swift in Sources */,
@@ -1170,6 +1181,7 @@
 				25461A9D1C0872B3009E5ADE /* String+ActiveSupport.swift in Sources */,
 				25461A941C08729D009E5ADE /* Int+Ruby.swift in Sources */,
 				25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */,
+				25D4EBFF1C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461ACE1C087327009E5ADE /* String+Path.swift in Sources */,
 				25461A931C08729D009E5ADE /* Float+Ruby.swift in Sources */,
 				25461ACA1C087327009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,

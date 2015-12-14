@@ -10,3 +10,6 @@ str.md5
 
 "Hello world.".md5
 str.hasSuffix("")
+
+String.UUIDString()
+String.UUIDString()

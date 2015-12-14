@@ -19,7 +19,7 @@ public extension String {
     func stringByAppendingPathComponents(components: [String]) -> String {
         let componentsCount = components.count
         var str = self
-        for var i = 0; i < componentsCount - 1; i++ {
+        for i in 0..<(componentsCount - 1) {
             str = str + "/" + components[i]
         }
         return str

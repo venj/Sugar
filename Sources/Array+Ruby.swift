@@ -29,7 +29,7 @@ public extension Array {
     - returns: Return `true` if the element is found.
     */
     func anyIf(element: Element, _ invocation: ((Element, Element) -> Bool)) -> Bool {
-        for var i = 0; i < count; ++i {
+        for i in 0..<count {
             if invocation(element, self[i]) {
                 return true
             }
@@ -128,7 +128,7 @@ public extension Array {
      - parameter invocation: A closure accept current element as argument and return a boolean that determines whether delete the element or not.
     */
     mutating func deleteIf(invocation:((Element) -> Bool)) {
-        for var i = 0; i < count; i++ {
+        for i in (0..<count).reverse() {
             if invocation(self[i]) {
                 removeAtIndex(i)
             }
@@ -174,7 +174,7 @@ public extension Array {
      - parameter invocation: A closure to process these indexes.
     */
     func eachIndex(invocation:((Int) -> Void)) {
-        for var i = 0; i < count; ++i {
+        for i in 0..<count {
             invocation(i)
         }
     }
@@ -185,7 +185,7 @@ public extension Array {
      - parameter invocation: A closure to process these elements and their indexes.
     */
     func eachWithIndex(invocation:((Int, Element) -> Void)) {
-        for var i = 0; i < count; ++i {
+        for i in 0..<count {
             invocation(i, self[i])
         }
     }
@@ -205,7 +205,7 @@ public extension Array {
     - parameter invocation: A closure take element as argument and return a boolean.
     */
     func findIndex(invocation:((Element) -> Bool)) -> Int? {
-        for var i = 0; i < count; ++i {
+        for i in 0..<count {
             if invocation(self[i]) { return i }
         }
         return nil
@@ -224,7 +224,7 @@ public extension Array {
      - parameter invocation: A closure take element as argument and return a boolean.
     */
     mutating func keepIf(invocation:((Element) -> Bool)) {
-        for var i = count - 1; i >= 0; --i {
+        for i in (0..<count).reverse() {
             if !invocation(self[i]) {
                 removeAtIndex(i)
             }
@@ -295,7 +295,7 @@ public extension Array {
      - returns: If found, return the index in `Int`, or `nil` if not found.
     */
     func rIndex(invocation:((Element) -> Bool)) -> Int? {
-        for var i = count - 1; i >= 0; --i {
+        for i in (0..<count).reverse() {
             if invocation(self[i]) { return i }
         }
         return nil
@@ -448,7 +448,7 @@ public extension Array where Element: Equatable {
      - returns: The position of the first occurance of the element, or `nil` if not found.
     */
     func findIndex(element: Element) -> Int? {
-        for var i = 0; i < count; ++i {
+        for i in 0..<count {
             if self[i] == element {
                 return i
             }

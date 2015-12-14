@@ -37,7 +37,7 @@ public extension Int {
             invocation(index: self)
         }
         else {
-            for var i = self; i >= to; --i {
+            for i in (to...self).reverse() {
                 invocation(index: i)
             }
         }
@@ -144,7 +144,7 @@ public extension Int {
             invocation(index: self)
         }
         else {
-            for var i = self; i <= to; ++i {
+            for i in self...to {
                 invocation(index: i)
             }
         }

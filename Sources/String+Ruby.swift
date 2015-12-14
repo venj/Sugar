@@ -21,21 +21,16 @@ public extension String {
     - returns: A variable length UUID string.
     */
     static func UUIDString() -> String {
-        let now = NSDate()
-        let timeStamp = now.timeIntervalSince1970
-        let str = String(timeStamp)
-        let hash = str.md5
+        var arr = [UInt8(0)] * 16
+        uuid_generate(&arr)
+        return arr.map {
         #if os(Linux)
-        return hash[0..<12]
+            let s = String($0, radix: 16, uppercase: true)
+            return s.characters.count == 1 ? "0"+s : s
         #else
-        let calender = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-        let dateComponents = calender!.components([.Minute, .Second], fromDate: now)
-        let minute = dateComponents.minute
-        let second = dateComponents.second
-        let selectedIndices = (minute % 32, second % 32)
-        let range = min(selectedIndices.0, selectedIndices.1)...max(selectedIndices.0, selectedIndices.1)
-        return hash[range]
+            return String(format: "%02X", arguments: [$0])
         #endif
+        }.reduce("", combine: +)
     }
 
     // Byte related methods are not included currently
@@ -241,7 +236,7 @@ public extension String {
         if words.count == 0 { return self }
         let charset = NSMutableCharacterSet(charactersInString: words[0])
         if words.count >= 2 {
-            for var i = 1; i < words.count; ++i {
+            for i in 1..<words.count {
                 let s = NSCharacterSet(charactersInString: words[i])
                 charset.formIntersectionWithCharacterSet(s)
             }

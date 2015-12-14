@@ -21,16 +21,8 @@ public extension String {
     - returns: A variable length UUID string.
     */
     static func UUIDString() -> String {
-        var arr = [UInt8(0)] * 16
-        uuid_generate(&arr)
-        return arr.map {
-        #if os(Linux)
-            let s = String($0, radix: 16, uppercase: true)
-            return s.characters.count == 1 ? "0"+s : s
-        #else
-            return String(format: "%02X", arguments: [$0])
-        #endif
-        }.reduce("", combine: +)
+        let uuid = NSUUID()
+        return uuid.UUIDString
     }
 
     // Byte related methods are not included currently

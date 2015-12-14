@@ -28,21 +28,21 @@ public extension String {
         #else
         let digestLength = Int(CC_MD5_DIGEST_LENGTH)
         #endif
-        var result: [UInt8] = [UInt8(0)] * digestLength
+        var result = UnsafeMutablePointer<UInt8>.alloc(digestLength)
         let length = self.utf8.count
         #if os(Linux)
         MD5(self, Int(length), &result)
         #else
-        CC_MD5(self, UInt32(length), &result)
+        CC_MD5(self, UInt32(length), result)
         #endif
-        let value = result.map {
+        return (0..<digestLength).map {
+            let v = result.advancedBy($0).memory
             #if os(Linux)
-            let s = String($0, radix: 16, uppercase: true)
-            return s.characters.count == 1 ? "0"+s : s
+                let s = String(v, radix: 16, uppercase: true)
+                return s.characters.count == 1 ? "0"+s : s
             #else
-            return String(format: "%02X", arguments: [$0])
+                return String(format: "%02X", arguments: [v])
             #endif
         }.reduce("", combine: +)
-        return value
     }
 }

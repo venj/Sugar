@@ -115,13 +115,11 @@ public extension String {
         }
         else {
             var (leftPad, rightPad) = ("", "")
-            for var i = 0, j = 0; i < leftPadSpace; ++i, ++j {
-                if j % padSize == 0 { j = 0 }
-                leftPad += padString[j]
+            for i in 0..<leftPadSpace {
+                leftPad += padString[i % padSize]
             }
-            for var i = 0, j = 0; i < rightPadSpace; ++i, ++j {
-                if j % padSize == 0 { j = 0 }
-                rightPad += padString[j]
+            for i in 0..<rightPadSpace {
+                rightPad += padString[i % padSize]
             }
             return leftPad + self + rightPad
         }
@@ -354,8 +352,8 @@ public extension String {
     func gsub(pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let matches = allMatches(pattern)  else { return self }
-        for var i = matches.count - 1; i >= 0; --i {
-            let match = matches[i]
+        (0..<matches.count).reverse().forEach {
+            let match = matches[$0]
             result.replaceRange(result.rangeFromNSRange(match.range), with: invocation(match))
         }
         return result
@@ -475,9 +473,8 @@ public extension String {
         else {
             var result = self
             let padSize = padString.characters.count
-            for var i = stringLength, j = 0; i < totalLength; ++i, ++j {
-                if j % padSize == 0 { j = 0 }
-                result += padString[j]
+            for i in 0..<(totalLength - stringLength) {
+                result += padString[i % padSize]
             }
             return result
         }
@@ -637,10 +634,8 @@ public extension String {
         else {
             var result = ""
             let padSize = padString.characters.count
-            let stringLength = characters.count
-            for var i = 0, j = 0; i < totalLength - stringLength; ++i, ++j {
-                if j % padSize == 0 { j = 0 }
-                result += padString[j]
+            for i in 0..<(totalLength - stringLength) {
+                result += padString[i % padSize]
             }
             result += self
             return result

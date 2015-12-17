@@ -388,6 +388,16 @@ public extension String {
         return true
     }
 
+    public func hasPrefix2(str: String) -> Bool {
+        let prefix = String(characters.prefix(str.characters.count))
+        return prefix == str
+    }
+
+    public func hasSuffix2(str: String) -> Bool {
+        let suffix = String(characters.prefix(str.characters.count))
+        return suffix == str
+    }
+
     #endif
 
     #if !os(Linux)

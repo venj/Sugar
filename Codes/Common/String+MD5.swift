@@ -31,7 +31,7 @@ public extension String {
         var result = UnsafeMutablePointer<UInt8>.alloc(digestLength)
         let length = self.utf8.count
         #if os(Linux)
-        MD5(self, Int(length), &result)
+        MD5(self, Int(length), result)
         #else
         CC_MD5(self, UInt32(length), result)
         #endif

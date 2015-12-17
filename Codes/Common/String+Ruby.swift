@@ -394,7 +394,7 @@ public extension String {
     }
 
     public func hasSuffix2(str: String) -> Bool {
-        let suffix = String(characters.prefix(str.characters.count))
+        let suffix = String(characters.suffix(str.characters.count))
         return suffix == str
     }
 

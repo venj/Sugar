@@ -36,3 +36,11 @@ public extension String {
         return self.substringWithRange(rangeFromNSRange(nsRange))
     }
 }
+
+#if os(Linux)
+extension String {
+    func substringWithRange(range: Range<Index>) -> String {
+        return self[range]
+    }
+}
+#endif

@@ -361,8 +361,18 @@ public extension String {
     #endif
 
     #if os(Linux)
-    // hasPrefix and hasSuffix are copied from Swift Package Manager.
     public func hasPrefix(str: String) -> Bool {
+        let prefix = String(characters.prefix(str.characters.count))
+        return prefix == str
+    }
+
+    public func hasSuffix(str: String) -> Bool {
+        let suffix = String(characters.suffix(str.characters.count))
+        return suffix == str
+    }
+
+    // hasPrefix2 and hasSuffix2 are copied from Swift Package Manager.
+    public func hasPrefix2(str: String) -> Bool {
         if utf8.count < str.utf8.count {
             return false
         }
@@ -374,7 +384,7 @@ public extension String {
         return true
     }
 
-    public func hasSuffix(str: String) -> Bool {
+    public func hasSuffix2(str: String) -> Bool {
         let count = utf8.count
         let strCount = str.utf8.count
         if count < strCount {
@@ -387,17 +397,6 @@ public extension String {
         }
         return true
     }
-
-    public func hasPrefix2(str: String) -> Bool {
-        let prefix = String(characters.prefix(str.characters.count))
-        return prefix == str
-    }
-
-    public func hasSuffix2(str: String) -> Bool {
-        let suffix = String(characters.suffix(str.characters.count))
-        return suffix == str
-    }
-
     #endif
 
     #if !os(Linux)

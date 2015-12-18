@@ -457,4 +457,23 @@ class StringRubyTests: XCTestCase {
         XCTAssertTrue(result2)
         XCTAssertTrue(result3)
     }
+
+    func testHasPrefix() {
+        let str = "开始➡️：This is a string has 混合 codings. Exposé! 😄~ 呜哈哈."
+        let prefix = "开始➡️：This"
+        self.measureBlock {
+            // Put the code you want to measure the time of here.
+            10000.times { _ in str.hasPrefix(prefix) }
+        }
+    }
+    #if os(Linux)
+    func testHasPrefix2() {
+        let str = "开始➡️：This is a string has 混合 codings. Exposé! 😄~ 呜哈哈."
+        let prefix = "开始➡️：This"
+        self.measureBlock {
+            // Put the code you want to measure the time of here.
+            10000.times { _ in str.hasPrefix2(prefix) }
+        }
+    }
+    #endif
 }

@@ -10,7 +10,7 @@ If you're looking for a complete Ruby Core implementation, see this: [RubyNative
 Usage
 -----
 
-Add this repo as a git submodule. Add Sugar_`$ARCH` to Linked Frameworks and Libraries. `$ARCH` could be iOS, OSX, watchOS, tvOS. 
+Add this repo as a git submodule. Add `Sugar_$ARCH` to Linked Frameworks and Libraries. `$ARCH` could be `iOS`, `OSX`, `watchOS`, `tvOS`. 
 
 Add import in your code like:
 
@@ -34,6 +34,11 @@ Documentation
 	```
 
 3. Read documentation in `docs` directory.
+
+Swift Package Manager
+---------------------
+
+This project supports Swift Package Manager on both OSX and Linux.
 
 Linux Support
 -------------

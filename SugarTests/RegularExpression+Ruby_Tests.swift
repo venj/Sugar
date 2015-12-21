@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Sugar_iOS
+@testable import Sugar
 
 class RegularExpressionRubyTests: XCTestCase {
     func testMatchExpression() {

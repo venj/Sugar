@@ -2,21 +2,50 @@ Sugar
 =====
 
 [![Build Status](https://travis-ci.org/venj/Sugar.svg?branch=master)](https://travis-ci.org/venj/Sugar)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-Sugar for Swift. Ruby Core sweetness and more for Swift. 
+Sugar for Swift -- Ruby Core sweetness and more for Swift. 
 
 If you're looking for a complete Ruby Core implementation, see this: [RubyNative/SwiftRuby](https://github.com/RubyNative/SwiftRuby)
 
 Usage
 -----
 
-Add this repo as a git submodule. Add `Sugar_$ARCH` to Linked Frameworks and Libraries. `$ARCH` could be `iOS`, `OSX`, `watchOS`, `tvOS`. 
+You can use this project with Carthage and Swift Package Manager.
 
-Add import in your code like:
+### Carthage
+
+Sugar supports iOS, OS X, tvOS and watchOS 2(?) by using Carthage. Add following line to your Cartfile:
+
+```
+github "venj/Sugar" ~> 0.1.0
+```
+
+Add both Sugar.framework and CommonCrypto.framework to your project.
+
+### Swift Package Manager
+
+Swift Package Manager only supports OS X target and Linux target for now. Add dependency code in your Package.swift:
 
 ```swift
-import Sugar_iOS 
+dependencies: [
+    .Package(url: "https://github.com/venj/Sugar.git", versions: Version(0,1,0) ..< Version(1,0,0)),
+]
 ```
+
+If you are on Linux, you may also need to install OpenSSL library headers.
+
+```bash
+sudo apt-get install libssl-dev
+```
+
+Now, in your code:
+
+```swift
+import Sugar
+```
+
+**Note:** There are many extension methods missing on Linux platform as they require methods that only available on OS X. As Apple's cross-platform Foundation library expanding, these extension methods would be finally available on Linux.
 
 Documentation
 -------------
@@ -35,31 +64,9 @@ Documentation
 
 3. Read documentation in `docs` directory.
 
-Swift Package Manager
----------------------
-
-This project supports Swift Package Manager on both OSX and Linux.
-
-Linux Support
--------------
-
-Part of the code is now Linux compatiable. Linux support will evolve as Swift evolves.
-
-Usage for Linux
----------------
-
-Add dependency code in your Package.swift:
-
-```swift
-dependencies: [
-    .Package(url: "https://github.com/venj/Sugar.git", versions: Version(0,0,1) ..< Version(1,0,0)),
-]
-```
-
-Now, in your code:
-
-```swift
-import Sugar
-```
-
 See [main.swift](https://github.com/venj/SugarTest/blob/master/Sources/main.swift) for an example.
+
+Known Issues
+------------
+
+Currently, playgrounds in the sample project is not working.

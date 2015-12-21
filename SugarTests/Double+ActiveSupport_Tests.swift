@@ -8,7 +8,7 @@
 
 import XCTest
 import Foundation
-@testable import Sugar_iOS
+@testable import Sugar
 
 class DoubleActiveSupportTests: XCTestCase {
 

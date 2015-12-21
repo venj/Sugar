@@ -1,7 +1,7 @@
 //: Playground - noun: a place where people can play
 
 import UIKit
-import Sugar_iOS
+import Sugar
 
 let base = "Hello"
 base.ljust(20, padString: "abc")

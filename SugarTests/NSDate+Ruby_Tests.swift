@@ -8,7 +8,7 @@
 
 import Foundation
 import XCTest
-@testable import Sugar_iOS
+@testable import Sugar
 
 class NSDateRubyTests: XCTestCase {
     var date: NSDate!

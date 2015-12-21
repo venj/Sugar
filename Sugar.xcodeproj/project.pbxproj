@@ -137,8 +137,8 @@
 		25461B351C0876C0009E5ADE /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A981C0872B3009E5ADE /* Double+ActiveSupport.swift */; };
 		25461B361C0876C0009E5ADE /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A991C0872B3009E5ADE /* Int+ActiveSupport.swift */; };
 		25461B371C0876C0009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
-		257859631C0810E1001E8C51 /* Sugar_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; };
-		257859641C0810E1001E8C51 /* Sugar_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		257859631C0810E1001E8C51 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar.framework */; };
+		257859641C0810E1001E8C51 /* Sugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
 		257859811C08111C001E8C51 /* UITabBarController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */; };
 		257859821C08111C001E8C51 /* UIAlertController+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */; };
@@ -203,7 +203,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				257859641C0810E1001E8C51 /* Sugar_iOS.framework in Embed Frameworks */,
+				257859641C0810E1001E8C51 /* Sugar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +254,10 @@
 		25461AC41C087327009E5ADE /* String+URLEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+URLEncode.swift"; path = "Codes/Common/String+URLEncode.swift"; sourceTree = SOURCE_ROOT; };
 		25461B3B1C0876EF009E5ADE /* Sugar_OSX.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar_OSX.playground; sourceTree = "<group>"; };
 		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Sugar.swift"; path = "../Codes/UIKit Extension/UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
-		2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257859891C0811FC001E8C51 /* Sugar_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257859AE1C08122E001E8C51 /* Sugar_OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_OSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		257859D41C081272001E8C51 /* Sugar_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2578595C1C0810E1001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257859891C0811FC001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257859AE1C08122E001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		257859D41C081272001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257C8BB91BFEE1C800DDD037 /* String+Ruby_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ruby_Tests.swift"; sourceTree = "<group>"; };
 		257EA4F41BF6CA4E006E5277 /* Sugar.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar.playground; sourceTree = SOURCE_ROOT; };
 		25883F111BF30EF100CCCE54 /* Sugar Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sugar Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,7 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257859631C0810E1001E8C51 /* Sugar_iOS.framework in Frameworks */,
+				257859631C0810E1001E8C51 /* Sugar.framework in Frameworks */,
 				258B7EDC1C27A01E00D0BFED /* CommonCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,10 +448,10 @@
 				25883F111BF30EF100CCCE54 /* Sugar Example.app */,
 				25883F251BF30EF100CCCE54 /* Sugar ExampleTests.xctest */,
 				25883F421BF30F2000CCCE54 /* SugarTests.xctest */,
-				2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */,
-				257859891C0811FC001E8C51 /* Sugar_tvOS.framework */,
-				257859AE1C08122E001E8C51 /* Sugar_OSX.framework */,
-				257859D41C081272001E8C51 /* Sugar_watchOS.framework */,
+				2578595C1C0810E1001E8C51 /* Sugar.framework */,
+				257859891C0811FC001E8C51 /* Sugar.framework */,
+				257859AE1C08122E001E8C51 /* Sugar.framework */,
+				257859D41C081272001E8C51 /* Sugar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -595,7 +595,7 @@
 			);
 			name = Sugar_iOS;
 			productName = Sugar_iOS;
-			productReference = 2578595C1C0810E1001E8C51 /* Sugar_iOS.framework */;
+			productReference = 2578595C1C0810E1001E8C51 /* Sugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		257859881C0811FC001E8C51 /* Sugar_tvOS */ = {
@@ -613,7 +613,7 @@
 			);
 			name = Sugar_tvOS;
 			productName = Sugar_tvOS;
-			productReference = 257859891C0811FC001E8C51 /* Sugar_tvOS.framework */;
+			productReference = 257859891C0811FC001E8C51 /* Sugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		257859AD1C08122E001E8C51 /* Sugar_OSX */ = {
@@ -631,7 +631,7 @@
 			);
 			name = Sugar_OSX;
 			productName = Sugar_OSX;
-			productReference = 257859AE1C08122E001E8C51 /* Sugar_OSX.framework */;
+			productReference = 257859AE1C08122E001E8C51 /* Sugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		257859D31C081272001E8C51 /* Sugar_watchOS */ = {
@@ -649,7 +649,7 @@
 			);
 			name = Sugar_watchOS;
 			productName = Sugar_watchOS;
-			productReference = 257859D41C081272001E8C51 /* Sugar_watchOS.framework */;
+			productReference = 257859D41C081272001E8C51 /* Sugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		25883F101BF30EF100CCCE54 /* Sugar Example */ = {
@@ -1097,7 +1097,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1120,7 +1120,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1143,7 +1143,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1169,7 +1169,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-tvOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1199,7 +1199,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1227,7 +1227,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-OSX";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1238,7 +1238,7 @@
 		257859DA1C081272001E8C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1252,7 +1252,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1265,7 +1265,7 @@
 		257859DB1C081272001E8C51 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1279,7 +1279,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-watchOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Sugar;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

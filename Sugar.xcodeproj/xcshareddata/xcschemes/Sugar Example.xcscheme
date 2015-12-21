@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0710"
+   LastUpgradeVersion = "0720"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "25883F101BF30EF100CCCE54"
                BuildableName = "Sugar Example.app"
                BlueprintName = "Sugar Example"
-               ReferencedContainer = "container:Sugar Example.xcodeproj">
+               ReferencedContainer = "container:Sugar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "25883F241BF30EF100CCCE54"
                BuildableName = "Sugar ExampleTests.xctest"
                BlueprintName = "Sugar ExampleTests"
-               ReferencedContainer = "container:Sugar Example.xcodeproj">
+               ReferencedContainer = "container:Sugar.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "25883F411BF30F2000CCCE54"
                BuildableName = "SugarTests.xctest"
                BlueprintName = "SugarTests"
-               ReferencedContainer = "container:Sugar Example.xcodeproj">
+               ReferencedContainer = "container:Sugar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "25883F101BF30EF100CCCE54"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
-            ReferencedContainer = "container:Sugar Example.xcodeproj">
+            ReferencedContainer = "container:Sugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "25883F101BF30EF100CCCE54"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
-            ReferencedContainer = "container:Sugar Example.xcodeproj">
+            ReferencedContainer = "container:Sugar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "25883F101BF30EF100CCCE54"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
-            ReferencedContainer = "container:Sugar Example.xcodeproj">
+            ReferencedContainer = "container:Sugar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

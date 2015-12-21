@@ -1,4 +1,5 @@
-# Created by https://www.gitignore.io/api/swift,objc
+
+# Created by https://www.gitignore.io/api/swift
 
 ### Swift ###
 # Xcode
@@ -8,7 +9,6 @@
 ## Build generated
 build/
 DerivedData
-docs/
 
 ## Various settings
 *.pbxuser
@@ -31,21 +31,37 @@ xcuserdata
 *.hmap
 *.ipa
 
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+
+Packages/
+.build/
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
 Pods/
 
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
 
+Carthage/Checkouts
 Carthage/Build
 
-# Swift Package
-.build
-Packages
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the 
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://github.com/fastlane/fastlane/blob/master/docs/Gitignore.md
+
+fastlane/report.xml
+fastlane/screenshots
+
+# Docs
+docs

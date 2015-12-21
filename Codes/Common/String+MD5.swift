@@ -7,16 +7,10 @@
 //
 
 import Foundation
-#if os(iOS)
-import CommonCrypto_iOS
-#elseif os(OSX)
-import CommonCrypto_OSX
-#elseif os(tvOS)
-import CommonCrypto_tvOS
-#elseif os(watchOS)
-import CommonCrypto_watchOS
-#elseif os(Linux)
+#if os(Linux)
 import COpenSSL
+#else
+import CommonCrypto
 #endif
 
 @available(iOS 7.0, OSX 10.9, *)

@@ -36,7 +36,7 @@
 		25461ACA1C087327009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
 		25461ACB1C087327009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461ACC1C087327009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
-		25461ACD1C087327009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461ACD1C087327009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
 		25461ACE1C087327009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
 		25461ACF1C087327009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
 		25461AD01C087327009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
@@ -48,7 +48,7 @@
 		25461ADA1C08769F009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
 		25461ADB1C08769F009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461ADC1C08769F009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
-		25461ADD1C08769F009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461ADD1C08769F009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
 		25461ADE1C08769F009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
 		25461ADF1C08769F009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
 		25461AE01C08769F009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
@@ -72,7 +72,7 @@
 		25461AF21C0876A9009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
 		25461AF31C0876A9009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461AF41C0876A9009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
-		25461AF51C0876A9009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461AF51C0876A9009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
 		25461AF61C0876A9009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
 		25461AF71C0876A9009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
 		25461AF81C0876A9009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
@@ -96,7 +96,7 @@
 		25461B0C1C0876B7009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
 		25461B0D1C0876B7009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461B0E1C0876B7009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
-		25461B0F1C0876B7009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461B0F1C0876B7009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
 		25461B101C0876B7009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
 		25461B111C0876B7009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
 		25461B121C0876B7009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
@@ -120,7 +120,7 @@
 		25461B241C0876C0009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
 		25461B251C0876C0009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461B261C0876C0009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
-		25461B271C0876C0009E5ADE /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+MD5.swift */; };
+		25461B271C0876C0009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
 		25461B281C0876C0009E5ADE /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC11C087327009E5ADE /* String+Path.swift */; };
 		25461B291C0876C0009E5ADE /* String+Range.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC21C087327009E5ADE /* String+Range.swift */; };
 		25461B2A1C0876C0009E5ADE /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC31C087327009E5ADE /* String+Regex.swift */; };
@@ -247,7 +247,7 @@
 		25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextCheckingResult+Swift.swift"; path = "Codes/Common/NSTextCheckingResult+Swift.swift"; sourceTree = SOURCE_ROOT; };
 		25461ABE1C087327009E5ADE /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Base64.swift"; path = "Codes/Common/String+Base64.swift"; sourceTree = SOURCE_ROOT; };
 		25461ABF1C087327009E5ADE /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JSON.swift"; path = "Codes/Common/String+JSON.swift"; sourceTree = SOURCE_ROOT; };
-		25461AC01C087327009E5ADE /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Codes/Common/String+MD5.swift"; sourceTree = SOURCE_ROOT; };
+		25461AC01C087327009E5ADE /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Hash.swift"; path = "Codes/Common/String+Hash.swift"; sourceTree = SOURCE_ROOT; };
 		25461AC11C087327009E5ADE /* String+Path.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Path.swift"; path = "Codes/Common/String+Path.swift"; sourceTree = SOURCE_ROOT; };
 		25461AC21C087327009E5ADE /* String+Range.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Range.swift"; path = "Codes/Common/String+Range.swift"; sourceTree = SOURCE_ROOT; };
 		25461AC31C087327009E5ADE /* String+Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Regex.swift"; path = "Codes/Common/String+Regex.swift"; sourceTree = SOURCE_ROOT; };
@@ -419,7 +419,7 @@
 				25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */,
 				25461ABE1C087327009E5ADE /* String+Base64.swift */,
 				25461ABF1C087327009E5ADE /* String+JSON.swift */,
-				25461AC01C087327009E5ADE /* String+MD5.swift */,
+				25461AC01C087327009E5ADE /* String+Hash.swift */,
 				25461AC11C087327009E5ADE /* String+Path.swift */,
 				25461AC21C087327009E5ADE /* String+Range.swift */,
 				25461AC31C087327009E5ADE /* String+Regex.swift */,
@@ -744,7 +744,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar Example" */;
+			buildConfigurationList = 25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -854,7 +854,7 @@
 				25461B0C1C0876B7009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
 				25461B0D1C0876B7009E5ADE /* String+Base64.swift in Sources */,
 				25461B0E1C0876B7009E5ADE /* String+JSON.swift in Sources */,
-				25461B0F1C0876B7009E5ADE /* String+MD5.swift in Sources */,
+				25461B0F1C0876B7009E5ADE /* String+Hash.swift in Sources */,
 				25461B101C0876B7009E5ADE /* String+Path.swift in Sources */,
 				25461B111C0876B7009E5ADE /* String+Range.swift in Sources */,
 				25461B121C0876B7009E5ADE /* String+Regex.swift in Sources */,
@@ -889,7 +889,7 @@
 				25461AF21C0876A9009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
 				25461AF31C0876A9009E5ADE /* String+Base64.swift in Sources */,
 				25461AF41C0876A9009E5ADE /* String+JSON.swift in Sources */,
-				25461AF51C0876A9009E5ADE /* String+MD5.swift in Sources */,
+				25461AF51C0876A9009E5ADE /* String+Hash.swift in Sources */,
 				25461AF61C0876A9009E5ADE /* String+Path.swift in Sources */,
 				25461AF71C0876A9009E5ADE /* String+Range.swift in Sources */,
 				25461AF81C0876A9009E5ADE /* String+Regex.swift in Sources */,
@@ -925,7 +925,7 @@
 				25461B251C0876C0009E5ADE /* String+Base64.swift in Sources */,
 				25461B261C0876C0009E5ADE /* String+JSON.swift in Sources */,
 				253158641C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
-				25461B271C0876C0009E5ADE /* String+MD5.swift in Sources */,
+				25461B271C0876C0009E5ADE /* String+Hash.swift in Sources */,
 				25461B281C0876C0009E5ADE /* String+Path.swift in Sources */,
 				25461B291C0876C0009E5ADE /* String+Range.swift in Sources */,
 				25461B2A1C0876C0009E5ADE /* String+Regex.swift in Sources */,
@@ -958,7 +958,7 @@
 				25461ADB1C08769F009E5ADE /* String+Base64.swift in Sources */,
 				25461ADC1C08769F009E5ADE /* String+JSON.swift in Sources */,
 				253158671C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
-				25461ADD1C08769F009E5ADE /* String+MD5.swift in Sources */,
+				25461ADD1C08769F009E5ADE /* String+Hash.swift in Sources */,
 				25461ADE1C08769F009E5ADE /* String+Path.swift in Sources */,
 				25461ADF1C08769F009E5ADE /* String+Range.swift in Sources */,
 				25461AE01C08769F009E5ADE /* String+Regex.swift in Sources */,
@@ -999,7 +999,7 @@
 				25461A921C08729D009E5ADE /* Double+Ruby.swift in Sources */,
 				25461AC71C087327009E5ADE /* NSData+Base64.swift in Sources */,
 				25461A9C1C0872B3009E5ADE /* Int+ActiveSupport.swift in Sources */,
-				25461ACD1C087327009E5ADE /* String+MD5.swift in Sources */,
+				25461ACD1C087327009E5ADE /* String+Hash.swift in Sources */,
 				25461A9D1C0872B3009E5ADE /* String+ActiveSupport.swift in Sources */,
 				25461A941C08729D009E5ADE /* Int+Ruby.swift in Sources */,
 				25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */,
@@ -1497,7 +1497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar Example" */ = {
+		25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25883F2C1BF30EF100CCCE54 /* Debug */,

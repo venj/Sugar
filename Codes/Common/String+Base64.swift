@@ -1,5 +1,5 @@
 //
-//  NSString+Base64.swift
+//  String+Base64.swift
 //  Video Player
 //
 //  Created by 朱文杰 on 15/11/2.

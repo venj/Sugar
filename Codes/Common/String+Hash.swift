@@ -77,7 +77,7 @@ public extension String {
             switch algorithm {
                 case .MD4: digestLength = Int(MD4_DIGEST_LENGTH)
                 case .MD5: digestLength = Int(MD5_DIGEST_LENGTH)
-                case .SHA1: digestLength = Int(SHA1_DIGEST_LENGTH)
+                case .SHA1: digestLength = Int(SHA_DIGEST_LENGTH)
                 case .SHA224: digestLength = Int(SHA224_DIGEST_LENGTH)
                 case .SHA256: digestLength = Int(SHA256_DIGEST_LENGTH)
                 case .SHA384: digestLength = Int(SHA384_DIGEST_LENGTH)
@@ -99,13 +99,13 @@ public extension String {
         let length = self.utf8.count
         #if os(Linux)
             switch algorithm {
-                case .MD4: MD4(self, UInt(length), result)
-                case .MD5: MD5(self, UInt(length), result)
-                case .SHA1: SHA1(self, UInt(length), result)
-                case .SHA224: SHA224(self, UInt(length), result)
-                case .SHA256: SHA256(self, UInt(length), result)
-                case .SHA384: SHA384(self, UInt(length), result)
-                case .SHA512: SHA512(self, UInt(length), result)
+                case .MD4: MD4(self, Int(length), result)
+                case .MD5: MD5(self, Int(length), result)
+                case .SHA1: SHA1(self, Int(length), result)
+                case .SHA224: SHA224(self, Int(length), result)
+                case .SHA256: SHA256(self, Int(length), result)
+                case .SHA384: SHA384(self, Int(length), result)
+                case .SHA512: SHA512(self, Int(length), result)
             }
         #else
             switch algorithm {

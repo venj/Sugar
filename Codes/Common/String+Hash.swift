@@ -108,7 +108,7 @@ public extension String {
         if hmacKey != nil && algorithm == .MD4 { fatalError("MD4 is not HMAC compatible.") }
         let digestLength: Int
         #if os(Linux)
-        let hmacAlgorithm: UnsafePointer<EVP_MD>
+        var hmacAlgorithm: UnsafePointer<EVP_MD>
         #else
         let hmacAlgorithm: CCHmacAlgorithm
         #endif
@@ -119,22 +119,22 @@ public extension String {
                 hmacAlgorithm = nil // Silence compile warning
             case .MD5:
                 digestLength = Int(MD5_DIGEST_LENGTH)
-                if hmacKey == nil { hmacAlgorithm = EVP_md5() }
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_md5()
             case .SHA1:
                 digestLength = Int(SHA_DIGEST_LENGTH)
-                hmacAlgorithm = EVP_sha1()
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_sha1()
             case .SHA224:
                 digestLength = Int(SHA224_DIGEST_LENGTH)
-                hmacAlgorithm = EVP_sha224()
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_sha224()
             case .SHA256:
                 digestLength = Int(SHA256_DIGEST_LENGTH)
-                hmacAlgorithm = EVP_sha256()
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_sha256()
             case .SHA384:
                 digestLength = Int(SHA384_DIGEST_LENGTH)
-                hmacAlgorithm = EVP_sha384()
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_sha384()
             case .SHA512:
                 digestLength = Int(SHA512_DIGEST_LENGTH)
-                hmacAlgorithm = EVP_sha512()
+                hmacAlgorithm = hmacKey == nil ? nil : EVP_sha512()
         }
         #else
         switch algorithm {
@@ -146,32 +146,33 @@ public extension String {
                 hmacAlgorithm = UInt32(0) // Silence compile warning
             case .MD5:
                 digestLength = Int(CC_MD5_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgMD5)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgMD5)
             case .SHA1:
                 digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgSHA1)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgSHA1)
             case .SHA224:
                 digestLength = Int(CC_SHA224_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgSHA224)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgSHA224)
             case .SHA256:
                 digestLength = Int(CC_SHA256_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgSHA256)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgSHA256)
             case .SHA384:
                 digestLength = Int(CC_SHA384_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgSHA384)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgSHA384)
             case .SHA512:
                 digestLength = Int(CC_SHA512_DIGEST_LENGTH)
-                hmacAlgorithm = UInt32(kCCHmacAlgSHA512)
+                hmacAlgorithm = hmacKey == nil ? UInt32(0) : UInt32(kCCHmacAlgSHA512)
         }
         #endif
         var result = UnsafeMutablePointer<UInt8>.alloc(digestLength)
         let length = self.utf8.count
-        if hmacKey != nil {
-            let keyLength = hmacKey!.utf8.count
+        if let key = hmacKey {
+            let keyLength = key.utf8.count
             #if os(Linux)
-                Hmac(hmacAlgorithm, hmacKey, keyLength, self, length, result);
+                var resultLength: UInt32 = 0
+                HMAC(hmacAlgorithm, key, Int32(keyLength), self, length, result, &resultLength);
             #else
-                CCHmac(hmacAlgorithm, hmacKey!, keyLength, self, length, result);
+                CCHmac(hmacAlgorithm, key, keyLength, self, length, result);
             #endif
         }
         else {

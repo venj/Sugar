@@ -71,33 +71,111 @@ public extension String {
         return calculateHashForAlgorithm(.SHA512)
     }
 
-    private func calculateHashForAlgorithm(algorithm: HashAlgorithm) -> String {
+    /// String's HMAC-MD5 checksum.
+    func hmacMD5(key: String) -> String {
+        return calculateHashForAlgorithm(.MD5, hmacKey: key)
+    }
+
+    /// String's HMAC-SHA1 checksum.
+    func hmacSHA1(key: String) -> String {
+        return calculateHashForAlgorithm(.SHA1, hmacKey: key)
+    }
+
+    /// String's HMAC-SHA224 checksum.
+    func hmacSHA224(key: String) -> String {
+        return calculateHashForAlgorithm(.SHA224, hmacKey: key)
+    }
+
+    /// String's HMAC-SHA256 checksum.
+    func hmacSHA256(key: String) -> String {
+        return calculateHashForAlgorithm(.SHA256, hmacKey: key)
+    }
+
+    /// String's HMAC-SHA384 checksum.
+    func hmacSHA384(key: String) -> String {
+        return calculateHashForAlgorithm(.SHA384, hmacKey: key)
+    }
+
+    /// String's HMAC-SHA512 checksum.
+    func hmacSHA512(key: String) -> String {
+        return calculateHashForAlgorithm(.SHA512, hmacKey: key)
+    }
+
+    private func calculateHashForAlgorithm(algorithm: HashAlgorithm, hmacKey:String? = nil) -> String {
+        #if !os(Linux)
+        if hmacKey != nil && algorithm == .MD2 { fatalError("MD2 is not HMAC compatible.") }
+        #endif
+        if hmacKey != nil && algorithm == .MD4 { fatalError("MD4 is not HMAC compatible.") }
         let digestLength: Int
         #if os(Linux)
-            switch algorithm {
-                case .MD4: digestLength = Int(MD4_DIGEST_LENGTH)
-                case .MD5: digestLength = Int(MD5_DIGEST_LENGTH)
-                case .SHA1: digestLength = Int(SHA_DIGEST_LENGTH)
-                case .SHA224: digestLength = Int(SHA224_DIGEST_LENGTH)
-                case .SHA256: digestLength = Int(SHA256_DIGEST_LENGTH)
-                case .SHA384: digestLength = Int(SHA384_DIGEST_LENGTH)
-                case .SHA512: digestLength = Int(SHA512_DIGEST_LENGTH)
-            }
+        let hmacAlgorithm: UnsafePointer<EVP_MD>
         #else
-            switch algorithm {
-                case .MD2: digestLength = Int(CC_MD2_DIGEST_LENGTH)
-                case .MD4: digestLength = Int(CC_MD4_DIGEST_LENGTH)
-                case .MD5: digestLength = Int(CC_MD5_DIGEST_LENGTH)
-                case .SHA1: digestLength = Int(CC_SHA1_DIGEST_LENGTH)
-                case .SHA224: digestLength = Int(CC_SHA224_DIGEST_LENGTH)
-                case .SHA256: digestLength = Int(CC_SHA256_DIGEST_LENGTH)
-                case .SHA384: digestLength = Int(CC_SHA384_DIGEST_LENGTH)
-                case .SHA512: digestLength = Int(CC_SHA512_DIGEST_LENGTH)
-            }
+        let hmacAlgorithm: CCHmacAlgorithm
+        #endif
+        #if os(Linux)
+        switch algorithm {
+            case .MD4:
+                digestLength = Int(MD4_DIGEST_LENGTH)
+                hmacAlgorithm = nil // Silence compile warning
+            case .MD5:
+                digestLength = Int(MD5_DIGEST_LENGTH)
+                if hmacKey == nil { hmacAlgorithm = EVP_md5() }
+            case .SHA1:
+                digestLength = Int(SHA_DIGEST_LENGTH)
+                hmacAlgorithm = EVP_sha1()
+            case .SHA224:
+                digestLength = Int(SHA224_DIGEST_LENGTH)
+                hmacAlgorithm = EVP_sha224()
+            case .SHA256:
+                digestLength = Int(SHA256_DIGEST_LENGTH)
+                hmacAlgorithm = EVP_sha256()
+            case .SHA384:
+                digestLength = Int(SHA384_DIGEST_LENGTH)
+                hmacAlgorithm = EVP_sha384()
+            case .SHA512:
+                digestLength = Int(SHA512_DIGEST_LENGTH)
+                hmacAlgorithm = EVP_sha512()
+        }
+        #else
+        switch algorithm {
+            case .MD2:
+                digestLength = Int(CC_MD2_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(0) // Silence compile warning
+            case .MD4:
+                digestLength = Int(CC_MD4_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(0) // Silence compile warning
+            case .MD5:
+                digestLength = Int(CC_MD5_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgMD5)
+            case .SHA1:
+                digestLength = Int(CC_SHA1_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgSHA1)
+            case .SHA224:
+                digestLength = Int(CC_SHA224_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgSHA224)
+            case .SHA256:
+                digestLength = Int(CC_SHA256_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgSHA256)
+            case .SHA384:
+                digestLength = Int(CC_SHA384_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgSHA384)
+            case .SHA512:
+                digestLength = Int(CC_SHA512_DIGEST_LENGTH)
+                hmacAlgorithm = UInt32(kCCHmacAlgSHA512)
+        }
         #endif
         var result = UnsafeMutablePointer<UInt8>.alloc(digestLength)
         let length = self.utf8.count
-        #if os(Linux)
+        if hmacKey != nil {
+            let keyLength = hmacKey!.utf8.count
+            #if os(Linux)
+                Hmac(hmacAlgorithm, hmacKey, keyLength, self, length, result);
+            #else
+                CCHmac(hmacAlgorithm, hmacKey!, keyLength, self, length, result);
+            #endif
+        }
+        else {
+            #if os(Linux)
             switch algorithm {
                 case .MD4: MD4(self, Int(length), result)
                 case .MD5: MD5(self, Int(length), result)
@@ -107,7 +185,7 @@ public extension String {
                 case .SHA384: SHA384(self, Int(length), result)
                 case .SHA512: SHA512(self, Int(length), result)
             }
-        #else
+            #else
             switch algorithm {
                 case .MD2: CC_MD2(self, UInt32(length), result)
                 case .MD4: CC_MD4(self, UInt32(length), result)
@@ -118,15 +196,16 @@ public extension String {
                 case .SHA384: CC_SHA384(self, UInt32(length), result)
                 case .SHA512: CC_SHA512(self, UInt32(length), result)
             }
-        #endif
-        return (0..<digestLength).map {
-            let v = result.advancedBy($0).memory
-            #if os(Linux)
-                let s = String(v, radix: 16, uppercase: true)
-                return s.characters.count == 1 ? "0"+s : s
-            #else
-                return String(format: "%02X", arguments: [v])
             #endif
-            }.reduce("", combine: +)
+        }
+        return (0..<digestLength).map {
+        let v = result.advancedBy($0).memory
+        #if os(Linux)
+            let s = String(v, radix: 16, uppercase: true)
+            return s.characters.count == 1 ? "0"+s : s
+        #else
+            return String(format: "%02X", arguments: [v])
+        #endif
+        }.reduce("", combine: +)
     }
 }

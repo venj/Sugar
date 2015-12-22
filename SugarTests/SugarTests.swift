@@ -63,6 +63,42 @@ class SugarTests: XCTestCase {
         XCTAssertEqual(str.sha512.downcase(), "70f460361a639767d665c14727b2f18bed18c8c6be6a6ad3950e976167ba57a8db214ac3ded3d7777e5eb20ea61a2f8a24d026d285cab4ba4d38dc1c410136f7")
     }
 
+    func testStringHMACMD5() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacMD5(hmacKey).downcase(), "3acb93f70cfdc57de765123de7749cab")
+    }
+
+    func testStringHMACSHA1() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacSHA1(hmacKey).downcase(), "5787dbcc3f91b80d02a553eaedf2964133477058")
+    }
+
+    func testStringHMACSHA224() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacSHA224(hmacKey).downcase(), "4e57411f438781724641a087f177cd995f2aee92c7ef5fb8ba748fed")
+    }
+
+    func testStringHMACSHA256() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacSHA256(hmacKey).downcase(), "fea9aeb5251f1df69d209ada3f5f7250ae4e71eddfb860d0b3354e9e4cf4e190")
+    }
+
+    func testStringHMACSHA384() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacSHA384(hmacKey).downcase(), "8c2ac0f3291c513fa74f3243160b77c6f427f191ab7c9d9b17f2317c0d8460c8c50112fcb715642e5a5abfc3a8ca0beb")
+    }
+
+    func testStringHMACSHA512() {
+        let hmacKey = "Swift"
+        let str = "Hello world."
+        XCTAssertEqual(str.hmacSHA512(hmacKey).downcase(), "79f0fbaf68229f58ba84d8dc86ebd76dbd9457f28515e625f158a9a939f0b0ebefe804e8a72942c404184ef357f4614ac79cc1fa136d54383f6e718c12c17440")
+    }
+
     //MARK: - Tests for String+URLEncode.swift
     func testPercentEncodedString() {
         let str = "% /".percentEncodedString

@@ -165,6 +165,7 @@ public extension String {
         }
         #endif
         var result = UnsafeMutablePointer<UInt8>.alloc(digestLength)
+        defer { if result != nil { free(result) } }
         let length = self.utf8.count
         if let key = hmacKey {
             let keyLength = key.utf8.count

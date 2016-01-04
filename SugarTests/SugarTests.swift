@@ -106,6 +106,46 @@ class SugarTests: XCTestCase {
         XCTAssertEqual(str, encodedString)
     }
 
-    //MARK: - Tests for String+Path.swift
+    //MARK: - Tests for Operators+General.swift
+
+    func testStringAddInt() {
+        let str = "3"
+        let i = 2
+        let expected = "32"
+        let actual = str +! i
+        XCTAssertEqual(actual, expected)
+    }
+
+    func testIntAddString() {
+        let str = "3"
+        let i = 2
+        let expected = 5
+        let actual = i +! str
+        XCTAssertEqual(actual, expected)
+    }
+
+    func testIntAddStringNotConvertableToInt() {
+        let str = "K3"
+        let i = 2
+        let expected = 2
+        let actual = i +! str
+        XCTAssertEqual(actual, expected)
+    }
+
+    func testIntAddDouble() {
+        let d: Double = 2.14
+        let i: Int = 1
+        let expected = 3.14
+        let actual = i +! d
+        XCTAssertEqual(actual, expected)
+    }
+
+    func testDoubleAddInt() {
+        let d: Double = 2.14
+        let i: Int = 1
+        let expected = 3.14
+        let actual = d +! i
+        XCTAssertEqual(actual, expected)
+    }
     
 }

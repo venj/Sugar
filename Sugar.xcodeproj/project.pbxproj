@@ -165,6 +165,11 @@
 		259DF1441C01B7C400A5773A /* String+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */; };
 		259DF1461C01BB1200A5773A /* Int+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */; };
 		259DF1481C01C39700A5773A /* Double+ActiveSupport_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */; };
+		25B96F701C3A62B400F60A9F /* Operators+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B96F6F1C3A62B400F60A9F /* Operators+General.swift */; };
+		25B96F711C3A62B400F60A9F /* Operators+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B96F6F1C3A62B400F60A9F /* Operators+General.swift */; };
+		25B96F721C3A62B400F60A9F /* Operators+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B96F6F1C3A62B400F60A9F /* Operators+General.swift */; };
+		25B96F731C3A62B400F60A9F /* Operators+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B96F6F1C3A62B400F60A9F /* Operators+General.swift */; };
+		25B96F741C3A62B400F60A9F /* Operators+General.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B96F6F1C3A62B400F60A9F /* Operators+General.swift */; };
 		25D4EBFF1C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
 		25D4EC001C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
 		25D4EC011C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */; };
@@ -287,6 +292,7 @@
 		259DF1431C01B7C300A5773A /* String+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
 		259DF1451C01BB1200A5773A /* Int+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
 		259DF1471C01C39700A5773A /* Double+ActiveSupport_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+ActiveSupport_Tests.swift"; sourceTree = "<group>"; };
+		25B96F6F1C3A62B400F60A9F /* Operators+General.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Operators+General.swift"; path = "Codes/Common/Operators+General.swift"; sourceTree = SOURCE_ROOT; };
 		25D4EBFE1C1DA3B300BD7F48 /* Int64+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int64+Ruby.swift"; path = "Codes/Common/Int64+Ruby.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -424,6 +430,7 @@
 				25461AC21C087327009E5ADE /* String+Range.swift */,
 				25461AC31C087327009E5ADE /* String+Regex.swift */,
 				25461AC41C087327009E5ADE /* String+URLEncode.swift */,
+				25B96F6F1C3A62B400F60A9F /* Operators+General.swift */,
 			);
 			name = "General Extension";
 			sourceTree = "<group>";
@@ -850,6 +857,7 @@
 				253158651C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
 				25461B091C0876B7009E5ADE /* NSData+Base64.swift in Sources */,
 				25461B0A1C0876B7009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25B96F721C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25461B0B1C0876B7009E5ADE /* NSRange+Swift.swift in Sources */,
 				25461B0C1C0876B7009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
 				25461B0D1C0876B7009E5ADE /* String+Base64.swift in Sources */,
@@ -904,6 +912,7 @@
 				25461B001C0876A9009E5ADE /* NSDate+Ruby.swift in Sources */,
 				25461B011C0876A9009E5ADE /* Operators+Ruby.swift in Sources */,
 				25461B021C0876A9009E5ADE /* String+Ruby.swift in Sources */,
+				25B96F731C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				253158661C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
 				25461B031C0876A9009E5ADE /* Double+ActiveSupport.swift in Sources */,
 				25461B041C0876A9009E5ADE /* Int+ActiveSupport.swift in Sources */,
@@ -917,6 +926,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25461B201C0876C0009E5ADE /* Int+FileSize.swift in Sources */,
+				25B96F711C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25D4EC001C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461B211C0876C0009E5ADE /* NSData+Base64.swift in Sources */,
 				25461B221C0876C0009E5ADE /* NSDictionary+JSON.swift in Sources */,
@@ -950,6 +960,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25461AD61C08769F009E5ADE /* Int+FileSize.swift in Sources */,
+				25B96F741C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25D4EC031C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461AD71C08769F009E5ADE /* NSData+Base64.swift in Sources */,
 				25461AD81C08769F009E5ADE /* NSDictionary+JSON.swift in Sources */,
@@ -1010,6 +1021,7 @@
 				25461ACB1C087327009E5ADE /* String+Base64.swift in Sources */,
 				25461AC81C087327009E5ADE /* NSDictionary+JSON.swift in Sources */,
 				25461A971C08729D009E5ADE /* String+Ruby.swift in Sources */,
+				25B96F701C3A62B400F60A9F /* Operators+General.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

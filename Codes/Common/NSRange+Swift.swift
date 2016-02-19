@@ -17,6 +17,6 @@ public extension NSRange {
     func range() -> Range<Int> {
         let startIndex = location
         let endIndex = startIndex.advancedBy(length)
-        return Range(start: startIndex, end: endIndex)
+        return startIndex ..< endIndex
     }
 }

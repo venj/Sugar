@@ -137,6 +137,7 @@
 		25461B351C0876C0009E5ADE /* Double+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A981C0872B3009E5ADE /* Double+ActiveSupport.swift */; };
 		25461B361C0876C0009E5ADE /* Int+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A991C0872B3009E5ADE /* Int+ActiveSupport.swift */; };
 		25461B371C0876C0009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
+		2574E5851C770B43009018CC /* UIAlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2574E5841C770B43009018CC /* UIAlertAction.swift */; };
 		257859631C0810E1001E8C51 /* Sugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar.framework */; };
 		257859641C0810E1001E8C51 /* Sugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2578595C1C0810E1001E8C51 /* Sugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		257859801C08111C001E8C51 /* UINavigationController+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */; };
@@ -259,6 +260,7 @@
 		25461AC41C087327009E5ADE /* String+URLEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+URLEncode.swift"; path = "Codes/Common/String+URLEncode.swift"; sourceTree = SOURCE_ROOT; };
 		25461B3B1C0876EF009E5ADE /* Sugar_OSX.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Sugar_OSX.playground; sourceTree = "<group>"; };
 		25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Sugar.swift"; path = "../Codes/UIKit Extension/UIAlertController+Sugar.swift"; sourceTree = "<group>"; };
+		2574E5841C770B43009018CC /* UIAlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertAction.swift; sourceTree = "<group>"; };
 		2578595C1C0810E1001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257859891C0811FC001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257859AE1C08122E001E8C51 /* Sugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Sugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -374,6 +376,7 @@
 				25883F611BF30F4700CCCE54 /* UINavigationController+StatusBarStyle.swift */,
 				25883F621BF30F4700CCCE54 /* UITabBarController+StatusBarStyle.swift */,
 				25501F151C048E7C001CB1FE /* UIAlertController+Sugar.swift */,
+				2574E5841C770B43009018CC /* UIAlertAction.swift */,
 			);
 			name = "UIKit Extension";
 			sourceTree = "<group>";
@@ -1011,6 +1014,7 @@
 				25461AC71C087327009E5ADE /* NSData+Base64.swift in Sources */,
 				25461A9C1C0872B3009E5ADE /* Int+ActiveSupport.swift in Sources */,
 				25461ACD1C087327009E5ADE /* String+Hash.swift in Sources */,
+				2574E5851C770B43009018CC /* UIAlertAction.swift in Sources */,
 				25461A9D1C0872B3009E5ADE /* String+ActiveSupport.swift in Sources */,
 				25461A941C08729D009E5ADE /* Int+Ruby.swift in Sources */,
 				25883F151BF30EF100CCCE54 /* AppDelegate.swift in Sources */,

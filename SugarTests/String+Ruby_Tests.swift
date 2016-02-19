@@ -71,7 +71,7 @@ class StringRubyTests: XCTestCase {
 
     func testSubscriptRangeIndex() {
         let original = "Hello world"
-        let range:Range<String.CharacterView.Index> = Range<String.CharacterView.Index>(start:original.startIndex, end:original.startIndex.advancedBy(3))
+        let range = original.startIndex ..< original.startIndex.advancedBy(3)
         let part = original[range]
         XCTAssertEqual(part, "Hel")
     }
@@ -200,7 +200,7 @@ class StringRubyTests: XCTestCase {
         let str = "Line 1\nLine 2\n\nLine 4"
         var numberOfLines = 0
         str.eachLine { _ in
-            numberOfLines++
+            numberOfLines += 1
         }
         XCTAssertEqual(numberOfLines, 4)
     }
@@ -233,7 +233,7 @@ class StringRubyTests: XCTestCase {
         let original = "plaese, relaese, plaese!"
         var count = 0
         let replaced = original.gsub("ae") {
-            count++
+            count += 1
             let fetched = original[$0.range]
             return fetched.reverse()
         }
@@ -385,7 +385,7 @@ class StringRubyTests: XCTestCase {
         let str = "h-e-l-l-o w-o-r-l-d"
         var count = 0
         str.scan("-") { _ in
-            count++
+            count += 1
         }
         XCTAssertEqual(count, 8)
     }

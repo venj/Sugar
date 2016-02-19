@@ -40,7 +40,7 @@ public extension String {
         let startIndex = self.startIndex
         let position = startIndex.advancedBy(pos)
         let endIndex = startIndex.advancedBy(pos+1)
-        let range = Range<Index>(start:position, end:endIndex)
+        let range = position ..< endIndex
         return substringWithRange(range)
     }
 
@@ -58,7 +58,7 @@ public extension String {
         let stringOrigin = self.startIndex
         let startIndex = stringOrigin.advancedBy(intRange.startIndex)
         let endIndex = startIndex.advancedBy(intRange.endIndex - intRange.startIndex)
-        let range = Range<Index>(start:startIndex, end:endIndex)
+        let range = startIndex ..< endIndex
         return substringWithRange(range)
     }
 
@@ -171,7 +171,7 @@ public extension String {
     func chop() -> String {
         var result = self
         let lastCharIndex = endIndex.advancedBy(-1)
-        let range = Range<Index>(start:lastCharIndex, end:endIndex)
+        let range = lastCharIndex ..< endIndex
         result.removeRange(range)
         return result
     }
@@ -424,7 +424,7 @@ public extension String {
     func index(subString: String, isRegex: Bool = false, isReverse: Bool = false,  offset: Int = 0) -> Int? {
         let stringLength = characters.count
         let searchOffset = (stringLength + offset) % stringLength
-        let searchRange = Range<Index>(start: startIndex.advancedBy(searchOffset), end: endIndex)
+        let searchRange = startIndex.advancedBy(searchOffset) ..< endIndex
         var options: NSStringCompareOptions = isReverse ? [.BackwardsSearch] : []
         if isRegex { options = [.RegularExpressionSearch] }
         guard let range = rangeOfString(subString, options:options, range: searchRange, locale: nil) else { return nil }
@@ -565,8 +565,8 @@ public extension String {
         var options: NSStringCompareOptions = isReverse ? [.BackwardsSearch] : []
         if isRegex { options = [.RegularExpressionSearch] }
         guard let range = rangeOfString(pattern, options: options, range: nil, locale: nil) else { return [self, "", ""] }
-        let rangeBefore = Range<Index>(start:self.startIndex, end:range.startIndex)
-        let rangeAfter = Range<Index>(start:range.endIndex, end:self.endIndex)
+        let rangeBefore = startIndex ..< range.startIndex
+        let rangeAfter = range.endIndex ..< endIndex
         return [self[rangeBefore], self[range], self[rangeAfter]]
     }
     #endif

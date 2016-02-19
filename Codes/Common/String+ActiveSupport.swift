@@ -28,7 +28,7 @@ public extension String {
     */
     func at(index: Index) -> String {
         let end = index.advancedBy(1)
-        let range = Range<Index>(start:index, end:end)
+        let range = index ..< end
         return substringWithRange(range)
     }
 

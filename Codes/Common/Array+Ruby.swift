@@ -95,7 +95,7 @@ public extension Array {
         while true {
             if index == count * cycles { break }
             invocation(self[index % count])
-            ++index
+            index += 1
         }
     }
 

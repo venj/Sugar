@@ -5,10 +5,11 @@
 //  Created by 朱文杰 on 16/2/19.
 //  Copyright © 2016年 朱文杰. All rights reserved.
 //
-
+#if !os(Linux)
 import UIKit
 
-extension UIAlertAction {
+@available(iOS 7.0, *)
+public extension UIAlertAction {
     /**
      Generate a cancel action without the hassle to write `UIAlertAction(...)` again and again.
      
@@ -19,3 +20,4 @@ extension UIAlertAction {
         return UIAlertAction(title: NSLocalizedString("Cancel", comment:"Cancel Action Title"), style: .Cancel, handler: handler)
     }
 }
+#endif

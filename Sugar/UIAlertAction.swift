@@ -16,8 +16,8 @@ public extension UIAlertAction {
      - parameter handler: Optional hander argument to do some cancel action. 
      - returns: UIAlertAction object which represents cancel action.
      */
-    class func cancelAction(handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
-        return UIAlertAction(title: NSLocalizedString("Cancel", comment:"Cancel Action Title"), style: .Cancel, handler: handler)
+    class func cancelAction(_ handler: ((UIAlertAction) -> Void)? = nil) -> UIAlertAction {
+        return UIAlertAction(title: NSLocalizedString("Cancel", comment:"Cancel Action Title"), style: .cancel, handler: handler)
     }
 }
 #endif

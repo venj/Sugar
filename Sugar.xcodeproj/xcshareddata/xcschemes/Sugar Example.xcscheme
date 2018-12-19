@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25883F101BF30EF100CCCE54"
+               BlueprintIdentifier = "255B22C321CA9DDF0011A5ED"
                BuildableName = "Sugar Example.app"
                BlueprintName = "Sugar Example"
                ReferencedContainer = "container:Sugar.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25883F241BF30EF100CCCE54"
-               BuildableName = "Sugar ExampleTests.xctest"
-               BlueprintName = "Sugar ExampleTests"
-               ReferencedContainer = "container:Sugar.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "25883F411BF30F2000CCCE54"
-               BuildableName = "SugarTests.xctest"
-               BlueprintName = "SugarTests"
-               ReferencedContainer = "container:Sugar.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25883F101BF30EF100CCCE54"
+            BlueprintIdentifier = "255B22C321CA9DDF0011A5ED"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
             ReferencedContainer = "container:Sugar.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25883F101BF30EF100CCCE54"
+            BlueprintIdentifier = "255B22C321CA9DDF0011A5ED"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
             ReferencedContainer = "container:Sugar.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "25883F101BF30EF100CCCE54"
+            BlueprintIdentifier = "255B22C321CA9DDF0011A5ED"
             BuildableName = "Sugar Example.app"
             BlueprintName = "Sugar Example"
             ReferencedContainer = "container:Sugar.xcodeproj">

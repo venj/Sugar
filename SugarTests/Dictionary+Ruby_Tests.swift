@@ -20,11 +20,11 @@ class DictionaryRubyTests: XCTestCase {
     func testDelete() {
         var dict = ["a": 1, "b": 2, "c": 3]
         var result: String = ""
-        dict.delete("a") {
+        _ = dict.delete("a") {
             result = $0 + " not found"
         }
         XCTAssertEqual(dict, ["b": 2, "c": 3])
-        dict.delete("d") {
+        _ = dict.delete("d") {
             result = $0 + " not found"
         }
         XCTAssertEqual(dict, ["b": 2, "c": 3])
@@ -128,7 +128,7 @@ class DictionaryRubyTests: XCTestCase {
     func testMergeInPlace() {
         var dict1 = ["a": 1, "b": 2, "c": 3]
         let dict2 = ["c": 4, "d": 5, "e": 6]
-        dict1.mergeInPlace(dict2)
+        _ = dict1.mergeInPlace(dict2)
         let target = ["a": 1, "b": 2, "c": 4, "d": 5, "e": 6]
         XCTAssertEqual(dict1, target)
     }
@@ -144,7 +144,7 @@ class DictionaryRubyTests: XCTestCase {
 
     func testRejectInPlace() {
         var dict = ["a": 1, "b": 2, "c": 3]
-        dict.rejectInPlace() {
+        _ = dict.rejectInPlace() {
             $1 > 2
         }
         let target = ["a": 1, "b": 2]
@@ -154,7 +154,7 @@ class DictionaryRubyTests: XCTestCase {
     func testReplace() {
         var dict = ["a": 1, "b": 2, "c": 3]
         let target = ["d": 99]
-        dict.replace(target)
+        _ = dict.replace(target)
         XCTAssertEqual(dict, target)
     }
 
@@ -194,7 +194,7 @@ class DictionaryRubyTests: XCTestCase {
 
     func testStore() {
         var dict = ["a": 1, "b": 2, "c": 3]
-        dict.store("c", value: 4)
+        _ = dict.store("c", value: 4)
         let target = ["a": 1, "b": 2, "c": 4]
         XCTAssertEqual(dict, target)
         let value = dict.store("d", value: 5)

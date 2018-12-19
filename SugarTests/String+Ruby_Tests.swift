@@ -71,7 +71,7 @@ class StringRubyTests: XCTestCase {
 
     func testSubscriptRangeIndex() {
         let original = "Hello world"
-        let range = original.startIndex ..< original.startIndex.advancedBy(3)
+        let range = original.startIndex ..< original.index(original.startIndex, offsetBy: 3)
         let part = original[range]
         XCTAssertEqual(part, "Hel")
     }
@@ -141,7 +141,7 @@ class StringRubyTests: XCTestCase {
 
     func testChopInPlace() {
         var str = "Hello"
-        str.chopInPlace()
+        _ = str.chopInPlace()
         XCTAssertEqual(str, "Hell")
     }
 
@@ -213,7 +213,7 @@ class StringRubyTests: XCTestCase {
 
     func testEncode() {
         let original = "中国"
-        let utf16String = original.encode(NSUTF16StringEncoding)
+        let utf16String = original.encode(String.Encoding.utf16)
         XCTAssertNotNil(utf16String)
     }
 
@@ -235,7 +235,7 @@ class StringRubyTests: XCTestCase {
         let replaced = original.gsub("ae") {
             count += 1
             let fetched = original[$0.range]
-            return fetched.reverse()
+            return fetched!.reverse()
         }
 
         XCTAssertEqual(count, 3)
@@ -259,7 +259,7 @@ class StringRubyTests: XCTestCase {
 
     func testInsert() {
         var original = "Hello world"
-        let result = original.insert(6, subString: "coding ")
+        let result = original.insert(6, "coding ")
         XCTAssertEqual(result, "Hello coding world")
     }
 
@@ -346,10 +346,10 @@ class StringRubyTests: XCTestCase {
 
     func testReverseInPlace() {
         var str = "lol"
-        str.reverseInPlace()
+        _ = str.reverseInPlace()
         XCTAssertEqual(str, "lol")
         var str1 = "pit"
-        str1.reverseInPlace()
+        _ = str1.reverseInPlace()
         XCTAssertEqual(str1, "tip")
     }
 
@@ -384,7 +384,7 @@ class StringRubyTests: XCTestCase {
     func testScan() {
         let str = "h-e-l-l-o w-o-r-l-d"
         var count = 0
-        str.scan("-") { _ in
+        _ = str.scan("-") { _ in
             count += 1
         }
         XCTAssertEqual(count, 8)
@@ -414,7 +414,7 @@ class StringRubyTests: XCTestCase {
     
     func testSqueezeInPlace() {
         var str = "  hello   world   "
-        str.squeezeInPlace()
+        _ = str.squeezeInPlace()
         let target = " hello world "
         XCTAssertEqual(str, target)
     }
@@ -449,10 +449,10 @@ class StringRubyTests: XCTestCase {
     
     func testValidEncoding() {
         let str1 = "中国"
-        let result1 = str1.validEncoding(NSASCIIStringEncoding)
-        let result2 = str1.validEncoding(NSUTF16StringEncoding)
+        let result1 = str1.validEncoding(String.Encoding.ascii)
+        let result2 = str1.validEncoding(String.Encoding.utf16)
         let str2 = "😊"
-        let result3 = str2.validEncoding(NSUTF8StringEncoding)
+        let result3 = str2.validEncoding(String.Encoding.utf8)
         XCTAssertFalse(result1)
         XCTAssertTrue(result2)
         XCTAssertTrue(result3)
@@ -461,9 +461,9 @@ class StringRubyTests: XCTestCase {
     func testHasPrefix() {
         let str = "开始➡️：This is a string has 混合 codings. Exposé! 😄~ 呜哈哈."
         let prefix = "开始➡️：This"
-        self.measureBlock {
+        self.measure {
             // Put the code you want to measure the time of here.
-            10000.times { _ in str.hasPrefix(prefix) }
+            10000.times { _ in _ = str.hasPrefix(prefix) }
         }
     }
     #if os(Linux)

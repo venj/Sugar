@@ -258,7 +258,7 @@ class ArrayRubyTests: XCTestCase {
 
     func testUnshift() {
         var arr = [2, 3]
-        arr.unshift(1)
+        _ = arr.unshift(1)
         let target = [1, 2, 3]
         XCTAssertEqual(arr, target)
     }
@@ -274,12 +274,12 @@ class ArrayRubyTests: XCTestCase {
     func testDelete() {
         var arr = [1, 2, 3]
         var doubled = 0
-        arr.delete(2) {
+        _ = arr.delete(2) {
             doubled = $0 * 2
         }
         XCTAssertEqual(doubled, 0)
         XCTAssertEqual(arr, [1, 3])
-        arr.delete(10) {
+        _ = arr.delete(10) {
             doubled = $0 * 2
         }
         XCTAssertEqual(doubled, 20)

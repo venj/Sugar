@@ -13,13 +13,13 @@ import Foundation
 class DoubleActiveSupportTests: XCTestCase {
 
     func testFromNow() {
-        let now = NSDate()
+        let now = Date()
         let t = 2.days.fromNow()
         XCTAssertEqual(now.day + 2, t.day)
     }
 
     func testAgo() {
-        let now = NSDate()
+        let now = Date()
         let t = 2.days.ago()
         XCTAssertEqual(now.day - 2, t.day)
     }

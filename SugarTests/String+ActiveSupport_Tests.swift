@@ -20,7 +20,7 @@ class StringActiveSupportTests: XCTestCase {
 
     func testAtIndex() {
         let str = "Hello"
-        let index = str.startIndex.advancedBy(1)
+        let index = str.index(str.startIndex, offsetBy: 1)
         let result = str.at(index)
         let target = "e"
         XCTAssertEqual(result, target)
@@ -82,7 +82,7 @@ class StringActiveSupportTests: XCTestCase {
 
     func testRemoveInPlace() {
         var str = "hello"
-        str.removeInPlace("l+o")
+        _ = str.removeInPlace("l+o")
         let target = "he"
         XCTAssertEqual(str, target)
     }
@@ -96,7 +96,7 @@ class StringActiveSupportTests: XCTestCase {
 
     func testSquishInPlace() {
         var str = "   Hello    world!   "
-        str.squishInPlace()
+        _ = str.squishInPlace()
         let target = "Hello world!"
         XCTAssertEqual(str, target)
     }

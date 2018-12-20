@@ -156,7 +156,7 @@ public extension String {
             if separator.count == 0 { return self }
             var e = endIndex
             while self[startIndex..<e].hasSuffix(separator) && endIndex > startIndex {
-                e = index(endIndex, offsetBy: String.IndexDistance(-1 * separator.count))
+                e = index(e, offsetBy: String.IndexDistance(-1 * separator.count))
             }
             return String(self[startIndex..<e])
         }

@@ -1,9 +1,9 @@
 //
 //  Int64+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/12/13.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/12/13.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 import Foundation

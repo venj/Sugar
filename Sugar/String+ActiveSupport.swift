@@ -1,14 +1,14 @@
 //
 //  String+ActiveSupport.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/19.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/19.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 /**
 Active Support flavored extension for String.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension String {
     /**
      Get the character at a specified position in integer. Negtive value is the position count from the end.

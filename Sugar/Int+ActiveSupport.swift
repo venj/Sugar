@@ -1,9 +1,9 @@
 //
 //  Int+ActiveSupport.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/19.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/19.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 // Notice for 32-bit: Now return Int64 to solve overflow. 
@@ -12,7 +12,7 @@ Active Support flavored extension for Int.
 */
 import Foundation
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Int {
     /// Kilobytes in int.
     var kilobytes: Int64 {

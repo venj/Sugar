@@ -1,15 +1,15 @@
 //
 //  Comparable+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/16.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/16.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 /**
 Ruby core flavored extension for `Comparable` protocal.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Comparable {
     // not like ruby, this method also works while left > right
     /**

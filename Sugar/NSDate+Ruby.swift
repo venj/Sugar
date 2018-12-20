@@ -1,9 +1,9 @@
 //
 //  NSDate+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/19.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/19.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 import Foundation
@@ -31,7 +31,7 @@ public enum WeekDay: Int {
 /**
 Some sugar for `NDDate`.  
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Date {
     /**
      Examine whether a `NSDate` object is a certain weekday.

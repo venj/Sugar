@@ -1,14 +1,14 @@
 //
 //  String+Range.swift
-//  Video Player
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/4.
+//  Created by Venj on 15/11/4.
 //  Copyright © 2015年 Home. All rights reserved.
 //
 
 import Foundation
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension String {
     /**
      Create a valid `Range<Index>` object of the string by an `NSRange` value. If `NSRange` is not valid, the conversion will cause a fatal error. (The fatal will be changed to a throw in future.)

@@ -2,8 +2,8 @@
 //  Sugar_OSX.h
 //  Sugar_OSX
 //
-//  Created by 朱文杰 on 15/11/27.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/27.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 #if TARGET_OS_IPHONE || TARGET_OS_TV

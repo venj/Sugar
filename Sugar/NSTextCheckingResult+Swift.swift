@@ -3,7 +3,7 @@
 //  Sugar Example
 //
 //  Created by 朱 文杰 on 15/11/14.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import Foundation
 /**
  NSTextCheckingResult extension for easy manipulation.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension NSTextCheckingResult {
     /**
      Subscript using an integer index to fetch a matched range at certain index.

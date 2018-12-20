@@ -2,7 +2,7 @@
 //  String+Hash.swift
 //  Video Player
 //
-//  Created by 朱文杰 on 15/11/3.
+//  Created by Venj on 15/11/3.
 //  Copyright © 2015年 Home. All rights reserved.
 //
 
@@ -26,7 +26,7 @@ public enum HashAlgorithm : Int {
     #endif
 }
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension String {
 
     #if !os(Linux)

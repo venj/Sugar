@@ -1,9 +1,9 @@
 //
 //  Int+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/16.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/16.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 /**
@@ -14,7 +14,7 @@ Integer extensions that mimic Ruby core's Integer and Numeric classes.
 32-bit compatibility issue will be fixed in future extension for `Int64` and will be resolved here too. 
 
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Int {
     // ceil, chr, denominator, ord, numerator, rationalize, round, truncate, to_xxx
     /**

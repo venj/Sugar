@@ -1,17 +1,9 @@
 //
 //  Int64+ActiveSupport.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/12/11.
-//  Copyright © 2015年 朱文杰. All rights reserved.
-//
-
-//
-//  Int+ActiveSupport.swift
-//  Sugar Example
-//
-//  Created by 朱文杰 on 15/11/19.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/12/11.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 // Notice for 32-bit: Following code may overflow on 32-bit platform
@@ -22,7 +14,7 @@ import Foundation
 
 // Only needed on 32-bit platform, because on 64-bit platform, Int and Int64 are the same.
 #if !( arch(x86_64) || arch(arm64) )
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Int64 {
     /// Kilobytes in int.
     var kilobytes: Int64 {

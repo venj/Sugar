@@ -1,14 +1,14 @@
 //
 //  NSDictionary+JSON.swift
-//  Video Player
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/1.
+//  Created by Venj on 15/11/1.
 //  Copyright © 2015年 Home. All rights reserved.
 //
 
 import Foundation
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension NSDictionary {
     /// Convert a dictionary to JSON string.
     var JSONString: String? {

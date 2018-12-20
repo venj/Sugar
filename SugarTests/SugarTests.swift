@@ -2,8 +2,8 @@
 //  SugarTests.swift
 //  SugarTests
 //
-//  Created by 朱文杰 on 15/11/11.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/11.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 import XCTest

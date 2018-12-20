@@ -2,8 +2,8 @@
 //  UIAlertController+Sugar.swift
 //  Sugar Example
 //
-//  Created by 朱文杰 on 15/11/24.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/24.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 #if !os(Linux)
 import UIKit

@@ -1,9 +1,9 @@
 //
 //  Operators+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/25.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/25.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 import Foundation
@@ -33,7 +33,7 @@ precedencegroup DoublePercentPrecedence {
     higherThan: MultiplicationPrecedence
 }
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func %%(lhs: String, rhs: [CVarArg]) -> String{
     return String(format: lhs, arguments: rhs)
 }
@@ -53,7 +53,7 @@ public func %%(lhs: String, rhs: [CVarArg]) -> String{
  - parameter rhs: Right hand side operand is an `Int` that indicate how many times that should be repeated.
  - returns: The repeated string.
  */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func *(lhs: String, rhs:Int) -> String {
     if rhs < 0 {
         fatalError("String can not multiply by negtive number.")
@@ -79,7 +79,7 @@ hand size string.
 - parameter rhs: Any type of object that `String` initializer can handle.
 - returns: A string with left hand side operand and right hand side operand
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func <<<T>(lhs: String, rhs: T) -> String {
     return lhs + String(describing: rhs)
 }
@@ -90,7 +90,7 @@ precedencegroup DoubleAsteriskPrecedence {
     associativity: left
     higherThan: MultiplicationPrecedence
 }
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 //TODO: minus rhs not implemented
 /**
 Calculate power of two integers.
@@ -125,7 +125,7 @@ public func **(lhs: Int64, rhs: Int64) -> Int64 {
  - parameter rhs: Can not be minus for now, and should be an integer.
  - returns: Power of two numbers.
  */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func **(lhs: Double, rhs: Int) -> Double {
     var result = 1.0
     rhs.times { _ in result *= lhs }
@@ -139,7 +139,7 @@ public func **(lhs: Double, rhs: Int) -> Double {
  - parameter rhs: Can not be minus for now, and should be an integer.
  - returns: Power of two numbers.
  */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func **(lhs: Float, rhs: Int) -> Float {
     var result: Float = 1.0
     rhs.times { _ in result *= lhs }
@@ -154,7 +154,7 @@ Array multiply an integer.
 - parameter rhs: An integer.
 - returns: A new array with all `lhs` elements repeated for `rhs` number of times.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
     var result: [Element] = []
     rhs.times { (index) -> Void in
@@ -170,7 +170,7 @@ func *<Element>(lhs: Array<Element>, rhs: Int) -> [Element] {
  - parameter rhs: Another array.
  - returns: A new array with `lhs` array and `rhs` array concatenated together.
  */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 func +<Element>(lhs: [Element], rhs: [Element]) -> [Element] {
     var result: [Element] = lhs
     result.append(contentsOf: rhs)
@@ -185,7 +185,7 @@ Concat an element into an existing array.
 - parameter rhs: An element.
 - returns: A new array with all the elements from the original array and another element.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
     var result: [Element] = lhs
     result.append(rhs)
@@ -199,7 +199,7 @@ func <<<Element>(lhs:[Element], rhs: Element) -> [Element] {
  - parameter rhs: Another array.
  - returns: A new array with all the elements from the original array and another array.
  */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 func <<<Element>(lhs:[Element], rhs: [Element]) -> [Element] {
     var result: [Element] = lhs
     result.append(contentsOf: rhs)
@@ -215,7 +215,7 @@ precedencegroup ShipPrecedence {
     associativity: left
     higherThan: LogicalConjunctionPrecedence
 }
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func <=> <T: Comparable>(lhs: T, rhs: T) -> Int {
     if lhs > rhs { return 1 }
     else if lhs == rhs { return 0 }
@@ -226,7 +226,7 @@ public func <=> <T: Comparable>(lhs: T, rhs: T) -> Int {
 /**
  Compare two `NSDate`. Earlier date is smaller.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func <(lhs: Date, rhs: Date) -> Bool {
     let lhsTimeStamp = lhs.timeIntervalSince1970
     let rhsTimeStamp = rhs.timeIntervalSince1970
@@ -243,7 +243,7 @@ precedencegroup RegexMatchPrecedence {
     associativity: left
     higherThan: ComparisonPrecedence
 }
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public func =~(lhs: String, rhs: String) -> Int? {
     guard let regex = try? NSRegularExpression(pattern: rhs, options: []) else { return nil }
     guard let match = regex.firstMatch(in: lhs, options: [], range: NSRange(location: 0, length: lhs.count)) else { return nil }
@@ -254,7 +254,7 @@ public func =~(lhs: String, rhs: String) -> Int? {
 Determine whether a string does not matches a regular expression pattern.
 */
 infix operator !~: RegexMatchPrecedence
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 // since swift does not have literal for regex, so not like ruby,
 // here we always use rhs as regex pattern
 public func !~(lhs: String, rhs: String) -> Bool {

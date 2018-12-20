@@ -1,15 +1,15 @@
 //
 //  Dictionary+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/17.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/17.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 /**
 Ruby core flavored extension for Generic `Dictionary`.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Dictionary {
     /**
      Remove all the keys and values of the dict. 
@@ -299,7 +299,7 @@ public extension Dictionary {
 
 }
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Dictionary where Value: Equatable {
     /**
      Find the first key using a value. 
@@ -333,7 +333,7 @@ public extension Dictionary where Value: Equatable {
     }
 }
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Dictionary where Value: Hashable {
     // invertInplace is not applicable
     /**

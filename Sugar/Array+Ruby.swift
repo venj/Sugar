@@ -1,15 +1,15 @@
 //
 //  Array+Ruby.swift
-//  Sugar Example
+//  Sugar
 //
-//  Created by 朱文杰 on 15/11/17.
-//  Copyright © 2015年 朱文杰. All rights reserved.
+//  Created by Venj on 15/11/17.
+//  Copyright © 2015年 Venj. All rights reserved.
 //
 
 /**
 Ruby core flavored extension for Generic `Array`.
 */
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Array {
     /*
         any is not applicable to generic Array, implemeted in `Array where Element: Equatable`
@@ -407,7 +407,7 @@ public extension Array {
     }
 }
 
-@available(iOS 7.0, OSX 10.9, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension Array where Element: Equatable {
     /**
      Determine whether an element is contained in the array or not. Alias for `contains`.

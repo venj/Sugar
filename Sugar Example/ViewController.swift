@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Sugar Example
 //
-//  Created by 朱文杰 on 2018/12/19.
-//  Copyright © 2018 朱文杰. All rights reserved.
+//  Created by Venj on 2018/12/19.
+//  Copyright © 2018 Venj. All rights reserved.
 //
 
 import UIKit

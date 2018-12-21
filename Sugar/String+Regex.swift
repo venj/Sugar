@@ -17,12 +17,7 @@ public extension String {
     func matches(_ pattern: String, regularExpressionOptions:NSRegularExpression.Options = [.caseInsensitive], matchingOptions:NSRegularExpression.MatchingOptions = []) -> Bool {
         guard let regex = try? NSRegularExpression(pattern: pattern, options: regularExpressionOptions) else { return false }
         let nsRange = NSRange(location: 0, length: self.count)
-        if regex.numberOfMatches(in: self, options: matchingOptions, range:nsRange) > 0 {
-            return true
-        }
-        else {
-            return false
-        }
+        return regex.numberOfMatches(in: self, options: matchingOptions, range:nsRange) > 0
     }
 
     /**

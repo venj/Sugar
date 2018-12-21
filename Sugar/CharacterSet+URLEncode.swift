@@ -15,9 +15,11 @@ extension CharacterSet {
 
      - returns: URL encode safe characters.
      */
-    static func formURLEncodeSafeCharacterSet() -> CharacterSet {
-        var result = CharacterSet.alphanumerics
-        result.insert(charactersIn: "-_.!~*'()")
-        return result
+    static var formURLEncodeSafeCharacterSet: CharacterSet {
+        get {
+            var result = CharacterSet.alphanumerics
+            result.insert(charactersIn: "-_.!~*'()")
+            return result
+        }
     }
 }

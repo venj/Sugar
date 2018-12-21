@@ -22,15 +22,15 @@ public extension Array {
             a.anyIf("b", ==)
     */
     /**
-    Examine whether an array contains an element or not by an invocation thet returns a boolean value. 
+    Examine whether an array contains an element or not by an body thet returns a boolean value.
     
     - parameter element: The element need to be find. 
-    - parameter invocation: A closure that accept current element and the target element and return a boolean value. 
+    - parameter body: A closure that accept current element and the target element and return a boolean value.
     - returns: Return `true` if the element is found.
     */
-    func anyIf(_ element: Element, _ invocation: ((Element, Element) -> Bool)) -> Bool {
+    func anyIf(_ element: Element, _ body: ((Element, Element) -> Bool)) -> Bool {
         for i in 0..<count {
-            if invocation(element, self[i]) {
+            if body(element, self[i]) {
                 return true
             }
         }
@@ -66,8 +66,8 @@ public extension Array {
     /**
      Alias for `map` method.
     */
-    func collect<T>(_ invocation:(Element) -> T) -> [T] {
-        return map(invocation)
+    func collect<T>(_ body:(Element) -> T) -> [T] {
+        return map(body)
     }
 
     // collect!, compact, compact! is not applicable
@@ -88,13 +88,13 @@ public extension Array {
     Cycle through an array for a number of times. 
     
     - parameter cycles: Number of cycles to go through the array. 
-    - parameter invocation: An closure that accept current element as agrument.
+    - parameter body: An closure that accept current element as agrument.
     */
-    func cycle(_ cycles:Int, _ invocation:(Element) -> Void) {
+    func cycle(_ cycles:Int, _ body:(Element) -> Void) {
         var index = 0
         while true {
             if index == count * cycles { break }
-            invocation(self[index % count])
+            body(self[index % count])
             index += 1
         }
     }
@@ -125,11 +125,11 @@ public extension Array {
     /**
      Delete elements that satisfy certain condition.
      
-     - parameter invocation: A closure accept current element as argument and return a boolean that determines whether delete the element or not.
+     - parameter body: A closure accept current element as argument and return a boolean that determines whether delete the element or not.
     */
-    mutating func deleteIf(_ invocation:((Element) -> Bool)) {
+    mutating func deleteIf(_ body:((Element) -> Bool)) {
         for i in (0..<count).reversed() {
-            if invocation(self[i]) {
+            if body(self[i]) {
                 remove(at: i)
             }
         }
@@ -150,12 +150,12 @@ public extension Array {
     /**
      Create a new array with elements satisfy a certain condisition deleted. 
      
-     - parameter invocation: A closure accept current element as argument and return a boolean to indicate whether delete the element or not. 
+     - parameter body: A closure accept current element as argument and return a boolean to indicate whether delete the element or not.
      - returns: A new array with proper elements removed.
     */
-    func dropWhile(_ invocation:((Element) -> Bool)) -> [Element] {
+    func dropWhile(_ body:((Element) -> Bool)) -> [Element] {
         var result = self
-        while invocation(result[0]) {
+        while body(result[0]) {
             _ = result.deleteAt(0)
         }
         return result
@@ -164,29 +164,29 @@ public extension Array {
     /**
      Alias for `forEacy` method.
     */
-    func each(_ invocation:((Element) -> Void)) {
-        forEach(invocation)
+    func each(_ body:((Element) -> Void)) {
+        forEach(body)
     }
 
     /**
      Enumerate through all the indexes of the array. 
      
-     - parameter invocation: A closure to process these indexes.
+     - parameter body: A closure to process these indexes.
     */
-    func eachIndex(_ invocation:((Int) -> Void)) {
+    func eachIndex(_ body:((Int) -> Void)) {
         for i in 0..<count {
-            invocation(i)
+            body(i)
         }
     }
 
     /**
      Enumerate through the array with element and its index pass to a closure. 
      
-     - parameter invocation: A closure to process these elements and their indexes.
+     - parameter body: A closure to process these elements and their indexes.
     */
-    func eachWithIndex(_ invocation:((Int, Element) -> Void)) {
+    func eachWithIndex(_ body:((Int, Element) -> Void)) {
         for i in 0..<count {
-            invocation(i, self[i])
+            body(i, self[i])
         }
     }
 
@@ -202,11 +202,11 @@ public extension Array {
     /**
     Find an element's first index using a closure.
     
-    - parameter invocation: A closure take element as argument and return a boolean.
+    - parameter body: A closure take element as argument and return a boolean.
     */
-    func findIndex(_ invocation:((Element) -> Bool)) -> Int? {
+    func findIndex(_ body:((Element) -> Bool)) -> Int? {
         for i in 0..<count {
-            if invocation(self[i]) { return i }
+            if body(self[i]) { return i }
         }
         return nil
     }
@@ -214,18 +214,18 @@ public extension Array {
     /**
      Alias for `findIndex` method.
     */
-    func index(_ invocation:((Element) -> Bool)) -> Int? {
-        return findIndex(invocation)
+    func index(_ body:((Element) -> Bool)) -> Int? {
+        return findIndex(body)
     }
 
     /**
      Remove all the elements that can not pass the test of the closure from the original array. 
      
-     - parameter invocation: A closure take element as argument and return a boolean.
+     - parameter body: A closure take element as argument and return a boolean.
     */
-    mutating func keepIf(_ invocation:((Element) -> Bool)) {
+    mutating func keepIf(_ body:((Element) -> Bool)) {
         for i in (0..<count).reversed() {
-            if !invocation(self[i]) {
+            if !body(self[i]) {
                 remove(at: i)
             }
         }
@@ -291,12 +291,12 @@ public extension Array {
     /**
      Find the last index of an element. 
      
-     - parameter invocation: A closure take element as argument and return a boolean.
+     - parameter body: A closure take element as argument and return a boolean.
      - returns: If found, return the index in `Int`, or `nil` if not found.
     */
-    func rIndex(_ invocation:((Element) -> Bool)) -> Int? {
+    func rIndex(_ body:((Element) -> Bool)) -> Int? {
         for i in (0..<count).reversed() {
-            if invocation(self[i]) { return i }
+            if body(self[i]) { return i }
         }
         return nil
     }
@@ -331,14 +331,14 @@ public extension Array {
     /**
     Create a new array with elements filtered by a closure. 
     
-    - parameter invocation: A closure take element as argument and return a boolean.
+    - parameter body: A closure take element as argument and return a boolean.
     - returns: A new array with elements pass through the filtration of the closure.
     */
-    func select(_ invocation:((Element) -> Bool)) -> [Element] {
+    func select(_ body:((Element) -> Bool)) -> [Element] {
         var result: [Element] = []
         var generator = self.makeIterator()
         while let e = generator.next() {
-            if invocation(e) {
+            if body(e) {
                 result.append(e)
             }
         }
@@ -348,8 +348,8 @@ public extension Array {
     /**
      Alias for `keepIf` method.
     */
-    mutating func selectInPlace(_ invocation:((Element) -> Bool)) {
-        keepIf(invocation)
+    mutating func selectInPlace(_ body:((Element) -> Bool)) {
+        keepIf(body)
     }
 
     /**
@@ -386,8 +386,8 @@ public extension Array {
     /**
      Alias for `select` method.
     */
-    func takeWhile(_ invocation:((Element) -> Bool)) -> [Element] {
-        return select(invocation)
+    func takeWhile(_ body:((Element) -> Bool)) -> [Element] {
+        return select(body)
     }
 
     // transpose, value_at, zip not implemented
@@ -420,10 +420,10 @@ public extension Array where Element: Equatable {
      Delete all occurance of one element. If a closure is specified, then execute the closure if delete actually happened.
      
      - parameter element: The element to delete. 
-     - parameter invocation: An optional closure that will be executed if no element found.
+     - parameter body: An optional closure that will be executed if no element found.
      - returns: The element that has been deleted.
     */
-    mutating func delete(_ element: Element, _ invocation:((Element) -> Void)? = nil) -> Element? {
+    mutating func delete(_ element: Element, _ body:((Element) -> Void)? = nil) -> Element? {
         var result: [Element] = []
         var generator = self.makeIterator()
         while let e = generator.next() {
@@ -436,7 +436,7 @@ public extension Array where Element: Equatable {
             return element
         }
         else {
-            invocation?(element)
+            body?(element)
             return nil
         }
     }

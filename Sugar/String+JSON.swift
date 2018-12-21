@@ -18,8 +18,8 @@ public extension String {
      - returns: JSON object (typically a dictionary or an array) or `nil` if conversion failed.
     */
     func JSONObject(_ encoding: String.Encoding = String.Encoding.utf8) -> AnyObject? {
-        guard let data = self.data(using: encoding) else { return nil }
-        guard let JSON = try? JSONSerialization.jsonObject(with: data, options:[]) else { return nil }
+        guard let data = self.data(using: encoding),
+            let JSON = try? JSONSerialization.jsonObject(with: data, options:[]) else { return nil }
         return JSON as AnyObject?
     }
 }

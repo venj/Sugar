@@ -19,16 +19,16 @@ public extension Dictionary {
     }
 
     // Since Swift is strict-typed language, not like ruby's method with the same name,
-    // invocation does not return, but we can still do something with the key while not found
+    // body does not return, but we can still do something with the key while not found
     /**
-    Delete a key-value pair according to the key. If key is not found, execute a closure. like Ruby's method with the same name, invocation does not return.
+    Delete a key-value pair according to the key. If key is not found, execute a closure. like Ruby's method with the same name, body does not return.
     
     - parameter key: The key to delete.
-    - parameter invocation: The optional closure to execute if key is not found.
+    - parameter body: The optional closure to execute if key is not found.
     - returns: The value associated with the key, or `nil` if not found.
     */
-    mutating func delete(_ key: Key, _ invocation:((Key) -> Void)? = nil) -> Value? {
-        guard let result = removeValue(forKey: key) else { invocation?(key); return nil }
+    mutating func delete(_ key: Key, _ body:((Key) -> Void)? = nil) -> Value? {
+        guard let result = removeValue(forKey: key) else { body?(key); return nil }
         return result
     }
 
@@ -36,12 +36,12 @@ public extension Dictionary {
     /**
     Delete a key value pair use some criteria specified in closure.
     
-    - parameter invocation: A closure accept key and value as arguments and determine whether they should be deleted.
+    - parameter body: A closure accept key and value as arguments and determine whether they should be deleted.
     */
-    mutating func deleteIf(_ invocation:(Key, Value) -> Bool) {
+    mutating func deleteIf(_ body:(Key, Value) -> Bool) {
         var generator = makeIterator()
         while let (key, value) = generator.next() {
-            if invocation(key, value) {
+            if body(key, value) {
                 removeValue(forKey: key)
             }
         }
@@ -50,36 +50,36 @@ public extension Dictionary {
     /**
      Enumerate all key-value pair in the dictionary. 
      
-     - parameter invocation: A closure accept key and value as arguments.
+     - parameter body: A closure accept key and value as arguments.
     */
-    func each(_ invocation:((Key, Value) -> Void)) {
+    func each(_ body:((Key, Value) -> Void)) {
         var generator = makeIterator()
         while let (key, value) = generator.next() {
-            invocation(key, value)
+            body(key, value)
         }
     }
 
     /**
      Enumerate all keys in the dictionary.
 
-     - parameter invocation: A closure accept dictionary key as argument.
+     - parameter body: A closure accept dictionary key as argument.
     */
-    func eachKey(_ invocation:((Key) -> Void)) {
+    func eachKey(_ body:((Key) -> Void)) {
         var generator = makeIterator()
         while let (key, _) = generator.next() {
-            invocation(key)
+            body(key)
         }
     }
 
     /**
      Enumerate all values in the dictionary.
 
-     - parameter invocation: A closure accept dictionary value as argument.
+     - parameter body: A closure accept dictionary value as argument.
      */
-    func eachValue(_ invocation:((Value) -> Void)) {
+    func eachValue(_ body:((Value) -> Void)) {
         var generator = makeIterator()
         while let (_, value) = generator.next() {
-            invocation(value)
+            body(value)
         }
     }
 
@@ -87,11 +87,11 @@ public extension Dictionary {
      Fetch a value by key. If the key is not found, execute a closure. 
      
      - parameter key: The key to find.
-     - parameter invocation: The optional closure to execute if key is not found.
+     - parameter body: The optional closure to execute if key is not found.
      - returns: The value associated with the key, or `nil` if not found.
     */
-    func fetch(_ key: Key, _ invocation:((Key) -> Void)? = nil) -> Value? {
-        guard let result = self[key] else { invocation?(key); return nil }
+    func fetch(_ key: Key, _ body:((Key) -> Void)? = nil) -> Value? {
+        guard let result = self[key] else { body?(key); return nil }
         return result
     }
 
@@ -118,12 +118,12 @@ public extension Dictionary {
     /**
     Keep only the key-value pairs that match the criteria specified in a closure.
     
-    - parameter invocation: A closure accept key and value as arguments and determine whether they should be kept.
+    - parameter body: A closure accept key and value as arguments and determine whether they should be kept.
     */
-    mutating func keepIf(_ invocation:((Key, Value) -> Bool)) {
+    mutating func keepIf(_ body:((Key, Value) -> Bool)) {
         var generator = makeIterator()
         while let (key, value) = generator.next() {
-            if !invocation(key, value) {
+            if !body(key, value) {
                 removeValue(forKey: key)
             }
         }
@@ -148,15 +148,15 @@ public extension Dictionary {
      Create a dictionary that have the current dictionary and another dictionary content merged. If both dictionary contain a same key, the later dictionary's value associated with the key will be used. 
      
      - parameter dict: A dictionary. 
-     - parameter invocation: A closure that accept the key, the value in current dictionary, and the value in another dictionary as arguments. 
+     - parameter body: A closure that accept the key, the value in current dictionary, and the value in another dictionary as arguments.
      - returns: A new dictionary with all key-value pair merged together.
     */
-    func merge(_ dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+    func merge(_ dict: [Key: Value], _ body: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
         var result: [Key: Value] = self
         var dictGenerator = dict.makeIterator()
         while let (key, newValue) = dictGenerator.next() {
             guard let oldValue = self[key] else { result[key] = newValue; continue }
-            guard let resultValue = invocation?(key, oldValue, newValue) else { result[key] = newValue; continue }
+            guard let resultValue = body?(key, oldValue, newValue) else { result[key] = newValue; continue }
             result[key] = resultValue
         }
         return result
@@ -166,14 +166,14 @@ public extension Dictionary {
      Merge the content of another dictionary into the current dictionary. Dictionary is changed.
      
      - parameter dict: A dictionary.
-     - parameter invocation: A closure that accept the key, the value in current dictionary, and the value in another dictionary as arguments.
+     - parameter body: A closure that accept the key, the value in current dictionary, and the value in another dictionary as arguments.
      - returns: Current dictionary after merge.
     */
-    mutating func mergeInPlace(_ dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+    mutating func mergeInPlace(_ dict: [Key: Value], _ body: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
         var dictGenerator = dict.makeIterator()
         while let (key, newValue) = dictGenerator.next() {
             guard let oldValue = self[key] else { self[key] = newValue; continue }
-            guard let resultValue = invocation?(key, oldValue, newValue) else { self[key] = newValue; continue }
+            guard let resultValue = body?(key, oldValue, newValue) else { self[key] = newValue; continue }
             self[key] = resultValue
         }
         return self
@@ -184,14 +184,14 @@ public extension Dictionary {
      
      `delete` method is only based on the key.
      
-     - parameter invocation: A closure accept key and value as arguments and determine whether they should be rejected in the new array.
+     - parameter body: A closure accept key and value as arguments and determine whether they should be rejected in the new array.
      - returns: A new array with some key-value pair rejected.
     */
-    func reject(_ invocation:((Key, Value) -> Bool)) -> [Key: Value] {
+    func reject(_ body:((Key, Value) -> Bool)) -> [Key: Value] {
         var result: [Key: Value] = [:]
         var generator = self.makeIterator()
         while let (key, value) = generator.next() {
-            if !invocation(key, value) {
+            if !body(key, value) {
                 result[key] = value
             }
         }
@@ -202,14 +202,14 @@ public extension Dictionary {
     /**
     Reject key-value pair that are not satisfy certain condition based on both key and value from current dictionary.
 
-    - parameter invocation: A closure accept key and value as arguments that determine whether they should be rejected in the new array.
+    - parameter body: A closure accept key and value as arguments that determine whether they should be rejected in the new array.
     - returns: If any key-value pair is rejected, return the dictionary after reject. Or `nil` if nothing changed.
     */
-    mutating func rejectInPlace(_ invocation:(Key, Value) -> Bool) -> [Key: Value]? {
+    mutating func rejectInPlace(_ body:(Key, Value) -> Bool) -> [Key: Value]? {
         var anyChange = false
         var generator = makeIterator()
         while let (key, value) = generator.next() {
-            if invocation(key, value) {
+            if body(key, value) {
                 anyChange = true
                 removeValue(forKey: key)
             }
@@ -231,13 +231,13 @@ public extension Dictionary {
     /**
      Create a new dictionary that matches some certain criteria and return it. 
      
-     - parameter invocation: A closure accept key and value as arguments that determine whether they should be seleted to the new array.
+     - parameter body: A closure accept key and value as arguments that determine whether they should be seleted to the new array.
     */
-    func select(_ invocation:((Key, Value) -> Bool)) -> [Key: Value] {
+    func select(_ body:((Key, Value) -> Bool)) -> [Key: Value] {
         var result: [Key: Value] = [:]
         var generator = self.makeIterator()
         while let (key, value) = generator.next() {
-            if invocation(key, value) {
+            if body(key, value) {
                 result[key] = value
             }
         }
@@ -247,13 +247,13 @@ public extension Dictionary {
     /**
      Like `keepIf`, only this one returns the dictionary if the original dictionary changes. 
      
-     - parameter invocation: A closure accept key and value as arguments and determine whether they should be selected.
+     - parameter body: A closure accept key and value as arguments and determine whether they should be selected.
     */
-    mutating func selectInPlace(_ invocation:((Key, Value) -> Bool)) -> [Key: Value]? {
+    mutating func selectInPlace(_ body:((Key, Value) -> Bool)) -> [Key: Value]? {
         var anyChange = false
         var generator = makeIterator()
         while let (key, value) = generator.next() {
-            if !invocation(key, value) {
+            if !body(key, value) {
                 anyChange = true
                 removeValue(forKey: key)
             }
@@ -293,8 +293,8 @@ public extension Dictionary {
     /**
     Alias for `mergeInPlace` method.
     */
-    mutating func update(_ dict: [Key: Value], _ invocation: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
-        return mergeInPlace(dict, invocation)
+    mutating func update(_ dict: [Key: Value], _ body: ((Key, Value, Value) -> Value)? = nil) -> [Key: Value] {
+        return mergeInPlace(dict, body)
     }
 
 }

@@ -30,15 +30,15 @@ public extension Int {
      Go through a range of integers from a larger number to a small number, and execute a closure that accept current value as argument every time. 
      
      - parameter to: A smaller integer. 
-     - parameter invocation: A closure that accept current index as argument.
+     - parameter body: A closure that accept current index as argument.
     */
-    func downTo(_ to: Int, _ invocation:((_ index: Int) -> Void)) {
+    func downTo(_ to: Int, _ body:((_ index: Int) -> Void)) {
         if to >= self {
-            invocation(self)
+            body(self)
         }
         else {
             for i in (to...self).reversed() {
-                invocation(i)
+                body(i)
             }
         }
     }
@@ -125,11 +125,11 @@ public extension Int {
     /**
      Execute a closure for multiple times. 
      
-     - parameter invocation: A closure accept current index as argument.
+     - parameter body: A closure accept current index as argument.
     */
-    func times(_ invocation: ((_ index: Int) -> Void)) {
+    func times(_ body: ((_ index: Int) -> Void)) {
         for i in 0..<self {
-            invocation(i)
+            body(i)
         }
     }
 
@@ -137,15 +137,15 @@ public extension Int {
      Go through a range of integers from a small number to a larger number, and execute a closure that accept current value as argument every time.
 
      - parameter to: A larger integer.
-     - parameter invocation: A closure that accept current index as argument.
+     - parameter body: A closure that accept current index as argument.
      */
-    func upTo(_ to: Int, _ invocation:((_ index: Int) -> Void)) {
+    func upTo(_ to: Int, _ body:((_ index: Int) -> Void)) {
         if to <= self {
-            invocation(self)
+            body(self)
         }
         else {
             for i in self...to {
-                invocation(i)
+                body(i)
             }
         }
     }

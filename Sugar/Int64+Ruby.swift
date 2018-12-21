@@ -12,11 +12,11 @@ extension Int64 {
     /**
      Execute a closure for multiple times.
 
-     - parameter invocation: A closure accept current index as argument.
+     - parameter body: A closure accept current index as argument.
      */
-    func times(_ invocation: ((_ index: Int64) -> Void)) {
+    func times(_ body: ((_ index: Int64) -> Void)) {
         for i in 0..<self {
-            invocation(i)
+            body(i)
         }
     }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-@available(iOS 9.0, OSX 10.11, *)
+@available(iOS 8.0, OSX 10.10, *)
 public extension String {
     /**
      Mimic the behavior NSString's method with the same name. Not cross-platform.

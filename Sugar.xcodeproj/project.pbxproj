@@ -17,9 +17,9 @@
 		25461A601C00705D009E5ADE /* Array+Ruby_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A5F1C00705D009E5ADE /* Array+Ruby_Tests.swift */; };
 		25461AD61C08769F009E5ADE /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB91C087327009E5ADE /* Int+FileSize.swift */; };
 		25461AD71C08769F009E5ADE /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABA1C087327009E5ADE /* Data+Base64.swift */; };
-		25461AD81C08769F009E5ADE /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */; };
+		25461AD81C08769F009E5ADE /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */; };
 		25461AD91C08769F009E5ADE /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABC1C087327009E5ADE /* NSRange+Swift.swift */; };
-		25461ADA1C08769F009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
+		25461ADA1C08769F009E5ADE /* NSTextCheckingResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */; };
 		25461ADB1C08769F009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461ADC1C08769F009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
 		25461ADD1C08769F009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
@@ -41,9 +41,9 @@
 		25461AED1C0876A0009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
 		25461AEE1C0876A9009E5ADE /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB91C087327009E5ADE /* Int+FileSize.swift */; };
 		25461AEF1C0876A9009E5ADE /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABA1C087327009E5ADE /* Data+Base64.swift */; };
-		25461AF01C0876A9009E5ADE /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */; };
+		25461AF01C0876A9009E5ADE /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */; };
 		25461AF11C0876A9009E5ADE /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABC1C087327009E5ADE /* NSRange+Swift.swift */; };
-		25461AF21C0876A9009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
+		25461AF21C0876A9009E5ADE /* NSTextCheckingResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */; };
 		25461AF31C0876A9009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461AF41C0876A9009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
 		25461AF51C0876A9009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
@@ -65,9 +65,9 @@
 		25461B051C0876A9009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
 		25461B081C0876B7009E5ADE /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB91C087327009E5ADE /* Int+FileSize.swift */; };
 		25461B091C0876B7009E5ADE /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABA1C087327009E5ADE /* Data+Base64.swift */; };
-		25461B0A1C0876B7009E5ADE /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */; };
+		25461B0A1C0876B7009E5ADE /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */; };
 		25461B0B1C0876B7009E5ADE /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABC1C087327009E5ADE /* NSRange+Swift.swift */; };
-		25461B0C1C0876B7009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
+		25461B0C1C0876B7009E5ADE /* NSTextCheckingResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */; };
 		25461B0D1C0876B7009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461B0E1C0876B7009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
 		25461B0F1C0876B7009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
@@ -89,9 +89,9 @@
 		25461B1F1C0876B7009E5ADE /* String+ActiveSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461A9A1C0872B3009E5ADE /* String+ActiveSupport.swift */; };
 		25461B201C0876C0009E5ADE /* Int+FileSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AB91C087327009E5ADE /* Int+FileSize.swift */; };
 		25461B211C0876C0009E5ADE /* Data+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABA1C087327009E5ADE /* Data+Base64.swift */; };
-		25461B221C0876C0009E5ADE /* NSDictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */; };
+		25461B221C0876C0009E5ADE /* Dictionary+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */; };
 		25461B231C0876C0009E5ADE /* NSRange+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABC1C087327009E5ADE /* NSRange+Swift.swift */; };
-		25461B241C0876C0009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */; };
+		25461B241C0876C0009E5ADE /* NSTextCheckingResultExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */; };
 		25461B251C0876C0009E5ADE /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABE1C087327009E5ADE /* String+Base64.swift */; };
 		25461B261C0876C0009E5ADE /* String+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461ABF1C087327009E5ADE /* String+JSON.swift */; };
 		25461B271C0876C0009E5ADE /* String+Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25461AC01C087327009E5ADE /* String+Hash.swift */; };
@@ -172,9 +172,9 @@
 		25461AB81C087327009E5ADE /* Comparable+Ruby.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Comparable+Ruby.swift"; path = "Sugar/Comparable+Ruby.swift"; sourceTree = SOURCE_ROOT; };
 		25461AB91C087327009E5ADE /* Int+FileSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Int+FileSize.swift"; path = "Sugar/Int+FileSize.swift"; sourceTree = SOURCE_ROOT; };
 		25461ABA1C087327009E5ADE /* Data+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Base64.swift"; path = "Sugar/Data+Base64.swift"; sourceTree = SOURCE_ROOT; };
-		25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDictionary+JSON.swift"; path = "Sugar/NSDictionary+JSON.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+JSON.swift"; path = "Sugar/Dictionary+JSON.swift"; sourceTree = SOURCE_ROOT; };
 		25461ABC1C087327009E5ADE /* NSRange+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSRange+Swift.swift"; path = "Sugar/NSRange+Swift.swift"; sourceTree = SOURCE_ROOT; };
-		25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSTextCheckingResult+Swift.swift"; path = "Sugar/NSTextCheckingResult+Swift.swift"; sourceTree = SOURCE_ROOT; };
+		25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSTextCheckingResultExtension.swift; path = Sugar/NSTextCheckingResultExtension.swift; sourceTree = SOURCE_ROOT; };
 		25461ABE1C087327009E5ADE /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Base64.swift"; path = "Sugar/String+Base64.swift"; sourceTree = SOURCE_ROOT; };
 		25461ABF1C087327009E5ADE /* String+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+JSON.swift"; path = "Sugar/String+JSON.swift"; sourceTree = SOURCE_ROOT; };
 		25461AC01C087327009E5ADE /* String+Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Hash.swift"; path = "Sugar/String+Hash.swift"; sourceTree = SOURCE_ROOT; };
@@ -334,9 +334,9 @@
 			children = (
 				25461AB91C087327009E5ADE /* Int+FileSize.swift */,
 				25461ABA1C087327009E5ADE /* Data+Base64.swift */,
-				25461ABB1C087327009E5ADE /* NSDictionary+JSON.swift */,
+				25461ABB1C087327009E5ADE /* Dictionary+JSON.swift */,
 				25461ABC1C087327009E5ADE /* NSRange+Swift.swift */,
-				25461ABD1C087327009E5ADE /* NSTextCheckingResult+Swift.swift */,
+				25461ABD1C087327009E5ADE /* NSTextCheckingResultExtension.swift */,
 				25461ABE1C087327009E5ADE /* String+Base64.swift */,
 				25461ABF1C087327009E5ADE /* String+JSON.swift */,
 				25461AC01C087327009E5ADE /* String+Hash.swift */,
@@ -686,10 +686,10 @@
 				25461B081C0876B7009E5ADE /* Int+FileSize.swift in Sources */,
 				253158651C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
 				25461B091C0876B7009E5ADE /* Data+Base64.swift in Sources */,
-				25461B0A1C0876B7009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25461B0A1C0876B7009E5ADE /* Dictionary+JSON.swift in Sources */,
 				25B96F721C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25461B0B1C0876B7009E5ADE /* NSRange+Swift.swift in Sources */,
-				25461B0C1C0876B7009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
+				25461B0C1C0876B7009E5ADE /* NSTextCheckingResultExtension.swift in Sources */,
 				25461B0D1C0876B7009E5ADE /* String+Base64.swift in Sources */,
 				25461B0E1C0876B7009E5ADE /* String+JSON.swift in Sources */,
 				25461B0F1C0876B7009E5ADE /* String+Hash.swift in Sources */,
@@ -722,9 +722,9 @@
 			files = (
 				25461AEE1C0876A9009E5ADE /* Int+FileSize.swift in Sources */,
 				25461AEF1C0876A9009E5ADE /* Data+Base64.swift in Sources */,
-				25461AF01C0876A9009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25461AF01C0876A9009E5ADE /* Dictionary+JSON.swift in Sources */,
 				25461AF11C0876A9009E5ADE /* NSRange+Swift.swift in Sources */,
-				25461AF21C0876A9009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
+				25461AF21C0876A9009E5ADE /* NSTextCheckingResultExtension.swift in Sources */,
 				25461AF31C0876A9009E5ADE /* String+Base64.swift in Sources */,
 				25461AF41C0876A9009E5ADE /* String+JSON.swift in Sources */,
 				25461AF51C0876A9009E5ADE /* String+Hash.swift in Sources */,
@@ -760,9 +760,9 @@
 				25B96F711C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25D4EC001C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461B211C0876C0009E5ADE /* Data+Base64.swift in Sources */,
-				25461B221C0876C0009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25461B221C0876C0009E5ADE /* Dictionary+JSON.swift in Sources */,
 				25461B231C0876C0009E5ADE /* NSRange+Swift.swift in Sources */,
-				25461B241C0876C0009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
+				25461B241C0876C0009E5ADE /* NSTextCheckingResultExtension.swift in Sources */,
 				25461B251C0876C0009E5ADE /* String+Base64.swift in Sources */,
 				25461B261C0876C0009E5ADE /* String+JSON.swift in Sources */,
 				253158641C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,
@@ -794,9 +794,9 @@
 				25B96F741C3A62B400F60A9F /* Operators+General.swift in Sources */,
 				25D4EC031C1DA3B300BD7F48 /* Int64+Ruby.swift in Sources */,
 				25461AD71C08769F009E5ADE /* Data+Base64.swift in Sources */,
-				25461AD81C08769F009E5ADE /* NSDictionary+JSON.swift in Sources */,
+				25461AD81C08769F009E5ADE /* Dictionary+JSON.swift in Sources */,
 				25461AD91C08769F009E5ADE /* NSRange+Swift.swift in Sources */,
-				25461ADA1C08769F009E5ADE /* NSTextCheckingResult+Swift.swift in Sources */,
+				25461ADA1C08769F009E5ADE /* NSTextCheckingResultExtension.swift in Sources */,
 				25461ADB1C08769F009E5ADE /* String+Base64.swift in Sources */,
 				25461ADC1C08769F009E5ADE /* String+JSON.swift in Sources */,
 				253158671C1AC15A007B20E7 /* Int64+ActiveSupport.swift in Sources */,

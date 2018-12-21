@@ -347,17 +347,17 @@ public extension String {
     Substitude all occurance of substrings matching regular expression pattern with the string that was returned by the closure. If regular expression pattern is illegal or no matching found in the string, the original string will be returned. Original string is not changed.
 
     - parameter pattern: A regular expression pattern.
-    - parameter invocation: A closure accecpt an `NSTextCheckingResult` argument and return a string.
+    - parameter body: A closure accecpt an `NSTextCheckingResult` argument and return a string.
     - returns: A new string with all occurance of patterns replaced.
     */
     #if !os(Linux)
-    func gsub(_ pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
+    func gsub(_ pattern:String, _ body:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let matches = allMatches(pattern)  else { return self }
         (0..<matches.count).reversed().forEach {
             let match = matches[$0]
             if let range = result.range(fromNSRange: match.range) {
-                result.replaceSubrange(range, with: invocation(match))
+                result.replaceSubrange(range, with: body(match))
             }
         }
         return result
@@ -518,12 +518,12 @@ public extension String {
      
      - parameter pattern: A regular expression pattern. 
      - parameter offset: Search offset.
-     - parameter invocation: Execute a closure if the pattern is found.
+     - parameter body: Execute a closure if the pattern is found.
      - returns: Last found pattern's `NSTextCheckingResult`, or `nil` if nothing found.
     */
-    func lastMatch(_ pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+    func lastMatch(_ pattern:String, offset: Int = 0, _ body:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.last
-        if m != nil { invocation?(m!) }
+        if m != nil { body?(m!) }
         return m
     }
 
@@ -545,12 +545,12 @@ public extension String {
 
      - parameter pattern: A regular expression pattern.
      - parameter offset: Search offset.
-     - parameter invocation: Execute a closure if the pattern is found.
+     - parameter body: Execute a closure if the pattern is found.
      - returns: First found pattern's `NSTextCheckingResult`, or `nil` if nothing found.
      */
-    func match(_ pattern:String, offset: Int = 0, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
+    func match(_ pattern:String, offset: Int = 0, _ body:((NSTextCheckingResult) -> Void)? = nil) -> NSTextCheckingResult? {
         let m = self.allMatches(pattern, offset: offset)?.first
-        if m != nil { invocation?(m!) }
+        if m != nil { body?(m!) }
         return m
     }
 
@@ -688,17 +688,17 @@ public extension String {
      Scan for a regular expression pattern and execute a closure with the founc result as the argument.
      
      - parameter pattern: A regular expression pattern. 
-     - parameter invocation: A closure that accept the scan result as argument. 
+     - parameter body: A closure that accept the scan result as argument.
      - returns: Returns a search result array, or `nil` if pattern not found.
     */
-    func scan(_ pattern:String, _ invocation:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
+    func scan(_ pattern:String, _ body:((NSTextCheckingResult) -> Void)? = nil) -> [NSTextCheckingResult]? {
         guard let matches = allMatches(pattern) else { return nil }
         if matches.count == 0 {
             return nil
         }
         else {
             for match in matches {
-                invocation?(match)
+                body?(match)
             }
             return matches
         }
@@ -812,13 +812,13 @@ public extension String {
      Replace first match of a regular expression pattern with the result of execusion of a closure.
      
      - parameter pattern: A regular expression pattern.
-     - parameter invocation: A parameter process the found result and return a string to replace. 
+     - parameter body: A parameter process the found result and return a string to replace.
      - return: A string with the first matched pattern replaced.
     */
-    func sub(_ pattern:String, _ invocation:( (_: NSTextCheckingResult) -> String )) -> String {
+    func sub(_ pattern:String, _ body:( (_: NSTextCheckingResult) -> String )) -> String {
         var result = self
         guard let match = match(pattern), let range = result.range(fromNSRange: match.range) else { return self }
-        result.replaceSubrange(range, with: invocation(match))
+        result.replaceSubrange(range, with: body(match))
         return result
     }
 

@@ -151,7 +151,7 @@ public extension String {
     - returns: Returns a string with last new line character removed.
     */
     // FIXME: Endless cycle in scrub.
-    public func chomp(_ separator: String? = nil) -> String {
+    func chomp(_ separator: String? = nil) -> String {
         func scrub(_ separator: String) -> String {
             if separator.count == 0 { return self }
             var e = endIndex

@@ -569,38 +569,41 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "朱文杰";
 				TargetAttributes = {
 					255B22C321CA9DDF0011A5ED = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = 32Y52676KN;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					2578595B1C0810E1001E8C51 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					257859881C0811FC001E8C51 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 1020;
 					};
 					257859AD1C08122E001E8C51 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 					};
 					257859D31C081272001E8C51 = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 1020;
 					};
 					25883F411BF30F2000CCCE54 = {
 						CreatedOnToolsVersion = 7.1.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1020;
 						TestTargetID = 25883F101BF30EF100CCCE54;
 					};
 				};
 			};
 			buildConfigurationList = 25883F0C1BF30EF100CCCE54 /* Build configuration list for PBXProject "Sugar" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -892,7 +895,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -917,7 +920,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -937,6 +940,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
 				PRODUCT_NAME = Sugar;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -957,6 +961,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "me.venj.Sugar-iOS";
 				PRODUCT_NAME = Sugar;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -978,6 +983,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1001,6 +1007,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1027,7 +1034,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1052,7 +1059,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1075,6 +1082,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1099,6 +1107,7 @@
 				PRODUCT_NAME = Sugar;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1110,6 +1119,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1166,6 +1176,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1219,6 +1230,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.venj.SugarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sugar Example.app/Sugar Example";
 			};
 			name = Debug;
@@ -1230,6 +1242,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.venj.SugarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sugar Example.app/Sugar Example";
 			};
 			name = Release;

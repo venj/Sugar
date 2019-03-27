@@ -15,7 +15,7 @@ class FloatRubyTests: XCTestCase {
         let target = Float(8.0)
         XCTAssertEqual(result, target)
     }
-    
+
     func testAbs() {
         XCTAssertEqual(Float(-1.0).abs(), Float(1.0))
         XCTAssertEqual(Float(1.0).abs(), Float(1.0))
